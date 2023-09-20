@@ -1,0 +1,241 @@
+{
+    "workbench.colorTheme": "Github Dark (Italics)",
+    "editor.renderWhitespace": "all",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.scrollbar.horizontal": "visible",
+    "editor.scrollbar.vertical": "visible",
+    "files.insertFinalNewline": true,
+    "workbench.preferredDarkColorTheme": "Github Dark (Italics)",
+    "workbench.startupEditor": "none",
+    "cSpell.userWords": [
+      "mylimiter"
+    ],
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+  
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.preferredLightColorTheme": "Github Light (Italics)",
+    "workbench.colorCustomizations": {
+      "editor.background": "#111111",
+      // "editorBracketHighlight.foreground2": "#ffffff", // white
+      // "editorBracketHighlight.foreground3": "#000000", // black
+      // "editorBracketHighlight.foreground3": "#ff0000", // red
+      "editorBracketHighlight.foreground3": "#ffa500", // orange
+      // "editorBracketHighlight.foreground2": "#ffff00", // yellow
+      "editorBracketHighlight.foreground1": "#00ff00", // green
+      // "editorBracketHighlight.foreground3": "#00ffff", // cyan
+      // "editorBracketHighlight.foreground3": "#0000ff", // blue
+      // "editorBracketHighlight.foreground2": "#ffc0cb", // pink
+      "editorBracketHighlight.foreground2": "#ff009d", // HOT pink
+      "editorBracketHighlight.unexpectedBracket.foreground":"#ff0000",
+      "editorWhitespace.foreground": "#ffffff",
+      "editorLineNumber.activeForeground": "#ffffff",
+      "editorLineNumber.foreground": "#63acff", // dark gray: #333333 || blue jeans: #63acff || hot pink: #ff63a1
+    },
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        // Comments
+        {
+          "name": "Comments",
+          "scope": [
+            "comment"
+          ],
+          "settings": {
+            "foreground": "#ac9999", // #ffffff
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "name": "Comments - Block",
+          "scope": [
+            "comment.block"
+          ],
+          "settings": {
+            "foreground": "#aaaaaa", // #aaaaaa
+            "fontStyle": "italic"
+          }
+        },
+        // Constants
+        {
+          "name": "Constants - Character - Escape",
+          "scope": [
+            "constant.character.escape"
+          ],
+          "settings": {
+            "foreground": "#79B8FF",
+            "fontStyle": "bold"
+          }
+        },
+        // Entity
+        {
+          "name": "Entity - Name",
+          "scope": [
+            "entity.name"
+          ],
+          "settings": {
+            "foreground": "#B392F0"
+          }
+        },
+        {
+          "name": "Entity - Name - Tag",
+          "scope": [
+            "entity.name.tag"
+          ],
+          "settings": {
+            "foreground": "#85E89D"
+          }
+        },
+        // Keywords
+        {
+          "name": "Keywords - Control",
+          "scope": [ 
+            "keyword.control"
+          ],
+          "settings": {
+            "foreground": "#ffaa00", 
+          }
+        },
+        // {
+        //   "name": "Keywords - Function",
+        //   "scope": [
+        //     "entity.name.function"
+        //   ],
+        //   "settings": {
+        //     "foreground": "#a956cc",
+        //   }
+        // },
+        {
+          "name": "Keywords - Operators",
+          "scope": [
+            "keyword.operator"
+          ],
+          "settings": {
+            "foreground": "#ff8000", 
+          }
+        },
+        // Punctuation
+        {
+          "name": "Punctuation - Definition - String",
+          "scope": [
+            "punctuation.definition.string"
+          ],
+          "settings": {
+            "foreground": "#ff7777",
+            "fontStyle": "bold"
+          }
+        },
+        // String
+        {
+          "name": "String - Quoted, Single",
+          "scope": [
+            "string.quoted.single"
+          ],
+          "settings": {
+            "foreground": "#9ecbff", // #3ecbff
+            "fontStyle": "bold"
+          }
+        },
+        {
+          "name": "String - Quoted, Double",
+          "scope": [
+            "string.quoted.double"
+          ],
+          "settings": {
+            "foreground": "#9ecbff"
+          }
+        },
+        {
+          "name": "String - Quoted, Triple",
+          "scope": [
+            "string.quoted.triple"
+          ],
+          "settings": {
+            "foreground": "#9ecbff"
+          }
+        },
+  
+        // Variables
+        {
+          "name": "Variables",
+          "scope": [ 
+            "variable.other"
+          ],
+          "settings": {
+            "foreground": "#00ffff", 
+          }
+        },
+        {
+          "name": "Variables - Parameters",
+          "scope": [
+            "variable.parameter"
+          ],
+          "settings": {
+            "foreground": "#ff0000", // #ff0000
+          }
+        }
+      ]
+    },
+    "haskell.manageHLS": "GHCup",
+    "java.configuration.runtimes": [
+      {
+        "name": "JavaSE-20",
+        "path": "C:\\Program Files\\Java\\jdk-20",
+        "default": true
+      }
+    ],
+    "[java]": {
+      "editor.suggest.snippetsPreventQuickSuggestions": false
+    },
+    "java.autobuild.enabled": false,
+    "maven.terminal.customEnv": [
+      {
+        "environmentVariable": "JAVA_HOME",             // variable name
+        "value": "C:\\Program Files\\Java\\jdk-20"      // value
+      }
+    ],
+    "java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk-20",
+    "maven.terminal.useJavaHome": true
+  }
+  
+  
+  // List of Colors:
+  /* 
+    ----REDS----
+    Red: #ff0000
+    Light Red: ff7777
+    ----ORANGES----
+    Dark Orange: #ff7000
+    Orange: #ffaa00
+    ----YELLOWS----
+    Yellow: #ffff00
+    Crossing-guard Yellow: #a2ff00
+    ----GREENS----
+    Dark Stetson green: #00ff8880
+    Sea foam green: #77ffc0
+    Bright green: #00ff4c
+    Blue-green: #00ffbf
+    ----BLUES----
+    Cyan: #00ffff
+    Dark blue, cobalt: #00445b
+    Dark neon blue: #0000ff
+    Electric blue: #00bfff
+    Lighter electric blue: #3ecbff
+    Blue jeans: #63acff
+    Sky blue: #79b8ff
+    ----VIOLET/PURPLE----
+    Purple: #aa00ff
+    Violet: #ff00ff
+    Magenta: #ff63fc
+    ----BROWNS----
+    ----GRAYS----
+    Gray: #aaaaaa
+   */
+  
