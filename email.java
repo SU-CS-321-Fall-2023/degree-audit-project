@@ -1,7 +1,12 @@
+package com.example.email;
+
+
 import javax.mail.*;
 import javax.mail.internet.*;
 import java.util.Properties;
 import javax.swing.JOptionPane;
+
+
 public class mail {
     public static void sendEmail(String to, String subject, String message) {
         String from = "your-email@example.com"; // Replace with your email address
