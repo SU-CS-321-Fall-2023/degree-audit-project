@@ -1,0 +1,1092 @@
+/*
+    !!!LOOK HERE BEFORE SCROLLING DOWN!!!
+    *The colors I have selected for the various backgrounds and fonts are NOT FINAL.
+    *The colors are there as guides to see the size and location of the various containers.
+    */
+
+/*
+    Please refer to the following two lines for how I have set up the various comments in this .css file:
+*   *Comments that have been marked with the asterisk * signal the beginning of styling sections.
+!   !Comments that have been marked with the exclamation mark ! signal the end of styling sections.
+    */
+
+/* Colors used in website
+    #000000
+    #ffffff
+    #ff6929 - Used for :hover
+    #ff6d4d - Not used
+    #175640 ---- dark green
+    #409639 ---- Stetson green
+    #85ab82 - Used for html background-color
+    #9bcd97 ---- light or palegreen
+    #900028 ---- Fordham red
+*/
+
+
+* {
+    box-sizing: border-box;
+}
+html {
+    background-color: #85ab82;
+
+    font-weight: normal;
+}
+body{
+    margin: 0px;
+}
+main {
+    max-width: 1700px;
+    width: auto;
+    overflow-x: visible;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+
+    margin: 0 auto;
+}
+aside {
+    display: block;
+}
+div {
+    display: block;
+
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+em {
+    color: red;
+    font-size: 14pt;
+    font-style: normal;
+}
+h1 {
+    /* background-color: orange; */
+    width: 600px;
+
+    padding: 0px;
+    margin: 0px;
+}
+h3 {
+    padding-top: 0px;
+}
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px; 
+    /* *border-radius has no effect for values greater than 1/2 of either width or height. */
+
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-left: 25px;
+}
+p {
+    width: 200px;
+
+    text-align: justify;
+
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+/*
+    Below are the defined styles for classes.
+    */
+
+    /*
+*<---- posts__container for all .html files ---->
+    */
+div.posts__container {
+    width: 100%;
+    min-height: 100px;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+
+    padding: 0px;
+    padding-left: 10px;
+
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+    div.posts__container section.posts_list {
+        position: relative;
+        width: 60%;
+        display: inline-block;
+    }
+        div.posts__container section.posts_list p.post {
+            background-color: #ff6929; /* #ff6d4d */
+            width: 300px;
+            border-radius: 200px;
+
+            color: #000000;
+            font-size: 10pt;
+            text-align: left;
+
+            padding-top: 5px;
+            padding-right: 5px;
+            padding-bottom: 5px;
+            padding-left: 20px;
+
+            margin-top: 0px;
+            margin-right: 10px;
+            margin-bottom: 0px;
+            margin-left: 25px;
+        }
+            div.posts__container section.posts_list p.post#date {
+                background-color: #900028;
+                width: 100px;
+                height: 28px;
+
+                color: #ffffff;
+                font-size: 12pt;
+                font-weight: normal;
+
+                padding-top: 5px;
+                padding-right: 10px;
+                padding-bottom: 5px;
+                padding-left: 15px;
+
+                margin-top: 10px;
+                margin-right: 0px;
+                margin-bottom: 0px;
+                margin-left: 0px;
+            }
+
+
+            /* Posts for about-us.html */
+                /* div.posts__container section.posts_list#About-Us_001 {
+                    position: relative;
+                }
+                    div.posts__container section.posts_list#About-Us_001 p.post#date {
+                        left: 0px;
+                        top: 390px;
+                    }
+                    div.posts__container section.posts_list#About-Us_001 p.post#message {
+                        height: 41px;
+                        left: 0px;
+                        top: 378px;
+                    }
+                div.posts__container section.posts_list#About-Us_002 {
+                    position: relative;
+                }
+                    div.posts__container section.posts_list#About-Us_002 p.post#date {
+                        left: 0px;
+                        top: 423px;
+                    }
+                    div.posts__container section.posts_list#About-Us_002 p.post#message {
+                        height: 26px;
+                        left: 0px;
+                        top: 451px;
+                    } */
+
+            /* Posts for Alex_G.html */
+                /* div.posts__container section.posts_list#AlexG_001 {
+                    position: relative;
+                }
+                    div.posts__container section.posts_list#AlexG_001 p.post#date {
+                        left: 0px;
+                        top: 370px;
+                    }
+                    div.posts__container section.posts_list#AlexG_001 p.post#message {
+                        height: 56px;
+                        left: 0px;
+                        top: 398px;
+                    }
+                div.posts__container section.posts_list#AlexG_002 {
+                    position: relative; 
+                }
+                    div.posts__container section.posts_list#AlexG_002 p.post#date {
+                        left: 0px;
+                        top: 460px;
+                    }
+                    div.posts__container section.posts_list#AlexG_002 p.post#message {
+                        height: 26px;
+                        left: 0px;
+                        top: 488px;
+                    } */
+                
+    /*
+!<----END OF Posts__container for all .html files ---->
+    */
+
+/*
+*<---- Containers specific to about-us.html ---->
+    */
+div.about-us_title__container {
+    width: 1000px;
+    min-width: 370px;
+}
+    h1.about-us_title {
+        width: fit-content;
+        padding: 10px;
+        margin: 10px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+div.About-Us {
+    background-color: #409639;
+    max-width: 1700px;
+    max-height: 100%;
+    border-radius: 0px;
+
+    overflow: auto;
+
+    font-family:'Times New Roman', Times, serif;
+    font-size: 16pt;
+    font-style: normal;
+    text-align: left;
+}
+    div.About-Us img.About-Us_team-pic {
+        background-color: #175640; /* #095540 */
+        min-width: 1000px;
+        max-width: 100%;
+        min-height: 300px;
+        border-radius: 0px;
+
+        float: none;
+        box-sizing: content-box;
+        display: flex;
+        justify-content: center;
+
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+        margin-left: auto;
+    }
+    div.About-Us article.bio {
+        max-width: 100%;
+        min-height: 200px;
+
+        float: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+        div.About-Us article.bio p {
+            background-color: #175640;
+            min-width: 300px;
+            border-radius: 20px;
+
+            float: left;
+
+            color: #ffffff;
+            font-size: 12pt;
+            font-style: normal;
+            font-weight: lighter;
+            line-height: 115%;
+            text-align: left;
+            text-indent: 0.15in;
+
+            padding-top: 10px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+
+            margin-top: 10px;
+            margin-right: auto;
+            margin-bottom: 10px;
+            margin-left: auto;
+        }
+            div.About-Us article.bio p#About_Paragraph_1 {
+                background-color: #175640;
+            }
+            div.About-Us article.bio p#About_Paragraph_2 {
+                background-color: #175640;
+            }
+            div.About-Us article.bio p#About_Paragraph_3 {
+                background-color: #175640;
+            }
+    div.About-Us div.About-Us-wedge#About-Us_wedge {
+        background-color: blue;
+        width: 100%;
+        height: 5px;
+
+        float: none;
+
+        margin-top: 0px;
+    }
+/*
+!<----END OF Containers specific to about-us.html ---->
+    */
+
+/*
+*<---- Containers specific to the various profile .html ---->
+    */
+main h1.profile-name {
+    min-width: 300px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    margin-top: 0px;
+    margin-right: 25px;
+    margin-bottom: 0px;
+    margin-left: 25px;
+}
+div.username#handler {
+    background-color: #409639;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+
+    overflow: visible;
+    box-sizing: content-box;
+
+    font-family:'Times New Roman', Times, serif;
+    font-size: 24pt;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    
+    padding: 10px;
+    margin: 0;
+    margin-bottom: 0px;
+}
+    div.username#handler p {
+        width: 250px;
+
+        line-height: 50px;
+        text-align: center;
+
+        padding: 0px;
+        margin: 0px;
+    }
+div.biography__container {
+    background-color: #9bcd97;
+    width: 500px;
+
+    float: right;
+    overflow: visible;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    padding: 25px;
+    margin: 0;
+}
+    div.biography__container#personal_bio_001 {
+        background-color: #409639;
+        width: fit-content;
+        height: 400px;
+        border-radius: 20px;
+
+        margin-left: 0px;
+    }
+        div.biography__container#personal_bio_001 article.bio {
+            background-color: #900028;
+            border-radius: 20px;
+
+            display: block;
+            
+            padding: 0;
+            margin: 0;
+            margin-bottom: auto;
+        }
+            div.biography__container#personal_bio_001 article.bio p {
+                background-color: #175640;
+                width: 400px;
+                border-radius: 20px;
+
+                float: left;
+                display: block;
+                overflow: auto;
+
+                color: #ffffff;
+                font-size: 14pt;
+                font-style: normal;
+                font-weight: lighter;
+                text-align: left;
+                text-indent: 0.25in;
+
+                padding-top: 5px;
+                padding-right: 15px;
+                padding-bottom: 5px;
+                padding-left: 15px;
+
+                margin-top: 0px;
+                margin-right: 5px;
+                margin-bottom: 0px;
+                margin-left: 5px;
+            }
+    div.biography__container#specific_bio_001 {
+        background-color: #409639;
+        width: fit-content;
+        min-height: 350px;
+        border-radius: 20px;
+
+        margin-right: 25px;
+        margin-left: auto;
+    }
+        div.biography__container#specific_bio_001 article.bio-specifics {
+            background-color: #175640;
+            width: 350px;
+            min-height: 300px;
+            border-radius: 20px;
+
+            float: right;
+
+            color: #ffffff;
+            font-size: 12pt;
+            font-style: normal;
+            font-weight: normal;
+            text-align: left;
+
+            padding-top: 5px;
+            padding-right: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+
+            margin-top: 0px;
+            margin-right: 5px;
+            margin-bottom: 0px;
+            margin-left: 5px;
+        }
+            div.biography__container#specific_bio_001 article.bio-specifics h3.bio-specifics-Header {
+                color: #ffffff;
+                text-align: center;
+            }
+            div.biography__container#specific_bio_001 article.bio-specifics h3.bio-specifics-Header hr {
+                background-color: #ffffff;
+                height: 1px;
+
+                border-width: 0px;
+            }
+            div.biography__container#specific_bio_001 article.bio-specifics ul {
+                background-color: #175640;
+                
+                font-weight: lighter;
+                line-height: 150%;
+            }
+img.profile_pic {
+    background-color: #175640; /* #095540 */
+    width: 300px;
+    min-height: 400px;
+    border-radius: 20px;
+    
+    float: left;
+
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    margin-top: 0px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    margin-left: 25px;
+}
+/*
+!<---- END OF Containers specific to the various profile .html (Ex.: Alex_G.html) ---->
+    */
+
+/*
+*<---- Containers specific to specific profiles ---->
+    */
+/*
+    The blue background-color for the Profile-Pic_wedge is NOT FINAL. Refer to the top of this file for explanation.
+    */
+div.Profile-Pic_wedge {
+    width: 10000px;
+    height: 5px;
+}
+/*
+!<---- END OF Containers specific to specific profiles ---->
+    */
+
+/*
+*<---- Styling for header.html ---->
+    */
+
+header object {
+    background-color: palegreen;
+    width: 1000px;
+    height: 248px;
+    border: 0px;
+
+    font-size: 100%;
+
+    vertical-align: baseline;
+    padding: 5px;
+    margin: 0px;
+}
+header.header {
+    background-color: #85ab82;
+    width: 100%;
+    min-height: 200px;
+    position: relative;
+
+    display: flex;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    padding: 0;
+    margin: 0;
+}
+div.inner_header {
+    background-color: #ffffff;
+    width: 100%;
+    height: 110px;
+
+    display: block;
+
+    margin: 0 auto;
+}
+.nav-bar a:hover, 
+.navigation#information-for__dropdown-title:hover ul.info-for__dropdown, 
+.navigation#remainder__nav-bar a:hover, 
+div.nav-bar-bottom__container ul.nav-bar-bottom__list a.nav-bar-bottom__list-link:hover,
+div.header-nav__log-in-out#log-in-out a:hover {
+    background-color: #ff6929;
+    color:#000000;
+}
+nav.nav-bar {
+    background-color: #409639;
+    width: 100%;
+    min-width: 350px;
+    height: auto;
+    max-height: 100px;
+
+    float: none;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin: 0px;
+}
+    div.nav-bar__container {
+        float: right;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        padding: 0px;
+        margin: 0px;
+    }
+        div.header-nav__log-in-out#log-in-out {
+            background-color: #900028;
+            width: 180px;
+            height: auto;
+            border-left-width: 2px;
+            border-left-style: solid;
+            border-left-color: #ffffff;
+
+            float: right;
+            overflow: hidden;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            font-size: 14pt;
+
+            padding: 0px;
+            margin: 0px;
+        }
+            div.header-nav__log-in-out#log-in-out a {
+                width: auto;
+                height: auto;
+
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                color: #ffffff;
+                font-size: 14pt;
+                font-weight: normal;
+                text-align: center;
+                text-decoration: none;
+
+                padding: 10px;
+                padding-right: 14px;
+                padding-left: 14px;
+                margin: 0px;
+                
+            }
+        div.navigation#information-for__dropdown-title {
+            width: 150px;
+            border-left-width: 2px;
+            border-left-style: solid;
+            border-left-color: #ffffff;
+
+            float: right;
+            overflow: hidden;
+            box-sizing: content-box;
+
+            padding: 0px;
+            margin: 0px;
+        }
+            ul.info-for__dropdown {
+                background-color: #900028;
+                width: auto;
+                height: auto;
+                border: none;
+                outline: none;
+
+                display: inline-block;
+                align-items: center;
+
+                padding: 0px;
+                margin: 0px;
+            }
+                ul.info-for__dropdown a {
+                    width: auto;
+                    height: max-content;
+
+                    display: inline-block;
+                    align-items: center;
+
+                    color: #ffffff;
+                    font-size: 14pt;
+                    text-decoration: none;
+                    
+                    padding: 10px;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                }
+                div.information-for__dropdown__content {
+                    background-color: #ffffff;
+                    min-width: 200px;
+                    position: absolute;
+                    z-index: 1;
+
+                    box-shadow: 0px 8px 16px 0px #00000060;
+                    float: right;
+                    display: none;
+
+                    padding: 0px;
+                }
+                    div.information-for__dropdown__content a {
+                        float: none;
+                        display: block;
+
+                        color: #000000;
+                        font-size: 14pt;
+                        text-decoration: none;
+
+                        padding-top: 5px;
+                        padding-right: 10px;
+                        padding-bottom: 5px;
+                        padding-left: 10px;
+                    }
+                    div.information-for__dropdown__content a:hover {
+                        background-color: #ddd;
+                    }
+                    .navigation#information-for__dropdown-title:hover .information-for__dropdown__content {
+                        display: block;
+                    }
+        div.navigation#remainder__nav-bar {
+            width: 332px;
+            border-left-width: 2px;
+            border-left-style: solid;
+            border-left-color: #ffffff;
+
+            float: right;
+            display: inline-flex;
+            overflow: hidden;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            padding: 0px;
+            margin: 0px;
+        }
+            div.navigation#remainder__nav-bar li {
+                list-style: none;
+                margin: 0px;
+            }
+                div.navigation#remainder__nav-bar a {
+                    background-color: #409639;
+                    height: min-content;
+
+                    list-style: none;
+                    float: left;
+                    display: block;
+
+                    color: #000000;
+                    font-size: 14pt;
+                    text-align: left;
+                    text-decoration: none;
+
+                    padding-top: 10px;
+                    padding-right: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 10px;
+
+                    margin-top: 0px;
+                    margin-right: 1px;
+                    margin-bottom: 0px;
+                    margin-left: 1px;
+                }
+nav.nav-bar-bottom {
+    background-color: #ffffff;
+    width: 100%;
+    height: auto;
+    border-bottom-width: 6px;
+    border-bottom-style: solid;
+    border-bottom-color: #ffffff;
+
+    float: left;
+    display: block;
+
+    padding-top: 0px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+}
+    div.nav-bar-bottom__container {
+        background-color: #ffffff;
+        width: 100%;
+        height: auto;
+
+        float: right;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        padding: 0px;
+        margin: 0px;
+    }
+        div.nav-bar-bottom__container h1.nav-bar-bottom__logo {
+            width: max-content;
+            height: auto;
+            border-radius: 0px;
+
+            float: left;
+
+            padding-top: 15px;
+            padding-right: 0px;
+            padding-bottom: 15px;
+            padding-left: 0px;
+
+            margin: 0px;
+        }
+            img#nav-bar__logo {
+                background-color: #ffffff;
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+                max-height: 100px;
+                border-radius: 0px;
+
+                float: left;
+
+                text-align: left;
+
+                padding: 0px;
+                margin: 0px;
+            }
+        div.nav-bar-bottom__container ul.nav-bar-bottom__list {
+            background-color: #ffffff;
+
+            list-style: none;
+            float: right;
+            display: inline-flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+
+            padding: 0px;
+            margin: 0px;
+            margin-left: auto;
+        }
+            div.nav-bar-bottom__container ul.nav-bar-bottom__list li {
+                justify-content: flex-end;
+                display: inline-flex;
+                
+                padding: 0px;
+                margin: 0px;
+            }
+                div.nav-bar-bottom__container ul.nav-bar-bottom__list a.nav-bar-bottom__list-link {
+                    float: right;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    color: #000000;
+                    font-size: 14pt;
+                    text-decoration: none;
+
+                    padding: 5px;
+                    margin: 0px;
+                }
+/*
+!<---- END OF Styling for header.html ---->
+    */
+
+    /*
+*<---- Styling for footer.html ---->
+    */
+
+
+
+footer {
+    background-color: #ffffff;
+    height: 300px;
+
+    margin: 0px;
+    margin-top: 2rem;
+}
+    div.footer__container {
+        background-color: #409639;
+        min-width: 100%;
+        min-height: 200px;
+
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        padding: 0px;
+        padding: 2rem 2rem;
+
+        margin: 0px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+        div.footer__container div.footer__container__row {
+            min-width: 200px;
+            min-height: 200px;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+            div.footer__container div.footer__left_column {
+                width: 100%;
+                min-width: 200px;
+                max-width: 66.666667%;
+                min-height: 150px;
+                position: relative;
+
+                display: flex;
+                flex: 0 0 66.666667%;
+                flex-direction: column;
+                justify-content: space-between;
+
+                padding: 0px;
+                padding-right: 15px;
+                padding-left: 15px;
+
+                margin: 0px;
+            }
+                div.footer__container div.The_Auditors_Logo__container {
+                    min-width: 20px;
+                    min-height: 20px;
+
+                    float: left;
+
+                    padding: 0px;
+                    margin: 0px;
+                }
+                    div.The_Auditors_Logo__container a.footer__logo#footer__logo {
+                        background-color: transparent;
+                        max-width: 300px;
+                        height: auto;
+
+                        text-decoration: none;
+
+                        margin-top: 0.5rem;
+                        margin-bottom: 1rem;
+                    }
+                        a.footer__logo#footer__logo img {
+                            width: 100%;
+                            min-width: 20px;
+                            max-width: 300px;
+                            height: auto;
+                            border-radius: 0px;
+                            border-style: none;
+
+                            vertical-align: middle;
+
+                            padding: 0px;
+                            margin: 0px;
+                        }
+            div.footer__container div.footer__right_column {
+                width: 100%;
+                min-width: 250px;
+                min-height: 50px;
+
+                flex: 0 0 33.333334%;
+
+                padding: 0px;
+                padding-right: 15px;
+                padding-left: 15px;
+
+                margin: 0px;
+            }
+                div.footer__right_column div.footer_links__widget__container {
+                    min-width: 40px;
+                    min-height: 40px;
+
+                    display: flex;
+
+                    padding: 0px;
+                    margin: 0px;
+                }
+                    div.footer_links__widget__container ul.widget_column#footer_links {
+                        min-width: 200px;
+
+                        list-style: none;
+
+                        padding: 0px;
+
+                        margin-top: 0px;
+                        margin-right: 5rem;
+                        margin-bottom: 1rem;
+                        margin-left: auto;
+                    }
+                        div.footer_links__widget__container li.widget_title#footer_links {
+                            border-bottom-width: 2px;
+                            border-bottom-style: solid;
+                            border-bottom-color: #ffffff;
+
+                            padding: 0px;
+                            padding-top: 0.25rem;
+                            padding-bottom: 0.25rem;
+
+                            margin: 0px;
+                            margin-bottom: 1rem;
+                        }
+                            li.widget_title#footer_links span.widget_title#footer_links {
+                                display: block;
+
+                                font-weight: 700;
+                                letter-spacing: -0.025rem;
+
+                                padding: 0px;
+                                margin: 0px;
+                            }
+                        div.footer_links__widget__container ul.widget_list#footer_links {
+                            list-style: none;
+
+                            padding: 5px;
+                            padding-left: 0px;
+                            margin: 5px;
+                            margin-left: 0px;
+                        }
+                            div.footer_links__widget__container li.widget_item#footer_links {
+                                text-decoration: none;
+                                padding: 5px;
+                                padding-left: 0px;
+                            }
+                                li.widget_item#footer_links a.widget_link#about_us {
+                                    color: #000000;
+                                    text-decoration: none;
+                                    padding: 0px;
+                                    margin: 0px;
+                                }
+                                li.widget_item#footer_links a.widget_link#repo {
+                                    color: #000000;
+                                    text-decoration: none;
+                                    padding: 0px;
+                                    margin: 0px;
+                                }
+
+
+
+
+                    div.footer__container div.handbook__container {
+                        background-color: silver;
+                        min-width: 20px;
+                        min-height: 20px;
+
+                        float: right;
+                        box-sizing: border-box;
+
+                        padding: 5px;
+                        margin: 0px;
+                        margin-left: auto;
+                    }
+
+        /* ---- Desktop Social Media ---- */
+                div.footer__container div.footer__left_column div.footer__social--desktop {
+                    padding: 0px;
+                    margin: 5px;
+                }
+                    div.footer__social--desktop ul.footer__social__list {
+                        max-height: 100px;
+
+                        list-style: none;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+
+                        text-align: left;
+
+                        padding: 0px;
+                        margin: 0px;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                    }
+                        div.footer__social--desktop ul.footer__social__list li.footer__social__item {
+                            padding: 0px;
+                            margin: 0px;
+                            margin-right: 0.75rem;
+                        }
+                            li.footer__social__item a.footer__social__link {
+                                background-color: transparent;
+                                text-decoration: none;
+                                padding: 0.5rem 0;
+                                margin: 0px;
+                            }
+                                a.footer__social__link img {
+                                    width: 2rem;
+                                    height: 26px;
+                                    border-radius: 0px;
+                                    border-style: none;
+                                    vertical-align: middle;
+
+                                    padding: 0px;
+                                    margin: 0px;
+                                }
+
+        /* ---- Mobile Social Media ---- */
+                div.footer__container div.footer__left_column div.footer__social--mobile {
+                    padding: 0px;
+                    margin: 0px;
+                }
+    /*
+!<---- END OF Styling for footer.html ---->
+    */
+
+/*
+*<---- Miscellaneous containers ---->
+    */
+
+
+/*
+!<---- END OF Miscellaneous containers ---->
+    */
