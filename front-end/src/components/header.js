@@ -16,9 +16,6 @@ class Header extends HTMLElement {
                                 <ul class="info-for__dropdown"><a href="#">Information For</a>
                                     <div class="information-for__dropdown__content">
                                         <a href="/front-end/src/index.html" aria-label="Link to the Homepage">Home</a>
-                                        <a href="" aria-label="Link for current team roster">Current Members</a>
-                                        <a href="" aria-label="Coaches">Coaches and Volunteers</a>
-                                        <a href="" aria-label="Notable alumni of the team">Alumni</a>
                                     </div>
                                 </ul>
                             </div>
@@ -35,16 +32,6 @@ class Header extends HTMLElement {
                                 <li>
                                     <a href="/front-end/src/about-us.html" class="nav-bar-bottom__list-link" aria-label="Link to our About Us page">
                                         About
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="nav-bar-bottom__list-link">
-                                        Mission
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="nav-bar-bottom__list-link">
-                                        Resources
                                     </a>
                                 </li>
                             </ul>
