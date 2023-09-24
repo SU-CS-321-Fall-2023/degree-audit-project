@@ -36,6 +36,7 @@ body{
     margin: 0px;
 }
 main {
+    background-color: lightyellow;
     max-width: 1700px;
     width: auto;
     overflow-x: visible;
@@ -1066,7 +1067,7 @@ footer {
 
 @media (min-width: 300px)
 {
-    .skills-table-xxs, .skills-table
+    .courses-table-xxs, .courses-table
     {
         width: 100%;
         max-width: 280px;
@@ -1079,7 +1080,7 @@ footer {
 
         margin: 0 0;
     }
-    .special-skills-table-xxs, .special-skills-table
+    .special-courses-table-xxs, .special-courses-table
     {
         width: 100%;
         max-width: 280px;
@@ -1107,7 +1108,6 @@ footer {
     }
     .table-key-xxs, .table-key#table-key
     {
-        /* width: 300px; */
         min-width: fit-content;
         height: fit-content;
         overflow-x: auto;
@@ -1117,6 +1117,11 @@ footer {
         display: block;
 
         margin: 0 0 1rem;
+    }
+    .student-heading-wrapper-xxs, .student-heading-wrapper#student-heading-wrapper,
+    .student-heading-xxs, .student-heading#student-heading
+    {
+        min-width: fit-content;
     }
     .nav-tabs-content-xxs, .nav-tabs-content
     {
@@ -1129,8 +1134,8 @@ footer {
 }
 @media (min-width: 400px)
 {
-    .skills-table-xs, .skills-table-xxs, 
-    .skills-table
+    .courses-table-xs, .courses-table-xxs, 
+    .courses-table
     {
         width: 100%;
         max-width: 380px;
@@ -1143,8 +1148,8 @@ footer {
 
         margin: 0 0;
     }
-    .special-skills-table-xs, .special-skills-table-xxs, 
-    .special-skills-table
+    .special-courses-table-xs, .special-courses-table-xxs, 
+    .special-courses-table
     {
         width: 100%;
         max-width: 380px;
@@ -1171,6 +1176,13 @@ footer {
         
         margin: 0 0;
     }
+    .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
+    .student-heading-wrapper#student-heading-wrapper,
+    .student-heading-xs, .student-heading-xxs, 
+    .student-heading#student-heading
+    {
+        min-width: fit-content;
+    }
     .nav-tabs-content-xs, .nav-tabs-content-xxs, 
     .nav-tabs-content
     {
@@ -1183,8 +1195,8 @@ footer {
 }
 @media (min-width: 576px)
 {
-    .skills-table-sm, .skills-table-xs, .skills-table-xxs, 
-    .skills-table
+    .courses-table-sm, .courses-table-xs, .courses-table-xxs, 
+    .courses-table
     {
         width: 100%;
         max-width: 540px;
@@ -1197,8 +1209,8 @@ footer {
 
         margin: 0 0;
     }
-    .skills-table-sm, .special-skills-table-xs, .special-skills-table-xxs, 
-    .special-skills-table
+    .courses-table-sm, .special-courses-table-xs, .special-courses-table-xxs, 
+    .special-courses-table
     {
         width: 100%;
         max-width: 540px;
@@ -1225,6 +1237,13 @@ footer {
         
         margin: 0 0;
     }
+    .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
+    .student-heading-wrapper#student-heading-wrapper,
+    .student-heading-sm, .student-heading-xs, .student-heading-xxs, 
+    .student-heading#student-heading
+    {
+        min-width: fit-content;
+    }
     .nav-tabs-content-sm, .nav-tabs-content-xs, .nav-tabs-content-xxs, 
     .nav-tabs-content
     {
@@ -1239,9 +1258,9 @@ footer {
 }
 @media (min-width: 768px)
 {
-    .skills-table-md, 
-    .skills-table-sm, .skills-table-xs, .skills-table-xxs, 
-    .skills-table
+    .courses-table-md, 
+    .courses-table-sm, .courses-table-xs, .courses-table-xxs, 
+    .courses-table
     {
         width: 100%;
         max-width: fit-content;
@@ -1254,9 +1273,9 @@ footer {
 
         margin: 0 0;
     }
-    .special-skills-table-md, 
-    .skills-table-sm, .special-skills-table-xs, .special-skills-table-xxs, 
-    .special-skills-table
+    .special-courses-table-md, 
+    .courses-table-sm, .special-courses-table-xs, .special-courses-table-xxs, 
+    .special-courses-table
     {
         width: 100%;
         max-width: fit-content;
@@ -1284,6 +1303,15 @@ footer {
         
         margin: 0 0;
     }
+    .student-heading-wrapper-md, 
+    .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
+    .student-heading-wrapper#student-heading-wrapper,
+    .student-heading-md, 
+    .student-heading-sm, .student-heading-xs, .student-heading-xxs, 
+    .student-heading#student-heading
+    {
+        min-width: fit-content;
+    }
     .new-container-md, 
     .new-container-sm, .new-container-xs, .new-container-xxs, .new-container
     {
@@ -1292,10 +1320,10 @@ footer {
 }
 @media (min-width: 992px)
 {
-    .skills-table-lg, 
-    .skills-table-md, 
-    .skills-table-sm, .skills-table-xs, .skills-table-xxs, 
-    .skills-table
+    .courses-table-lg, 
+    .courses-table-md, 
+    .courses-table-sm, .courses-table-xs, .courses-table-xxs, 
+    .courses-table
     {
         width: 100%;
         max-width: fit-content;
@@ -1308,10 +1336,10 @@ footer {
 
         margin: 0 0;
     }
-    .special-skills-table-lg, 
-    .special-skills-table-md, 
-    .skills-table-sm, .special-skills-table-xs, .special-skills-table-xxs, 
-    .special-skills-table
+    .special-courses-table-lg, 
+    .special-courses-table-md, 
+    .courses-table-sm, .special-courses-table-xs, .special-courses-table-xxs, 
+    .special-courses-table
     {
         width: 100%;
         max-width: fit-content;
@@ -1340,6 +1368,17 @@ footer {
         
         margin: 0 0;
     }
+    .student-heading-wrapper-lg, 
+    .student-heading-wrapper-md, 
+    .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
+    .student-heading-wrapper#student-heading-wrapper,
+    .student-heading-lg, 
+    .student-heading-md, 
+    .student-heading-sm, .student-heading-xs, .student-heading-xxs, 
+    .student-heading#student-heading
+    {
+        min-width: fit-content;
+    }
     .new-container-lg, .new-container-md, 
     .new-container-sm, .new-container-xs, .new-container-xxs, .new-container
     {
@@ -1348,10 +1387,10 @@ footer {
 }
 @media (min-width: 1200px)
 {
-    .skills-table-xl, .skills-table-lg, 
-    .skills-table-md, 
-    .skills-table-sm, .skills-table-xs, .skills-table-xxs, 
-    .skills-table
+    .courses-table-xl, .courses-table-lg, 
+    .courses-table-md, 
+    .courses-table-sm, .courses-table-xs, .courses-table-xxs, 
+    .courses-table
     {
         width: 100%;
         max-width: fit-content;
@@ -1364,10 +1403,10 @@ footer {
 
         margin: 0 0;
     }
-    .special-skills-table-xl, .special-skills-table-lg, 
-    .special-skills-table-md, 
-    .skills-table-sm, .special-skills-table-xs, .special-skills-table-xxs, 
-    .special-skills-table
+    .special-courses-table-xl, .special-courses-table-lg, 
+    .special-courses-table-md, 
+    .courses-table-sm, .special-courses-table-xs, .special-courses-table-xxs, 
+    .special-courses-table
     {
         width: 100%;
         max-width: fit-content;
@@ -1396,6 +1435,17 @@ footer {
         
         margin: 0 0;
     }
+    .student-heading-wrapper-xl, .student-heading-wrapper-lg, 
+    .student-heading-wrapper-md, 
+    .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
+    .student-heading-wrapper#student-heading-wrapper,
+    .student-heading-xl, .student-heading-lg, 
+    .student-heading-md, 
+    .student-heading-sm, .student-heading-xs, .student-heading-xxs, 
+    .student-heading#student-heading
+    {
+        min-width: fit-content;
+    }
     .new-container-xl, .new-container-lg, .new-container-md, 
     .new-container-sm, .new-container-xs, .new-container-xxs, .new-container
     {
@@ -1404,10 +1454,10 @@ footer {
 }
 @media (min-width: 1400px)
 {
-    .skills-table-xxl, .skills-table-xl, .skills-table-lg, 
-    .skills-table-md, 
-    .skills-table-sm, .skills-table-xs, .skills-table-xxs, 
-    .skills-table
+    .courses-table-xxl, .courses-table-xl, .courses-table-lg, 
+    .courses-table-md, 
+    .courses-table-sm, .courses-table-xs, .courses-table-xxs, 
+    .courses-table
     {
         width: 100%;
         max-width: fit-content;
@@ -1420,10 +1470,10 @@ footer {
 
         margin: 0 0;
     }
-    .special-skills-table-xxl, .special-skills-table-xl, .special-skills-table-lg, 
-    .special-skills-table-md, 
-    .skills-table-sm, .special-skills-table-xs, .special-skills-table-xxs, 
-    .special-skills-table
+    .special-courses-table-xxl, .special-courses-table-xl, .special-courses-table-lg, 
+    .special-courses-table-md, 
+    .courses-table-sm, .special-courses-table-xs, .special-courses-table-xxs, 
+    .special-courses-table
     {
         width: 100%;
         max-width: fit-content;
@@ -1452,6 +1502,17 @@ footer {
 
         margin: 0 0;
     }
+    .student-heading-wrapper-xxl, .student-heading-wrapper-xl, .student-heading-wrapper-lg, 
+    .student-heading-wrapper-md, 
+    .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
+    .student-heading-wrapper#student-heading-wrapper,
+    .student-heading-xxl, .student-heading-xl, .student-heading-lg, 
+    .student-heading-md, 
+    .student-heading-sm, .student-heading-xs, .student-heading-xxs, 
+    .student-heading#student-heading
+    {
+        max-width: max-content;
+    }
     .new-container-xxl, .new-container-xl, .new-container-lg, .new-container-md, 
     .new-container-sm, .new-container-xs, .new-container-xxs, .new-container
     {
@@ -1459,12 +1520,63 @@ footer {
     }
 }
 
+/* .myWrapper#myWrapper
+{
+    padding: 0 0px;
+    margin: 0 0;
+} */
 p.sched-des#sched-des
 {
     width: fit-content;
     max-width: 500px;
     text-wrap: wrap;
     margin: 0 0 1rem 0;
+}
+#course-semester
+{
+    text-align: center;
+}
+.student-heading-wrapper#student-heading-wrapper
+{
+    background-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-top-width: 5px;
+    border-top-color: #409639;
+    
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.175);
+    padding: 0 0;
+    margin: 0 0 0 0;
+}
+.student-heading#student-heading
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+}
+/* .student-heading #student-name#student-heading
+{
+    display: flex;
+    flex-wrap: wrap;
+} */
+.student-heading div
+{
+    margin: 0.25rem 0;
+}
+.student-heading #class-level#student-heading
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.student-heading #major#student-heading
+{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .tab-content-text
@@ -1491,9 +1603,9 @@ p.sched-des#sched-des
 {   
     white-space: nowrap;
 }
-.skills-table-head
+.courses-table-head
 {
-    text-align: center;
+    text-align: left;
 }
 .skill-table-text-left
 {
