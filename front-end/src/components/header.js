@@ -22,23 +22,6 @@ class Header extends HTMLElement {
                                     </div>
                                 </ul>
                             </div>
-                            <div class="navigation" id="remainder__nav-bar">
-                                <li>
-                                    <a href="" aria-label="Practice location">Location</a>
-                                </li>
-                                <li>
-                                    <a href="" aria-label="How to get involved">Apply</a>
-                                </li>
-                                <li>
-                                    <a href="" aria-label="">Visit</a>
-                                </li>
-                                <li>
-                                    <a href="" aria-label="Link to donate">Give</a>
-                                </li>
-                                <li>
-                                    <a href="" aria-label="See us in the news">News</a>
-                                </li>
-                            </div>
                         </div>
                     </nav>
                     <nav class="nav-bar-bottom">
