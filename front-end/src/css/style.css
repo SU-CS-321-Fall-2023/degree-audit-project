@@ -36,7 +36,7 @@ body{
     margin: 0px;
 }
 main {
-    background-color: lightyellow;
+    /* background-color: lightyellow; */
     max-width: 1700px;
     width: auto;
     overflow-x: visible;
@@ -809,6 +809,8 @@ footer {
 
                             vertical-align: middle;
 
+                            color: white;
+
                             padding: 0px;
                             margin: 0px;
                         }
@@ -1099,8 +1101,6 @@ footer {
         max-width: fit-content;
         height: 600px;
         overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
 
         display: block;
 
@@ -1111,17 +1111,17 @@ footer {
         min-width: fit-content;
         height: fit-content;
         overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
 
         display: block;
+
+        color: black;
 
         margin: 0 0 1rem;
     }
     .student-heading-wrapper-xxs, .student-heading-wrapper#student-heading-wrapper,
     .student-heading-xxs, .student-heading#student-heading
     {
-        min-width: fit-content;
+        max-width: 300px;
     }
     .nav-tabs-content-xxs, .nav-tabs-content
     {
@@ -1169,11 +1169,9 @@ footer {
         max-width: fit-content;
         height: 600px;
         overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
 
         display: block;
-        
+
         margin: 0 0;
     }
     .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
@@ -1181,7 +1179,7 @@ footer {
     .student-heading-xs, .student-heading-xxs, 
     .student-heading#student-heading
     {
-        min-width: fit-content;
+        max-width: 380px;
     }
     .nav-tabs-content-xs, .nav-tabs-content-xxs, 
     .nav-tabs-content
@@ -1230,11 +1228,9 @@ footer {
         max-width: fit-content;
         height: 600px;
         overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
 
         display: block;
-        
+
         margin: 0 0;
     }
     .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
@@ -1242,7 +1238,7 @@ footer {
     .student-heading-sm, .student-heading-xs, .student-heading-xxs, 
     .student-heading#student-heading
     {
-        min-width: fit-content;
+        max-width: 400px;
     }
     .nav-tabs-content-sm, .nav-tabs-content-xs, .nav-tabs-content-xxs, 
     .nav-tabs-content
@@ -1296,11 +1292,9 @@ footer {
         max-width: fit-content;
         height: 600px;
         overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
 
         display: block;
-        
+
         margin: 0 0;
     }
     .student-heading-wrapper-md, 
@@ -1310,7 +1304,7 @@ footer {
     .student-heading-sm, .student-heading-xs, .student-heading-xxs, 
     .student-heading#student-heading
     {
-        min-width: fit-content;
+        max-width: 600px;
     }
     .new-container-md, 
     .new-container-sm, .new-container-xs, .new-container-xxs, .new-container
@@ -1361,11 +1355,9 @@ footer {
         max-width: fit-content;
         height: 600px;
         overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
 
         display: block;
-        
+
         margin: 0 0;
     }
     .student-heading-wrapper-lg, 
@@ -1377,7 +1369,7 @@ footer {
     .student-heading-sm, .student-heading-xs, .student-heading-xxs, 
     .student-heading#student-heading
     {
-        min-width: fit-content;
+        max-width: 800px;
     }
     .new-container-lg, .new-container-md, 
     .new-container-sm, .new-container-xs, .new-container-xxs, .new-container
@@ -1428,11 +1420,9 @@ footer {
         max-width: fit-content;
         height: 600px;
         overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
 
         display: block;
-        
+
         margin: 0 0;
     }
     .student-heading-wrapper-xl, .student-heading-wrapper-lg, 
@@ -1444,7 +1434,7 @@ footer {
     .student-heading-sm, .student-heading-xs, .student-heading-xxs, 
     .student-heading#student-heading
     {
-        min-width: fit-content;
+        max-width: 800px;
     }
     .new-container-xl, .new-container-lg, .new-container-md, 
     .new-container-sm, .new-container-xs, .new-container-xxs, .new-container
@@ -1495,8 +1485,6 @@ footer {
         max-width: fit-content;
         height: 600px;
         overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
 
         display: block;
 
@@ -1511,7 +1499,7 @@ footer {
     .student-heading-sm, .student-heading-xs, .student-heading-xxs, 
     .student-heading#student-heading
     {
-        max-width: max-content;
+        max-width: 1200px;
     }
     .new-container-xxl, .new-container-xl, .new-container-lg, .new-container-md, 
     .new-container-sm, .new-container-xs, .new-container-xxs, .new-container
@@ -1525,6 +1513,11 @@ footer {
     padding: 0 0px;
     margin: 0 0;
 } */
+.page-title
+{
+    color: black;
+    font-weight: bold;
+}
 p.sched-des#sched-des
 {
     width: fit-content;
@@ -1539,20 +1532,20 @@ p.sched-des#sched-des
 .student-heading-wrapper#student-heading-wrapper
 {
     background-color: white;
-    border-width: 2px;
+    border-width: 3px;
     border-style: solid;
-    border-top-width: 5px;
+    border-top-width: 10px;
     border-top-color: #409639;
     
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.175);
     padding: 0 0;
-    margin: 0 0 0 0;
+    margin: 0 auto 0 auto;
 }
 .student-heading#student-heading
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     margin-top: 0.5rem;
     margin-right: 1rem;
@@ -1566,7 +1559,7 @@ p.sched-des#sched-des
 } */
 .student-heading div
 {
-    margin: 0.25rem 0;
+    margin: 0.25rem 0.25rem;
 }
 .student-heading #class-level#student-heading
 {
@@ -1579,6 +1572,26 @@ p.sched-des#sched-des
     flex-wrap: wrap;
 }
 
+.table-new#table-main
+{
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+}
+.table-key#table-key
+{
+    min-width: fit-content;
+    height: fit-content;
+    overflow-x: auto;
+
+    display: block;
+
+    color: white;
+    /* font-weight: bold; */
+
+    margin: 0 0 1rem;
+}
+
 .tab-content-text
 {
     /* width: auto; */
@@ -1588,6 +1601,25 @@ p.sched-des#sched-des
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-start;
+}
+tr.odd-row th, tr.odd-row td
+{
+    background-color: lightslategray;
+    color: black;
+}
+tr.even-row th, tr.even-row td
+{
+    background-color: lightcoral;
+}
+tr.degree-row th, tr.degree-row td
+{
+    background-color: snow;
+    color: black;
+}
+tr.degree-row#not-fulfilled th, 
+tr.degree-row#not-fulfilled td
+{
+    background-color: rgb(255, 152, 152);
 }
 .table-text
 {
