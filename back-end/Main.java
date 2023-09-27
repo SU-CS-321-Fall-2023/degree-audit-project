@@ -127,17 +127,32 @@ public class Main {
                 String[] values = line.split(",");
 
                 // Add the check here
-                if (values.length < 5) {
+                String majorName, courseId, courseName;
+                int creditHours, semester;
+
+                if (values.length == 3) {
+                    majorName = values[0].trim();
+                    courseId = "N/A";  // or some default value
+                    courseName = values[1].trim();
+                    creditHours = 0;  // or some default value
+                    semester = 0;  // or some default value
+                } else if (values.length == 5) {
+                    majorName = values[0].trim();
+                    courseId = values[1].trim();
+                    courseName = values[2].trim();
+                    creditHours = Integer.parseInt(values[3].trim());
+                    semester = Integer.parseInt(values[4].trim());
+                } else {
                     System.err.println("Skipping malformed line: " + line);
-                    continue;  // skip the rest of the current loop iteration
+                    continue;
                 }
 
 
-                String majorName = values[0].trim();
-                String courseId = values[1].trim();
-                String courseName = values[2].trim();
-                int creditHours = Integer.parseInt(values[3].trim());
-                int semester = Integer.parseInt(values[4].trim());
+                //String majorName = values[0].trim();
+                //String courseId = values[1].trim();
+                //String courseName = values[2].trim();
+                //int creditHours = Integer.parseInt(values[3].trim());
+                //int semester = Integer.parseInt(values[4].trim());
 
                 Major major;
                 if (!majorsMap.containsKey(majorName)){
