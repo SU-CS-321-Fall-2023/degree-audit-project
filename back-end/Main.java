@@ -1,8 +1,13 @@
+import java.io.BufferedReader;
 import java.util.*;
-import com.opencsv.CSVReader;
-import com.opencsv.exceptions.CsvException;
+// com.opencsv.CSVReader;
+//import com.opencsv.exceptions.CsvException;
 import java.io.FileReader;
 import java.io.IOException;
+//import org.supercsv.io.ICsvListReader;
+//import org.supercsv.io.CsvListReader;
+//import org.supercsv.prefs.CsvPreference;
+
 
 class Course {
     private String courseId;
@@ -101,13 +106,23 @@ public class Main {
     public static void main(String[] args) {
         String csvFilePath = "C:\\Users\\sydne\\OneDrive - Stetson University, Inc\\Desktop\\Academic Programs - Stetson University.csv";
 
-        try (CSVReader reader = new CSVReader(new FileReader(csvFilePath))){
-            String[] nextLine;
-            while ((nextLine = reader.readNext()) != null){
+        //try (CSVReader reader = new CSVReader(new FileReader(csvFilePath))){
+            //String[] nextLine;
+            //while ((nextLine = reader.readNext()) != null){
                 //process the data as needed
-                String majorName = nextLine[0];
+              //  String majorName = nextLine[0];
                 //other fields
-                System.out.println("Major: " + majorName);
+                //System.out.println("Major: " + majorName);
+        //try (ICsvListReader listReader = new CsvListReader(new FileReader("C:\Users\sydne\OneDrive - Stetson University, Inc\Desktop\Computer Science\Academic Programs - Stetson University.csv"), CsvPreference.STANDARD_PREFERENCE)){
+          //  List<String> line;
+            //while ((line = listReader.read()) != null){
+                //process the line here...
+        try (BufferedReader br = new BufferedReader(new FileReader ("C:/Users/sydne/OneDrive - Stetson University, Inc/Desktop/Computer Science/Academic Programs - Stetson University.csv"))){
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] values = line.split(",");
+                //Process the values here...
+
             }
         }
         catch (IOException e){
