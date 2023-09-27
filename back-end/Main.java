@@ -117,16 +117,64 @@ public class Main {
           //  List<String> line;
             //while ((line = listReader.read()) != null){
                 //process the line here...
+        Map<String, Major> majorsMap = new HashMap<>();
+
         try (BufferedReader br = new BufferedReader(new FileReader ("C:/Users/sydne/OneDrive - Stetson University, Inc/Desktop/Computer Science/Academic Programs - Stetson University.csv"))){
             String line;
+            br.readLine();
+
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
+
+                // Add the check here
+                if (values.length < 5) {
+                    System.err.println("Skipping malformed line: " + line);
+                    continue;  // skip the rest of the current loop iteration
+                }
+
+
+                String majorName = values[0].trim();
+                String courseId = values[1].trim();
+                String courseName = values[2].trim();
+                int creditHours = Integer.parseInt(values[3].trim());
+                int semester = Integer.parseInt(values[4].trim());
+
+                Major major;
+                if (!majorsMap.containsKey(majorName)){
+                    major = new Major(majorName, majorName);
+                    majorsMap.put(majorName, major);
+                }
+                else{
+                    major = majorsMap.get(majorName);
+                }
                 //Process the values here...
 
+                Course course = new Course(courseId, courseName, creditHours, semester);
+                List<Course> coreCourses = major.getCoreCourses(semester);
+                if (coreCourses == null) {
+                    coreCourses = new ArrayList<>();
+                    major.addCoreCourses(semester, coreCourses);
+                }
+                coreCourses.add(course);
             }
         }
         catch (IOException e){
             e.printStackTrace();
+        }
+
+
+// Code to display all majors and their courses
+        for (Major major : majorsMap.values()) {
+            System.out.println("Major: " + major.getMajorName());
+            for (int i = 1; i <= 8; i++) {  // assuming 8 semesters for simplicity
+                List<Course> courses = major.getCoreCourses(i);
+                if (courses != null) {
+                    System.out.println("  Semester " + i + ":");
+                    for (Course course : courses) {
+                        System.out.println("    - " + course.getCourseName());
+                    }
+                }
+            }
         }
 
         Course math101 = new Course("MATH101", "Introduction to Mathematics", 4, 1);
