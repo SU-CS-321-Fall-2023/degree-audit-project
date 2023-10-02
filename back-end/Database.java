@@ -3,6 +3,8 @@ import java.util.*;
 import static java.util.Collections.*;
 
 public class Database {
+
+    public boolean test = false;
     public static void main(String[] args) {
 
         Map<String, Map<String, Object>> majors = new HashMap<>();

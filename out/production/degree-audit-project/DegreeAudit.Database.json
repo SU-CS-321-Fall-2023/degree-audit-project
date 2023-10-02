@@ -1,0 +1,300 @@
+[{
+  "_id": "major_id",
+  "majorName": "Computer Science",
+  "requirements": [
+    {
+      "category": "Major Requirements",
+      "courses": [
+        "CSCI 141 - Introduction to Computer Science I",
+        "CSCI 142 - Introduction to Computer Science II",
+        "CSCI 201",
+        "CSCI 211",
+        "CSCI 221",
+        "CSCI 321",
+        "CSCI 301",
+        "CSCI 311",
+        "CSCI 498",
+        "CSCI 499"
+      ]
+    },
+    {
+      "category": "Collateral Requirements",
+      "courses": [
+        "MATH 142Q - Calculus II with Analytic Geometry",
+        "BIOL 141P-Introductory Biology: Biochemistry, Cell Biology and Molecular Genetics",
+        "BIOL 142P-Introductory Biology: Animal and Plant Physiology",
+        "PHYS 141P-University Physics I",
+        "PHYS 142P-University Physics II",
+        "CHEM 141P-General Chemistry I",
+        "CHEM 142P-General Chemistry II",
+        "ENSS 140P-Introduction to Environmental Science and Studies",
+        "ENSS 141P"
+      ]
+    },
+    {
+      "category": "General Electives",
+      "units": 8
+    },
+    [
+      " ENGL 100",
+      " ENGL 100 ",
+      "FSEM 100",
+      "JSEM",
+      " MUSC, MUSA or MUSE",
+      "Culture and Belief (any B course)",
+      "Historical Inquiry (any H course)",
+      "Individuals, Societies, and Social Systems (any S course)",
+      "Modern Languages (any L course)",
+      "Physical and Natural World (any P course)",
+      "Stetson Values (V)"
+    ]
+  ]
+},
+{
+  "_id": {
+    "$oid": "650d9e88735651f7af8300a0"
+  },
+  "majorName": "Accounting",
+  "requirements": [
+    {
+      "category": "Major Requirements",
+      "courses": [
+        "ACCT 202 - Fundamentals of Accounting II",
+        "ACCT 300 - Accounting Colloquium",
+        "ACCT 303 - Financial Accounting I",
+        "ACCT 304 - Financial Accounting II"
+      ]
+    },
+    {
+      "category": "Concentrations",
+      "Accounting": [
+        "ACCT 310 - Accounting Information Systems",
+        "ACCT 410 - Accounting Information Systems",
+        "ACCT 421 - Managerial Cost Accounting",
+        "ACCT 440 - Data Analytics for Accounting",
+        "Select one of the following",
+        "Select two of the following, one of which must be an ACCT course"
+      ],
+      "CPA": [
+        "ACCT 311 - Overview of Federal Taxation",
+        "ACCT 406 - Auditing I",
+        "ACCT 410 - Accounting Information Systems",
+        "ACCT 421 - Managerial Cost Accounting",
+        "ACCT 440 - Data Analytics for Accounting"
+      ],
+      "Data Analytics": [
+        "ACCT 410 - Accounting Information Systems",
+        "ACCT 440 - Data Analytics for Accounting",
+        "BSAN 300 - Programming for Analytics",
+        "BSAN 465 - Predictive Analytics",
+        "Select two of the following, one of which must be an ACCT course"
+      ],
+      "Financial Planning": [
+        "ACCT 310 - Accounting Information Systems",
+        "ACCT 421 - Managerial Cost Accounting",
+        "FINA 318 - Fundamentals of Financial Planning",
+        "Select two of the following"
+      ]
+    },
+    {
+      "category": "General Electives",
+      "units": 7
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "650d9f8f735651f7af8300a1"
+  },
+  "majorName": "Bachelor of Music with Emphasis in Business",
+  "requirements": [
+    {
+      "category": "General Education Requirements",
+      "courses": [
+        "FSEM 100 - First Year Seminar",
+        "Individuals, Societies, and Social Systems (any S course)",
+        "Language (102L level)",
+        "Historical Inquiry (any H course)",
+        "Personal and Social Responsibility (any V course)",
+        "Quantitative Reasoning (any Q course)",
+        "Non-music Elective (can be used for a 101-level language if required)"
+      ]
+    },
+    {
+      "category": "Theory",
+      "courses": [
+        "MUSC 171 - Diatonic Harmony",
+        "MUSC 172 - Chromatic Harmony",
+        "MUSC 271 - Form and Analysis"
+      ]
+    },
+    {
+      "category": "Aural Training",
+      "courses": [
+        "MUSC 173 - Aural Training I",
+        "MUSC 174 - Aural Training II",
+        "MUSC 273 - Aural Training III",
+        "MUSC 274 - Aural Training IV"
+      ]
+    },
+    {
+      "category": "Functional Keyboard",
+      "courses": [
+        "MUSC 175 - Functional Keyboard I",
+        "MUSC 176 - Functional Keyboard II",
+        "MUSC 275 - Functional Keyboard III",
+        "MUSC 276 - Functional Keyboard IV"
+      ]
+    },
+    {
+      "category": "Music History",
+      "courses": [
+        "MUSC 211H - History of European Music: 1700-1900"
+      ]
+    },
+    {
+      "category": "Lower-division lessons",
+      "courses": [
+        "MUSA 112 - Primary Lower-Division Lessons for Music Majors"
+      ]
+    },
+    {
+      "category": "Music Culture",
+      "courses": [
+        "MUSC 151 - Music Culture"
+      ]
+    },
+    {
+      "category": "Conducting",
+      "courses": [
+        "MUSC 277 - Conducting I"
+      ]
+    },
+    {
+      "category": "Technology for Musicians",
+      "courses": [
+        "MUSC 259 - Technology for Musicians"
+      ]
+    },
+    {
+      "category": "Career Skills",
+      "courses": [
+        "MUSC 300 - Career Skills for the Entrepreneurial Musician"
+      ]
+    },
+    {
+      "category": "Major Requirements",
+      "courses": [
+        "External emphasis courses",
+        "Upper-division lessons/Music Experience Bundle",
+        "Eight Ensembles",
+        "Upper-division Theory or Music History and Literature elective"
+      ]
+    },
+    {
+      "category": "General Elective",
+      "units": 2
+    },
+    {
+      "category": "Other Requirements",
+      "courses": [
+        "Sophomore Decision",
+        "Oral Communication Competency"
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "650d9ff2735651f7af8300a2"
+  },
+  "majorName": "Cybersecurity",
+  "requirements": [
+    {
+      "category": "General Education Requirements",
+      "courses": [
+        "The student must complete the General Education Requirements in the College of Arts & Sciences"
+      ]
+    },
+    {
+      "category": "Major Requirements",
+      "courses": [
+        "CSCI 141 - Introduction to Computer Science I",
+        "CSCI 142 - Introduction to Computer Science II",
+        "CSCI 221 - Software Development I",
+        "CSCI 301 - Operating Systems",
+        "CSCI 304 - Computer Networks",
+        "CINF 201 - Database Systems",
+        "CINF 301 - Web Application Development",
+        "CSEC 141 - Introduction to Cybersecurity",
+        "CSEC 302 - Secure Coding",
+        "CSEC 331 - Computer and Network Security",
+        "CSEC 498 - Senior Proposal",
+        "CSEC 499 - Senior Project",
+        "Two 300- or 400-level CSCI, CINF, CSEC units (excluding junior seminars)"
+      ]
+    },
+    {
+      "category": "Collateral Requirements",
+      "courses": [
+        "Select one unit from the following:",
+        "MATH 125Q - Introduction to Mathematical and Statistical Modeling",
+        "MATH 131Q - Calculus I with Review Part 2",
+        "MATH 141Q - Calculus I with Analytic Geometry"
+      ]
+    },
+    {
+      "category": "General Electives",
+      "units": 8
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "650da0e4735651f7af8300a3"
+  },
+  "majorName": "Chemistry",
+  "requirements": [
+    {
+      "category": "General Education Requirements",
+      "courses": [
+        "The student must complete the General Education Requirements of the College of Arts & Sciences."
+      ]
+    },
+    {
+      "category": "Major Requirements",
+      "courses": [
+        "CHEM 141P & CHEM 142P - General Chemistry I and General Chemistry II",
+        "CHEM 201 - Organic Chemistry I",
+        "CHEM 202 - Inorganic Chemistry",
+        "CHEM 203 - Physical Chemistry",
+        "CHEM 204 - Biochemistry I",
+        "CHEM 205 - Analytical Chemistry",
+        "CHEM 301 - Organic Chemistry II",
+        "CHEM 498 & CHEM 499 - Research Proposal and Senior Project",
+        "Select two units from the following in-depth courses:",
+        "CHEM 302 - Biological Inorganic Chemistry",
+        "CHEM 303 - Advanced Physical Chemistry",
+        "CHEM 304 - Biochemistry II",
+        "CHEM 305 - Instrumental Analysis: Forensic Chemistry",
+        "CHEM 306 - Spectra and Structure",
+        "CHEM 307 - Nucleic Acid Structure, Function, and Metabolism",
+        "CHEM 308 - Advanced Organic Chemistry",
+        "CHEM 309 - Advanced Environmental Chemistry"
+      ]
+    },
+    {
+      "category": "Collateral Requirements",
+      "courses": [
+        "MATH 141Q & MATH 142Q - Calculus I with Analytic Geometry and Calculus II with Analytic Geometry",
+        "Select one of the following sequences:",
+        "PHYS 121P & PHYS 122P - College Physics I and College Physics II",
+        "PHYS 141P & PHYS 142P - University Physics I and University Physics II"
+      ]
+    },
+    {
+      "category": "General Electives",
+      "units": 7
+    }
+  ]
+}]
