@@ -14,25 +14,6 @@ class Footer extends HTMLElement {
                                 <img src="" alt="The Auditors">
                             </a>
                         </div>
-                        <div class="footer__social--desktop">
-                            <ul class="footer__social__list">
-                                <li class="footer__social__item">
-                                    <a href="" class="footer__social__link" id="facebook">
-                                        <img src="/src/images/facebook.svg" alt="Link to our Facebook">
-                                    </a>
-                                </li>
-                                <li class="footer__social__item">
-                                    <a href="" class="footer__social__link" id="instagram">
-                                        <img src="/src/images/instagram.svg" alt="Link to our Instagram">
-                                    </a>
-                                </li>
-                                <li class="footer__social__item">
-                                    <a href="" class="footer__social__link" id="twitter">
-                                        <img src="/src/images/twitter.svg" alt="Link to our Twitter">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                     <div class="footer__right_column">
                         <div class="footer_links__widget__container">
@@ -45,7 +26,7 @@ class Footer extends HTMLElement {
                                         <a href="/front-end/src/about-us.html" class="widget_link" id="about_us" target="blank">About Us</a>
                                     </li>
                                     <li class="widget_item" id="footer_links">
-                                        <a href="" class="widget_link" id="repo" target="blank">GitHub Repo</a>
+                                        <a href="https://github.com/SU-CS-321-Fall-2023/degree-audit-project" class="widget_link" id="repo" target="blank">GitHub Repo</a>
                                     </li>
                                 </ul>
                             </ul>

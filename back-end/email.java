@@ -1,4 +1,4 @@
-package com.example.email;
+/* package com.example.email;
 
 
 import javax.mail.*;
@@ -58,3 +58,5 @@ public class mail {
     }
 
 }
+
+ */
