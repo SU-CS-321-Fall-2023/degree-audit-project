@@ -21,4 +21,3 @@ This project aims to expand upon the current functionality (or lack thereof) of 
          Course: Software Development II
            Code: CSCI 321, 5447
        Semester: Fall 2023
-
