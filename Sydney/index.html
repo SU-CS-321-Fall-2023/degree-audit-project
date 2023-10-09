@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Student ID and Upload CSV</title>
+</head>
+<body>
+	<h1>Enter Your Student ID and Major</h1>
+	<form action="/" method="post" enctype="multipart/form-data">
+		<label for="student_id">Student ID:</label>
+		<input type="text" id="student_id" name="student_id" required>
+
+		<!-- Input for major -->
+		<label for="major">Major:</label>
+		<input type="text" id="major" name="major">
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
+
+
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 8px 12px;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+</style>
+
+
+
+<table>
+    {% for row in data %}
+        <tr>
+            {% if loop.first %} <!-- Check if it's the first row -->
+                {% for cell in row %}
+                    <th>{{ cell }}</th> <!-- Use table header tag for header row -->
+                {% endfor %}
+            {% else %}
+                {% for cell in row %}
+                    <td>{{ cell }}</td>
+                {% endfor %}
+            {% endif %}
+        </tr>
+    {% endfor %}
+</table>
+
+
+
+
+

@@ -10,18 +10,43 @@
         <meta name="description" content="This is the beginning of the Auditors' creation.">
         <meta name="author" content="The Auditors">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrapCyborg.css') }}">
         <script src="{{ url_for('static', filename='header.js') }}" type="text/javascript" defer></script>
         <script src="{{ url_for('static', filename='footer.js') }}" type="text/javascript" defer></script>
     </head>
     <body>
         <header-component></header-component>
+        <h1>Enter Your Student ID and Major</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="student_id">Student ID:</label>
+            <input type="text" id="student_id" name="student_id" required>
+            <!-- Input for major -->
+            <label for="major">Major:</label>
+            <input type="text" id="major" name="major">
+            <input type="submit" value="Submit">
+        </form>
         <main>
             <div class="container text-start bg-primary text-black myWrapper" id="myWrapper">
                 <div class="row">
                     <div class="col col-auto tab-content-text my-2 me-auto">
                         <h1 class="page-title">Class Auditing</h1>
                         <h5 class="">Available for all Stetson students</h5>
+                        <table>
+                            {% for row in data %}
+                                <tr>
+                                    {% if loop.first %} <!-- Check if it's the first row -->
+                                        {% for cell in row %}
+                                            <th>{{ cell }}</th> <!-- Use table header tag for header row -->
+                                        {% endfor %}
+                                    {% else %}
+                                        {% for cell in row %}
+                                            <td>{{ cell }}</td>
+                                        {% endfor %}
+                                    {% endif %}
+                                </tr>
+                            {% endfor %}
+                        </table>
+            
                     </div>
                 </div>
                 <div class="row">
@@ -846,3 +871,23 @@
         <footer-component></footer-component>
     </body>
 </html>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 8px 12px;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+</style>
