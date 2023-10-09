@@ -1,0 +1,77 @@
+Course Title,Course Details,Hours,CRN
+Fall 2020 - DeLand
+American History I,"HIST 151H, HY1",4,6436
+American National Government,"POLI 101S, HY",4,4387
+"Honors First-Year Seminar ""Enduring Questions""","HONR 101, OL1",4,5707
+Introduction to Psychology,"PSYC 101S, OL2",4,5573
+Spring 2021 - DeLand
+American History II,"HIST 152H, OL",4,4920
+Honors Project,"HONR 102, OL2",2,7760
+Honors Project,"HONR 102, LO",0,7761
+Introduction to Computing,"CSCI 111, HY",4,7719
+"Stars, Galaxies and Cosmology","ASTR 112P, OL",4,6508
+"Stars, Galaxies and Cosmology - Lab 1","ASTR 112P, LO1",0,6509
+Survey of US Literature,"ENGL 258H, OL",4,8225
+Summer 2021 - DeLand
+Developmental Psychology,"PSYC 231, OL",4,3759
+Fall 2021 - DeLand
+African American History,"HIST 251H, 01",4,5818
+American Women's History,"HIST 362H, 01",4,5180
+Honors Workshop,"HONR 201, 02",2,5710
+Introduction to Computer Science I,"CSCI 141, 01",4,4377
+"Studies in Gender, Race, Class, and Sexuality in the US","GEND 100V, 02",4,7301
+Spring 2022 - DeLand
+American Cultural Traditions,"AMST 301B, 01",4,4698
+Honors Tutorials #5: Checkmate,"HONR 202, 05",2,6722
+Introduction to Computer Science II,"CSCI 142, 01",4,5041
+Introduction to Cybersecurity,"CSEC 141, 01",4,7853
+The 1950's and 1960's,"AMST 256B, 01",4,7418
+Fall 2022 - DeLand
+History of American Health Care,"HIST 356V, 01",4,7309
+Honors Junior Seminar,"HONR 301, JS1",4,8301
+Introduction to Computer Organization,"CSCI 201, 01",4,4378
+Software Development I,"CSCI 221, 01",4,4379
+Spring 2023 - DeLand
+Computer Networks,"CSCI 304, 01",4,7758
+Elementary Spanish I,"SPAN 101, 02",4,5121
+Global Perspectives on Women and Gender,"GEND 200V, 01",4,7401
+Operating Systems,"CSCI 301, 02",4,8514
+Web Application Development,"CINF 301, 01",4,5417
+Summer 2023 - DeLand
+Honors Internship,"HONR 297, 01",2,3676
+Introduction to Mathematical and Statistical Modeling,"MATH 125Q, OL",4,2985
+Programming Languages,"CSCI 380, HY",4,3911
+Fall 2023 - DeLand
+Best Books Club,"HONR 401, 01",0,5711
+Computer and Network Security,"CSEC 331, 01",4,8011
+Elementary Spanish II,"SPAN 102L, 02",4,4343
+Secure Coding,"CSEC 302, 01",4,8122
+Senior Proposal,"CSEC 498, 01",4,8243
+Software Development II,"CSCI 321, 01",4,5447
+Requirement,Course Details,Course Title,Grade,Hours,CRN
+"100 or 200 Level American 
+ Studies Prefix or Attribution","HIST 151H, HY1",The 1950's and 1960's,A-,4,6436
+1 of 2 Orientation American Studies,"HIST 251H, 01",African American History,A+,4,5818
+2 of 2 Orientation American Studies,"POLI 101S, HY",American National Government,A-,4,4387
+American Cultural Traditions,"AMST 301B, 01",American Cultural Traditions,A-,4,4698
+Senior Project,AMST 499,Senior Project,--,4,####
+"1 of 2 Courses with American 
+ Studies Prefix or Attribution","ENGL 258H, OL",Survey of US Literature,A-,4,8225
+"2 of 2 Courses with American 
+ Studies Prefix or Attribution","HIST 152H, OL",American History II,A-,4,4920
+"Focus Area: 1 of 4 courses 
+ related to Common Theme","GEND 100V, 02","Studies in Gender, Race, Class,
+ and Sexuality in the US",A,4,7301
+"Focus Area: 2 of 4 courses 
+ related to Common Theme","GEND 200V, 01","Global Perspectives on 
+ Women and Gender",A,4,7401
+"Focus Area: 3 of 4 courses 
+ related to Common Theme","HIST 356V, 01",History of American Health Care,A-,4,7309
+"Focus Area: 4 of 4 courses 
+ related to Common Theme","HIST 362H, 01",American Women's History,A,4,5180
+"One 300 Level course from courses 
+ with AMST-prefix or Attribution
+ or from Focus Area","HIST 356V, 01",History of American Health Care,A-,4,7309
+"One 300 Level course from courses 
+ with AMST-prefix or Attribution
+ or from Focus Area","HIST 362H, 01",American Women's History,A,4,5180
