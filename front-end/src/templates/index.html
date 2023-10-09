@@ -9,10 +9,10 @@
         <meta name="theme-color" content="#000000">
         <meta name="description" content="This is the beginning of the Auditors' creation.">
         <meta name="author" content="The Auditors">
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-        <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
-        <script src="/front-end/src/components/header.js" type="text/javascript" defer></script>
-        <script src="/front-end/src/components/footer.js" type="text/javascript" defer></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrapCyborg.css') }}">
+        <script src="{{ url_for('static', filename='header.js') }}" type="text/javascript" defer></script>
+        <script src="{{ url_for('static', filename='footer.js') }}" type="text/javascript" defer></script>
     </head>
     <body>
         <header-component></header-component>
