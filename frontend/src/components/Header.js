@@ -38,7 +38,14 @@ function Header()
   );
 }
 
-export default Header;
+// Two options for implementing the component.
+
+// 1. Include in HTML as " <Header /> "
+export default Header; 
+
+// 2. Include in HTML as " <header-component></header-component> "
+// customElements.define('header-component', Header);
+
 
 
 

@@ -34,4 +34,10 @@ function Footer()
   )
 }
 
-export default Footer;
+// Two options for implementing the component.
+
+// 1. Include in HTML as " <Footer /> "
+export default Footer; 
+
+// 2. Include in HTML as " <footer-component></footer-component> "
+// customElements.define('footer-component', Footer);
