@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
+import CoursesTable from "./CoursesTable";
+
 import './../../../styles/style.css';
 import './../../../styles/bootstrapCyborg.css';
 
@@ -14,9 +16,10 @@ function CoursesOffcanvas()
 
     return (
         <div class="courses-offcanvas" id="courses-offcanvas">
-            <button class="btn btn-dark table-key" id="table-key" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-courses" aria-controls="offcanvasExample" fdprocessedid="igv1p" onClick={handleShow}>
+            <button class="btn btn-light table-key" id="table-key" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-courses" aria-controls="offcanvasExample" fdprocessedid="igv1p" onClick={handleShow}>
                 Click for Table Key
             </button>
+            <CoursesTable></CoursesTable>
             <Offcanvas class="offcanvas offcanvas-start bg-light text-dark text-wrap" tabindex="-1" id="offcanvas-courses" aria-labelledby="offcanvas-tableKey" show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
                     <h5 class="offcanvas-title" id="offcanvas-tableKey">Table Key</h5>

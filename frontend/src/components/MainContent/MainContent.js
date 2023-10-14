@@ -3,7 +3,7 @@ import { useState } from 'react';
 import CoursesOffcanvas from "./CoursesTable/CoursesOffcanvas";
 import DegreeOffcanvas from "./DegreeTable/DegreeOffcanvas";
 
-// import StudentTable from "./../../components/StudentTable.js";
+import StudentTable from "./../../components/StudentTable.js";
 import StudentID from "../forms/StudentID.js";
 
 
@@ -32,7 +32,7 @@ function MainContent()
                             </tr>
                         </thead>
                         <tbody>
-                            <studenttable-component></studenttable-component>
+                            <student-component></student-component>
                         </tbody>
                     </table>
                 </div>
@@ -81,415 +81,21 @@ function MainContent()
             </div>
             <div class="row">
                 <div class="col-auto tab-content-text table-main_container" id="table-main">
-                    <h3>Your History</h3>
-                    <p class="sched-des" id="sched-des">Below is a history of the courses you have taken and received credit for.</p>
-                    <CoursesOffcanvas />
-                    <table class="table table-new table-hover table-responsive mb-3 courses-table" id="table-main" aria-label="Student Course History">
-                        <thead class="table-head courses-table-head">
-                            <tr class="table-info">
-                                <th scope="col table-head">Course Title</th>
-                                <th scope="col">Course Details</th>
-                                <th scope="col">Hours</th>
-                                <th scope="col">CRN</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="table-info" id="course-semester">
-                                <th colspan="4">Fall 2020 - DeLand</th>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">American History I</th>
-                                <td>HIST 151H, HY1</td>
-                                <td>4</td>
-                                <td>6436</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">American National Government</th>
-                                <td>POLI 101S, HY</td>
-                                <td>4</td>
-                                <td>4387</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Honors First-Year Seminar "Enduring Questions"</th>
-                                <td>HONR 101, OL1</td>
-                                <td>4</td>
-                                <td>5707</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Introduction to Psychology</th>
-                                <td>PSYC 101S, OL2</td>
-                                <td>4</td>
-                                <td>5573</td>
-                            </tr>
-                            <tr class="table-info" id="course-semester">
-                                <th colspan="4">Spring 2021 - DeLand</th>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">American History II</th>
-                                <td>HIST 152H, OL</td>
-                                <td>4</td>
-                                <td>4920</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Honors Project</th>
-                                <td>HONR 102, OL2</td>
-                                <td>2</td>
-                                <td>7760</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Honors Project</th>
-                                <td>HONR 102, LO</td>
-                                <td>0</td>
-                                <td>7761</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Introduction to Computing</th>
-                                <td>CSCI 111, HY</td>
-                                <td>4</td>
-                                <td>7719</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Stars, Galaxies and Cosmology</th>
-                                <td>ASTR 112P, OL</td>
-                                <td>4</td>
-                                <td>6508</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Stars, Galaxies and Cosmology - Lab 1</th>
-                                <td>ASTR 112P, LO1</td>
-                                <td>0</td>
-                                <td>6509</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Survey of US Literature</th>
-                                <td>ENGL 258H, OL</td>
-                                <td>4</td>
-                                <td>8225</td>
-                            </tr>
-                            <tr class="table-info" id="course-semester">
-                                <th colspan="4">Summer 2021 - DeLand</th>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Developmental Psychology</th>
-                                <td>PSYC 231, OL</td>
-                                <td>4</td>
-                                <td>3759</td>
-                            </tr>
-                            <tr class="table-info" id="course-semester">
-                                <th colspan="4">Fall 2021 - DeLand</th>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">African American History</th>
-                                <td>HIST 251H, 01</td>
-                                <td>4</td>
-                                <td>5818</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">American Women's History</th>
-                                <td>HIST 362H, 01</td>
-                                <td>4</td>
-                                <td>5180</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Honors Workshop</th>
-                                <td>HONR 201, 02</td>
-                                <td>2</td>
-                                <td>5710</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Introduction to Computer Science I</th>
-                                <td>CSCI 141, 01</td>
-                                <td>4</td>
-                                <td>4377</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Studies in Gender, Race, Class, and Sexuality in the US</th>
-                                <td>GEND 100V, 02</td>
-                                <td>4</td>
-                                <td>7301</td>
-                            </tr>
-                            <tr class="table-info" id="course-semester">
-                                <th colspan="4">Spring 2022 - DeLand</th>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">American Cultural Traditions</th>
-                                <td>AMST 301B, 01</td>
-                                <td>4</td>
-                                <td>4698</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Honors Tutorials #5: Checkmate</th>
-                                <td>HONR 202, 05</td>
-                                <td>2</td>
-                                <td>6722</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Introduction to Computer Science II</th>
-                                <td>CSCI 142, 01</td>
-                                <td>4</td>
-                                <td>5041</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Introduction to Cybersecurity</th>
-                                <td>CSEC 141, 01</td>
-                                <td>4</td>
-                                <td>7853</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">The 1950's and 1960's</th>
-                                <td>AMST 256B, 01</td>
-                                <td>4</td>
-                                <td>7418</td>
-                            </tr>
-                            <tr class="table-info" id="course-semester">
-                                <th colspan="4">Fall 2022 - DeLand</th>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">History of American Health Care</th>
-                                <td>HIST 356V, 01</td>
-                                <td>4</td>
-                                <td>7309</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Honors Junior Seminar</th>
-                                <td>HONR 301, JS1</td>
-                                <td>4</td>
-                                <td>8301</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Introduction to Computer Organization</th>
-                                <td>CSCI 201, 01</td>
-                                <td>4</td>
-                                <td>4378</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Software Development I</th>
-                                <td>CSCI 221, 01</td>
-                                <td>4</td>
-                                <td>4379</td>
-                            </tr>
-                            <tr class="table-info" id="course-semester">
-                                <th colspan="4">Spring 2023 - DeLand</th>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Computer Networks</th>
-                                <td>CSCI 304, 01</td>
-                                <td>4</td>
-                                <td>7758</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Elementary Spanish I</th>
-                                <td>SPAN 101, 02</td>
-                                <td>4</td>
-                                <td>5121</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Global Perspectives on Women and Gender</th>
-                                <td>GEND 200V, 01</td>
-                                <td>4</td>
-                                <td>7401</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Operating Systems</th>
-                                <td>CSCI 301, 02</td>
-                                <td>4</td>
-                                <td>8514</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Web Application Development</th>
-                                <td>CINF 301, 01</td>
-                                <td>4</td>
-                                <td>5417</td>
-                            </tr>
-                            <tr class="table-info" id="course-semester">
-                                <th colspan="4">Summer 2023 - DeLand</th>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Honors Internship</th>
-                                <td>HONR 297, 01</td>
-                                <td>2</td>
-                                <td>3676</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Introduction to Mathematical and Statistical Modeling</th>
-                                <td>MATH 125Q, OL</td>
-                                <td>4</td>
-                                <td>2985</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Programming Languages</th>
-                                <td>CSCI 380, HY</td>
-                                <td>4</td>
-                                <td>3911</td>
-                            </tr>
-                            <tr class="table-info" id="course-semester">
-                                <th colspan="4">Fall 2023 - DeLand</th>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Best Books Club</th>
-                                <td>HONR 401, 01</td>
-                                <td>0</td>
-                                <td>5711</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Computer and Network Security</th>
-                                <td>CSEC 331, 01</td>
-                                <td>4</td>
-                                <td>8011</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Elementary Spanish II</th>
-                                <td>SPAN 102L, 02</td>
-                                <td>4</td>
-                                <td>4343</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Secure Coding</th>
-                                <td>CSEC 302, 01</td>
-                                <td>4</td>
-                                <td>8122</td>
-                            </tr>
-                            <tr class="odd-row">
-                                <th scope="row">Senior Proposal</th>
-                                <td>CSEC 498, 01</td>
-                                <td>4</td>
-                                <td>8243</td>
-                            </tr>
-                            <tr class="even-row">
-                                <th scope="row">Software Development II</th>
-                                <td>CSCI 321, 01</td>
-                                <td>4</td>
-                                <td>5447</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="history_heading" id="history_heading">
+                        <h3>Your History</h3>
+                        <p class="sched-des" id="sched-des">Below is a history of the courses you have taken and received credit for.</p>
+                        <CoursesOffcanvas />
+                    </div>
                 </div>
                 {/* <!-- Comment out the next two lines to bring these two sections side-by-side. --> */}
             </div>
             <div class="row">
                 <div class="col-auto tab-content-text table-main_container" id="table-main">
-                    <h3>Your Degree</h3>
-                    <p class="sched-des" id="sched-des">Below is your current progress of your selected Major(s).</p>
-                    <br/>
-                    <DegreeOffcanvas />
-                    <table class="table table-new table-hover table-responsive mb-3 degree-table" id="table-main" aria-label="Major Requirements">
-                        <thead class="table-head courses-table-head">
-                            <tr class="table-info">
-                                <th scope="col table-head">Requirement</th>
-                                <th scope="col">Course Details</th>
-                                <th scope="col">Course Title</th>
-                                <th scope="col">Grade</th>
-                                <th scope="col">Hours</th>
-                                <th scope="col">CRN</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="degree-row">
-                                <th scope="row">100 or 200 Level American <br/> Studies Prefix or Attribution</th>
-                                <td>HIST 151H, HY1</td>
-                                <td>The 1950's and 1960's</td>
-                                <td>A-</td>
-                                <td>4</td>
-                                <td>6436</td>
-                            </tr>
-                            <tr class="degree-row">
-                                <th scope="row">1 of 2 Orientation American Studies</th>
-                                <td>HIST 251H, 01</td>
-                                <td>African American History</td>
-                                <td>A+</td>
-                                <td>4</td>
-                                <td>5818</td>
-                            </tr>
-                            <tr class="degree-row">
-                                <th scope="row">2 of 2 Orientation American Studies</th>
-                                <td>POLI 101S, HY</td>
-                                <td>American National Government</td>
-                                <td>A-</td>
-                                <td>4</td>
-                                <td>4387</td>
-                            </tr>
-                            <tr class="degree-row">
-                                <th scope="row">American Cultural Traditions</th>
-                                <td>AMST 301B, 01</td>
-                                <td>American Cultural Traditions</td>
-                                <td>A-</td>
-                                <td>4</td>
-                                <td>4698</td>
-                            </tr>
-                            <tr class="degree-row" id="not-fulfilled">
-                                <th scope="row">Senior Project</th>
-                                <td>AMST 499</td>
-                                <td>Senior Project</td>
-                                <td>--</td>
-                                <td>4</td>
-                                <td>####</td>
-                            </tr>
-                            <tr class="degree-row">
-                                <th scope="row">1 of 2 Courses with American <br/> Studies Prefix or Attribution</th>
-                                <td>ENGL 258H, OL</td>
-                                <td>Survey of US Literature</td>
-                                <td>A-</td>
-                                <td>4</td>
-                                <td>8225</td>
-                            </tr>
-                            <tr class="degree-row">
-                                <th scope="row">2 of 2 Courses with American <br/> Studies Prefix or Attribution</th>
-                                <td>HIST 152H, OL</td>
-                                <td>American History II</td>
-                                <td>A-</td>
-                                <td>4</td>
-                                <td>4920</td>
-                            </tr>
-                            <tr class="degree-row">
-                                <th scope="row">Focus Area: 1 of 4 courses <br/> related to Common Theme</th>
-                                <td>GEND 100V, 02</td>
-                                <td>Studies in Gender, Race, Class,<br/> and Sexuality in the US</td>
-                                <td>A</td>
-                                <td>4</td>
-                                <td>7301</td>
-                            </tr>
-                            <tr class="degree-row">
-                                <th scope="row">Focus Area: 2 of 4 courses <br/> related to Common Theme</th>
-                                <td>GEND 200V, 01</td>
-                                <td>Global Perspectives on <br/> Women and Gender</td>
-                                <td>A</td>
-                                <td>4</td>
-                                <td>7401</td>
-                            </tr>
-                            <tr class="degree-row">
-                                <th scope="row">Focus Area: 3 of 4 courses <br/> related to Common Theme</th>
-                                <td>HIST 356V, 01</td>
-                                <td>History of American Health Care</td>
-                                <td>A-</td>
-                                <td>4</td>
-                                <td>7309</td>
-                            </tr>
-                            <tr class="degree-row">
-                                <th scope="row">Focus Area: 4 of 4 courses <br/> related to Common Theme</th>
-                                <td>HIST 362H, 01</td>
-                                <td>American Women's History</td>
-                                <td>A</td>
-                                <td>4</td>
-                                <td>5180</td>
-                            </tr>
-                            <tr class="degree-row">
-                                <th scope="row">One 300 Level course from courses <br/> with AMST-prefix or Attribution<br/> or from Focus Area</th>
-                                <td>HIST 356V, 01</td>
-                                <td>History of American Health Care</td>
-                                <td>A-</td>
-                                <td>4</td>
-                                <td>7309</td>
-                            </tr>
-                            <tr class="degree-row">
-                                <th scope="row">One 300 Level course from courses <br/> with AMST-prefix or Attribution<br/> or from Focus Area</th>
-                                <td>HIST 362H, 01</td>
-                                <td>American Women's History</td>
-                                <td>A</td>
-                                <td>4</td>
-                                <td>5180</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="degree_heading" id="degree_heading">
+                        <h3>Your Degree</h3>
+                        <p class="sched-des" id="sched-des">Below is your current progress of your selected Major(s).</p>
+                        <DegreeOffcanvas />
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -508,6 +114,7 @@ function MainContent()
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="./../StudentTable.js"></script>
     </div>
     );
 }

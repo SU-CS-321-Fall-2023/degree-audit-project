@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
+import DegreeTable from "./DegreeTable";
+
 import './../../../styles/style.css';
 import './../../../styles/bootstrapCyborg.css';
 
@@ -14,9 +16,10 @@ function DegreeOffcanvas()
 
     return (
         <div class="degree-offcanvas" id="degree-offcanvas">
-            <button class="btn btn-dark table-key" id="table-key" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-degree" aria-controls="offcanvasExample" fdprocessedid="igv1p" onClick={handleShow}>
+            <button class="btn btn-light table-key" id="table-key" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-degree" aria-controls="offcanvasExample" fdprocessedid="igv1p" onClick={handleShow}>
                 Click for Table Key
             </button>
+            <DegreeTable></DegreeTable>
             <Offcanvas class="offcanvas offcanvas-start bg-light text-dark text-wrap" tabindex="-1" id="offcanvas-degree" aria-labelledby="offcanvas-tableKey" show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
                     <h5 class="offcanvas-title" id="offcanvas-tableKey">Table Key</h5>
