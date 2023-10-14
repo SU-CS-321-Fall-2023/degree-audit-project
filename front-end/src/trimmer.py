@@ -6,11 +6,11 @@ lineCount = 0
 filteredData = []
 
 try:
-    with open('student_data.json', 'r') as f:
+    with open('Output Files/student_data.json', 'r') as f:
         lineCount= sum(1 for _ in f)
     print(f"Line Count: {lineCount}")
 
-    with open('student_data.json', 'r') as ourFile:
+    with open('Output Files/student_data.json', 'r') as ourFile:
         # content = ourFile.read()
         # print(content)
         ourData = json.load(ourFile)
