@@ -31,7 +31,7 @@ function Footer()
             </div>
         </div>
     </div>
-  )
+  );
 }
 
 // Two options for implementing the component.

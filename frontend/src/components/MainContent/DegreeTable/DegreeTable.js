@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import ToolTip from 'react-bootstrap/Tooltip';
 
 function DegreeTable()
 {
-    const [isExpanded, setExpanded] = useState(false);
+    const [isExpanded, setExpanded] = useState(true);
 
     const toggleTableVisibility = () => {
         setExpanded(!isExpanded);
@@ -22,7 +20,7 @@ function DegreeTable()
     const tableID = isExpanded ? 'table-main' : 'table-main expanded-table';
 
     return (
-        <div>
+        <div class="degree_heading" id="degree_heading">
             <button class="btn btn-info table-expand" id="table-expand" type="button" onClick={toggleTableVisibility}>
                 Click to Expand Table
             </button>

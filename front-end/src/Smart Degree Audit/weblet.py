@@ -70,7 +70,7 @@ def index():
         email = request.form.get('student_email', None)  # Fetch the major entered by the user
 
         # Read the predefined CSV file and store the data
-        with open(userCSV_path, 'r') as f:
+        with open(testCSV_path, 'r') as f:
             reader = csv.reader(f)
             data = [row for row in reader]
 

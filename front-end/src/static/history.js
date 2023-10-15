@@ -15,9 +15,7 @@ function buildTable(data) {
 }
 
 // Fetch JSON data from an external file
-fetch('/static/filtered.json')
+fetch('./static/filtered.json')
     .then(response => response.json())
     .then(data => buildTable(data))
     .catch(error => console.error('Error:', error));
-
-

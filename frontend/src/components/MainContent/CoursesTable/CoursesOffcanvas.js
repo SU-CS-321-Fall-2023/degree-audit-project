@@ -55,7 +55,7 @@ function CoursesOffcanvas()
                 </Offcanvas.Body>
             </Offcanvas>
         </div>
-    )
+    );
 }
 
 export default CoursesOffcanvas;

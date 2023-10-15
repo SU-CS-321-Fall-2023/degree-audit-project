@@ -22,4 +22,4 @@ class IdForm extends HTMLElement {
     }
 }
 
-customElements.define('idForm-component', IdForm);
+customElements.define('idform-component', IdForm);

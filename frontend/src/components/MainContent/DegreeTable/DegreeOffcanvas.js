@@ -55,7 +55,7 @@ function DegreeOffcanvas()
                 </Offcanvas.Body>
             </Offcanvas>
         </div>
-    )
+    );
 }
 
 export default DegreeOffcanvas;
