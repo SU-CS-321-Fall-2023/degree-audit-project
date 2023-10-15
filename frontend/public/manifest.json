@@ -1,6 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Auditors",
+  "name": "Smart Degree Audit",
+  "description": "Automatically generate semester-by-semester schedules based on user interests and degree requirements.",
+  "lang": "en-US",
+  "dir": "ltr",
   "icons": [
     {
       "src": "favicon.ico",
