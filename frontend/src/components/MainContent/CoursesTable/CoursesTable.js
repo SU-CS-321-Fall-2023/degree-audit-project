@@ -8,21 +8,23 @@ function CoursesTable()
         setExpanded(!isExpanded);
     };
 
+    const tableID = isExpanded ? 'table-main' : 'table-main expanded-table';
+
     return (
         <div>
-            <button class="btn btn-info table-key" id="table-key" type="button" onClick={toggleTableVisibility}>
+            <button class="btn btn-info table-expand" id="table-expand" type="button" onClick={toggleTableVisibility}>
                 Click to Expand Table
             </button>
-            {isExpanded && (
-                <table class="table table-new table-hover table-responsive mb-3 courses-table" id="table-main" aria-label="Student Course History">
-                    <thead class="table-head courses-table-head">
-                        <tr class="table-info">
-                            <th scope="col table-head">Course Title</th>
-                            <th scope="col">Course Details</th>
-                            <th scope="col">Hours</th>
-                            <th scope="col">CRN</th>
-                        </tr>
-                    </thead>
+            <table class="table table-new table-hover table-responsive mb-3 courses-table" id={tableID} aria-label="Student Course History">
+                <thead class="table-head courses-table-head">
+                    <tr class="table-info">
+                        <th scope="col table-head">Course Title</th>
+                        <th scope="col">Course Details</th>
+                        <th scope="col">Hours</th>
+                        <th scope="col">CRN</th>
+                    </tr>
+                </thead>
+                {isExpanded && (
                     <tbody>
                         <tr class="table-info" id="course-semester">
                             <th colspan="4">Fall 2020 - DeLand</th>
@@ -292,8 +294,8 @@ function CoursesTable()
                             <td>5447</td>
                         </tr>
                     </tbody>
-                </table>
-            )}
+                )}
+            </table>
         </div>
     );
 }

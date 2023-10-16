@@ -34,7 +34,7 @@ app = Flask(
     static_folder="./static")
 # cors = CORS(app)
 # Configure the value of the "origins" key to be the actual URL of the React Frontend.
-cors = CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
+cors = CORS(app, resources={r"/*": {"origins": "http://10.66.3.41:3000"}})
 
 ALLOWED_EXTENSIONS = {'csv'}
 # class Index(Resource):
@@ -59,7 +59,7 @@ ALLOWED_EXTENSIONS = {'csv'}
 
 
 
-@app.route('/api/index', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
     data = []  # A list to hold our CSV data
 
@@ -76,12 +76,17 @@ def index():
             reader = csv.reader(f)
             data = [row for row in reader]
 
+      
         # Filter the data based on the major if one is entered
         if email:
             # Assuming the major is in the 2nd column (index 1). Adjust the index if needed.
             data = [data[0]] + [row for row in data[1:] if email.lower() in row[1].lower()]
+    else:
+        print("GET method has been used for /api/index .")
 
     return render_template(webletIndex, data=data)
+
+# @app.route('/api/static/', methods=['GET', 'POST'])
 
 # @app.route('/api/data')
 # def get_data():
@@ -117,4 +122,4 @@ if __name__ == '__main__':
     """
     Must be placed at the end of the file.
     """
-    app.run(host = '127.0.0.1', port = 8000, debug = True)
+    app.run(host = '10.66.3.41', port = 8000, debug = True)

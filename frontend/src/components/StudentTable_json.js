@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Papa from 'papaparse';
 
 // Function to populate the HTML table
 function StudentTable(data) {
-    const [csvData, setCsvData] = useState([]);
+    const [jsonData, setJsonData] = useState([]);
 
     useEffect(() => {
         axios({
-            method: 'post',
-            baseURL:'http://10.66.3.41:3000/',
-            // url: './filtered.csv', // Replace with your JSON file path
+            method: 'get',
+            url: './filtered.json', // Replace with your JSON file path
             responseType: 'stream', // Indicate that you want to stream the response
-            maxContentLength: 5000,
-            maxBodyLength: 5000,
         })
         .then(response => {
             // Process the streamed response here
@@ -24,30 +20,15 @@ function StudentTable(data) {
             });
             response.data.on('end', () => {
                 // All data has been received, so you can now parse it
-                const csvString = data.join('');
-                Papa.parse(csvString, {
-                    header: true, // Treat the first row as headers
-                    dynamicTyping: true, // Convert numeric values to numbers
-                    skipEmptyLines: true, // Skip empty lines
-                    complete: function(results) {
-                        // The parsed CSV data is available in results.data
-                        setCsvData(results.data);
-                    },
-                });
+                const jsonData = JSON.parse(data.join(''));
+                setJsonData(jsonData);
             });
         })
         .catch(error => console.error('Error:', error));
     }, []);
 
-    useEffect(() => {
-        if (csvData.length > 0)
-        {
-            populateTable(csvData);
-        }
-    }, [csvData]);
-
     const populateTable = (data) => {
-        const table = document.getElementById('csvTable table-main');
+        const table = document.getElementById('jsonTable table-main');
 
         for (const item of data) {
             // Create table structure to match that of filtered.json
@@ -63,9 +44,15 @@ function StudentTable(data) {
         }
     }
 
+    useEffect(() => {
+        if (jsonData.length > 0)
+        {
+            populateTable(jsonData);
+        }
+    }, [jsonData]);
 
     return (
-        <table class="table table-new table-hover table-responsive mb-3" id="csvTable table-main" aria-label="Student Course History">
+        <table class="table table-new table-hover table-responsive mb-3" id="jsonTable table-main" aria-label="Student Course History">
             <thead class="table-head courses-table-head">
                 <tr class="table-info">
                     <th scope="col table-head">Course Title</th>

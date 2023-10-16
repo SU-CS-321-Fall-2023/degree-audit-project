@@ -1,19 +1,19 @@
 import React from "react";
-import { useState } from 'react';
+// import { useState } from 'react';
 import CoursesOffcanvas from "./CoursesTable/CoursesOffcanvas";
 import DegreeOffcanvas from "./DegreeTable/DegreeOffcanvas";
 
-import StudentTable from "./../../components/StudentTable.js";
 import StudentID from "../forms/StudentID.js";
+import StudentTable from "../StudentTable.js";
 
 
 
 function MainContent()
 {
-    const [show, setShow] = useState(false);
+    // const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    // const handleClose = () => setShow(false);
+    // const handleShow = () => setShow(true);
 
     return (
     <div class="main_content_container">
@@ -23,18 +23,7 @@ function MainContent()
                     <StudentID />
                     <h1 class="page-title">Class Auditing</h1>
                     <h5 class="">Available for all Stetson students</h5>
-                    <table class="table table-new table-hover table-responsive mb-3" id="jsonTable table-main" aria-label="Student Course History">
-                        <thead class="table-head courses-table-head">
-                            <tr class="table-info">
-                                <th scope="col table-head">Course Title</th>
-                                <th scope="col">CRN</th>
-                                <th scope="col">Term Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <student-component></student-component>
-                        </tbody>
-                    </table>
+                    <StudentTable />
                 </div>
             </div>
             <div class="row">
