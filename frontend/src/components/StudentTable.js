@@ -9,7 +9,7 @@ function StudentTable(data) {
     useEffect(() => {
         axios({
             method: 'post',
-            baseURL:'http://localhost:3000/',
+            baseURL:'http://localhost:8000',
             // url: './filtered.csv', // Replace with your JSON file path
             responseType: 'stream', // Indicate that you want to stream the response
             maxContentLength: 5000,

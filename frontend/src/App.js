@@ -11,7 +11,8 @@ function App() {
   const [data, setData] = useState({});
   
   useEffect(() => {
-    axios.get('http://localhost:8000/')
+    // axios.get('http://192.168.1.46:3000/')
+    axios.get('http://127.0.0.1:3000/')
       .then(response => {
         setData(response.data);
       })
@@ -20,9 +21,7 @@ function App() {
       });
   }, []);
   return (
-    <div>
-      <div dangerouslySetInnerHTML={{ __html:data }}></div>
-    </div>
+    <MainContent />
   );
 }
 
