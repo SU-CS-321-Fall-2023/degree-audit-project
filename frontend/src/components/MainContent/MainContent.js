@@ -6,6 +6,9 @@ import DegreeOffcanvas from "./DegreeTable/DegreeOffcanvas";
 import StudentID from "../forms/StudentID.js";
 import StudentTable from "../StudentTable.js";
 
+import './../../styles/style.css';
+import './../../styles/bootstrapCyborg.css';
+
 
 
 function MainContent()
