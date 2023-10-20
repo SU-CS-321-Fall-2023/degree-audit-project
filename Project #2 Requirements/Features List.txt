@@ -9,3 +9,6 @@ Smart Degree Audit: Phase 2 Features List
 4. Registration Dashboard Implementation: With a valid semester set generated and approved by the user, when registration times come up, the app should somehow link the desired schedule to Stetson's Registration Dashboard, and potentially automatically register the student for those classes. In the case of a full roster for one of the desired classes, the app should have a backup case, and notify the user if it needs to be implemented.
 
 5. Cultural Credit Opportunity Notification: This feature of the app could take data from Stetson's Engage platform, and present the user at-a-glance information on when and where upcoming cultural credit events will be taking place. The app could also account for how many cultural credit requirements the user has remaining, and come up with a pacing of events to get them completed by the time the user graduates.
+
+BY DECREE OF SIR SCARLATO, DUKE OF THE ADVENT OF HEALTH
+6. Stakeholder Presentation: Week 6, give a presentation of our (hopefully) complete app to an external stakeholder in the Registrar's Office and/or the director of HR, tbd.
