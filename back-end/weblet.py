@@ -15,11 +15,12 @@ def ourPaths():
     Purpose: Initializes necessary variable for web app.
     """
     global rootPath
-    rootPath = os.path.abspath(os.getcwd()) + "\\front-end\\src"
+    # rootPath = os.path.abspath(os.getcwd()) + "\\front-end\\src"
+    rootPath = os.path.abspath(os.getcwd())
     print(f"rootPath: {rootPath}")
     
     global webletIndex
-    webletIndex = "index.html"
+    webletIndex =  "index.html"
 ourPaths() # Must be placed at beginning of file.
 
 def allowed_file(filename):
@@ -30,8 +31,10 @@ app = Flask(
     __name__,
     root_path=(rootPath),
     # "D:/GitHub/Software Dev II/The-Auditors/degree-audit-project/front-end/src",
-    template_folder="./templates",
-    static_folder="./static")
+    # template_folder= rootPath + "/frontend/src/templates",
+    # static_folder= rootPath + "/frontend/src")
+    template_folder= rootPath + "/frontend/src/templates",
+    static_folder= rootPath + "/frontend/src/components")
 # cors = CORS(app)
 # Configure the value of the "origins" key to be the actual URL of the React Frontend.
 # Make sure to NOT have a / at the end of the "origins" URL.
@@ -65,7 +68,7 @@ def index():
     data = []  # A list to hold our CSV data
 
     # Use raw string notation for the path or double up the backslashes
-    userCSV_path = rootPath + r'\\user.csv'
+    userCSV_path = rootPath + '\\front-end\\src\\user.csv'
     reqsCSV_path = rootPath + r'\\reqs.csv'
     testCSV_path = rootPath + r'\\test.csv'
 
@@ -85,7 +88,7 @@ def index():
         print("else Statement has been reached for /api/index.")
         # print("GET method has been used for /api/index .")
 
-    return render_template(webletIndex, data=data)
+    return render_template("index.html", data=data)
 
 # @app.route('/api/static/', methods=['GET', 'POST'])
 
