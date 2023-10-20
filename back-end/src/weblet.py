@@ -65,7 +65,7 @@ def index():
     data = []  # A list to hold our CSV data
 
     # Use raw string notation for the path or double up the backslashes
-    userCSV_path = rootPath + r'\\user.csv'
+    userCSV_path = rootPath + '\\user.csv'
     reqsCSV_path = rootPath + r'\\reqs.csv'
     testCSV_path = rootPath + r'\\test.csv'
 
@@ -73,14 +73,14 @@ def index():
         email = request.form.get('student_email', None)  # Fetch the major entered by the user
 
         # Read the predefined CSV file and store the data
-        with open(userCSV_path, 'r') as f:
-            reader = csv.reader(f)
-            data = [row for row in reader]
+        #with open(userCSV_path, 'r') as f:
+         #   reader = csv.reader(f)
+          #  data = [row for row in reader]
 
         # Filter the data based on the major if one is entered
-        if email:
+        #if email:
             # Assuming the major is in the 2nd column (index 1). Adjust the index if needed.
-            data = [data[0]] + [row for row in data[1:] if email.lower() in row[1].lower()]
+         #   data = [data[0]] + [row for row in data[1:] if email.lower() in row[1].lower()]
     else:
         print("else Statement has been reached for /api/index.")
         # print("GET method has been used for /api/index .")
