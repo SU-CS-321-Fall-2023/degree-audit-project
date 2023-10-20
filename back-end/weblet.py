@@ -33,8 +33,8 @@ app = Flask(
     # "D:/GitHub/Software Dev II/The-Auditors/degree-audit-project/front-end/src",
     # template_folder= rootPath + "/frontend/src/templates",
     # static_folder= rootPath + "/frontend/src")
-    template_folder= rootPath + "/frontend/src/templates",
-    static_folder= rootPath + "/frontend/src/components")
+    template_folder= rootPath + "/front-end/src/templates",
+    static_folder= rootPath + "/front-end/src/static")
 # cors = CORS(app)
 # Configure the value of the "origins" key to be the actual URL of the React Frontend.
 # Make sure to NOT have a / at the end of the "origins" URL.
