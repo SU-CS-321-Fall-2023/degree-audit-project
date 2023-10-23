@@ -339,7 +339,7 @@ dist
 
 
 # Additional files and folders
-# filtered.json
+filtered.json
 student_data.json
-Misc.txt
 ip.md
+/Misc_Folder

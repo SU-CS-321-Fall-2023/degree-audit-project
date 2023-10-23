@@ -68,11 +68,7 @@ def index():
     data = []  # A list to hold our CSV data
 
     # Use raw string notation for the path or double up the backslashes
-<<<<<<< HEAD:back-end/src/weblet.py
-    userCSV_path = rootPath + '\\user.csv'
-=======
     userCSV_path = rootPath + '\\front-end\\src\\user.csv'
->>>>>>> 261dcfff76bf80a916565283d7d9c178763f332c:back-end/weblet.py
     reqsCSV_path = rootPath + r'\\reqs.csv'
     testCSV_path = rootPath + r'\\test.csv'
 
