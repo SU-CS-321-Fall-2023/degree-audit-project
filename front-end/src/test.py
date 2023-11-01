@@ -1,6 +1,8 @@
 # import jsonCreate # importing script, creates student_data.json
 import trimmer
 
+# jsonCreate.py --> trimmer.py --> test.py
+
 # desired_parameters = ['courseTitle', 'courseReferenceNumber', 'termDescription', 'courseNumber']
 # filtered_data  = {}
 

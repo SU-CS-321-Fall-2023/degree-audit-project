@@ -1,6 +1,8 @@
 import os, json
 import jsonCreate
 
+# jsonCreate.py --> trimmer.py --> test.py
+
 # ourFile = '\\student_data.json'
 lineCount = 0
 filteredData = []
