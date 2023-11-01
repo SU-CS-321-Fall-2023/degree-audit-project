@@ -1,0 +1,18 @@
+<!-- templates/add_course.html -->
+
+<form method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.course_name.label }}<br>
+        {{ form.course_name(size=32) }}
+    </p>
+    <p>
+        {{ form.grade.label }}<br>
+        {{ form.grade(size=32) }}
+    </p>
+    <p>
+        {{ form.academic_year.label }}<br>
+        {{ form.academic_year() }}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
