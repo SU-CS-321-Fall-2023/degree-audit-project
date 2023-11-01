@@ -7,7 +7,7 @@
 3. **Freshman/Junior Seminar Selection** --> Available
 4. **Registration Dashboard Implementation** --> Available
 5. **Cultural Credit Opportunity Notification** --> *Peyton*
-6. **Dept. Chair Contact** --> Available
+6. **Dept. Chair Contact** --> Nonso
 7. **Academic Progress Tracker** --> *Sydney*
 8. **Course Reviews** --> *Sydney*
 9. **Email alerts** --> *Peyton*
