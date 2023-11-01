@@ -4,10 +4,10 @@
 
 1. **Interest Exploration** --> *Peyton*
 2. **Schedule Generation** --> Available
-3. **Freshman/Junior Seminar Selection** --> Available
+3. **Freshman/Junior Seminar Selection** --> *Nonso*
 4. **Registration Dashboard Implementation** --> Available
 5. **Cultural Credit Opportunity Notification** --> *Peyton*
-6. **Dept. Chair Contact** --> Nonso
+6. **Dept. Chair Contact** --> *Nonso*
 7. **Academic Progress Tracker** --> *Sydney*
 8. **Course Reviews** --> *Sydney*
 9. **Email alerts** --> *Peyton*
