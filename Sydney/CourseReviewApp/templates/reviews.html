@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,23 +24,25 @@
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 20px;
-            background-color: black;
-            color: white;
+            background-color: white;
+            color: black;
             z-index: 2;
             border-radius: 8px;
             width: 60%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .modal h2 {
-            background-color: green;
+            background-color: #4CAF50;
             padding: 10px;
             margin-top: 0;
             border-radius: 6px 6px 0 0;
+            color: white;
         }
 
         .modal button {
-            background-color: white;
-            color: black;
+            background-color: #4CAF50;
+            color: white;
             padding: 5px 10px;
             border: none;
             border-radius: 4px;
@@ -47,8 +50,7 @@
         }
 
         .modal button:hover {
-            background-color: green;
-            color: white;
+            background-color: #45a049;
         }
 
         .rating {
@@ -57,12 +59,12 @@
         }
 
         .rating label {
-    font-size: 25px;
-    text-decoration: none;
-    color: #aaa;
-    transition: color 0.2s;
-    cursor: pointer;
-}
+            font-size: 25px;
+            text-decoration: none;
+            color: #aaa;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
 
         .rating > a:hover,
         .rating > a:hover ~ a,
@@ -77,8 +79,30 @@
         .form-field {
             margin-bottom: 15px;
         }
+
+             /* Slider CSS */
+             .slider-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .slider-label {
+            margin-right: 10px;
+        }
+
+        .slider {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .slider-value {
+            width: 30px;
+            text-align: center;
+        }
+
     </style>
 </head>
+
 <body>
     <h1>Welcome to Course Reviews</h1>
 
@@ -91,58 +115,76 @@
     <div class="modal" id="reviewForm">
         <h2>Course Review Form</h2>
 
-        <!-- ... your code above ... -->
+        <form>
+            <div class="form-field">
+                <label>Course Name:</label>
+                <input type="text" name="course_name">
+            </div>
 
-<!-- ... your code above ... -->
+        <!-- <div class="form-field"> 
+                <label>Review:</label>
+                <textarea name="review"></textarea>
+            </div> -->
 
-<form>
-    <div class="form-field">
-        <label>Course Name:</label>
-        <input type="text" name="course_name">
-    </div>
+            <div class="form-field">
+                <label>Class Difficulty:</label>
+                <select name="difficulty_rating" required>
+                    <option value="" disabled selected>Select Difficulty</option>
+                    <option value="1">1 Not Difficult</option>
+                    <option value="2">2 Slightly Difficult</option>
+                    <option value="3">3 Moderately Difficult</option>
+                    <option value="4">4 Difficult</option>
+                    <option value="5">5 Very Difficult</option>
+                </select>
+            </div>
 
-    <div class="form-field">
-        <label>Review:</label>
-        <textarea name="review"></textarea>
-    </div>
+            <div class="form-field">
+                <label>Professor's Rating:</label>
+                <span class="rating">
+                    <input type="radio" id="prof_rating_5" name="professor_rating" value="5" required><label for="prof_rating_5">&#9733;</label>
+                    <input type="radio" id="prof_rating_4" name="professor_rating" value="4" required><label for="prof_rating_4">&#9733;</label>
+                    <input type="radio" id="prof_rating_3" name="professor_rating" value="3" required><label for="prof_rating_3">&#9733;</label>
+                    <input type="radio" id="prof_rating_2" name="professor_rating" value="2" required><label for="prof_rating_2">&#9733;</label>
+                    <input type="radio" id="prof_rating_1" name="professor_rating" value="1" required><label for="prof_rating_1">&#9733;</label>
+                </span>
+            </div>
 
-    <div class="form-field">
-        <label>Class Difficulty:</label>
-        <select name="difficulty_rating" required>
-            <option value="" disabled selected>Select Difficulty</option>
-            <option value="1">1 Not Difficult</option>
-            <option value="2">2 Slightly Difficult</option>
-            <option value="3">3 Moderately Difficult</option>
-            <option value="4">4 Difficult</option>
-            <option value="5">5 Very Difficult</option>
-        </select>
-    </div>
+            <div class="form-field">
+                <label>Review:</label>
+                <textarea name="review" id="reviewTextarea" oninput="updateWordCount()"></textarea>
+                <p id="wordCountDisplay">Words: 0/100</p>
+            </div>
 
-    <div class="form-field">
-        <label>Professor's Rating:</label>
-        <span class="rating">
-            <input type="radio" id="prof_rating_5" name="professor_rating" value="5" required><label for="prof_rating_5">&#9733;</label>
-            <input type="radio" id="prof_rating_4" name="professor_rating" value="4" required><label for="prof_rating_4">&#9733;</label>
-            <input type="radio" id="prof_rating_3" name="professor_rating" value="3" required><label for="prof_rating_3">&#9733;</label>
-            <input type="radio" id="prof_rating_2" name="professor_rating" value="2" required><label for="prof_rating_2">&#9733;</label>
-            <input type="radio" id="prof_rating_1" name="professor_rating" value="1" required><label for="prof_rating_1">&#9733;</label>
-        </span>
-    </div>
-    
-
-    <input type="submit" value="Save Review">
-</form>
-
-<!-- ... your code below ... -->
-
-
-<!-- ... your code below ... -->
-
+            <input type="submit" value="Save Review">
+        </form>
 
         <button onclick="closeModal()">Close</button>
     </div>
 
     <script>
+        function updateWordCount() {
+        var textarea = document.getElementById('reviewTextarea');
+        var wordCountDisplay = document.getElementById('wordCountDisplay');
+
+        var words = textarea.value.split(/\s+/).filter(Boolean).length; // Filters out empty strings from the array
+        wordCountDisplay.textContent = 'Words: ' + words + '/100';
+
+        if (words > 100) {
+            wordCountDisplay.style.color = 'red';
+        } else {
+            wordCountDisplay.style.color = 'black';
+        }
+    }
+
+    document.querySelector('form').addEventListener('submit', function(event) {
+        var words = document.getElementById('reviewTextarea').value.split(/\s+/).filter(Boolean).length;
+
+        if (words > 100) {
+            alert('Review exceeds the maximum word count of 100. Please reduce your review length.');
+            event.preventDefault();  // Prevent form submission
+        }
+    });
+
         function toggleReview() {
             var checkbox = document.getElementById('showReview');
             var reviewForm = document.getElementById('reviewForm');
@@ -166,5 +208,5 @@
         }
     </script>
 </body>
-</html>
 
+</html>
