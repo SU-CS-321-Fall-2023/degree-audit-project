@@ -118,7 +118,7 @@
         <form>
             <div class="form-field">
                 <label>Course Name:</label>
-                <input type="text" name="course_name">
+                {{ form.course_name }}
             </div>
 
         <!-- <div class="form-field"> 
@@ -128,7 +128,8 @@
 
             <div class="form-field">
                 <label>Class Difficulty:</label>
-                <select name="difficulty_rating" required>
+                {{ form.difficulty_rating }}
+
                     <option value="" disabled selected>Select Difficulty</option>
                     <option value="1">1 Not Difficult</option>
                     <option value="2">2 Slightly Difficult</option>
@@ -140,7 +141,8 @@
 
             <div class="form-field">
                 <label>Professor's Rating:</label>
-                <span class="rating">
+                {{ form.professor_rating }}
+
                     <input type="radio" id="prof_rating_5" name="professor_rating" value="5" required><label for="prof_rating_5">&#9733;</label>
                     <input type="radio" id="prof_rating_4" name="professor_rating" value="4" required><label for="prof_rating_4">&#9733;</label>
                     <input type="radio" id="prof_rating_3" name="professor_rating" value="3" required><label for="prof_rating_3">&#9733;</label>
@@ -154,6 +156,9 @@
                 <textarea name="review" id="reviewTextarea" oninput="updateWordCount()"></textarea>
                 <p id="wordCountDisplay">Words: 0/100</p>
             </div>
+
+            {{ form.csrf_token }}
+
 
             <input type="submit" value="Save Review">
         </form>
