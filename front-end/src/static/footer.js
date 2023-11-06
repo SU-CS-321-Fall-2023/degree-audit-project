@@ -1,3 +1,5 @@
+// import DOMPurify from "dompurify";
+
 class Footer extends HTMLElement {
     constructor() {
         super();
@@ -10,7 +12,7 @@ class Footer extends HTMLElement {
                 <div class="footer__container__row">
                     <div class="footer__left_column">
                         <div class="The_Auditors_Logo__container">
-                            <a href="/front-end/src/index.html" class="footer__logo" id="footer__logo" aria-label="The Auditors' Logo">
+                            <a href="/" class="footer__logo" id="footer__logo" aria-label="The Auditors' Logo">
                                 <img src="" alt="The Auditors">
                             </a>
                         </div>
@@ -35,7 +37,6 @@ class Footer extends HTMLElement {
                 </div>
             </div>
         </footer>
-        
         `;
     }
 }

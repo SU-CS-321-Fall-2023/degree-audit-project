@@ -1531,8 +1531,8 @@ p.sched-des#sched-des
 div.history_heading#history_heading,
 div.degree_heading#degree_heading
 {
-    /* width: 100%;
-    height: 100%; */
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -1542,14 +1542,14 @@ div.degree_heading#degree_heading
 .table-main_container#table-main
 {
     margin-top: 0.5rem;
-    margin-right: 0;
+    margin-right: auto;
     margin-bottom: 0.5rem;
     margin-left: 0;
 }
 .table-new#table-main
 {
-    /* width: 100%;
-    height: 100%; */
+    width: 100%;
+    height: 100%;
     border-color: black;
     border-style: solid;
     border-width: 3px;
@@ -1567,7 +1567,7 @@ div.degree_heading#degree_heading
 
     margin: 0 0 1rem;
 }
-/* .table-expand#table-expand
+.table-expand#table-expand
 {
     min-width: fit-content;
     height: fit-content;
@@ -1587,7 +1587,7 @@ div.degree_heading#degree_heading
     border-style: solid;
     border-width: 3px;
     resize: both;
-} */
+}
 
 .tab-content-text
 {

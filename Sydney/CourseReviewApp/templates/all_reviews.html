@@ -1,0 +1,21 @@
+<!-- templates/all_reviews.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Reviews</title>
+</head>
+<body>
+    <h1>All Course Reviews</h1>
+    {% for review in reviews %}
+    <div>
+        <h3>{{ review.course_name }}</h3>
+        <p>{{ review.review_text }}</p>
+        <hr>
+    </div>
+    {% endfor %}
+    <a href="{{ url_for('index') }}">Back to form</a>
+</body>
+</html>
