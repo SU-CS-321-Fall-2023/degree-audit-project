@@ -13,7 +13,7 @@ This project aims to expand upon the current functionality (or lack thereof) of 
     Backend:        Peyton Shelly
     Frontend Lead:  Alexander Garofalo (Backup Team Lead)
     Frontend:       Nonso Okeke
-    
+
 --Project 2 Roles Change--
 
     Team Lead:      Alexander Garofalo
