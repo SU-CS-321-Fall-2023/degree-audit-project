@@ -8,6 +8,8 @@ session = requests.Session()
 # Both of these cookies are necessary to access the URL.
 # You will need to get your own personal cookies.
 #! We don't condone cookie sharing here!!
+session.cookies['JSESSIONID'] = 'your JSESSIONID'
+session.cookies['INGRESSCOOKIE'] = 'your INGRESSCOOKIE'
 
 # url = 'https://myapps.stetson.edu/StudentRegistrationSsb/ssb/registration'
 data_url = 'https://myapps.stetson.edu/StudentRegistrationSsb/ssb/registrationHistory/reset?term=202315'
