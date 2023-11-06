@@ -11,8 +11,16 @@ This project aims to expand upon the current functionality (or lack thereof) of 
     Team Lead:      Maddy Cobb
     Backend Lead:   Sydney Heimann
     Backend:        Peyton Shelly
-    Frontend Lead:  Alexander Garofalo
+    Frontend Lead:  Alexander Garofalo (Backup Team Lead)
     Frontend:       Nonso Okeke
+    
+--Project 2 Roles Change--
+
+    Team Lead:      Alexander Garofalo
+    Backend Lead:   Sydney Heimann (Backup Team Lead)
+    Backend:        Peyton Shelly
+    Backend:        Maddy Cobb
+    Frontend Lead:  Nonso Okeke
 
 ## Class Details
 

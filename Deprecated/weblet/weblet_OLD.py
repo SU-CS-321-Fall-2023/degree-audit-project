@@ -1,5 +1,3 @@
-# Outdated since October 9, 2023
-# Replaced by weblet.py
 
 # from flask import Flask
 # from flask import render_template

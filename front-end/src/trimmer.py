@@ -40,7 +40,7 @@ try:
             }
             filteredData.append(app_data)
         print("\n".join(map(str, filteredData)))
-        with open('filtered.json', 'w') as json_file:
+        with open('Output Files/filtered.json', 'w') as json_file:
             json.dump(filteredData, json_file, indent=4)
         print("filtered.json has been created.")
 
