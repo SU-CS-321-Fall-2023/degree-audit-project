@@ -4,10 +4,108 @@
 
 % To receive the details regarding a specific major, epecially for ones that have similar abbreviations:
 % getDetails("BA", "EDUC", X) :- major("BA", "EDUC", X), courseDescription(X,Y).
-find_majorByDegree(Degree, Majors) :- findall((Abbreviation, Full_Name), major(Degree,Abbreviation,Full_Name), Majors).
+
+% findMajor(Degree, Abbreviation, Full_Name, Majors) :-
+%     findall((Degree, Abbreviation, Full_Name), major(Degree,Abbreviation,Full_Name), Majors),
+%     write_to_file('majors.csv', Majors).
+findMajor(Degree, Abbreviation, Full_Name, Majors) :-
+    findall((Degree, Abbreviation, Full_Name), major(Degree,Abbreviation,Full_Name), Majors),
+    forall(Degree=Degree, write_to_file('majors.txt', Majors)).
+    % write_to_file('majors.csv', Majors).
+    % print(Majors).
+    % forall(major(Degree, Abbreviation, Full_Name)=Majors, (print(major(Degree, Abbreviation, Full_Name)))).
 
 
-getDetails("BA", "EDUC", X) :- courseDescription(X,Y).
+% fileSave(Filename, List, Mode) :-
+%     must_be(oneof([write, append]), Mode),
+%     setup_call_cleanup(
+%         open(FileName, Mode, File),
+%         forall(
+%             member(Element,List),
+%             (
+%                 write(File, Element),
+%                 write(File, ' ')
+%             )
+%         ),
+%         close(File)).
+
+% portray(majors(Majors)) :- nl(Majors), maplist(writeln, Majors).
+
+% Define a predicate to write data to a file
+write_to_file(File, Data) :-
+    open(File, write, Stream),  % Open the file for writing (creates/overwrites)
+    writeq(Stream, Data),        % Write the data to the file
+    close(Stream).              % Close the file
+
+% Example usage
+% write_to_file('pickles.txt', 'Hello, Prolog!\n').
+% write_to_file('pickles.txt', 'This is a new line.\n').
+
+% Read and display the contents of the file
+read_file(File) :-
+    open(File, read, Stream),
+    repeat,
+    read_line_to_string(Stream, Line),
+    (   Line == end_of_file
+    ->  true
+    ;   writeln(Line),
+        fail
+    ),
+    close(Stream).
+
+% Example usage to read and display the contents of the file
+% read_file('output.txt').
+
+
+% write_list([]).
+% write_to_file(Filename, Data) :-
+%     open(Filename, append, Stream),
+%     write(Stream, Data),
+%     write(Stream, '\n'),
+%     % write_to_file(Filename, Data),
+%     close(Stream).
+% write_list([H|T]) :-
+%     open('pickles.txt', write, Stream),
+%     write(Stream, H),
+%     write(Stream, '\n'),
+%     write_list(T),
+%     close(Stream).
+
+find_majorByDegree(Degree, Majors) :- 
+    findMajor(Degree, Abbreviation, Full_Name, Majors).
+    % forall(Degree=Degree, writef('%t', ([Degree, Abbreviation, Full_Name]))).
+    % write_to_file('pickles.txt', Majors).
+    % write_to_file('pickles.txt', Majors).
+    % write_list([Majors|Majors]).
+
+
+    % forall(Degree="BA", write_term((Degree, Abbreviation, Full_Name), [ portray(true), numbervars(true), quoted(true), no_lists(false) ])).
+    % forall(Majors, (writef('\n'), writeln(Majors))).
+    % forall(Majors, (writeln(("BA", "AMST", "American Studies"), Term))).
+        % find_majorByDegree(Degree, Majors).
+
+
+
+
+    % myWrite(Majors).
+    % member(("BA", "ENGL", "English"), Majors),
+    % writef('%t\n', Majors).
+    % find_majorByDegree(Degree, Majors).
+    % print(Degree), print(Abbreviation), print(Full_Name), write(Majors).
+    % atom_concat(Degree, Abbreviation, L), atom_concat(L, Full_Name, L), print(L).
+    % print_term(Degree, [ portray(true), numbervars(true), quoted(true)]).
+% find_majorByAbbrev(Abbreviation, Majors) :- 
+%     findMajor(Degree, Abbreviation, Full_Name, Majors).
+%     % atom_concat(Degree, Abbreviation, Abbreviation), atom_concat(Abbreviation, Full_Name, Abbreviation).
+%     % print_term((Abbreviation), [ portray(true), numbervars(true), quoted(true)]).
+% find_majorByName(Full_Name, Majors) :- 
+%     findMajor(Degree, Abbreviation, Full_Name, Majors).
+%     % atom_concat(Abbreviation, Full_Name, Full_Name), atom_concat(Degree, Full_Name, Full_Name),
+%     % print_term(Majors, [ portray(true), numbervars(true), quoted(true), no_lists(false)]).
+% % find_majorByDegree2(Degree, Majors) :- findall(X, major(Degree,_,X), Majors). 
+
+
+% getDetails("BA", "EDUC", X) :- courseDescription(X,Y).
 
 courseDescription("Elementary Education", ": That is a child-friendly major.").
 
