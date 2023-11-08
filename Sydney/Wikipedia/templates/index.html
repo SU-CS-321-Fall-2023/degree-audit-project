@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia Search</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+        /* Keyframes for animations */
+        @keyframes slideUpFade {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Base styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+            color: white;
+        }
+
+        form {
+            animation: slideUpFade 0.7s forwards;
+            padding: 30px; /* Increased padding */
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Input styling with a search icon */
+        #search-input {
+            width: 90%; /* Increase width */
+            padding: 15px 15px 15px 45px; /* Increase padding and adjust for the icon */
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            outline: none;
+            font-size: 20px; /* Bigger font size */
+            background: white url('https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/magnifier-icon.png') 15px center no-repeat; /* Adjust icon position */
+            background-size: 30px; /* Increase icon size */
+        }
+
+        #search-input:focus {
+            box-shadow: 0 0 5px #007BFF;
+        }
+
+        /* Button styling */
+        button {
+            margin-top: 20px; /* Increase margin */
+            padding: 15px 20px; /* Increase padding */
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            background-color: #007BFF;
+            color: white;
+            font-size: 20px; /* Bigger font size */
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:active {
+            transform: translateY(2px);
+        }
+
+    </style>
+</head>
+
+<body>
+    <form method="post" action="/">
+        <label for="search-input" style="font-size: 20px;">Search Wikipedia:</label> <!-- Bigger label font size -->
+        <input type="text" id="search-input" name="search" placeholder="Enter search term..." required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+
+</html>
