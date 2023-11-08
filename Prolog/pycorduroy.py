@@ -1,9 +1,12 @@
 import os
+import subprocess
 
-# TODO: Call SWI-Prolog from this file.
+# // TODO: Call SWI-Prolog from this file.
 # // TODO: After opening program, consult "corduroy.pro"
 # // TODO: Run queries to create lists of majors
 # TODO: Break code into functions.
+
+subprocess.call(args="C:/Program Files/swipl/bin/swipl-win.exe")
 
 # Replace the file paths with your own
 degrees = [
