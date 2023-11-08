@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wikipedia Search Results</title>
+    <meta name="description" content="A Wikipedia search results display">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <!-- Icon link example (Replace with your own icon) -->
+    <link rel="icon" href="path-to-your-favicon.ico">
+</head>
+
+<body>
+    <!-- Display the results inside a box -->
+    <div class="result-box">
+        <div class="result-image">
+            <img src = "https://heavy.com/wp-content/uploads/2020/04/danny-devito-e1587578167195.jpg?quality=65&strip=all" alt="Result Image" class=""image-modal">
+           <!-- <img src="https://api.time.com/wp-content/uploads/2023/09/GettyImages-81156287.jpg" alt="Result Image" class="image-modal">-->
+        </div>
+        <div class="theme-toggle">
+            <input type="checkbox" id="darkModeToggle">
+            <label for="darkModeToggle">Dark Mode</label>
+        </div>        
+        <div class="result-content">
+            <h2>Results for: {{ title }}</h2>
+            <p>{{ summary }}</p>
+            <div class="action-links">
+                <a href="https://en.wikipedia.org/wiki/{{ title|replace(' ', '_') }}" target="_blank" class="wiki-link">Read more on Wikipedia <span class="external-link-icon">🔗</span></a>
+                <a href="/" class="back-button">Back to Search</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Global styles */
+        body {
+            background: white;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Result Box Styles */
+        .result-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            animation: slideUpFade 0.7s forwards;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.7);
+            max-width: 1000px;
+            margin: 2% auto;
+            color: white;
+        }
+
+        /* Image Styles */
+        .result-image img {
+            max-width: 300px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            margin-right: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .result-image img:hover {
+            transform: scale(1.05);
+            opacity: 0.8;
+        }
+
+        /* Content Styles */
+        .result-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .result-box h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #0cc218;
+            font-weight: bolder;
+        }
+        .result-box p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .action-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .result-box a {
+            flex: 1;
+            margin: 0 10px;
+            padding: 15px 0;
+            text-align: center;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .result-box a:hover {
+            transform: translateY(-2px);
+        }
+        .back-button {
+            background-color: #ff0800;
+            color: white;
+        }
+        .wiki-link {
+            background-color: #001dc3;
+            color: white;
+        }
+        .external-link-icon {
+            padding-left: 10px;
+        }
+
+        /* Responsive design */
+        @media only screen and (max-width: 800px) {
+            .result-box {
+                flex-direction: column;
+            }
+            .result-image {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .result-content {
+                text-align: center;
+            }
+            .action-links {
+                flex-direction: column;
+            }
+            .result-box a {
+                margin: 10px 0;
+            }
+        }
+        body.dark-mode {
+    background: #121212;
+    color: #fff;
+}
+
+body.dark-mode .result-box {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .result-box h2 {
+    color: #0cc218;
+}
+
+body.dark-mode .back-button {
+    background-color: #ff4081;
+}
+
+body.dark-mode .wiki-link {
+    background-color: #3f51b5;
+}
+
+        
+    </style>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+    
+        darkModeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        });
+    </script>    
+</body>
+
+</html>
