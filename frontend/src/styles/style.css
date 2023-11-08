@@ -1464,11 +1464,13 @@ div.inner_form {
     }
 }
 
-/* .myWrapper#myWrapper
+.myWrapper#myWrapper
 {
+    background-color: #85ab82;
+
     padding: 0 0px;
     margin: 0 0;
-} */
+}
 .page-title
 {
     color: black;
