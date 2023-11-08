@@ -1,0 +1,27 @@
+body {
+    background-color: green;
+    color: white;
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
+
+.header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.banner {
+    background-color: white;
+    color: green;
+    padding: 10px;
+    text-align: center;
+    border: 50px solid black; /* Add a border around the banner */
+}
+
+.recommended-courses {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
