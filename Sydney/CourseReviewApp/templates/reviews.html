@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,9 +27,17 @@
             color: black;
             z-index: 2;
             border-radius: 8px;
-            width: 60%;
+            max-width: 90%;
+            width: 100%;
+            margin: 0 auto;
+            padding: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
+        /* Responsive font sizes */
+body, input, select, textarea, button {
+    font-size: 0.8rem; /* Responsive font size */
+}
 
         .modal h2 {
             background-color: #4CAF50;
@@ -77,11 +84,11 @@
         }
 
         .form-field {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
-             /* Slider CSS */
-             .slider-container {
+        /* Slider CSS */
+        .slider-container {
             display: flex;
             align-items: center;
         }
@@ -100,11 +107,158 @@
             text-align: center;
         }
 
+        .star-rating {
+            display: flex;
+            flex-direction: row-reverse; /* Reverse the order of the flex items */
+            justify-content: flex-end; /* Align items to the right */
+        }
+
+        .professor-rating-label {
+            font-size: 14px; /* Smaller font size for the label */
+            margin-left: 10px; /* Space between the label and the stars */
+        }
+
+        /* Hide the radio buttons */
+        .star-rating input[type="radio"] {
+            display: none;
+        }
+
+        /* Style for the star labels */
+        .star-rating label {
+            font-size: 25px;
+            color: black; /* Default color of stars */
+            cursor: pointer;
+        }
+
+        /* Change color of stars when radio button is checked */
+        .star-rating input[type="radio"]:checked ~ label {
+            color: gold;
+        }
+
+
+        /* Style for each form-field group */
+.form-field {
+    margin-bottom: 10px; /* Adjust space between each form field */
+}
+
+/* Style for each question label */
+.question-label {
+    display: inline-block; /* Display the label inline with the radio buttons */
+    margin-right: 10px; /* Space between the label and the radio buttons */
+    vertical-align: top; /* Aligns the label with the top of the radio buttons */
+}
+
+/* Style for each radio button group */
+.radio-group {
+    display: block; /* Display the radio buttons inline with the label */
+}
+
+/* Style for each radio option */
+.radio-group label {
+    display: inline-block; 
+    margin-right: 10px; /* Space between each radio button */
+    white-space: nowrap; /* Prevents label text from wrapping */
+    margin-bottom: 0; /* Remove bottom margin if any */
+}
+
+/* Styling radio buttons and checkboxes for better interaction */
+.radio-group label, .checkbox-group label {
+    padding: 5px; /* Easier to click */
+    cursor: pointer;
+}
+
+/* Organizing form sections */
+.form-section {
+    margin-bottom: 30px; /* Space out sections */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .modal {
+        padding: 10px; /* Smaller padding on smaller screens */
+        width: 95%; /* Use more width on smaller screens */
+    }
+
+    .form-field, .question-label, .radio-group {
+        /* Adjust layout for smaller screens */
+    }
+
+    .radio-group label {
+            /* Adjustments for smaller screens */
+            display: inline-block; /* Aligns labels horizontally */
+    margin-right: 10px; /* Space between each label */
+    margin-bottom: 0; /* Remove bottom margin if any */
+        }
+}
+
+/* Styles for tabs or accordion (if implemented) */
+.tab-container, .accordion-container {
+    /* Styles for tab or accordion layout */
+}
+
+input[type="text"], select, textarea {
+    font-size: 0.9rem; /* Reduce font size in form elements */
+}
+
+button {
+    padding: 5px 10px; /* Adjust button padding */
+}
+
+/* Adjusting the base font size */
+body {
+    font-size: 0.8rem; /* Decrease the base font size */
+}
+
+/* Adjusting headings */
+h1 {
+    font-size: 1.0 rem; /* Adjust the size as needed */
+}
+
+h2 {
+    font-size: 1.0 rem; /* Adjust the size as needed */
+}
+
+/* Adjusting labels and buttons */
+label, button {
+    font-size: 0.8rem; /* Adjust the size as needed */
+}
+
+/* Adjusting form inputs */
+input[type="text"], select, textarea {
+    font-size: 0.8rem; /* Adjust the size as needed */
+}
+
+/* Other specific adjustments as needed */
+/* ... */
+
+
+/* Flex container for rating and feedback */
+.rating-feedback-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between elements */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between items */
+}
+
+.star-rating-container, .feedback-textarea-container {
+    flex: 1; /* Take up equal space */
+}
+
+@media (max-width: 768px) {
+    .rating-feedback-container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+}
+
+
+
+
     </style>
 </head>
 
 <body>
     <h1>Welcome to Course Reviews</h1>
+    <p>Please quantify your responses. Don't just say "it was good", "instructor can't teach", "the class was terrible", etc. Offer an explanation for why you feel the way you do so as to help others understand your perspective.</p>
 
     <label>
         <input type="checkbox" id="showReview" onclick="toggleReview()"> Show Course Review Form
@@ -118,7 +272,7 @@
         <form>
             <!-- Course Name dropdown field -->
             <div class="form-field">
-                <label>Course Name:</label>
+                
                 <select name="course_name" required>
                     <option value="" disabled selected>Select your course to review</option>
                     <option value="Software Development II">CSCI 321</option>
@@ -126,63 +280,122 @@
                     <option value="Introduction to Computer Science">CSCI 141</option>
                     <option value="Introduction to Computing">CSCI 111</option>
                 </select>
-            </div>
+            </div> 
 
-        <!-- <div class="form-field"> 
-                <label>Review:</label>
-                <textarea name="review"></textarea>
-            </div> -->
+            <!-- Additional new fields as per your requirement -->
+            <!-- Flask page -->
 
-            <div class="form-field">
-                <label>Class Difficulty:</label>
-                <select name="difficulty_rating" required>
-                    <option value="" disabled selected>Select Difficulty</option>
-                    <option value="1">1 Not Difficult</option>
-                    <option value="2">2 Slightly Difficult</option>
-                    <option value="3">3 Moderately Difficult</option>
-                    <option value="4">4 Difficult</option>
-                    <option value="5">5 Very Difficult</option>
-                </select>
-            </div>
+           
+            <!-- Star rating for professor -->
+            <!-- Flex container for rating and feedback -->
+<div class="rating-feedback-container">
+    <!-- Star rating for professor -->
+    <div class="star-rating-container">
+        <label class="professor-rating-label">{{ form.professor_rate.label }}</label>
+        <div class="star-rating">
+            {% for i in range(5, 0, -1) %}
+                <input type="radio" id="rate{{ i }}" name="professor_rate" value="{{ i }}">
+                <label for="rate{{ i }}">★</label>
+            {% endfor %}
+        </div>
+    </div>
 
-            <div class="form-field">
-                <label>Professor's Rating:</label>
-                <span class="rating">
-                    <input type="radio" id="prof_rating_5" name="professor_rating" value="5" required><label for="prof_rating_5">&#9733;</label>
-                    <input type="radio" id="prof_rating_4" name="professor_rating" value="4" required><label for="prof_rating_4">&#9733;</label>
-                    <input type="radio" id="prof_rating_3" name="professor_rating" value="3" required><label for="prof_rating_3">&#9733;</label>
-                    <input type="radio" id="prof_rating_2" name="professor_rating" value="2" required><label for="prof_rating_2">&#9733;</label>
-                    <input type="radio" id="prof_rating_1" name="professor_rating" value="1" required><label for="prof_rating_1">&#9733;</label>
-                </span>
-            </div>
+    <!-- Professor feedback -->
+    <div class="feedback-textarea-container">
+        <label for="professorFeedback">What did you think of the Professor:</label>
+        <textarea id="professorFeedback" class="char-count-textarea" name="professor_feedback" oninput="updateCharCount(this)"></textarea>
+        <p class="char-count-display">Characters: 0/250</p>
+    </div>
+</div>
 
-
-            <!-- Existing form fields -->
+            
 
             <div class="form-field">
-                <label>What did you think of the Professor:</label>
-                <textarea name="professor_feedback" id="professorFeedback" required></textarea>
+                <label for="courseLoad">Describe the course load:</label>
+                <textarea id="courseLoad" class="char-count-textarea" name="course_load" oninput="updateCharCount(this)"></textarea>
+                <p class="char-count-display">Characters: 0/250</p>
             </div>
 
             <div class="form-field">
-                <label>Describe the course load:</label>
-                <textarea name="course_load" id="courseLoad" required></textarea>
+                <label for="quizzesTests">How were quizzes/tests (if any):</label>
+                <textarea id="quizzesTests" class="char-count-textarea" name="quizzes_tests" oninput="updateCharCount(this)"></textarea>
+                <p class="char-count-display">Characters: 0/250</p>
             </div>
 
             <div class="form-field">
-                <label>How were quizzes/tests (if any):</label>
-                <textarea name="quizzes_tests" id="quizzesTests" required></textarea>
+                <label for="reviewTextarea">Overall Course Review:</label>
+                <textarea id="reviewTextarea" class="char-count-textarea" name="review" oninput="updateCharCount(this)"></textarea>
+                <p class="char-count-display">Characters: 0/250</p>
             </div>
 
-            <!-- Rest of the form continues... -->
+           <!-- Instructor Notes Online -->
+           <!-- Corrected class name for the form field -->
+           <div class="form-field">
+            <label class="question-label">Does the instructor post the class notes online?</label>
+            <div class="radio-group">
+                <input type="radio" id="notes_yes" name="notes_online" value="Yes">
+                <label for="notes_yes">Yes</label>
+                <input type="radio" id="notes_no" name="notes_online" value="No">
+                <label for="notes_no">No</label>
+                <input type="radio" id="notes_na" name="notes_online" value="N/A">
+                <label for="notes_na">N/A</label>
+            </div>
+        </div>
+        
+        <!-- Does the instructor offer extra credit? -->
+<div class="form-field">
+    <label class="question-label">Does the instructor offer extra credit?</label>
+    <div class="radio-group">
+        <input type="radio" id="extra_credit_yes" name="extra_credit" value="Yes">
+        <label for="extra_credit_yes">Yes</label>
+        <input type="radio" id="extra_credit_no" name="extra_credit" value="No">
+        <label for="extra_credit_no">No</label>
+        <input type="radio" id="extra_credit_na" name="extra_credit" value="N/A">
+        <label for="extra_credit_na">N/A</label>
+    </div>
+</div>
 
+<!-- The instructor is flexible when it comes to unforeseen circumstances -->
+<div class="form-field">
+    <label class="question-label">The instructor is flexible when it comes to unforeseen circumstances</label>
+    <div class="radio-group">
+        <input type="radio" id="flexibility_strongly_agree" name="flexibility" value="Strongly Agree">
+        <label for="flexibility_strongly_agree">Strongly Agree</label>
+        <input type="radio" id="flexibility_agree" name="flexibility" value="Agree">
+        <label for="flexibility_agree">Agree</label>
+        <input type="radio" id="flexibility_neutral" name="flexibility" value="Neutral">
+        <label for="flexibility_neutral">Neutral</label>
+        <input type="radio" id="flexibility_disagree" name="flexibility" value="Disagree">
+        <label for="flexibility_Disagree">Disagree</label>
+        <input type="radio" id="flexibility_strongly_disagree" name="flexibility" value="Strongly Disagree">
+        <label for="flexibility_strongly_disagree">Strongly Disgree</label>
+        <!-- Repeat for Disagree, Neutral, Agree, Strongly Agree, N/A -->
+    </div>
+</div>
+        
+        
+        
+        <!-- Other form fields... -->
+        
 
+<!-- Other form fields... -->
+
+        
 
             <div class="form-field">
-                <label>Review:</label>
-                <textarea name="review" id="reviewTextarea" oninput="updateWordCount()"></textarea>
-                <p id="wordCountDisplay">Words: 0/100</p>
+                <label for="instructorDemeanor">What was the professor's demeanor like?:</label>
+                <textarea id="instructorDemeanor" name="instructor_demeanor" oninput="updateCharCount(this)"></textarea>
+                <p class="char-count-display">Characters: 0/250</p>
             </div>
+
+            <!-- Rest of the new fields... -->
+
+            <div class="form-field">
+                <label>Overall Course Review:</label>
+                <textarea name="review" id="reviewTextarea" oninput="updateCharCount()"></textarea>
+                <p id="charCountDisplay">Characters: 0/250</p> <!-- Updated ID and text -->
+            </div>
+            
 
             <input type="submit" value="Save Review">
         </form>
@@ -191,28 +404,29 @@
     </div>
 
     <script>
-        function updateWordCount() {
-        var textarea = document.getElementById('reviewTextarea');
-        var wordCountDisplay = document.getElementById('wordCountDisplay');
+          // Function to update character count for a specific textarea
+          function updateCharCount(textareaElement) {
+                var charCountDisplay = textareaElement.nextElementSibling; // Assuming the character count display <p> is right after the textarea
+                var charCount = textareaElement.value.length;
+                charCountDisplay.textContent = 'Characters: ' + charCount + '/250';
 
-        var words = textarea.value.split(/\s+/).filter(Boolean).length; // Filters out empty strings from the array
-        wordCountDisplay.textContent = 'Words: ' + words + '/100';
+                // Optional: Change color if the count exceeds 250 characters
+                if (charCount > 250) {
+                    charCountDisplay.style.color = 'red';
+                } else {
+                    charCountDisplay.style.color = 'black';
+                }
+            }
 
-        if (words > 100) {
-            wordCountDisplay.style.color = 'red';
-        } else {
-            wordCountDisplay.style.color = 'black';
-        }
-    }
 
-    document.querySelector('form').addEventListener('submit', function(event) {
-        var words = document.getElementById('reviewTextarea').value.split(/\s+/).filter(Boolean).length;
+        document.querySelector('form').addEventListener('submit', function(event) {
+            var words = document.getElementById('reviewTextarea').value.split(/\s+/).filter(Boolean).length;
 
-        if (words > 100) {
-            alert('Review exceeds the maximum word count of 100. Please reduce your review length.');
-            event.preventDefault();  // Prevent form submission
-        }
-    });
+            if (words > 100) {
+                alert('Review exceeds the maximum word count of 100. Please reduce your review length.');
+                event.preventDefault();
+            }
+        });
 
         function toggleReview() {
             var checkbox = document.getElementById('showReview');
@@ -237,5 +451,4 @@
         }
     </script>
 </body>
-
 </html>
