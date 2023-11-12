@@ -87,6 +87,23 @@ def all_reviews():
     reviews = Review.query.all()
     return render_template('all_reviews.html', reviews=reviews)
 
+@app.route('/select_course')
+def select_course():
+    return render_template('course_selection.html')
+
+@app.route('/review_form', methods=['POST'])
+def review_form():
+    selected_course = request.form['course_name']
+    # Do something with the selected course, like render a new template
+    return render_template('review_form.html', course=selected_course)
+
+@app.route('/course_selection', methods=['GET', 'POST'])
+def course_selection():
+    if request.method == 'POST':
+        selected_course = request.form['course_name']
+        return render_template('reviews.html', course=selected_course)
+    return render_template('course_selection.html')
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
