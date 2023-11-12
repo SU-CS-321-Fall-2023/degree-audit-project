@@ -5,6 +5,9 @@ from wtforms import StringField, TextAreaField, SubmitField, RadioField
 from wtforms.validators import DataRequired, Length
 from datetime import datetime
 
+# import os
+# rootPath = os.path.abspath(os.getcwd())
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///reviews.db'
 app.config['SECRET_KEY'] = 'your_secret_key'
