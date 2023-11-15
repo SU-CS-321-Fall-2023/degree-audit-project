@@ -228,13 +228,14 @@ font-size: 0.8rem; /* Adjust the size as needed */
 /* Flex container for rating and feedback */
 .rating-feedback-container {
 display: flex;
-justify-content: space-between; /* Distribute space between elements */
-align-items: flex-start; /* Align items to the top */
+justify-content: flex-start; /* Distribute space between elements */
+/*align-items: flex-start; /* Align items to the top */
 gap: 20px; /* Space between items */
 }
 
 .star-rating-container, .feedback-textarea-container {
-flex: 1; /* Take up equal space */
+flex-grow: 1; /* Take up equal space */
+max-width: 50%;
 }
 
 @media (max-width: 768px) {
