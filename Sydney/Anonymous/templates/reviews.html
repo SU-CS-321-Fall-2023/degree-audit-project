@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Reviews for {{ course_code }}</title>
+</head>
+<body>
+    <h1>Course Reviews for {{ course_code }}</h1>
+
+    {% if reviews %}
+        <ul>
+            {% for review in reviews %}
+                <li>
+                    <strong>ID:</strong> {{ review.id }}<br>
+                    <strong>Review:</strong> {{ review.review_text }}<br>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No reviews available for this course.</p>
+    {% endif %}
+
+    <h2>Submit a Review</h2>
+    <form action="/submit_review" method="post">
+        <input type="hidden" name="course_code" value="{{ course_code }}">
+        <label for="content">Review Content:</label><br>
+        <textarea id="content" name="content" required></textarea><br>
+        <input type="submit" value="Submit Review">
+    </form>
+
+    <a href="/">Back to Course List</a>
+</body>
+</html>

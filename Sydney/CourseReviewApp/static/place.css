@@ -1,0 +1,245 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    color: black;
+    z-index: 2;
+    border-radius: 8px;
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive font sizes */
+body, input, select, textarea, button {
+font-size: 0.8rem; /* Responsive font size */
+}
+
+.modal h2 {
+    background-color: #4CAF50;
+    padding: 10px;
+    margin-top: 0;
+    border-radius: 6px 6px 0 0;
+    color: white;
+}
+
+.modal button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #45a049;
+}
+
+.rating {
+    direction: rtl;
+    display: inline-block;
+}
+
+.rating label {
+    font-size: 25px;
+    text-decoration: none;
+    color: #aaa;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.rating > a:hover,
+.rating > a:hover ~ a,
+.rating > input:checked ~ label {
+    color: gold;
+}
+
+.rating input {
+    display: none;
+}
+
+.form-field {
+    margin-bottom: 10px;
+}
+
+/* Slider CSS */
+.slider-container {
+    display: flex;
+    align-items: center;
+}
+
+.slider-label {
+    margin-right: 10px;
+}
+
+.slider {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.slider-value {
+    width: 30px;
+    text-align: center;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order of the flex items */
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.professor-rating-label {
+    font-size: 14px; /* Smaller font size for the label */
+    margin-left: 10px; /* Space between the label and the stars */
+}
+
+/* Hide the radio buttons */
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+/* Style for the star labels */
+.star-rating label {
+    font-size: 25px;
+    color: black; /* Default color of stars */
+    cursor: pointer;
+}
+
+/* Change color of stars when radio button is checked */
+.star-rating input[type="radio"]:checked ~ label {
+    color: gold;
+}
+
+
+/* Style for each form-field group */
+.form-field {
+margin-bottom: 10px; /* Adjust space between each form field */
+}
+
+/* Style for each question label */
+.question-label {
+display: inline-block; /* Display the label inline with the radio buttons */
+margin-right: 10px; /* Space between the label and the radio buttons */
+vertical-align: top; /* Aligns the label with the top of the radio buttons */
+}
+
+/* Style for each radio button group */
+.radio-group {
+display: block; /* Display the radio buttons inline with the label */
+}
+
+/* Style for each radio option */
+.radio-group label {
+display: inline-block; 
+margin-right: 10px; /* Space between each radio button */
+white-space: nowrap; /* Prevents label text from wrapping */
+margin-bottom: 0; /* Remove bottom margin if any */
+}
+
+/* Styling radio buttons and checkboxes for better interaction */
+.radio-group label, .checkbox-group label {
+padding: 5px; /* Easier to click */
+cursor: pointer;
+}
+
+/* Organizing form sections */
+.form-section {
+margin-bottom: 30px; /* Space out sections */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+.modal {
+padding: 10px; /* Smaller padding on smaller screens */
+width: 95%; /* Use more width on smaller screens */
+}
+
+.form-field, .question-label, .radio-group {
+/* Adjust layout for smaller screens */
+}
+
+.radio-group label {
+    /* Adjustments for smaller screens */
+    display: inline-block; /* Aligns labels horizontally */
+margin-right: 10px; /* Space between each label */
+margin-bottom: 0; /* Remove bottom margin if any */
+}
+}
+
+/* Styles for tabs or accordion (if implemented) */
+.tab-container, .accordion-container {
+/* Styles for tab or accordion layout */
+}
+
+input[type="text"], select, textarea {
+font-size: 0.9rem; /* Reduce font size in form elements */
+}
+
+button {
+padding: 5px 10px; /* Adjust button padding */
+}
+
+/* Adjusting the base font size */
+body {
+font-size: 0.8rem; /* Decrease the base font size */
+}
+
+/* Adjusting headings */
+h1 {
+font-size: 1.0 rem; /* Adjust the size as needed */
+}
+
+h2 {
+font-size: 1.0 rem; /* Adjust the size as needed */
+}
+
+/* Adjusting labels and buttons */
+label, button {
+font-size: 0.8rem; /* Adjust the size as needed */
+}
+
+/* Adjusting form inputs */
+input[type="text"], select, textarea {
+font-size: 0.8rem; /* Adjust the size as needed */
+}
+
+/* Other specific adjustments as needed */
+/* ... */
+
+
+/* Flex container for rating and feedback */
+.rating-feedback-container {
+display: flex;
+justify-content: flex-start; /* Distribute space between elements */
+/*align-items: flex-start; /* Align items to the top */
+gap: 20px; /* Space between items */
+}
+
+.star-rating-container, .feedback-textarea-container {
+flex-grow: 1; /* Take up equal space */
+max-width: 50%;
+}
+
+@media (max-width: 768px) {
+.rating-feedback-container {
+flex-direction: column; /* Stack vertically on smaller screens */
+}
+}
