@@ -48,5 +48,8 @@
         <input type="submit" value="Next">
     </form>
     
+    <a href="{{ url_for('show_reviews', course_id=course.id) }}">View Reviews for {{ course.course_name }}</a>
+
+
 </body>
 </html>

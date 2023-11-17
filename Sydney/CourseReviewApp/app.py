@@ -107,6 +107,37 @@ def course_selection():
         return render_template('reviews.html', course=selected_course)
     return render_template('course_selection.html')
 
+@app.route('/submit_review', methods=['POST'])
+def submit_review():
+    form = ReviewForm(request.form)
+    if form.validate_on_submit():
+        new_review = Review(
+            # Fill in the fields from the form
+            course_id=...,
+            review_text=form.review_text.data,
+            # ... other fields ...
+            # You might want to exclude any personal identifying information to keep it anonymous
+        )
+        db.session.add(new_review)
+        db.session.commit()
+        flash('Review submitted successfully!', 'success')
+        return redirect(url_for('index'))  # Or wherever you want to redirect
+    # Handle the case where the form is not valid
+    return render_template('reviews.html', form=form)
+
+
+@app.route('/reviews/<int:course_id>')
+def show_reviews(course_id):
+    course = Course.query.get(course_id)
+    if course is None:
+        flash('Course not found!', 'error')
+        return redirect(url_for('index'))
+    
+    reviews = Review.query.filter_by(course_id=course_id).all()
+    return render_template('course_reviews.html', course=course, reviews=reviews)
+
+
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

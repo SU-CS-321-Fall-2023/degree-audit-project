@@ -9,7 +9,6 @@
     </head>
 
     <body>
-        <h1>Review for {{ course }}</h1>
         <h1>Welcome to Course Reviews</h1>
         <p>Please quantify your responses. Don't just say "it was good", "instructor can't teach", "the class was terrible", etc. Offer an explanation for why you feel the way you do so as to help others understand your perspective.</p>
 
@@ -147,6 +146,16 @@
 
             <button onclick="closeModal()">Close</button>
         </div>
+
+        <!-- Inside reviews.html -->
+        <div class="modal" id="reviewForm">
+            <h2>Course Review Form</h2>
+
+            <form method="post" action="{{ url_for('submit_review') }}">
+                <!-- The rest of your form fields -->
+            </form>
+        </div>
+
 
         <script>
             // Function to update character count for a specific textarea
