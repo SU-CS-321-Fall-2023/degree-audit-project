@@ -1,0 +1,34 @@
+
+body {
+    background-color: #ffffff; /* White background color */
+    color: #008000; /* Green text color */
+}
+
+h1 {
+    color: #008000; /* Green header text color */
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    color: #008000; /* Green label text color */
+}
+
+input[type="email"] {
+    border: 1px solid #008000; /* Green border for email input */
+}
+
+button {
+    background-color: #008000; /* Green background color for the button */
+    color: #ffffff; /* White text color for the button */
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #006400; /* Darker green color on button hover */
+}
