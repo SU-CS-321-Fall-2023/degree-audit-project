@@ -12,7 +12,8 @@ session = requests.Session()
 # session.cookies['INGRESSCOOKIE'] = 'your INGRESSCOOKIE'
 
 # url = 'https://myapps.stetson.edu/StudentRegistrationSsb/ssb/registration'
-data_url = 'https://myapps.stetson.edu/StudentRegistrationSsb/ssb/registrationHistory/reset?term=202315'
+# data_url = 'https://myapps.stetson.edu/StudentRegistrationSsb/ssb/registrationHistory/reset?term=202315'
+# data_url = ('https://myapps.stetson.edu/StudentRegistrationSsb/ssb/courseSearchResults/courseSearchResults?txt_subject=' + subject + '&txt_term=202425&startDatepicker=&endDatepicker=&uniqueSessionId=fcqzg1700264632027&pageOffset=0&pageMaxSize=100&sortColumn=subjectDescription&sortDirection=asc')
 
 try:
     response = session.get(data_url)
@@ -21,7 +22,7 @@ try:
     if response.status_code == 200:
         print("Request was successful.")
         data = response.json()
-        with open('Output Files/student_data.json', 'w') as json_file:
+        with open('Output Files/db/student_data.json', 'w') as json_file:
             json.dump(data, json_file, indent=4)
         print("student_data.json has been created.")
         # print(response.text)  # Print the content of the page
