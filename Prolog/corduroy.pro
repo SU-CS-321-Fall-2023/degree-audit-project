@@ -258,7 +258,7 @@ minor("WLGC", "World Language").
 
 % Administered through the School of Business Administration.
 minor("ACCT", "Accounting").
-% minor("Applied Statistics").
+minor("STAT", "Applied Statistics").
 minor("SOBA", "Business Administration").
 minor("BSAN", "Business Systems and Analytics").
 minor("BLAW", "Business Law").
@@ -270,7 +270,7 @@ minor("INTL", "International Business").
 minor("MGMT", "Management").
 minor("MKTG", "Marketing").
 minor("SALS", "Professional Sales").
-minor("SPBS", "Sport Business").
+minor("SPTB", "Sport Business").
 
 % Administered through the School of Music.
 % minor("General Minor in Music").
@@ -284,6 +284,85 @@ cas("COMM").
 cas("CSCI").
 cas("DIGA").
 
+subjectFilter("ACCT", "Accounting").
+subjectFilter("AERS", "Aerospace Studies").
+subjectFilter("AFST", "Africana Studies").
+subjectFilter("AMST", "American Studies").
+subjectFilter("ANTH", "Anthropology").
+subjectFilter("LARB", "Arabic").
+subjectFilter("ARTS", "Art Studio").
+subjectFilter("ARTH", "Art History").
+subjectFilter("ASIA", "Asian Studies").
+subjectFilter("ASTR", "Astronomy").
+subjectFilter("BIOL", "Biology").
+subjectFilter("SOBA", "Business Administration").
+subjectFilter("BLAW", "Business Law").
+subjectFilter("BSAN", "Business Systems and Analytics").
+subjectFilter("CHEM", "Chemistry").
+subjectFilter("CHIN", "Chinese").
+subjectFilter("COMM", "Communication and Media Studies").
+subjectFilter("CINF", "Computer Information Systems").
+subjectFilter("CSCI", "Computer Science").
+subjectFilter("COUN", "Counseling").
+subjectFilter("CREA", "Creative Arts").
+subjectFilter("CSEC", "Cybersecurity").
+subjectFilter("DIGA", "Digital Arts").
+subjectFilter("ECON", "Economics").
+subjectFilter("EDUC", "Education").
+subjectFilter("EL", "Elective Course").
+subjectFilter("ENGL", "English").
+subjectFilter("ENCW", "English-Creative Writing").
+subjectFilter("ENTP", "Entrepreneurship").
+subjectFilter("ENSS", "Environmental Science and Studies").
+subjectFilter("FENT", "Family Enterprise").
+subjectFilter("FINA", "Finance").
+subjectFilter("FSEM", "First Year Seminar").
+subjectFilter("FREN", "French").
+subjectFilter("GEND", "Gender Studies").
+subjectFilter("GERM", "German").
+subjectFilter("HLSC", "Health Sciences").
+subjectFilter("HIST", "History").
+subjectFilter("HONR", "Honors").
+subjectFilter("HRMT", "Human Resource Management").
+subjectFilter("INTL", "International Business").
+subjectFilter("INSU", "International Studies").
+subjectFilter("ITAL", "Italian").
+subjectFilter("JWST", "Jewish Studies").
+subjectFilter("JOUR", "Journalism").
+subjectFilter("LANG", "Language-Other").
+subjectFilter("LALS", "Latin American and Latino Studies").
+subjectFilter("LAW", "Law Courses").
+subjectFilter("LING", "Linguistics").
+subjectFilter("MGMT", "Management").
+subjectFilter("MKTG", "Marketing").
+subjectFilter("MATH", "Mathematics").
+subjectFilter("MILS", "Military Science").
+subjectFilter("MUSC", "Music (MUSC)").
+subjectFilter("MUSA", "Music Applied").
+subjectFilter("MUED", "Music Education").
+subjectFilter("MUSE", "Music Ensemble").
+subjectFilter("MUSX", "Music Experience").
+subjectFilter("PHIL", "Philosophy").
+subjectFilter("PHYS", "Physics").
+subjectFilter("POLI", "Political Science").
+subjectFilter("PORT", "Portuguese Language").
+subjectFilter("PRHP", "Pre-Health").
+subjectFilter("PSYC", "Psychology").
+subjectFilter("PUBH", "Public Health").
+subjectFilter("RELS", "Religious Studies").
+subjectFilter("REES", "Russian, East European, and Eurasian Studies").
+subjectFilter("RUSS", "Russian Language").
+subjectFilter("SALS", "Sales").
+subjectFilter("SSCI", "Social Science - Interdisciplinary").
+subjectFilter("SOCI", "Sociology").
+subjectFilter("SPAN", "Spanish").
+subjectFilter("SPTB", "Sport Business").
+subjectFilter("STAT", "Statistics").
+subjectFilter("SA", "Study Abroad").
+subjectFilter("FOOD", "Sustainable Food Systems").
+subjectFilter("THEA", "Theatre Arts").
+subjectFilter("TRF", "Transfer-Law School").
+subjectFilter("WLGC", "World Languages and Cultures").
 
 % f(a).
 % f(b).
@@ -305,15 +384,6 @@ course("Course2", "AMST", "AMST 201").
 course("Course3", "AMST", "AMST 301").
 course("Course4", "AMST", "AMST 401").
 course("Course5", "AMST", "AMST 499").
-% pickle("Course11", "AMST", "AMST 499").
-% pickle("Course12", "AMST", "AMST 499").
-% pickle("Course13", "AMST", "AMST 499").
-
-roomba("Course6", "AMST", "AMST 101").
-roomba("Course7", "AMST", "AMST 201").
-roomba("Course8", "AMST", "AMST 301").
-roomba("Course9", "AMST", "AMST 401").
-roomba("Course0", "AMST", "AMST 499").
 
 mySearch(B, AllMatches) :- 
     findall((A,B,C), _(A,B,C), AllMatches).
