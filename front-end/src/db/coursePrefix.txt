@@ -1,0 +1,77 @@
+Accounting                                      ACCT
+Aerospace Studies                               AERS
+Africana Studies                                AFST
+American Studies                                AMST
+Anthropology                                    ANTH
+Arabic                                          LARB
+Art-Studio                                      ARTS
+Art History                                     ARTH
+Asian Studies                                   ASIA
+Astronomy                                       ASTR
+Biology                                         BIOL
+Business Administration                         SOBA
+Business Law                                    BLAW
+Business Systems Analysis                       BSAN
+Chemistry                                       CHEM
+Chinese                                         CHIN
+Communication and Media Studies                 COMM
+Computer Information Systems                    CINF
+Computer Science                                CSCI
+Counselling                                     COUN
+Creative Arts                                   CREA
+Cybersecurity                                   CSEC
+Digital Arts                                    DIGA
+Economics                                       ECON
+Education                                       EDUC
+English                                         ENGL
+English-Creative Writing                        ENCW
+Entrepreneurship                                ENTP
+Environmental Science and Studies               ENSS
+Family Business                                 FENT
+Finance                                         FINA
+First-Year Seminar                              FSEM
+Foreign Language                                LANG
+French                                          FREN
+Gender Studies                                  GEND
+German                                          GERM
+History                                         HIST
+Honors                                          HONR
+Health Science                                  HLSC
+Human Resource Management                       HRMT
+International Business                          INTL
+International Studies                           INSU
+Italian                                         ITAL
+Jewish Studies                                  JWST
+Journalism                                      JOUR
+Language                                        LANG
+Latin American and Latino Studies               LALS
+Law                                             LAW
+Linguistics                                     LING
+Management                                      MGMT
+Marketing                                       MKTG
+Mathematics                                     MATH
+Military Science                                MILS
+Music                                           MUSC
+Music-Applied                                   MUSA
+Music Education                                 MUED
+Music-Ensemble                                  MUSE
+Music Experience                                MUSX
+Philosophy                                      PHIL
+Physics                                         PHYS
+Political Science                               POLI
+Portuguese                                      PORT
+Pre-Health                                      PRHP
+Professional Sales                              SALS
+Psychology                                      PSYC
+Public Health                                   PUBH
+Religious Studies                               RELS
+Russian                                         RUSS
+Russian, East European, and Eurasian Studies    REES
+Sociology                                       SOCI
+Social Science - Interdisciplinary              SSCI
+Spanish                                         SPAN
+Sport Business                                  SPTB
+Statistics                                      STAT
+Sustainable Food Systems                        FOOD
+Theatre Arts                                    THEA
+World Languages and Cultures                    WLGC

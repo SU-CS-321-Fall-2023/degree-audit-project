@@ -1,0 +1,239 @@
+[
+    {
+        "subject": "ACCT"
+    },
+    {
+        "subject": "AERS"
+    },
+    {
+        "subject": "AFST"
+    },
+    {
+        "subject": "AMST"
+    },
+    {
+        "subject": "ANTH"
+    },
+    {
+        "subject": "LARB"
+    },
+    {
+        "subject": "ARTS"
+    },
+    {
+        "subject": "ARTH"
+    },
+    {
+        "subject": "ASIA"
+    },
+    {
+        "subject": "ASTR"
+    },
+    {
+        "subject": "BIOL"
+    },
+    {
+        "subject": "SOBA"
+    },
+    {
+        "subject": "BLAW"
+    },
+    {
+        "subject": "BSAN"
+    },
+    {
+        "subject": "CHEM"
+    },
+    {
+        "subject": "CHIN"
+    },
+    {
+        "subject": "COMM"
+    },
+    {
+        "subject": "CINF"
+    },
+    {
+        "subject": "CSCI"
+    },
+    {
+        "subject": "COUN"
+    },
+    {
+        "subject": "CREA"
+    },
+    {
+        "subject": "CSEC"
+    },
+    {
+        "subject": "DIGA"
+    },
+    {
+        "subject": "ECON"
+    },
+    {
+        "subject": "EDUC"
+    },
+    {
+        "subject": "EL"
+    },
+    {
+        "subject": "ENGL"
+    },
+    {
+        "subject": "ENCW"
+    },
+    {
+        "subject": "ENTP"
+    },
+    {
+        "subject": "ENSS"
+    },
+    {
+        "subject": "FENT"
+    },
+    {
+        "subject": "FINA"
+    },
+    {
+        "subject": "FSEM"
+    },
+    {
+        "subject": "FREN"
+    },
+    {
+        "subject": "GEND"
+    },
+    {
+        "subject": "GERM"
+    },
+    {
+        "subject": "HLSC"
+    },
+    {
+        "subject": "HIST"
+    },
+    {
+        "subject": "HONR"
+    },
+    {
+        "subject": "HRMT"
+    },
+    {
+        "subject": "INTL"
+    },
+    {
+        "subject": "INSU"
+    },
+    {
+        "subject": "ITAL"
+    },
+    {
+        "subject": "JWST"
+    },
+    {
+        "subject": "JOUR"
+    },
+    {
+        "subject": "LANG"
+    },
+    {
+        "subject": "LALS"
+    },
+    {
+        "subject": "LAW"
+    },
+    {
+        "subject": "LING"
+    },
+    {
+        "subject": "MGMT"
+    },
+    {
+        "subject": "MKTG"
+    },
+    {
+        "subject": "MATH"
+    },
+    {
+        "subject": "MILS"
+    },
+    {
+        "subject": "MUSC"
+    },
+    {
+        "subject": "MUSA"
+    },
+    {
+        "subject": "MUED"
+    },
+    {
+        "subject": "MUSE"
+    },
+    {
+        "subject": "MUSX"
+    },
+    {
+        "subject": "PHIL"
+    },
+    {
+        "subject": "PHYS"
+    },
+    {
+        "subject": "POLI"
+    },
+    {
+        "subject": "PORT"
+    },
+    {
+        "subject": "PRHP"
+    },
+    {
+        "subject": "PSYC"
+    },
+    {
+        "subject": "PUBH"
+    },
+    {
+        "subject": "RELS"
+    },
+    {
+        "subject": "REES"
+    },
+    {
+        "subject": "RUSS"
+    },
+    {
+        "subject": "SALS"
+    },
+    {
+        "subject": "SSCI"
+    },
+    {
+        "subject": "SOCI"
+    },
+    {
+        "subject": "SPAN"
+    },
+    {
+        "subject": "SPTB"
+    },
+    {
+        "subject": "STAT"
+    },
+    {
+        "subject": "SA"
+    },
+    {
+        "subject": "FOOD"
+    },
+    {
+        "subject": "THEA"
+    },
+    {
+        "subject": "TRF"
+    },
+    {
+        "subject": "WLGC"
+    }
+]
