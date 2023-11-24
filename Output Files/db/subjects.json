@@ -25,7 +25,7 @@
     },
     {
       "code": "ARTS",
-      "description": "Art"
+      "description": "Art - Studio"
     },
     {
       "code": "ARTH",
@@ -65,7 +65,7 @@
     },
     {
       "code": "COMM",
-      "description": "Communication &amp; Media Studies"
+      "description": "Communication and Media Studies"
     },
     {
       "code": "CINF",
@@ -117,7 +117,7 @@
     },
     {
       "code": "ENSS",
-      "description": "Environmental Sci &amp; Studies"
+      "description": "Environmental Science and Studies"
     },
     {
       "code": "FENT",
@@ -129,7 +129,7 @@
     },
     {
       "code": "FSEM",
-      "description": "First Year Seminar"
+      "description": "First-Year Seminar"
     },
     {
       "code": "FREN",
@@ -185,7 +185,7 @@
     },
     {
       "code": "LALS",
-      "description": "Latin American&amp;Latino Studies"
+      "description": "Latin American and Latino Studies"
     },
     {
       "code": "LAW",
@@ -265,7 +265,7 @@
     },
     {
       "code": "REES",
-      "description": "Russian East Eur Eurasia Std"
+      "description": "Russian, East European, and Eurasian Studies"
     },
     {
       "code": "RUSS",
@@ -277,7 +277,7 @@
     },
     {
       "code": "SSCI",
-      "description": "Social Science-Interdiciplinry"
+      "description": "Social Science - Interdisciplinary"
     },
     {
       "code": "SOCI",
@@ -313,6 +313,6 @@
     },
     {
       "code": "WLGC",
-      "description": "World Languages &amp; Cultures"
+      "description": "World Languages and Cultures"
     }
   ]

@@ -4,7 +4,7 @@ Africana Studies                                AFST
 American Studies                                AMST
 Anthropology                                    ANTH
 Arabic                                          LARB
-Art-Studio                                      ARTS
+Art - Studio                                    ARTS
 Art History                                     ARTH
 Asian Studies                                   ASIA
 Astronomy                                       ASTR
