@@ -1,0 +1,48 @@
+{
+    "data":
+    [
+        {
+          "id": "Numerical value assigned to course based on its 'subject' and its 'courseNumber'.",
+          "termEffective": "Current value of term according to the year and semester. Follows Stetson's original system.",
+          "courseNumber": "Numerical value that corresponds to the course's number for registration. Ex.: 141 for CSCI141",
+          "subject": "Alphanumeric abbreviation of the major or area that the course corresponds with. CSCI for Computer Science, etc.",
+          "subjectCode": "Duplication of the value paired with the course's 'subject' key.",
+          "college": "The school that oversees the course. This could be 'College of Arts and Sciences', 'School of Business', etc.",
+          "collegeCode": "Alphanumeric abbreviation of the value paired with the course's 'college' key.",
+          "department": "Faculty department that the course corresponds with. Ex: American Studies, Mathematics, etc.",
+          "departmentCode": "Alphanumeric abbreviation of the value paired with the course's 'department' key.",
+          "courseTitle": "Name of the course.",
+          "durationUnit": "",
+          "numberOfUnits": "",
+          "attributes": "A list of all the General Education attributes that this course possesses.",
+          "gradeModes": "",
+          "ceu": "",
+          "courseScheduleTypes": "",
+          "courseLevels": "",
+          "creditHourHigh": "",
+          "creditHourLow": "",
+          "creditHourIndicator": "",
+          "lectureHourLow": "",
+          "lectureHourHigh": "",
+          "lectureHourIndicator": "",
+          "billHourLow": "",
+          "billHourHigh": "",
+          "billHourIndicator": "",
+          "labHourLow": "",
+          "labHourHigh": "",
+          "labHourIndicator": "",
+          "otherHourLow": "",
+          "otherHourHigh": "",
+          "otherHourIndicator": "",
+          "description": "",
+          "subjectDescription": "",
+          "courseDescription": "A description of the topics covered in the course and how it might be structured.",
+          "division": "",
+          "termStart": "",
+          "termEnd": "",
+          "preRequisiteCheckMethodCde": "",
+          "anySections": "",
+          "prerequisites": "A list of the prerequisites that are required for a student to register for this course."
+        }
+    ]
+}
