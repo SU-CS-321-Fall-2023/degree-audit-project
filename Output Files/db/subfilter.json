@@ -1,239 +1,397 @@
 [
     {
-        "subject": "ACCT"
+        "subject": "ACCT",
+        "description": "Accounting",
+        "id": 1
     },
     {
-        "subject": "AERS"
+        "subject": "AERS",
+        "description": "Aerospace Studies",
+        "id": 2
     },
     {
-        "subject": "AFST"
+        "subject": "AFST",
+        "description": "Africana Studies",
+        "id": 3
     },
     {
-        "subject": "AMST"
+        "subject": "AMST",
+        "description": "American Studies",
+        "id": 4
     },
     {
-        "subject": "ANTH"
+        "subject": "ANTH",
+        "description": "Anthropology",
+        "id": 5
     },
     {
-        "subject": "LARB"
+        "subject": "LARB",
+        "description": "Arabic",
+        "id": 6
     },
     {
-        "subject": "ARTS"
+        "subject": "ARTS",
+        "description": "Art - Studio",
+        "id": 7
     },
     {
-        "subject": "ARTH"
+        "subject": "ARTH",
+        "description": "Art History",
+        "id": 8
     },
     {
-        "subject": "ASIA"
+        "subject": "ASIA",
+        "description": "Asian Studies",
+        "id": 9
     },
     {
-        "subject": "ASTR"
+        "subject": "ASTR",
+        "description": "Astronomy",
+        "id": 10
     },
     {
-        "subject": "BIOL"
+        "subject": "BIOL",
+        "description": "Biology",
+        "id": 11
     },
     {
-        "subject": "SOBA"
+        "subject": "SOBA",
+        "description": "Business Administration",
+        "id": 12
     },
     {
-        "subject": "BLAW"
+        "subject": "BLAW",
+        "description": "Business Law",
+        "id": 13
     },
     {
-        "subject": "BSAN"
+        "subject": "BSAN",
+        "description": "Business Systems and Analytics",
+        "id": 14
     },
     {
-        "subject": "CHEM"
+        "subject": "CHEM",
+        "description": "Chemistry",
+        "id": 15
     },
     {
-        "subject": "CHIN"
+        "subject": "CHIN",
+        "description": "Chinese",
+        "id": 16
     },
     {
-        "subject": "COMM"
+        "subject": "COMM",
+        "description": "Communication and Media Studies",
+        "id": 17
     },
     {
-        "subject": "CINF"
+        "subject": "CINF",
+        "description": "Computer Information Systems",
+        "id": 18
     },
     {
-        "subject": "CSCI"
+        "subject": "CSCI",
+        "description": "Computer Science",
+        "id": 19
     },
     {
-        "subject": "COUN"
+        "subject": "COUN",
+        "description": "Counseling",
+        "id": 20
     },
     {
-        "subject": "CREA"
+        "subject": "CREA",
+        "description": "Creative Arts",
+        "id": 21
     },
     {
-        "subject": "CSEC"
+        "subject": "CSEC",
+        "description": "Cybersecurity",
+        "id": 22
     },
     {
-        "subject": "DIGA"
+        "subject": "DIGA",
+        "description": "Digital Arts",
+        "id": 23
     },
     {
-        "subject": "ECON"
+        "subject": "ECON",
+        "description": "Economics",
+        "id": 24
     },
     {
-        "subject": "EDUC"
+        "subject": "EDUC",
+        "description": "Education",
+        "id": 25
     },
     {
-        "subject": "EL"
+        "subject": "EL",
+        "description": "Elective Course",
+        "id": 26
     },
     {
-        "subject": "ENGL"
+        "subject": "ENGL",
+        "description": "English",
+        "id": 27
     },
     {
-        "subject": "ENCW"
+        "subject": "ENCW",
+        "description": "English-Creative Writing",
+        "id": 28
     },
     {
-        "subject": "ENTP"
+        "subject": "ENTP",
+        "description": "Entrepreneurship",
+        "id": 29
     },
     {
-        "subject": "ENSS"
+        "subject": "ENSS",
+        "description": "Environmental Science and Studies",
+        "id": 30
     },
     {
-        "subject": "FENT"
+        "subject": "FENT",
+        "description": "Family Enterprise",
+        "id": 31
     },
     {
-        "subject": "FINA"
+        "subject": "FINA",
+        "description": "Finance",
+        "id": 32
     },
     {
-        "subject": "FSEM"
+        "subject": "FSEM",
+        "description": "First-Year Seminar",
+        "id": 33
     },
     {
-        "subject": "FREN"
+        "subject": "FREN",
+        "description": "French",
+        "id": 34
     },
     {
-        "subject": "GEND"
+        "subject": "GEND",
+        "description": "Gender Studies",
+        "id": 35
     },
     {
-        "subject": "GERM"
+        "subject": "GERM",
+        "description": "German",
+        "id": 36
     },
     {
-        "subject": "HLSC"
+        "subject": "HLSC",
+        "description": "Health Sciences",
+        "id": 37
     },
     {
-        "subject": "HIST"
+        "subject": "HIST",
+        "description": "History",
+        "id": 38
     },
     {
-        "subject": "HONR"
+        "subject": "HONR",
+        "description": "Honors",
+        "id": 39
     },
     {
-        "subject": "HRMT"
+        "subject": "HRMT",
+        "description": "Human Resource Management",
+        "id": 40
     },
     {
-        "subject": "INTL"
+        "subject": "INTL",
+        "description": "International Business",
+        "id": 41
     },
     {
-        "subject": "INSU"
+        "subject": "INSU",
+        "description": "International Studies",
+        "id": 42
     },
     {
-        "subject": "ITAL"
+        "subject": "ITAL",
+        "description": "Italian",
+        "id": 43
     },
     {
-        "subject": "JWST"
+        "subject": "JWST",
+        "description": "Jewish Studies",
+        "id": 44
     },
     {
-        "subject": "JOUR"
+        "subject": "JOUR",
+        "description": "Journalism",
+        "id": 45
     },
     {
-        "subject": "LANG"
+        "subject": "LANG",
+        "description": "Language-Other",
+        "id": 46
     },
     {
-        "subject": "LALS"
+        "subject": "LALS",
+        "description": "Latin American and Latino Studies",
+        "id": 47
     },
     {
-        "subject": "LAW"
+        "subject": "LAW",
+        "description": "Law Courses",
+        "id": 100000
     },
     {
-        "subject": "LING"
+        "subject": "LING",
+        "description": "Linguistics",
+        "id": 48
     },
     {
-        "subject": "MGMT"
+        "subject": "MGMT",
+        "description": "Management",
+        "id": 49
     },
     {
-        "subject": "MKTG"
+        "subject": "MKTG",
+        "description": "Marketing",
+        "id": 50
     },
     {
-        "subject": "MATH"
+        "subject": "MATH",
+        "description": "Mathematics",
+        "id": 51
     },
     {
-        "subject": "MILS"
+        "subject": "MILS",
+        "description": "Military Science",
+        "id": 52
     },
     {
-        "subject": "MUSC"
+        "subject": "MUSC",
+        "description": "Music (MUSC)",
+        "id": 53
     },
     {
-        "subject": "MUSA"
+        "subject": "MUSA",
+        "description": "Music Applied",
+        "id": 54
     },
     {
-        "subject": "MUED"
+        "subject": "MUED",
+        "description": "Music Education",
+        "id": 55
     },
     {
-        "subject": "MUSE"
+        "subject": "MUSE",
+        "description": "Music Ensemble",
+        "id": 56
     },
     {
-        "subject": "MUSX"
+        "subject": "MUSX",
+        "description": "Music Experience",
+        "id": 57
     },
     {
-        "subject": "PHIL"
+        "subject": "PHIL",
+        "description": "Philosophy",
+        "id": 58
     },
     {
-        "subject": "PHYS"
+        "subject": "PHYS",
+        "description": "Physics",
+        "id": 59
     },
     {
-        "subject": "POLI"
+        "subject": "POLI",
+        "description": "Political Science",
+        "id": 60
     },
     {
-        "subject": "PORT"
+        "subject": "PORT",
+        "description": "Portuguese Language",
+        "id": 61
     },
     {
-        "subject": "PRHP"
+        "subject": "PRHP",
+        "description": "Pre-Health",
+        "id": 62
     },
     {
-        "subject": "PSYC"
+        "subject": "PSYC",
+        "description": "Psychology",
+        "id": 63
     },
     {
-        "subject": "PUBH"
+        "subject": "PUBH",
+        "description": "Public Health",
+        "id": 64
     },
     {
-        "subject": "RELS"
+        "subject": "RELS",
+        "description": "Religious Studies",
+        "id": 65
     },
     {
-        "subject": "REES"
+        "subject": "REES",
+        "description": "Russian, East European, and Eurasian Studies",
+        "id": 66
     },
     {
-        "subject": "RUSS"
+        "subject": "RUSS",
+        "description": "Russian Language",
+        "id": 67
     },
     {
-        "subject": "SALS"
+        "subject": "SALS",
+        "description": "Sales",
+        "id": 68
     },
     {
-        "subject": "SSCI"
+        "subject": "SSCI",
+        "description": "Social Science - Interdisciplinary",
+        "id": 69
     },
     {
-        "subject": "SOCI"
+        "subject": "SOCI",
+        "description": "Sociology",
+        "id": 70
     },
     {
-        "subject": "SPAN"
+        "subject": "SPAN",
+        "description": "Spanish",
+        "id": 71
     },
     {
-        "subject": "SPTB"
+        "subject": "SPTB",
+        "description": "Sport Business",
+        "id": 72
     },
     {
-        "subject": "STAT"
+        "subject": "STAT",
+        "description": "Statistics",
+        "id": 73
     },
     {
-        "subject": "SA"
+        "subject": "SA",
+        "description": "Study Abroad",
+        "id": 74
     },
     {
-        "subject": "FOOD"
+        "subject": "FOOD",
+        "description": "Sustainable Food Systems",
+        "id": 75
     },
     {
-        "subject": "THEA"
+        "subject": "THEA",
+        "description": "Theatre Arts",
+        "id": 76
     },
     {
-        "subject": "TRF"
+        "subject": "TRF",
+        "description": "Transfer-Law School",
+        "id": 77
     },
     {
-        "subject": "WLGC"
+        "subject": "WLGC",
+        "description": "World Languages and Cultures",
+        "id": 78
     }
 ]
