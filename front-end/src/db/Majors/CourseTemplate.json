@@ -2,7 +2,7 @@
     "data":
     [
         {
-          "id": "Numerical value assigned to course based on its 'subject' and its 'courseNumber'.",
+          "id": "Numerical value assigned to course based on its 'subject' and its 'courseNumber'. It is the combination of the course's 'subject ID' and its 'courseNumber'.",
           "termEffective": "Current value of term according to the year and semester. Follows Stetson's original system.",
           "courseNumber": "Numerical value that corresponds to the course's number for registration. Ex.: 141 for CSCI141",
           "subject": "Alphanumeric abbreviation of the major or area that the course corresponds with. CSCI for Computer Science, etc.",
@@ -12,16 +12,13 @@
           "department": "Faculty department that the course corresponds with. Ex: American Studies, Mathematics, etc.",
           "departmentCode": "Alphanumeric abbreviation of the value paired with the course's 'department' key.",
           "courseTitle": "Name of the course.",
-          "durationUnit": "",
-          "numberOfUnits": "",
+          "numberOfUnits": "Numerical value that represents the number of units the course is worth.",
           "attributes": "A list of all the General Education attributes that this course possesses.",
-          "gradeModes": "",
-          "ceu": "",
+          "ceu": null,
           "courseScheduleTypes": "",
-          "courseLevels": "",
-          "creditHourHigh": "",
-          "creditHourLow": "",
-          "creditHourIndicator": "",
+          "creditHourHigh": "The maximum number of credits that a student can receive for this course.",
+          "creditHourLow": "The minimum number of credits that a student can receive for this course.",
+          "creditHourIndicator": "There are only three acceptable values for this key: null, 'TO', 'OR'.",
           "lectureHourLow": "",
           "lectureHourHigh": "",
           "lectureHourIndicator": "",
@@ -37,11 +34,9 @@
           "description": "",
           "subjectDescription": "",
           "courseDescription": "A description of the topics covered in the course and how it might be structured.",
-          "division": "",
           "termStart": "",
-          "termEnd": "",
+          "termEnd": "'999999', equivalent to the 'End of Time'",
           "preRequisiteCheckMethodCde": "",
-          "anySections": "",
           "prerequisites": "A list of the prerequisites that are required for a student to register for this course."
         }
     ]
