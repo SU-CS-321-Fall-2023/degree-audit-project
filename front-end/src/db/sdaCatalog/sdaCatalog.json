@@ -1,6 +1,6 @@
 [
     {
-        "id": "1190",
+        "id": "01190",
         "termEffective": "202325",
         "courseNumber": "190",
         "subject": "ACCT",
@@ -37,7 +37,7 @@
         "prerequisites": null
     },
     {
-        "id": "1191",
+        "id": "01191",
         "termEffective": "201725",
         "courseNumber": "191",
         "subject": "ACCT",
@@ -74,7 +74,7 @@
         "prerequisites": null
     },
     {
-        "id": "1201",
+        "id": "01201",
         "termEffective": "202235",
         "courseNumber": "201",
         "subject": "ACCT",
@@ -111,7 +111,7 @@
         "prerequisites": null
     },
     {
-        "id": "1202",
+        "id": "01202",
         "termEffective": "202015",
         "courseNumber": "202",
         "subject": "ACCT",
@@ -148,7 +148,7 @@
         "prerequisites": null
     },
     {
-        "id": "1211",
+        "id": "01211",
         "termEffective": "201815",
         "courseNumber": "211",
         "subject": "ACCT",
@@ -185,7 +185,7 @@
         "prerequisites": null
     },
     {
-        "id": "1212",
+        "id": "01212",
         "termEffective": "201825",
         "courseNumber": "212",
         "subject": "ACCT",
@@ -222,7 +222,7 @@
         "prerequisites": null
     },
     {
-        "id": "1213",
+        "id": "01213",
         "termEffective": "201415",
         "courseNumber": "213",
         "subject": "ACCT",
@@ -259,7 +259,7 @@
         "prerequisites": null
     },
     {
-        "id": "1250",
+        "id": "01250",
         "termEffective": "202415",
         "courseNumber": "250",
         "subject": "ACCT",
@@ -296,7 +296,7 @@
         "prerequisites": null
     },
     {
-        "id": "1285",
+        "id": "01285",
         "termEffective": "201615",
         "courseNumber": "285",
         "subject": "ACCT",
@@ -333,7 +333,7 @@
         "prerequisites": null
     },
     {
-        "id": "1290",
+        "id": "01290",
         "termEffective": "202325",
         "courseNumber": "290",
         "subject": "ACCT",
@@ -370,7 +370,7 @@
         "prerequisites": null
     },
     {
-        "id": "1300",
+        "id": "01300",
         "termEffective": "201515",
         "courseNumber": "300",
         "subject": "ACCT",
@@ -407,7 +407,7 @@
         "prerequisites": null
     },
     {
-        "id": "1301",
+        "id": "01301",
         "termEffective": "201415",
         "courseNumber": "301",
         "subject": "ACCT",
@@ -444,7 +444,7 @@
         "prerequisites": null
     },
     {
-        "id": "1303",
+        "id": "01303",
         "termEffective": "201415",
         "courseNumber": "303",
         "subject": "ACCT",
@@ -481,7 +481,7 @@
         "prerequisites": null
     },
     {
-        "id": "1304",
+        "id": "01304",
         "termEffective": "201415",
         "courseNumber": "304",
         "subject": "ACCT",
@@ -518,7 +518,7 @@
         "prerequisites": null
     },
     {
-        "id": "1310",
+        "id": "01310",
         "termEffective": "201415",
         "courseNumber": "310",
         "subject": "ACCT",
@@ -555,7 +555,7 @@
         "prerequisites": null
     },
     {
-        "id": "1311",
+        "id": "01311",
         "termEffective": "202415",
         "courseNumber": "311",
         "subject": "ACCT",
@@ -592,7 +592,7 @@
         "prerequisites": null
     },
     {
-        "id": "1341V",
+        "id": "01341V",
         "termEffective": "202115",
         "courseNumber": "341V",
         "subject": "ACCT",
@@ -629,7 +629,7 @@
         "prerequisites": null
     },
     {
-        "id": "1385",
+        "id": "01385",
         "termEffective": "201615",
         "courseNumber": "385",
         "subject": "ACCT",
@@ -666,7 +666,7 @@
         "prerequisites": null
     },
     {
-        "id": "1390",
+        "id": "01390",
         "termEffective": "202325",
         "courseNumber": "390",
         "subject": "ACCT",
@@ -703,7 +703,7 @@
         "prerequisites": null
     },
     {
-        "id": "1395",
+        "id": "01395",
         "termEffective": "202015",
         "courseNumber": "395",
         "subject": "ACCT",
@@ -740,7 +740,7 @@
         "prerequisites": null
     },
     {
-        "id": "1397",
+        "id": "01397",
         "termEffective": "202125",
         "courseNumber": "397",
         "subject": "ACCT",
@@ -777,7 +777,7 @@
         "prerequisites": null
     },
     {
-        "id": "1402",
+        "id": "01402",
         "termEffective": "201415",
         "courseNumber": "402",
         "subject": "ACCT",
@@ -814,7 +814,7 @@
         "prerequisites": null
     },
     {
-        "id": "1406",
+        "id": "01406",
         "termEffective": "201415",
         "courseNumber": "406",
         "subject": "ACCT",
@@ -851,7 +851,7 @@
         "prerequisites": null
     },
     {
-        "id": "1407",
+        "id": "01407",
         "termEffective": "201515",
         "courseNumber": "407",
         "subject": "ACCT",
@@ -888,7 +888,7 @@
         "prerequisites": null
     },
     {
-        "id": "1410",
+        "id": "01410",
         "termEffective": "201915",
         "courseNumber": "410",
         "subject": "ACCT",
@@ -925,7 +925,7 @@
         "prerequisites": null
     },
     {
-        "id": "1411",
+        "id": "01411",
         "termEffective": "201415",
         "courseNumber": "411",
         "subject": "ACCT",
@@ -962,7 +962,7 @@
         "prerequisites": null
     },
     {
-        "id": "1421",
+        "id": "01421",
         "termEffective": "201415",
         "courseNumber": "421",
         "subject": "ACCT",
@@ -999,7 +999,7 @@
         "prerequisites": null
     },
     {
-        "id": "1424",
+        "id": "01424",
         "termEffective": "201715",
         "courseNumber": "424",
         "subject": "ACCT",
@@ -1036,7 +1036,7 @@
         "prerequisites": null
     },
     {
-        "id": "1440",
+        "id": "01440",
         "termEffective": "202125",
         "courseNumber": "440",
         "subject": "ACCT",
@@ -1073,7 +1073,7 @@
         "prerequisites": null
     },
     {
-        "id": "1485",
+        "id": "01485",
         "termEffective": "201425",
         "courseNumber": "485",
         "subject": "ACCT",
@@ -1110,7 +1110,7 @@
         "prerequisites": null
     },
     {
-        "id": "1490",
+        "id": "01490",
         "termEffective": "202325",
         "courseNumber": "490",
         "subject": "ACCT",
@@ -1147,7 +1147,7 @@
         "prerequisites": null
     },
     {
-        "id": "1502",
+        "id": "01502",
         "termEffective": "201415",
         "courseNumber": "502",
         "subject": "ACCT",
@@ -1184,7 +1184,7 @@
         "prerequisites": null
     },
     {
-        "id": "1503",
+        "id": "01503",
         "termEffective": "201815",
         "courseNumber": "503",
         "subject": "ACCT",
@@ -1221,7 +1221,7 @@
         "prerequisites": null
     },
     {
-        "id": "1504",
+        "id": "01504",
         "termEffective": "201415",
         "courseNumber": "504",
         "subject": "ACCT",
@@ -1258,7 +1258,7 @@
         "prerequisites": null
     },
     {
-        "id": "1507",
+        "id": "01507",
         "termEffective": "201415",
         "courseNumber": "507",
         "subject": "ACCT",
@@ -1295,7 +1295,7 @@
         "prerequisites": null
     },
     {
-        "id": "1508",
+        "id": "01508",
         "termEffective": "201415",
         "courseNumber": "508",
         "subject": "ACCT",
@@ -1332,7 +1332,7 @@
         "prerequisites": null
     },
     {
-        "id": "1509",
+        "id": "01509",
         "termEffective": "201415",
         "courseNumber": "509",
         "subject": "ACCT",
@@ -1369,7 +1369,7 @@
         "prerequisites": null
     },
     {
-        "id": "1510",
+        "id": "01510",
         "termEffective": "201625",
         "courseNumber": "510",
         "subject": "ACCT",
@@ -1406,7 +1406,7 @@
         "prerequisites": null
     },
     {
-        "id": "1511",
+        "id": "01511",
         "termEffective": "201415",
         "courseNumber": "511",
         "subject": "ACCT",
@@ -1443,7 +1443,7 @@
         "prerequisites": null
     },
     {
-        "id": "1512",
+        "id": "01512",
         "termEffective": "201415",
         "courseNumber": "512",
         "subject": "ACCT",
@@ -1480,7 +1480,7 @@
         "prerequisites": null
     },
     {
-        "id": "1516",
+        "id": "01516",
         "termEffective": "201415",
         "courseNumber": "516",
         "subject": "ACCT",
@@ -1517,7 +1517,7 @@
         "prerequisites": null
     },
     {
-        "id": "1519",
+        "id": "01519",
         "termEffective": "201515",
         "courseNumber": "519",
         "subject": "ACCT",
@@ -1554,7 +1554,7 @@
         "prerequisites": null
     },
     {
-        "id": "1520",
+        "id": "01520",
         "termEffective": "201415",
         "courseNumber": "520",
         "subject": "ACCT",
@@ -1591,7 +1591,7 @@
         "prerequisites": null
     },
     {
-        "id": "1521",
+        "id": "01521",
         "termEffective": "201415",
         "courseNumber": "521",
         "subject": "ACCT",
@@ -1628,7 +1628,7 @@
         "prerequisites": null
     },
     {
-        "id": "1522",
+        "id": "01522",
         "termEffective": "201415",
         "courseNumber": "522",
         "subject": "ACCT",
@@ -1665,7 +1665,7 @@
         "prerequisites": null
     },
     {
-        "id": "1523",
+        "id": "01523",
         "termEffective": "201415",
         "courseNumber": "523",
         "subject": "ACCT",
@@ -1702,7 +1702,7 @@
         "prerequisites": null
     },
     {
-        "id": "1524",
+        "id": "01524",
         "termEffective": "202415",
         "courseNumber": "524",
         "subject": "ACCT",
@@ -1739,7 +1739,7 @@
         "prerequisites": null
     },
     {
-        "id": "1530",
+        "id": "01530",
         "termEffective": "201415",
         "courseNumber": "530",
         "subject": "ACCT",
@@ -1776,7 +1776,7 @@
         "prerequisites": null
     },
     {
-        "id": "1533",
+        "id": "01533",
         "termEffective": "202015",
         "courseNumber": "533",
         "subject": "ACCT",
@@ -1813,7 +1813,7 @@
         "prerequisites": null
     },
     {
-        "id": "1540",
+        "id": "01540",
         "termEffective": "201715",
         "courseNumber": "540",
         "subject": "ACCT",
@@ -1850,7 +1850,7 @@
         "prerequisites": null
     },
     {
-        "id": "1541",
+        "id": "01541",
         "termEffective": "201715",
         "courseNumber": "541",
         "subject": "ACCT",
@@ -1887,7 +1887,7 @@
         "prerequisites": null
     },
     {
-        "id": "1542",
+        "id": "01542",
         "termEffective": "201715",
         "courseNumber": "542",
         "subject": "ACCT",
@@ -1924,7 +1924,7 @@
         "prerequisites": null
     },
     {
-        "id": "1543",
+        "id": "01543",
         "termEffective": "202415",
         "courseNumber": "543",
         "subject": "ACCT",
@@ -1961,7 +1961,7 @@
         "prerequisites": null
     },
     {
-        "id": "1550",
+        "id": "01550",
         "termEffective": "202415",
         "courseNumber": "550",
         "subject": "ACCT",
@@ -1998,7 +1998,7 @@
         "prerequisites": null
     },
     {
-        "id": "1563",
+        "id": "01563",
         "termEffective": "201415",
         "courseNumber": "563",
         "subject": "ACCT",
@@ -2035,7 +2035,7 @@
         "prerequisites": null
     },
     {
-        "id": "1585",
+        "id": "01585",
         "termEffective": "201615",
         "courseNumber": "585",
         "subject": "ACCT",
@@ -2072,7 +2072,7 @@
         "prerequisites": null
     },
     {
-        "id": "1590",
+        "id": "01590",
         "termEffective": "201615",
         "courseNumber": "590",
         "subject": "ACCT",
@@ -2109,7 +2109,7 @@
         "prerequisites": null
     },
     {
-        "id": "1591",
+        "id": "01591",
         "termEffective": "201615",
         "courseNumber": "591",
         "subject": "ACCT",
@@ -2146,7 +2146,7 @@
         "prerequisites": null
     },
     {
-        "id": "2101",
+        "id": "02101",
         "termEffective": "201915",
         "courseNumber": "101",
         "subject": "AERS",
@@ -2183,7 +2183,7 @@
         "prerequisites": null
     },
     {
-        "id": "2102",
+        "id": "02102",
         "termEffective": "201915",
         "courseNumber": "102",
         "subject": "AERS",
@@ -2220,7 +2220,7 @@
         "prerequisites": null
     },
     {
-        "id": "2111",
+        "id": "02111",
         "termEffective": "201915",
         "courseNumber": "111",
         "subject": "AERS",
@@ -2257,7 +2257,7 @@
         "prerequisites": null
     },
     {
-        "id": "2112",
+        "id": "02112",
         "termEffective": "201915",
         "courseNumber": "112",
         "subject": "AERS",
@@ -2294,7 +2294,7 @@
         "prerequisites": null
     },
     {
-        "id": "2201",
+        "id": "02201",
         "termEffective": "201915",
         "courseNumber": "201",
         "subject": "AERS",
@@ -2331,7 +2331,7 @@
         "prerequisites": null
     },
     {
-        "id": "2202",
+        "id": "02202",
         "termEffective": "201915",
         "courseNumber": "202",
         "subject": "AERS",
@@ -2368,7 +2368,7 @@
         "prerequisites": null
     },
     {
-        "id": "2211",
+        "id": "02211",
         "termEffective": "201915",
         "courseNumber": "211",
         "subject": "AERS",
@@ -2405,7 +2405,7 @@
         "prerequisites": null
     },
     {
-        "id": "2212",
+        "id": "02212",
         "termEffective": "201915",
         "courseNumber": "212",
         "subject": "AERS",
@@ -2442,7 +2442,7 @@
         "prerequisites": null
     },
     {
-        "id": "2301",
+        "id": "02301",
         "termEffective": "201915",
         "courseNumber": "301",
         "subject": "AERS",
@@ -2479,7 +2479,7 @@
         "prerequisites": null
     },
     {
-        "id": "2302",
+        "id": "02302",
         "termEffective": "201915",
         "courseNumber": "302",
         "subject": "AERS",
@@ -2516,7 +2516,7 @@
         "prerequisites": null
     },
     {
-        "id": "2311",
+        "id": "02311",
         "termEffective": "201915",
         "courseNumber": "311",
         "subject": "AERS",
@@ -2553,7 +2553,7 @@
         "prerequisites": null
     },
     {
-        "id": "2312",
+        "id": "02312",
         "termEffective": "201915",
         "courseNumber": "312",
         "subject": "AERS",
@@ -2590,7 +2590,7 @@
         "prerequisites": null
     },
     {
-        "id": "2401",
+        "id": "02401",
         "termEffective": "201915",
         "courseNumber": "401",
         "subject": "AERS",
@@ -2627,7 +2627,7 @@
         "prerequisites": null
     },
     {
-        "id": "2402",
+        "id": "02402",
         "termEffective": "201915",
         "courseNumber": "402",
         "subject": "AERS",
@@ -2664,7 +2664,7 @@
         "prerequisites": null
     },
     {
-        "id": "2411",
+        "id": "02411",
         "termEffective": "201915",
         "courseNumber": "411",
         "subject": "AERS",
@@ -2701,7 +2701,7 @@
         "prerequisites": null
     },
     {
-        "id": "2412",
+        "id": "02412",
         "termEffective": "201915",
         "courseNumber": "412",
         "subject": "AERS",
@@ -2738,7 +2738,7 @@
         "prerequisites": null
     },
     {
-        "id": "3100S",
+        "id": "03100S",
         "termEffective": "201015",
         "courseNumber": "100S",
         "subject": "AFST",
@@ -2775,7 +2775,7 @@
         "prerequisites": null
     },
     {
-        "id": "3101H",
+        "id": "03101H",
         "termEffective": "201015",
         "courseNumber": "101H",
         "subject": "AFST",
@@ -2812,7 +2812,7 @@
         "prerequisites": null
     },
     {
-        "id": "3102H",
+        "id": "03102H",
         "termEffective": "201015",
         "courseNumber": "102H",
         "subject": "AFST",
@@ -2849,7 +2849,7 @@
         "prerequisites": null
     },
     {
-        "id": "3190",
+        "id": "03190",
         "termEffective": "201615",
         "courseNumber": "190",
         "subject": "AFST",
@@ -2886,7 +2886,7 @@
         "prerequisites": null
     },
     {
-        "id": "3235A",
+        "id": "03235A",
         "termEffective": "201215",
         "courseNumber": "235A",
         "subject": "AFST",
@@ -2923,7 +2923,7 @@
         "prerequisites": null
     },
     {
-        "id": "3240A",
+        "id": "03240A",
         "termEffective": "201215",
         "courseNumber": "240A",
         "subject": "AFST",
@@ -2960,7 +2960,7 @@
         "prerequisites": null
     },
     {
-        "id": "3285",
+        "id": "03285",
         "termEffective": "201325",
         "courseNumber": "285",
         "subject": "AFST",
@@ -2997,7 +2997,7 @@
         "prerequisites": null
     },
     {
-        "id": "3290",
+        "id": "03290",
         "termEffective": "202325",
         "courseNumber": "290",
         "subject": "AFST",
@@ -3034,7 +3034,7 @@
         "prerequisites": null
     },
     {
-        "id": "3335",
+        "id": "03335",
         "termEffective": "201215",
         "courseNumber": "335",
         "subject": "AFST",
@@ -3071,7 +3071,7 @@
         "prerequisites": null
     },
     {
-        "id": "3343V",
+        "id": "03343V",
         "termEffective": "201815",
         "courseNumber": "343V",
         "subject": "AFST",
@@ -3108,7 +3108,7 @@
         "prerequisites": null
     },
     {
-        "id": "3344V",
+        "id": "03344V",
         "termEffective": "202115",
         "courseNumber": "344V",
         "subject": "AFST",
@@ -3145,7 +3145,7 @@
         "prerequisites": null
     },
     {
-        "id": "3345V",
+        "id": "03345V",
         "termEffective": "202125",
         "courseNumber": "345V",
         "subject": "AFST",
@@ -3182,7 +3182,7 @@
         "prerequisites": null
     },
     {
-        "id": "3350A",
+        "id": "03350A",
         "termEffective": "201415",
         "courseNumber": "350A",
         "subject": "AFST",
@@ -3219,7 +3219,7 @@
         "prerequisites": null
     },
     {
-        "id": "3385",
+        "id": "03385",
         "termEffective": "201615",
         "courseNumber": "385",
         "subject": "AFST",
@@ -3256,7 +3256,7 @@
         "prerequisites": null
     },
     {
-        "id": "3390",
+        "id": "03390",
         "termEffective": "202325",
         "courseNumber": "390",
         "subject": "AFST",
@@ -3293,7 +3293,7 @@
         "prerequisites": null
     },
     {
-        "id": "3391V",
+        "id": "03391V",
         "termEffective": "202115",
         "courseNumber": "391V",
         "subject": "AFST",
@@ -3330,7 +3330,7 @@
         "prerequisites": null
     },
     {
-        "id": "3395",
+        "id": "03395",
         "termEffective": "201415",
         "courseNumber": "395",
         "subject": "AFST",
@@ -3367,7 +3367,7 @@
         "prerequisites": null
     },
     {
-        "id": "3397",
+        "id": "03397",
         "termEffective": "202335",
         "courseNumber": "397",
         "subject": "AFST",
@@ -3404,7 +3404,7 @@
         "prerequisites": null
     },
     {
-        "id": "3485",
+        "id": "03485",
         "termEffective": "201615",
         "courseNumber": "485",
         "subject": "AFST",
@@ -3441,7 +3441,7 @@
         "prerequisites": null
     },
     {
-        "id": "3490",
+        "id": "03490",
         "termEffective": "202325",
         "courseNumber": "490",
         "subject": "AFST",
@@ -3478,7 +3478,7 @@
         "prerequisites": null
     },
     {
-        "id": "4001",
+        "id": "04001",
         "termEffective": "201925",
         "courseNumber": "001",
         "subject": "AMST",
@@ -3515,7 +3515,7 @@
         "prerequisites": null
     },
     {
-        "id": "4101B",
+        "id": "04101B",
         "termEffective": "201615",
         "courseNumber": "101B",
         "subject": "AMST",
@@ -3552,7 +3552,7 @@
         "prerequisites": null
     },
     {
-        "id": "4151A",
+        "id": "04151A",
         "termEffective": "201215",
         "courseNumber": "151A",
         "subject": "AMST",
@@ -3589,7 +3589,7 @@
         "prerequisites": null
     },
     {
-        "id": "4154V",
+        "id": "04154V",
         "termEffective": "201815",
         "courseNumber": "154V",
         "subject": "AMST",
@@ -3626,7 +3626,7 @@
         "prerequisites": null
     },
     {
-        "id": "4185",
+        "id": "04185",
         "termEffective": "201515",
         "courseNumber": "185",
         "subject": "AMST",
@@ -3663,7 +3663,7 @@
         "prerequisites": null
     },
     {
-        "id": "4190",
+        "id": "04190",
         "termEffective": "202325",
         "courseNumber": "190",
         "subject": "AMST",
@@ -3700,7 +3700,7 @@
         "prerequisites": null
     },
     {
-        "id": "4210H",
+        "id": "04210H",
         "termEffective": "201515",
         "courseNumber": "210H",
         "subject": "AMST",
@@ -3737,7 +3737,7 @@
         "prerequisites": null
     },
     {
-        "id": "4255H",
+        "id": "04255H",
         "termEffective": "201615",
         "courseNumber": "255H",
         "subject": "AMST",
@@ -3774,7 +3774,7 @@
         "prerequisites": null
     },
     {
-        "id": "4256B",
+        "id": "04256B",
         "termEffective": "201815",
         "courseNumber": "256B",
         "subject": "AMST",
@@ -3811,7 +3811,7 @@
         "prerequisites": null
     },
     {
-        "id": "4285",
+        "id": "04285",
         "termEffective": "201515",
         "courseNumber": "285",
         "subject": "AMST",
@@ -3848,7 +3848,7 @@
         "prerequisites": null
     },
     {
-        "id": "4290",
+        "id": "04290",
         "termEffective": "201635",
         "courseNumber": "290",
         "subject": "AMST",
@@ -3885,7 +3885,7 @@
         "prerequisites": null
     },
     {
-        "id": "4290V",
+        "id": "04290V",
         "termEffective": "202335",
         "courseNumber": "290V",
         "subject": "AMST",
@@ -3922,7 +3922,7 @@
         "prerequisites": null
     },
     {
-        "id": "4294B",
+        "id": "04294B",
         "termEffective": "202315",
         "courseNumber": "294B",
         "subject": "AMST",
@@ -3959,7 +3959,7 @@
         "prerequisites": null
     },
     {
-        "id": "4301B",
+        "id": "04301B",
         "termEffective": "201015",
         "courseNumber": "301B",
         "subject": "AMST",
@@ -3996,7 +3996,7 @@
         "prerequisites": null
     },
     {
-        "id": "4305",
+        "id": "04305",
         "termEffective": "201515",
         "courseNumber": "305",
         "subject": "AMST",
@@ -4033,7 +4033,7 @@
         "prerequisites": null
     },
     {
-        "id": "4310",
+        "id": "04310",
         "termEffective": "201315",
         "courseNumber": "310",
         "subject": "AMST",
@@ -4070,7 +4070,7 @@
         "prerequisites": null
     },
     {
-        "id": "4320H",
+        "id": "04320H",
         "termEffective": "201015",
         "courseNumber": "320H",
         "subject": "AMST",
@@ -4107,7 +4107,7 @@
         "prerequisites": null
     },
     {
-        "id": "4325V",
+        "id": "04325V",
         "termEffective": "201815",
         "courseNumber": "325V",
         "subject": "AMST",
@@ -4144,7 +4144,7 @@
         "prerequisites": null
     },
     {
-        "id": "4330",
+        "id": "04330",
         "termEffective": "201015",
         "courseNumber": "330",
         "subject": "AMST",
@@ -4181,7 +4181,7 @@
         "prerequisites": null
     },
     {
-        "id": "4340",
+        "id": "04340",
         "termEffective": "201015",
         "courseNumber": "340",
         "subject": "AMST",
@@ -4218,7 +4218,7 @@
         "prerequisites": null
     },
     {
-        "id": "4350V",
+        "id": "04350V",
         "termEffective": "201815",
         "courseNumber": "350V",
         "subject": "AMST",
@@ -4255,7 +4255,7 @@
         "prerequisites": null
     },
     {
-        "id": "4354B",
+        "id": "04354B",
         "termEffective": "201215",
         "courseNumber": "354B",
         "subject": "AMST",
@@ -4292,7 +4292,7 @@
         "prerequisites": null
     },
     {
-        "id": "4355V",
+        "id": "04355V",
         "termEffective": "201815",
         "courseNumber": "355V",
         "subject": "AMST",
@@ -4329,7 +4329,7 @@
         "prerequisites": null
     },
     {
-        "id": "4356H",
+        "id": "04356H",
         "termEffective": "201515",
         "courseNumber": "356H",
         "subject": "AMST",
@@ -4366,7 +4366,7 @@
         "prerequisites": null
     },
     {
-        "id": "4363V",
+        "id": "04363V",
         "termEffective": "201815",
         "courseNumber": "363V",
         "subject": "AMST",
@@ -4403,7 +4403,7 @@
         "prerequisites": null
     },
     {
-        "id": "4368",
+        "id": "04368",
         "termEffective": "201015",
         "courseNumber": "368",
         "subject": "AMST",
@@ -4440,7 +4440,7 @@
         "prerequisites": null
     },
     {
-        "id": "4385",
+        "id": "04385",
         "termEffective": "201615",
         "courseNumber": "385",
         "subject": "AMST",
@@ -4477,7 +4477,7 @@
         "prerequisites": null
     },
     {
-        "id": "4390",
+        "id": "04390",
         "termEffective": "201615",
         "courseNumber": "390",
         "subject": "AMST",
@@ -4514,7 +4514,7 @@
         "prerequisites": null
     },
     {
-        "id": "4395",
+        "id": "04395",
         "termEffective": "201415",
         "courseNumber": "395",
         "subject": "AMST",
@@ -4551,7 +4551,7 @@
         "prerequisites": null
     },
     {
-        "id": "4397",
+        "id": "04397",
         "termEffective": "202335",
         "courseNumber": "397",
         "subject": "AMST",
@@ -4588,7 +4588,7 @@
         "prerequisites": null
     },
     {
-        "id": "4485",
+        "id": "04485",
         "termEffective": "201615",
         "courseNumber": "485",
         "subject": "AMST",
@@ -4625,7 +4625,7 @@
         "prerequisites": null
     },
     {
-        "id": "4490",
+        "id": "04490",
         "termEffective": "201615",
         "courseNumber": "490",
         "subject": "AMST",
@@ -4662,7 +4662,7 @@
         "prerequisites": null
     },
     {
-        "id": "4499",
+        "id": "04499",
         "termEffective": "201015",
         "courseNumber": "499",
         "subject": "AMST",
@@ -4699,7 +4699,7 @@
         "prerequisites": null
     },
     {
-        "id": "5101B",
+        "id": "05101B",
         "termEffective": "202235",
         "courseNumber": "101B",
         "subject": "ANTH",
@@ -4736,7 +4736,7 @@
         "prerequisites": null
     },
     {
-        "id": "5180",
+        "id": "05180",
         "termEffective": "201515",
         "courseNumber": "180",
         "subject": "ANTH",
@@ -4773,7 +4773,7 @@
         "prerequisites": null
     },
     {
-        "id": "5181",
+        "id": "05181",
         "termEffective": "201515",
         "courseNumber": "181",
         "subject": "ANTH",
@@ -4810,7 +4810,7 @@
         "prerequisites": null
     },
     {
-        "id": "5190",
+        "id": "05190",
         "termEffective": "202325",
         "courseNumber": "190",
         "subject": "ANTH",
@@ -4847,7 +4847,7 @@
         "prerequisites": null
     },
     {
-        "id": "5201P",
+        "id": "05201P",
         "termEffective": "202115",
         "courseNumber": "201P",
         "subject": "ANTH",
@@ -4884,7 +4884,7 @@
         "prerequisites": null
     },
     {
-        "id": "5210B",
+        "id": "05210B",
         "termEffective": "201915",
         "courseNumber": "210B",
         "subject": "ANTH",
@@ -4921,7 +4921,7 @@
         "prerequisites": null
     },
     {
-        "id": "5215B",
+        "id": "05215B",
         "termEffective": "202415",
         "courseNumber": "215B",
         "subject": "ANTH",
@@ -4958,7 +4958,7 @@
         "prerequisites": null
     },
     {
-        "id": "5235S",
+        "id": "05235S",
         "termEffective": "202315",
         "courseNumber": "235S",
         "subject": "ANTH",
@@ -4995,7 +4995,7 @@
         "prerequisites": null
     },
     {
-        "id": "5285",
+        "id": "05285",
         "termEffective": "201715",
         "courseNumber": "285",
         "subject": "ANTH",
@@ -5032,7 +5032,7 @@
         "prerequisites": null
     },
     {
-        "id": "5290",
+        "id": "05290",
         "termEffective": "202115",
         "courseNumber": "290",
         "subject": "ANTH",
@@ -5069,7 +5069,7 @@
         "prerequisites": null
     },
     {
-        "id": "5301",
+        "id": "05301",
         "termEffective": "202015",
         "courseNumber": "301",
         "subject": "ANTH",
@@ -5106,7 +5106,7 @@
         "prerequisites": null
     },
     {
-        "id": "5385",
+        "id": "05385",
         "termEffective": "201715",
         "courseNumber": "385",
         "subject": "ANTH",
@@ -5143,7 +5143,7 @@
         "prerequisites": null
     },
     {
-        "id": "5390",
+        "id": "05390",
         "termEffective": "202015",
         "courseNumber": "390",
         "subject": "ANTH",
@@ -5180,7 +5180,7 @@
         "prerequisites": null
     },
     {
-        "id": "5395",
+        "id": "05395",
         "termEffective": "201715",
         "courseNumber": "395",
         "subject": "ANTH",
@@ -5217,7 +5217,7 @@
         "prerequisites": null
     },
     {
-        "id": "5396",
+        "id": "05396",
         "termEffective": "202015",
         "courseNumber": "396",
         "subject": "ANTH",
@@ -5254,7 +5254,7 @@
         "prerequisites": null
     },
     {
-        "id": "5397",
+        "id": "05397",
         "termEffective": "201735",
         "courseNumber": "397",
         "subject": "ANTH",
@@ -5291,7 +5291,7 @@
         "prerequisites": null
     },
     {
-        "id": "5485",
+        "id": "05485",
         "termEffective": "201715",
         "courseNumber": "485",
         "subject": "ANTH",
@@ -5328,7 +5328,7 @@
         "prerequisites": null
     },
     {
-        "id": "5490",
+        "id": "05490",
         "termEffective": "201715",
         "courseNumber": "490",
         "subject": "ANTH",
@@ -5365,7 +5365,7 @@
         "prerequisites": null
     },
     {
-        "id": "6101",
+        "id": "06101",
         "termEffective": "201615",
         "courseNumber": "101",
         "subject": "LARB",
@@ -5402,7 +5402,7 @@
         "prerequisites": null
     },
     {
-        "id": "6102L",
+        "id": "06102L",
         "termEffective": "201615",
         "courseNumber": "102L",
         "subject": "LARB",
@@ -5439,7 +5439,7 @@
         "prerequisites": null
     },
     {
-        "id": "6201L",
+        "id": "06201L",
         "termEffective": "201915",
         "courseNumber": "201L",
         "subject": "LARB",
@@ -5476,7 +5476,7 @@
         "prerequisites": null
     },
     {
-        "id": "6202L",
+        "id": "06202L",
         "termEffective": "201915",
         "courseNumber": "202L",
         "subject": "LARB",
@@ -5513,7 +5513,7 @@
         "prerequisites": null
     },
     {
-        "id": "7100A",
+        "id": "07100A",
         "termEffective": "202335",
         "courseNumber": "100A",
         "subject": "ARTS",
@@ -5550,7 +5550,7 @@
         "prerequisites": null
     },
     {
-        "id": "7101A",
+        "id": "07101A",
         "termEffective": "202215",
         "courseNumber": "101A",
         "subject": "ARTS",
@@ -5587,7 +5587,7 @@
         "prerequisites": null
     },
     {
-        "id": "7102A",
+        "id": "07102A",
         "termEffective": "202215",
         "courseNumber": "102A",
         "subject": "ARTS",
@@ -5624,7 +5624,7 @@
         "prerequisites": null
     },
     {
-        "id": "7103A",
+        "id": "07103A",
         "termEffective": "202215",
         "courseNumber": "103A",
         "subject": "ARTS",
@@ -5661,7 +5661,7 @@
         "prerequisites": null
     },
     {
-        "id": "7180",
+        "id": "07180",
         "termEffective": "201415",
         "courseNumber": "180",
         "subject": "ARTS",
@@ -5698,7 +5698,7 @@
         "prerequisites": null
     },
     {
-        "id": "7181",
+        "id": "07181",
         "termEffective": "201415",
         "courseNumber": "181",
         "subject": "ARTS",
@@ -5735,7 +5735,7 @@
         "prerequisites": null
     },
     {
-        "id": "7182",
+        "id": "07182",
         "termEffective": "201415",
         "courseNumber": "182",
         "subject": "ARTS",
@@ -5772,7 +5772,7 @@
         "prerequisites": null
     },
     {
-        "id": "7190",
+        "id": "07190",
         "termEffective": "202325",
         "courseNumber": "190",
         "subject": "ARTS",
@@ -5809,7 +5809,7 @@
         "prerequisites": null
     },
     {
-        "id": "7200A",
+        "id": "07200A",
         "termEffective": "202315",
         "courseNumber": "200A",
         "subject": "ARTS",
@@ -5846,7 +5846,7 @@
         "prerequisites": null
     },
     {
-        "id": "7201A",
+        "id": "07201A",
         "termEffective": "202215",
         "courseNumber": "201A",
         "subject": "ARTS",
@@ -5883,7 +5883,7 @@
         "prerequisites": null
     },
     {
-        "id": "7202",
+        "id": "07202",
         "termEffective": "202215",
         "courseNumber": "202",
         "subject": "ARTS",
@@ -5920,7 +5920,7 @@
         "prerequisites": null
     },
     {
-        "id": "7203",
+        "id": "07203",
         "termEffective": "202215",
         "courseNumber": "203",
         "subject": "ARTS",
@@ -5957,7 +5957,7 @@
         "prerequisites": null
     },
     {
-        "id": "7208A",
+        "id": "07208A",
         "termEffective": "202135",
         "courseNumber": "208A",
         "subject": "ARTS",
@@ -5994,7 +5994,7 @@
         "prerequisites": null
     },
     {
-        "id": "7212A",
+        "id": "07212A",
         "termEffective": "202335",
         "courseNumber": "212A",
         "subject": "ARTS",
@@ -6031,7 +6031,7 @@
         "prerequisites": null
     },
     {
-        "id": "7213",
+        "id": "07213",
         "termEffective": "202215",
         "courseNumber": "213",
         "subject": "ARTS",
@@ -6068,7 +6068,7 @@
         "prerequisites": null
     },
     {
-        "id": "7214B",
+        "id": "07214B",
         "termEffective": "202125",
         "courseNumber": "214B",
         "subject": "ARTS",
@@ -6105,7 +6105,7 @@
         "prerequisites": null
     },
     {
-        "id": "7216A",
+        "id": "07216A",
         "termEffective": "202135",
         "courseNumber": "216A",
         "subject": "ARTS",
@@ -6142,7 +6142,7 @@
         "prerequisites": null
     },
     {
-        "id": "7218A",
+        "id": "07218A",
         "termEffective": "202135",
         "courseNumber": "218A",
         "subject": "ARTS",
@@ -6179,7 +6179,7 @@
         "prerequisites": null
     },
     {
-        "id": "7222A",
+        "id": "07222A",
         "termEffective": "202215",
         "courseNumber": "222A",
         "subject": "ARTS",
@@ -6216,7 +6216,7 @@
         "prerequisites": null
     },
     {
-        "id": "7232",
+        "id": "07232",
         "termEffective": "202215",
         "courseNumber": "232",
         "subject": "ARTS",
@@ -6253,7 +6253,7 @@
         "prerequisites": null
     },
     {
-        "id": "7285",
+        "id": "07285",
         "termEffective": "201615",
         "courseNumber": "285",
         "subject": "ARTS",
@@ -6290,7 +6290,7 @@
         "prerequisites": null
     },
     {
-        "id": "7290",
+        "id": "07290",
         "termEffective": "201615",
         "courseNumber": "290",
         "subject": "ARTS",
@@ -6327,7 +6327,7 @@
         "prerequisites": null
     },
     {
-        "id": "7302",
+        "id": "07302",
         "termEffective": "201415",
         "courseNumber": "302",
         "subject": "ARTS",
@@ -6364,7 +6364,7 @@
         "prerequisites": null
     },
     {
-        "id": "7303",
+        "id": "07303",
         "termEffective": "202215",
         "courseNumber": "303",
         "subject": "ARTS",
@@ -6401,7 +6401,7 @@
         "prerequisites": null
     },
     {
-        "id": "7306",
+        "id": "07306",
         "termEffective": "202135",
         "courseNumber": "306",
         "subject": "ARTS",
@@ -6438,7 +6438,7 @@
         "prerequisites": null
     },
     {
-        "id": "7308",
+        "id": "07308",
         "termEffective": "202135",
         "courseNumber": "308",
         "subject": "ARTS",
@@ -6475,7 +6475,7 @@
         "prerequisites": null
     },
     {
-        "id": "7316",
+        "id": "07316",
         "termEffective": "202135",
         "courseNumber": "316",
         "subject": "ARTS",
@@ -6512,7 +6512,7 @@
         "prerequisites": null
     },
     {
-        "id": "7321",
+        "id": "07321",
         "termEffective": "201415",
         "courseNumber": "321",
         "subject": "ARTS",
@@ -6549,7 +6549,7 @@
         "prerequisites": null
     },
     {
-        "id": "7332",
+        "id": "07332",
         "termEffective": "202215",
         "courseNumber": "332",
         "subject": "ARTS",
@@ -6586,7 +6586,7 @@
         "prerequisites": null
     },
     {
-        "id": "7333",
+        "id": "07333",
         "termEffective": "202135",
         "courseNumber": "333",
         "subject": "ARTS",
@@ -6623,7 +6623,7 @@
         "prerequisites": null
     },
     {
-        "id": "7335",
+        "id": "07335",
         "termEffective": "201415",
         "courseNumber": "335",
         "subject": "ARTS",
@@ -6660,7 +6660,7 @@
         "prerequisites": null
     },
     {
-        "id": "7345",
+        "id": "07345",
         "termEffective": "201415",
         "courseNumber": "345",
         "subject": "ARTS",
@@ -6697,7 +6697,7 @@
         "prerequisites": null
     },
     {
-        "id": "7385",
+        "id": "07385",
         "termEffective": "201615",
         "courseNumber": "385",
         "subject": "ARTS",
@@ -6734,7 +6734,7 @@
         "prerequisites": null
     },
     {
-        "id": "7390",
+        "id": "07390",
         "termEffective": "201615",
         "courseNumber": "390",
         "subject": "ARTS",
@@ -6771,7 +6771,7 @@
         "prerequisites": null
     },
     {
-        "id": "7391",
+        "id": "07391",
         "termEffective": "202135",
         "courseNumber": "391",
         "subject": "ARTS",
@@ -6808,7 +6808,7 @@
         "prerequisites": null
     },
     {
-        "id": "7395",
+        "id": "07395",
         "termEffective": "201415",
         "courseNumber": "395",
         "subject": "ARTS",
@@ -6845,7 +6845,7 @@
         "prerequisites": null
     },
     {
-        "id": "7398",
+        "id": "07398",
         "termEffective": "202215",
         "courseNumber": "398",
         "subject": "ARTS",
@@ -6882,7 +6882,7 @@
         "prerequisites": null
     },
     {
-        "id": "7399",
+        "id": "07399",
         "termEffective": "202425",
         "courseNumber": "399",
         "subject": "ARTS",
@@ -6919,7 +6919,7 @@
         "prerequisites": null
     },
     {
-        "id": "7402",
+        "id": "07402",
         "termEffective": "201415",
         "courseNumber": "402",
         "subject": "ARTS",
@@ -6956,7 +6956,7 @@
         "prerequisites": null
     },
     {
-        "id": "7403",
+        "id": "07403",
         "termEffective": "202315",
         "courseNumber": "403",
         "subject": "ARTS",
@@ -6993,7 +6993,7 @@
         "prerequisites": null
     },
     {
-        "id": "7406",
+        "id": "07406",
         "termEffective": "202135",
         "courseNumber": "406",
         "subject": "ARTS",
@@ -7030,7 +7030,7 @@
         "prerequisites": null
     },
     {
-        "id": "7407",
+        "id": "07407",
         "termEffective": "202135",
         "courseNumber": "407",
         "subject": "ARTS",
@@ -7067,7 +7067,7 @@
         "prerequisites": null
     },
     {
-        "id": "7416",
+        "id": "07416",
         "termEffective": "202135",
         "courseNumber": "416",
         "subject": "ARTS",
@@ -7104,7 +7104,7 @@
         "prerequisites": null
     },
     {
-        "id": "7417",
+        "id": "07417",
         "termEffective": "202135",
         "courseNumber": "417",
         "subject": "ARTS",
@@ -7141,7 +7141,7 @@
         "prerequisites": null
     },
     {
-        "id": "7432",
+        "id": "07432",
         "termEffective": "202315",
         "courseNumber": "432",
         "subject": "ARTS",
@@ -7178,7 +7178,7 @@
         "prerequisites": null
     },
     {
-        "id": "7485",
+        "id": "07485",
         "termEffective": "201615",
         "courseNumber": "485",
         "subject": "ARTS",
@@ -7215,7 +7215,7 @@
         "prerequisites": null
     },
     {
-        "id": "7490",
+        "id": "07490",
         "termEffective": "201615",
         "courseNumber": "490",
         "subject": "ARTS",
@@ -7252,7 +7252,7 @@
         "prerequisites": null
     },
     {
-        "id": "7498",
+        "id": "07498",
         "termEffective": "202225",
         "courseNumber": "498",
         "subject": "ARTS",
@@ -7289,7 +7289,7 @@
         "prerequisites": null
     },
     {
-        "id": "7499",
+        "id": "07499",
         "termEffective": "202125",
         "courseNumber": "499",
         "subject": "ARTS",
@@ -7326,7 +7326,7 @@
         "prerequisites": null
     },
     {
-        "id": "8180",
+        "id": "08180",
         "termEffective": "201535",
         "courseNumber": "180",
         "subject": "ARTH",
@@ -7363,7 +7363,7 @@
         "prerequisites": null
     },
     {
-        "id": "8190",
+        "id": "08190",
         "termEffective": "202325",
         "courseNumber": "190",
         "subject": "ARTH",
@@ -7400,7 +7400,7 @@
         "prerequisites": null
     },
     {
-        "id": "8210A",
+        "id": "08210A",
         "termEffective": "201015",
         "courseNumber": "210A",
         "subject": "ARTH",
@@ -7437,7 +7437,7 @@
         "prerequisites": null
     },
     {
-        "id": "8211A",
+        "id": "08211A",
         "termEffective": "201515",
         "courseNumber": "211A",
         "subject": "ARTH",
@@ -7474,7 +7474,7 @@
         "prerequisites": null
     },
     {
-        "id": "8212A",
+        "id": "08212A",
         "termEffective": "202225",
         "courseNumber": "212A",
         "subject": "ARTH",
@@ -7511,7 +7511,7 @@
         "prerequisites": null
     },
     {
-        "id": "8241A",
+        "id": "08241A",
         "termEffective": "201515",
         "courseNumber": "241A",
         "subject": "ARTH",
@@ -7548,7 +7548,7 @@
         "prerequisites": null
     },
     {
-        "id": "8242A",
+        "id": "08242A",
         "termEffective": "202415",
         "courseNumber": "242A",
         "subject": "ARTH",
@@ -7585,7 +7585,7 @@
         "prerequisites": null
     },
     {
-        "id": "8242V",
+        "id": "08242V",
         "termEffective": "201815",
         "courseNumber": "242V",
         "subject": "ARTH",
@@ -7622,7 +7622,7 @@
         "prerequisites": null
     },
     {
-        "id": "8243V",
+        "id": "08243V",
         "termEffective": "202415",
         "courseNumber": "243V",
         "subject": "ARTH",
@@ -7659,7 +7659,7 @@
         "prerequisites": null
     },
     {
-        "id": "8251A",
+        "id": "08251A",
         "termEffective": "201715",
         "courseNumber": "251A",
         "subject": "ARTH",
@@ -7696,7 +7696,7 @@
         "prerequisites": null
     },
     {
-        "id": "8251V",
+        "id": "08251V",
         "termEffective": "201815",
         "courseNumber": "251V",
         "subject": "ARTH",
@@ -7733,7 +7733,7 @@
         "prerequisites": null
     },
     {
-        "id": "8285",
+        "id": "08285",
         "termEffective": "201615",
         "courseNumber": "285",
         "subject": "ARTH",
@@ -7770,7 +7770,7 @@
         "prerequisites": null
     },
     {
-        "id": "8290",
+        "id": "08290",
         "termEffective": "201615",
         "courseNumber": "290",
         "subject": "ARTH",
@@ -7807,7 +7807,7 @@
         "prerequisites": null
     },
     {
-        "id": "8290A",
+        "id": "08290A",
         "termEffective": "201625",
         "courseNumber": "290A",
         "subject": "ARTH",
@@ -7844,7 +7844,7 @@
         "prerequisites": null
     },
     {
-        "id": "8290V",
+        "id": "08290V",
         "termEffective": "201815",
         "courseNumber": "290V",
         "subject": "ARTH",
@@ -7881,7 +7881,7 @@
         "prerequisites": null
     },
     {
-        "id": "8310",
+        "id": "08310",
         "termEffective": "201515",
         "courseNumber": "310",
         "subject": "ARTH",
@@ -7918,7 +7918,7 @@
         "prerequisites": null
     },
     {
-        "id": "8312",
+        "id": "08312",
         "termEffective": "202415",
         "courseNumber": "312",
         "subject": "ARTH",
@@ -7955,7 +7955,7 @@
         "prerequisites": null
     },
     {
-        "id": "8314A",
+        "id": "08314A",
         "termEffective": "201015",
         "courseNumber": "314A",
         "subject": "ARTH",
@@ -7992,7 +7992,7 @@
         "prerequisites": null
     },
     {
-        "id": "8315A",
+        "id": "08315A",
         "termEffective": "201415",
         "courseNumber": "315A",
         "subject": "ARTH",
@@ -8029,7 +8029,7 @@
         "prerequisites": null
     },
     {
-        "id": "8316",
+        "id": "08316",
         "termEffective": "201015",
         "courseNumber": "316",
         "subject": "ARTH",
@@ -8066,7 +8066,7 @@
         "prerequisites": null
     },
     {
-        "id": "8321V",
+        "id": "08321V",
         "termEffective": "201815",
         "courseNumber": "321V",
         "subject": "ARTH",
@@ -8103,7 +8103,7 @@
         "prerequisites": null
     },
     {
-        "id": "8322V",
+        "id": "08322V",
         "termEffective": "201815",
         "courseNumber": "322V",
         "subject": "ARTH",
@@ -8140,7 +8140,7 @@
         "prerequisites": null
     },
     {
-        "id": "8325S",
+        "id": "08325S",
         "termEffective": "201515",
         "courseNumber": "325S",
         "subject": "ARTH",
@@ -8177,7 +8177,7 @@
         "prerequisites": null
     },
     {
-        "id": "8326",
+        "id": "08326",
         "termEffective": "202415",
         "courseNumber": "326",
         "subject": "ARTH",
@@ -8214,7 +8214,7 @@
         "prerequisites": null
     },
     {
-        "id": "8334V",
+        "id": "08334V",
         "termEffective": "202215",
         "courseNumber": "334V",
         "subject": "ARTH",
@@ -8251,7 +8251,7 @@
         "prerequisites": null
     },
     {
-        "id": "8341V",
+        "id": "08341V",
         "termEffective": "201815",
         "courseNumber": "341V",
         "subject": "ARTH",
@@ -8288,7 +8288,7 @@
         "prerequisites": null
     },
     {
-        "id": "8344V",
+        "id": "08344V",
         "termEffective": "201915",
         "courseNumber": "344V",
         "subject": "ARTH",
@@ -8325,7 +8325,7 @@
         "prerequisites": null
     },
     {
-        "id": "8365",
+        "id": "08365",
         "termEffective": "201515",
         "courseNumber": "365",
         "subject": "ARTH",
@@ -8362,7 +8362,7 @@
         "prerequisites": null
     },
     {
-        "id": "8366",
+        "id": "08366",
         "termEffective": "202415",
         "courseNumber": "366",
         "subject": "ARTH",
@@ -8399,7 +8399,7 @@
         "prerequisites": null
     },
     {
-        "id": "8372V",
+        "id": "08372V",
         "termEffective": "201815",
         "courseNumber": "372V",
         "subject": "ARTH",
@@ -8436,7 +8436,7 @@
         "prerequisites": null
     },
     {
-        "id": "8380",
+        "id": "08380",
         "termEffective": "202015",
         "courseNumber": "380",
         "subject": "ARTH",
@@ -8473,7 +8473,7 @@
         "prerequisites": null
     },
     {
-        "id": "8385",
+        "id": "08385",
         "termEffective": "201615",
         "courseNumber": "385",
         "subject": "ARTH",
@@ -8510,7 +8510,7 @@
         "prerequisites": null
     },
     {
-        "id": "8390",
+        "id": "08390",
         "termEffective": "201615",
         "courseNumber": "390",
         "subject": "ARTH",
@@ -8547,7 +8547,7 @@
         "prerequisites": null
     },
     {
-        "id": "8395",
+        "id": "08395",
         "termEffective": "201415",
         "courseNumber": "395",
         "subject": "ARTH",
@@ -8584,7 +8584,7 @@
         "prerequisites": null
     },
     {
-        "id": "8415",
+        "id": "08415",
         "termEffective": "201315",
         "courseNumber": "415",
         "subject": "ARTH",
@@ -8621,7 +8621,7 @@
         "prerequisites": null
     },
     {
-        "id": "8485",
+        "id": "08485",
         "termEffective": "201615",
         "courseNumber": "485",
         "subject": "ARTH",
@@ -8658,7 +8658,7 @@
         "prerequisites": null
     },
     {
-        "id": "8490",
+        "id": "08490",
         "termEffective": "201615",
         "courseNumber": "490",
         "subject": "ARTH",
@@ -8695,7 +8695,7 @@
         "prerequisites": null
     },
     {
-        "id": "8499",
+        "id": "08499",
         "termEffective": "201515",
         "courseNumber": "499",
         "subject": "ARTH",
@@ -8732,7 +8732,7 @@
         "prerequisites": null
     },
     {
-        "id": "9200S",
+        "id": "09200S",
         "termEffective": "201615",
         "courseNumber": "200S",
         "subject": "ASIA",
@@ -8769,7 +8769,7 @@
         "prerequisites": null
     },
     {
-        "id": "9290",
+        "id": "09290",
         "termEffective": "202325",
         "courseNumber": "290",
         "subject": "ASIA",
@@ -8806,7 +8806,7 @@
         "prerequisites": null
     },
     {
-        "id": "9390",
+        "id": "09390",
         "termEffective": "201835",
         "courseNumber": "390",
         "subject": "ASIA",

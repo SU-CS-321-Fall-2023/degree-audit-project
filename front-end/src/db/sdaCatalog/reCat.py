@@ -5,15 +5,15 @@ lineCount = 0
 newCatalog = list()
 myIDs = list()
 subjects = [
-    ["ACCT", "1"],
-    ["AERS", "2"],
-    ["AFST", "3"],
-    ["AMST", "4"],
-    ["ANTH", "5"],
-    ["LARB", "6"],
-    ["ARTS", "7"],
-    ["ARTH", "8"],
-    ["ASIA", "9"],
+    ["ACCT", "01"],
+    ["AERS", "02"],
+    ["AFST", "03"],
+    ["AMST", "04"],
+    ["ANTH", "05"],
+    ["LARB", "06"],
+    ["ARTS", "07"],
+    ["ARTH", "08"],
+    ["ASIA", "09"],
     ["ASTR", "10"],
     ["BIOL", "11"],
     ["SOBA", "12"],
@@ -93,7 +93,7 @@ try:
 
     # with open('front-end\\src\\db\\Majors\\CS.json', 'r') as file002:
     #     csData = json.load(file002)
-    with open('front-end\src\db\sdaCatalog\sdaCatalog.json', 'r') as ourFile:
+    with open('front-end\\src\\db\\sdaCatalog\\newCatalog.json', 'r') as ourFile:
         # content = ourFile.read()
         # print(content)
         ourData = json.load(ourFile)
