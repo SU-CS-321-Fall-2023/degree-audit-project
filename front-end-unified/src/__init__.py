@@ -10,7 +10,7 @@ def create_app():
         static_folder= rootPath + "/front-end/src/static")
     app.config['SECRET_KEY'] = 'hai'
 
-    from .views import views
-    app.register_blueprint(views, url_prefix='/')
+    #from .views import views
+    #app.register_blueprint(views, url_prefix='/')
     
     return app
