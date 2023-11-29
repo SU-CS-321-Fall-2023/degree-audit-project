@@ -1,15 +1,15 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 views = Blueprint('views', __name__)
 
 @views.route('/')
 def home():
-    return "<h1>Homepage</h1>"
+    return render_template("index.html")
 
-@views.route('/reviews')
-def reviews():
+@views.route('/review')
+def review():
     return "<h1>Course Reviews Page</h1>"
 
-@views.route('/cultural')
+@views.route('/culture')
 def culture():
     return "<h1>Cultural Credits Opportunity Tracker</h1>"
