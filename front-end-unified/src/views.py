@@ -12,4 +12,4 @@ def review():
 
 @views.route('/culture')
 def culture():
-    return "<h1>Cultural Credits Opportunity Tracker</h1>"
+    return render_template("culture.html")
