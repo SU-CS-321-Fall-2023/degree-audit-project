@@ -114,8 +114,6 @@ def index():
 
     # return render_template(webletIndex, data=data)
 
-
-
 if __name__ == '__main__':
     """
     Must be placed at the end of the file.

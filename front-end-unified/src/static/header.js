@@ -11,7 +11,7 @@ class Header extends HTMLElement {
                     <nav class="title-bar__containter">
                         <h1 class="title-bar__logo">
                             <a href="/">
-                                <img id="title-bar__logo" src="" alt="Stetson Degree Audit">
+                                <img id="title-bar__logo" src="" alt="Stetson Smart Degree Audit">
                                 </img>
                             </a>
                         </h1>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title>Smart Degree Audit</title>
+        <title>{% block title %}Smart Degree Audit{% endblock %}</title>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE-edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,61 +9,42 @@
         <meta name="description" content="This is the beginning of the Auditors' creation." />
         <meta name="author" content="The Auditors" />
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrapCyborg.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrapCyborg.css') }}" />
         <script src="{{ url_for('static', filename='header.js') }}" type="text/javascript" defer></script>
         <script src="{{ url_for('static', filename='footer.js') }}" type="text/javascript" defer></script>
+        <script src="{{ url_for('static', filename='idForm.js') }}" type="text/javascript" defer></script>
     </head>
     <body>
         <header-component></header-component>
         <main>
-            <div class="row">
-                <div class="student-heading-wrapper" id="student-heading-wrapper">
-                    <div class="student-heading" id="student-heading">
-                        <div id="grad-level">
-                            <span><b>Level</b></span>
-                            <span>Undergraduate</span>
-                        </div>
-                        <div id="class-level">
-                            <span><b>Class</b></span>
-                            <span>Senior</span>
-                        </div>
-                        <div id="major">
-                            <span><b>Major</b></span>
-                            <span>American Studies</span>
-                        </div>
-                        <div id="program">
-                            <span><b>Program</b></span>
-                            <span>BA-AMST</span>
-                        </div>
-                        <div id="advisor-name">
-                            <span><b>Advisor</b></span>
-                            <span>Last, First</span>
-                        </div>
-                        <div id="academic-status">
-                            <span><b>Academic Status</b></span>
-                            <span>Good Standing</span>
-                        </div>
-                        <div id="student-type">
-                            <span><b>Student Type</b></span>
-                            <span>(C) Continuing Student</span>
-                        </div>
-                        <div id="student-status">
-                            <span><b>Student Status</b></span>
-                            <span>Active</span>
-                        </div>
-                        <div id="ant-grad-date">
-                            <span><b>Anticipated Grad Date</b></span>
-                            <span>DD-MMM-YY</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container text-start myWrapper" id="myWrapper">
-                <div class="row">
-
-                </div>
+            <div class="theme-toggle">
+                <input type="checkbox" id="darkModeToggle">
+                <label for="darkModeToggle">Dark Mode</label>
+            </div> 
+            <div class="container">
+                {% block content %}
+                {% endblock %}
             </div>
         </main>
         <footer-component></footer-component>
+        <style>
+            body {
+                background: white;
+            }
+            body.dark-mode {
+                background: black;
+            }
+        </style>
+        <script>
+            const darkModeToggle = document.getElementById('darkModeToggle');
+        
+            darkModeToggle.addEventListener('change', function() {
+                if (this.checked) {
+                    document.body.classList.add('dark-mode');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                }
+            });
+        </script>  
     </body>
 </html>

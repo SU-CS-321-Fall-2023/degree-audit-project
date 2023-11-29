@@ -4,11 +4,11 @@ views = Blueprint('views', __name__)
 
 @views.route('/')
 def home():
-    return render_template("index.html")
+    return render_template("home.html")
 
 @views.route('/review')
 def review():
-    return "<h1>Course Reviews Page</h1>"
+    return render_template("review.html")
 
 @views.route('/culture')
 def culture():
