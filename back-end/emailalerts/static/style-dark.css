@@ -1,0 +1,34 @@
+
+body {
+    background-color: #1a1a1a; /* Dark background color */
+    color: #ffffff; /* White text color */
+}
+
+h1 {
+    color: #ffffff; /* White header text color */
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    color: #ffffff; /* White label text color */
+}
+
+input[type="email"] {
+    border: 1px solid #ffffff; /* White border for email input */
+}
+
+button {
+    background-color: #ffffff; /* White background color for the button */
+    color: #1a1a1a; /* Dark text color for the button */
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e6e6e6; /* Light gray color on button hover */
+}

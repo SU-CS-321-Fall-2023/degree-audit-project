@@ -3,6 +3,13 @@
 % To receive the details regarding a specific major, epecially for ones that have similar abbreviations:
 % getDetails("BA", "EDUC", X) :- major("BA", "EDUC", X), courseDescription(X,Y).
 
+% Logic Path to generate the files.
+% find_X_Degrees() runs findX(), which runs X_forall(), which runs write_to_file()
+% find_X_Degrees() :- findX() :- X_forall() :- write_to_file()
+% Example of above logic path:
+% find_BA_Degrees() runs findBA(), which runs ba_forall(), which runs write_to_file()
+% find_BA_Degrees() :- findBA() :- ba_forall() :- write_to_file()
+
 % Bachelor of Arts
 findBA(Degree, Majors) :-
     findall((Degree, Abbreviation, Full_Name), major(Degree,Abbreviation,Full_Name), Majors),
@@ -33,6 +40,7 @@ findMajor(Degree, Majors) :-
     findall((Degree, Abbreviation, Full_Name), major(Degree,Abbreviation,Full_Name), Majors),
     major_forall(Degree, Majors).
 
+
 ba_forall(Degree, Majors) :- forall(Degree=Degree, write_to_file('baMajors.txt', Majors)).   % Bachelor of Arts
 bs_forall(Degree, Majors) :- forall(Degree=Degree, write_to_file('bsMajors.txt', Majors)).   % Bachelor of Science
 bba_forall(Degree, Majors) :- forall(Degree=Degree, write_to_file('bbaMajors.txt', Majors)). % Bachelor of Business Administration
@@ -40,6 +48,26 @@ bm_forall(Degree, Majors) :- forall(Degree=Degree, write_to_file('bmMajors.txt',
 bme_forall(Degree, Majors) :- forall(Degree=Degree, write_to_file('bmeMajors.txt', Majors)). % Bachelor of Music Education
 
 major_forall(Degree, Majors) :- forall(Degree=Degree, write_to_file('allMajors.txt', Majors)). % All majors
+
+
+find_BA_Degrees("BA", Majors) :- findBA("BA", Majors).     % Bachelor of Arts
+find_BS_Degrees("BS", Majors) :- findBS("BS", Majors).     % Bachelor of Science
+find_BBA_Degrees("BBA", Majors) :- findBBA("BBA", Majors). % Bachelor of Business Administration
+find_BM_Degrees("BM", Majors) :- findBM("BM", Majors).     % Bachelor of Music
+find_BME_Degrees("BME", Majors) :- findBME("BME", Majors). % Bachelor of Music Education
+
+find_All_Degrees("NONE", Majors) :- Degree=Degree, findMajor(Degree, Majors). % All majors
+
+% Shortcut for initializing the files.
+% Just copy and paste the line below (exluding the modulus, %) into the SWI-Prolog terminal and run.
+% find_BA_Degrees("BA", Majors); find_BS_Degrees("BS", Majors); find_BBA_Degrees("BBA", Majors); find_BM_Degrees("BM", Majors); find_BME_Degrees("BME", Majors); find_All_Degrees("NONE", Majors).
+% :- find_BA_Degrees("BA", Majors).
+% :- find_BS_Degrees("BS", Majors).
+% :- find_BBA_Degrees("BBA", Majors).
+% :- find_BM_Degrees("BM", Majors).
+% :- find_BME_Degrees("BME", Majors).
+% :- find_All_Degrees("NONE", Majors).
+
 
 
 % write_list([]).
@@ -78,30 +106,18 @@ write_to_file(Filename, Data) :-
 % Example usage to read and display the contents of the file
 % read_file('output.txt').
 
-find_BA_Degrees("BA", Majors) :- findBA("BA", Majors).    % Bachelor of Arts
-find_BS_Degrees("BS", Majors) :- findBS("BS", Majors).    % Bachelor of Science
-find_BBA_Degrees("BBA", Majors) :- findBBA("BBA", Majors). % Bachelor of Business Administration
-find_BM_Degrees("BM", Majors) :- findBM("BM", Majors).    % Bachelor of Music
-find_BME_Degrees("BME", Majors) :- findBME("BME", Majors). % Bachelor of Music Education
+% filterMajor(X, Majors) :-
+%     findall((Degree, Abbreviation, Full_Name), major(Degree,Abbreviation,Full_Name), Majors),
 
-find_All_Degrees("NONE", Majors) :- Degree=Degree, findMajor(Degree, Majors). % All majors
-
-% Shortcut for initializing the files.
-% Just copy and paste the line below (exluding the modulus, %) into the SWI-Prolog terminal and run.
-% find_BA_Degrees("BA", Majors); find_BS_Degrees("BS", Majors); find_BBA_Degrees("BBA", Majors); find_BM_Degrees("BM", Majors); find_BME_Degrees("BME", Majors); find_All_Degrees("NONE", Majors).
-% :- find_BA_Degrees("BA", Majors).
-% :- find_BS_Degrees("BS", Majors).
-% :- find_BBA_Degrees("BBA", Majors).
-% :- find_BM_Degrees("BM", Majors).
-% :- find_BME_Degrees("BME", Majors).
-% :- find_All_Degrees("NONE", Majors).
 
 % find_majorByAbbrev(Abbreviation, Majors) :- 
-%     findMajor(Degree, Abbreviation, Full_Name, Majors).
+%     filterMajor(Abbreviation, Majors).
+%     % filterMajor(Degree, Abbreviation, Full_Name, Majors).
 %     % atom_concat(Degree, Abbreviation, Abbreviation), atom_concat(Abbreviation, Full_Name, Abbreviation).
 %     % print_term((Abbreviation), [ portray(true), numbervars(true), quoted(true)]).
 % find_majorByName(Full_Name, Majors) :- 
-%     findMajor(Degree, Abbreviation, Full_Name, Majors).
+%     filterMajor(Full_Name, Majors).
+%     % filterMajor(Degree, Abbreviation, Full_Name, Majors).
 %     % atom_concat(Abbreviation, Full_Name, Full_Name), atom_concat(Degree, Full_Name, Full_Name),
 %     % print_term(Majors, [ portray(true), numbervars(true), quoted(true), no_lists(false)]).
 
@@ -109,7 +125,7 @@ find_All_Degrees("NONE", Majors) :- Degree=Degree, findMajor(Degree, Majors). % 
 % getDetails("BA", "EDUC", X) :- courseDescription(X,Y).
 % forall(Degree="BA", write_term((Degree, Abbreviation, Full_Name), [ portray(true), numbervars(true), quoted(true), no_lists(false) ])).
 
-courseDescription("Elementary Education", ": That is a child-friendly major.").
+% courseDescription("Elementary Education", ": That is a child-friendly major.").
 
 % TODO: Differentiate between "Elementary Education" and "General Studies in Education"
 % TODO: Differentiate between "Economics" and "Global Development"
@@ -197,8 +213,6 @@ major("BME", "MUSC", "BME (Vocal/General)").
 % Bachelor of Arts in Music
 major("BA in Music", "MUSC", "BA in Music").
 
-% :- (listing(major("BA", Y, Z))).
-
 % Minors
 minor("AFST", "Africana Studies").
 minor("AMST", "American Studies").
@@ -237,32 +251,31 @@ minor("RUSS", "Russian").
 minor("REES", "Russian, East European, and Eurasian Studies").
 minor("SOCI", "Sociology").
 minor("SPAN", "Spanish").
-% minor("Studio Art").
+minor("STUD", "Studio Art").
 minor("FOOD", "Sustainable Food Systems").
 minor("THEA", "Theatre Arts").
 minor("WLGC", "World Language").
 
 % Administered through the School of Business Administration.
-minor("Accounting").
-minor("Applied Statistics").
-minor("Business Administration").
-minor("Business Systems and Analytics").
-minor("Business Law").
-minor("Entrepreneurship").
-minor("Family Enterprise").
-minor("Finance").
-minor("Human Resource Management").
-minor("International Business").
-minor("Management").
-minor("Marketing").
-minor("Professional Sales").
-minor("Sport Business").
+minor("ACCT", "Accounting").
+minor("STAT", "Applied Statistics").
+minor("SOBA", "Business Administration").
+minor("BSAN", "Business Systems and Analytics").
+minor("BLAW", "Business Law").
+minor("ENTP", "Entrepreneurship").
+minor("FENT", "Family Enterprise").
+minor("FINA", "Finance").
+minor("HRMT", "Human Resource Management").
+minor("INTL", "International Business").
+minor("MGMT", "Management").
+minor("MKTG", "Marketing").
+minor("SALS", "Professional Sales").
+minor("SPTB", "Sport Business").
 
 % Administered through the School of Music.
-minor("General Minor in Music").
-minor("Music Technology").
-% Command to list all offered minors.
-% :- listing(minor).
+% minor("General Minor in Music").
+% minor("Music Technology").
+
 
 
 % Course Descriptions
@@ -271,6 +284,85 @@ cas("COMM").
 cas("CSCI").
 cas("DIGA").
 
+subjectFilter("ACCT", "Accounting").
+subjectFilter("AERS", "Aerospace Studies").
+subjectFilter("AFST", "Africana Studies").
+subjectFilter("AMST", "American Studies").
+subjectFilter("ANTH", "Anthropology").
+subjectFilter("LARB", "Arabic").
+subjectFilter("ARTS", "Art Studio").
+subjectFilter("ARTH", "Art History").
+subjectFilter("ASIA", "Asian Studies").
+subjectFilter("ASTR", "Astronomy").
+subjectFilter("BIOL", "Biology").
+subjectFilter("SOBA", "Business Administration").
+subjectFilter("BLAW", "Business Law").
+subjectFilter("BSAN", "Business Systems and Analytics").
+subjectFilter("CHEM", "Chemistry").
+subjectFilter("CHIN", "Chinese").
+subjectFilter("COMM", "Communication and Media Studies").
+subjectFilter("CINF", "Computer Information Systems").
+subjectFilter("CSCI", "Computer Science").
+subjectFilter("COUN", "Counseling").
+subjectFilter("CREA", "Creative Arts").
+subjectFilter("CSEC", "Cybersecurity").
+subjectFilter("DIGA", "Digital Arts").
+subjectFilter("ECON", "Economics").
+subjectFilter("EDUC", "Education").
+subjectFilter("EL", "Elective Course").
+subjectFilter("ENGL", "English").
+subjectFilter("ENCW", "English-Creative Writing").
+subjectFilter("ENTP", "Entrepreneurship").
+subjectFilter("ENSS", "Environmental Science and Studies").
+subjectFilter("FENT", "Family Enterprise").
+subjectFilter("FINA", "Finance").
+subjectFilter("FSEM", "First Year Seminar").
+subjectFilter("FREN", "French").
+subjectFilter("GEND", "Gender Studies").
+subjectFilter("GERM", "German").
+subjectFilter("HLSC", "Health Sciences").
+subjectFilter("HIST", "History").
+subjectFilter("HONR", "Honors").
+subjectFilter("HRMT", "Human Resource Management").
+subjectFilter("INTL", "International Business").
+subjectFilter("INSU", "International Studies").
+subjectFilter("ITAL", "Italian").
+subjectFilter("JWST", "Jewish Studies").
+subjectFilter("JOUR", "Journalism").
+subjectFilter("LANG", "Language-Other").
+subjectFilter("LALS", "Latin American and Latino Studies").
+subjectFilter("LAW", "Law Courses").
+subjectFilter("LING", "Linguistics").
+subjectFilter("MGMT", "Management").
+subjectFilter("MKTG", "Marketing").
+subjectFilter("MATH", "Mathematics").
+subjectFilter("MILS", "Military Science").
+subjectFilter("MUSC", "Music (MUSC)").
+subjectFilter("MUSA", "Music Applied").
+subjectFilter("MUED", "Music Education").
+subjectFilter("MUSE", "Music Ensemble").
+subjectFilter("MUSX", "Music Experience").
+subjectFilter("PHIL", "Philosophy").
+subjectFilter("PHYS", "Physics").
+subjectFilter("POLI", "Political Science").
+subjectFilter("PORT", "Portuguese Language").
+subjectFilter("PRHP", "Pre-Health").
+subjectFilter("PSYC", "Psychology").
+subjectFilter("PUBH", "Public Health").
+subjectFilter("RELS", "Religious Studies").
+subjectFilter("REES", "Russian, East European, and Eurasian Studies").
+subjectFilter("RUSS", "Russian Language").
+subjectFilter("SALS", "Sales").
+subjectFilter("SSCI", "Social Science - Interdisciplinary").
+subjectFilter("SOCI", "Sociology").
+subjectFilter("SPAN", "Spanish").
+subjectFilter("SPTB", "Sport Business").
+subjectFilter("STAT", "Statistics").
+subjectFilter("SA", "Study Abroad").
+subjectFilter("FOOD", "Sustainable Food Systems").
+subjectFilter("THEA", "Theatre Arts").
+subjectFilter("TRF", "Transfer-Law School").
+subjectFilter("WLGC", "World Languages and Cultures").
 
 % f(a).
 % f(b).
@@ -281,3 +373,18 @@ cas("DIGA").
 % h(b).
 % h(c).
 % k(X) :- f(X), g(X), h(X).
+
+% listing commands
+% :- (listing(major("BA", Y, Z))). % lists all majors with the "BA" degree.
+% :- listing(minor). % list all offered minors.
+
+
+course("Course1", "AMST", "AMST 101").
+course("Course2", "AMST", "AMST 201").
+course("Course3", "AMST", "AMST 301").
+course("Course4", "AMST", "AMST 401").
+course("Course5", "AMST", "AMST 499").
+
+mySearch(B, AllMatches) :- 
+    findall((A,B,C), _(A,B,C), AllMatches).
+    % forall(pickle(A,B,C), (findall(((A,B,C)), X(A,B,C), AllMatches)).

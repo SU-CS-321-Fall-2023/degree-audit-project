@@ -1,0 +1,397 @@
+[
+    {
+        "subject": "ACCT",
+        "description": "Accounting",
+        "id": 1
+    },
+    {
+        "subject": "AERS",
+        "description": "Aerospace Studies",
+        "id": 2
+    },
+    {
+        "subject": "AFST",
+        "description": "Africana Studies",
+        "id": 3
+    },
+    {
+        "subject": "AMST",
+        "description": "American Studies",
+        "id": 4
+    },
+    {
+        "subject": "ANTH",
+        "description": "Anthropology",
+        "id": 5
+    },
+    {
+        "subject": "LARB",
+        "description": "Arabic",
+        "id": 6
+    },
+    {
+        "subject": "ARTS",
+        "description": "Art - Studio",
+        "id": 7
+    },
+    {
+        "subject": "ARTH",
+        "description": "Art History",
+        "id": 8
+    },
+    {
+        "subject": "ASIA",
+        "description": "Asian Studies",
+        "id": 9
+    },
+    {
+        "subject": "ASTR",
+        "description": "Astronomy",
+        "id": 10
+    },
+    {
+        "subject": "BIOL",
+        "description": "Biology",
+        "id": 11
+    },
+    {
+        "subject": "SOBA",
+        "description": "Business Administration",
+        "id": 12
+    },
+    {
+        "subject": "BLAW",
+        "description": "Business Law",
+        "id": 13
+    },
+    {
+        "subject": "BSAN",
+        "description": "Business Systems and Analytics",
+        "id": 14
+    },
+    {
+        "subject": "CHEM",
+        "description": "Chemistry",
+        "id": 15
+    },
+    {
+        "subject": "CHIN",
+        "description": "Chinese",
+        "id": 16
+    },
+    {
+        "subject": "COMM",
+        "description": "Communication and Media Studies",
+        "id": 17
+    },
+    {
+        "subject": "CINF",
+        "description": "Computer Information Systems",
+        "id": 18
+    },
+    {
+        "subject": "CSCI",
+        "description": "Computer Science",
+        "id": 19
+    },
+    {
+        "subject": "COUN",
+        "description": "Counseling",
+        "id": 20
+    },
+    {
+        "subject": "CREA",
+        "description": "Creative Arts",
+        "id": 21
+    },
+    {
+        "subject": "CSEC",
+        "description": "Cybersecurity",
+        "id": 22
+    },
+    {
+        "subject": "DIGA",
+        "description": "Digital Arts",
+        "id": 23
+    },
+    {
+        "subject": "ECON",
+        "description": "Economics",
+        "id": 24
+    },
+    {
+        "subject": "EDUC",
+        "description": "Education",
+        "id": 25
+    },
+    {
+        "subject": "EL",
+        "description": "Elective Course",
+        "id": 26
+    },
+    {
+        "subject": "ENGL",
+        "description": "English",
+        "id": 27
+    },
+    {
+        "subject": "ENCW",
+        "description": "English-Creative Writing",
+        "id": 28
+    },
+    {
+        "subject": "ENTP",
+        "description": "Entrepreneurship",
+        "id": 29
+    },
+    {
+        "subject": "ENSS",
+        "description": "Environmental Science and Studies",
+        "id": 30
+    },
+    {
+        "subject": "FENT",
+        "description": "Family Enterprise",
+        "id": 31
+    },
+    {
+        "subject": "FINA",
+        "description": "Finance",
+        "id": 32
+    },
+    {
+        "subject": "FSEM",
+        "description": "First-Year Seminar",
+        "id": 33
+    },
+    {
+        "subject": "FREN",
+        "description": "French",
+        "id": 34
+    },
+    {
+        "subject": "GEND",
+        "description": "Gender Studies",
+        "id": 35
+    },
+    {
+        "subject": "GERM",
+        "description": "German",
+        "id": 36
+    },
+    {
+        "subject": "HLSC",
+        "description": "Health Sciences",
+        "id": 37
+    },
+    {
+        "subject": "HIST",
+        "description": "History",
+        "id": 38
+    },
+    {
+        "subject": "HONR",
+        "description": "Honors",
+        "id": 39
+    },
+    {
+        "subject": "HRMT",
+        "description": "Human Resource Management",
+        "id": 40
+    },
+    {
+        "subject": "INTL",
+        "description": "International Business",
+        "id": 41
+    },
+    {
+        "subject": "INSU",
+        "description": "International Studies",
+        "id": 42
+    },
+    {
+        "subject": "ITAL",
+        "description": "Italian",
+        "id": 43
+    },
+    {
+        "subject": "JWST",
+        "description": "Jewish Studies",
+        "id": 44
+    },
+    {
+        "subject": "JOUR",
+        "description": "Journalism",
+        "id": 45
+    },
+    {
+        "subject": "LANG",
+        "description": "Language-Other",
+        "id": 46
+    },
+    {
+        "subject": "LALS",
+        "description": "Latin American and Latino Studies",
+        "id": 47
+    },
+    {
+        "subject": "LAW",
+        "description": "Law Courses",
+        "id": 100000
+    },
+    {
+        "subject": "LING",
+        "description": "Linguistics",
+        "id": 48
+    },
+    {
+        "subject": "MGMT",
+        "description": "Management",
+        "id": 49
+    },
+    {
+        "subject": "MKTG",
+        "description": "Marketing",
+        "id": 50
+    },
+    {
+        "subject": "MATH",
+        "description": "Mathematics",
+        "id": 51
+    },
+    {
+        "subject": "MILS",
+        "description": "Military Science",
+        "id": 52
+    },
+    {
+        "subject": "MUSC",
+        "description": "Music (MUSC)",
+        "id": 53
+    },
+    {
+        "subject": "MUSA",
+        "description": "Music Applied",
+        "id": 54
+    },
+    {
+        "subject": "MUED",
+        "description": "Music Education",
+        "id": 55
+    },
+    {
+        "subject": "MUSE",
+        "description": "Music Ensemble",
+        "id": 56
+    },
+    {
+        "subject": "MUSX",
+        "description": "Music Experience",
+        "id": 57
+    },
+    {
+        "subject": "PHIL",
+        "description": "Philosophy",
+        "id": 58
+    },
+    {
+        "subject": "PHYS",
+        "description": "Physics",
+        "id": 59
+    },
+    {
+        "subject": "POLI",
+        "description": "Political Science",
+        "id": 60
+    },
+    {
+        "subject": "PORT",
+        "description": "Portuguese Language",
+        "id": 61
+    },
+    {
+        "subject": "PRHP",
+        "description": "Pre-Health",
+        "id": 62
+    },
+    {
+        "subject": "PSYC",
+        "description": "Psychology",
+        "id": 63
+    },
+    {
+        "subject": "PUBH",
+        "description": "Public Health",
+        "id": 64
+    },
+    {
+        "subject": "RELS",
+        "description": "Religious Studies",
+        "id": 65
+    },
+    {
+        "subject": "REES",
+        "description": "Russian, East European, and Eurasian Studies",
+        "id": 66
+    },
+    {
+        "subject": "RUSS",
+        "description": "Russian Language",
+        "id": 67
+    },
+    {
+        "subject": "SALS",
+        "description": "Sales",
+        "id": 68
+    },
+    {
+        "subject": "SSCI",
+        "description": "Social Science - Interdisciplinary",
+        "id": 69
+    },
+    {
+        "subject": "SOCI",
+        "description": "Sociology",
+        "id": 70
+    },
+    {
+        "subject": "SPAN",
+        "description": "Spanish",
+        "id": 71
+    },
+    {
+        "subject": "SPTB",
+        "description": "Sport Business",
+        "id": 72
+    },
+    {
+        "subject": "STAT",
+        "description": "Statistics",
+        "id": 73
+    },
+    {
+        "subject": "SA",
+        "description": "Study Abroad",
+        "id": 74
+    },
+    {
+        "subject": "FOOD",
+        "description": "Sustainable Food Systems",
+        "id": 75
+    },
+    {
+        "subject": "THEA",
+        "description": "Theatre Arts",
+        "id": 76
+    },
+    {
+        "subject": "TRF",
+        "description": "Transfer-Law School",
+        "id": 77
+    },
+    {
+        "subject": "WLGC",
+        "description": "World Languages and Cultures",
+        "id": 78
+    }
+]

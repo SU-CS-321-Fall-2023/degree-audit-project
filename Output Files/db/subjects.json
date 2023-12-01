@@ -1,0 +1,318 @@
+[
+    {
+      "code": "ACCT",
+      "description": "Accounting"
+    },
+    {
+      "code": "AERS",
+      "description": "Aerospace Studies"
+    },
+    {
+      "code": "AFST",
+      "description": "Africana Studies"
+    },
+    {
+      "code": "AMST",
+      "description": "American Studies"
+    },
+    {
+      "code": "ANTH",
+      "description": "Anthropology"
+    },
+    {
+      "code": "LARB",
+      "description": "Arabic"
+    },
+    {
+      "code": "ARTS",
+      "description": "Art - Studio"
+    },
+    {
+      "code": "ARTH",
+      "description": "Art History"
+    },
+    {
+      "code": "ASIA",
+      "description": "Asian Studies"
+    },
+    {
+      "code": "ASTR",
+      "description": "Astronomy"
+    },
+    {
+      "code": "BIOL",
+      "description": "Biology"
+    },
+    {
+      "code": "SOBA",
+      "description": "Business Administration"
+    },
+    {
+      "code": "BLAW",
+      "description": "Business Law"
+    },
+    {
+      "code": "BSAN",
+      "description": "Business Systems and Analytics"
+    },
+    {
+      "code": "CHEM",
+      "description": "Chemistry"
+    },
+    {
+      "code": "CHIN",
+      "description": "Chinese"
+    },
+    {
+      "code": "COMM",
+      "description": "Communication and Media Studies"
+    },
+    {
+      "code": "CINF",
+      "description": "Computer Information Systems"
+    },
+    {
+      "code": "CSCI",
+      "description": "Computer Science"
+    },
+    {
+      "code": "COUN",
+      "description": "Counseling"
+    },
+    {
+      "code": "CREA",
+      "description": "Creative Arts"
+    },
+    {
+      "code": "CSEC",
+      "description": "Cybersecurity"
+    },
+    {
+      "code": "DIGA",
+      "description": "Digital Arts"
+    },
+    {
+      "code": "ECON",
+      "description": "Economics"
+    },
+    {
+      "code": "EDUC",
+      "description": "Education"
+    },
+    {
+      "code": "EL",
+      "description": "Elective Course"
+    },
+    {
+      "code": "ENGL",
+      "description": "English"
+    },
+    {
+      "code": "ENCW",
+      "description": "English-Creative Writing"
+    },
+    {
+      "code": "ENTP",
+      "description": "Entrepreneurship"
+    },
+    {
+      "code": "ENSS",
+      "description": "Environmental Science and Studies"
+    },
+    {
+      "code": "FENT",
+      "description": "Family Enterprise"
+    },
+    {
+      "code": "FINA",
+      "description": "Finance"
+    },
+    {
+      "code": "FSEM",
+      "description": "First-Year Seminar"
+    },
+    {
+      "code": "FREN",
+      "description": "French"
+    },
+    {
+      "code": "GEND",
+      "description": "Gender Studies"
+    },
+    {
+      "code": "GERM",
+      "description": "German"
+    },
+    {
+      "code": "HLSC",
+      "description": "Health Sciences"
+    },
+    {
+      "code": "HIST",
+      "description": "History"
+    },
+    {
+      "code": "HONR",
+      "description": "Honors"
+    },
+    {
+      "code": "HRMT",
+      "description": "Human Resource Management"
+    },
+    {
+      "code": "INTL",
+      "description": "International Business"
+    },
+    {
+      "code": "INSU",
+      "description": "International Studies"
+    },
+    {
+      "code": "ITAL",
+      "description": "Italian"
+    },
+    {
+      "code": "JWST",
+      "description": "Jewish Studies"
+    },
+    {
+      "code": "JOUR",
+      "description": "Journalism"
+    },
+    {
+      "code": "LANG",
+      "description": "Language-Other"
+    },
+    {
+      "code": "LALS",
+      "description": "Latin American and Latino Studies"
+    },
+    {
+      "code": "LAW",
+      "description": "Law Courses"
+    },
+    {
+      "code": "LING",
+      "description": "Linguistics"
+    },
+    {
+      "code": "MGMT",
+      "description": "Management"
+    },
+    {
+      "code": "MKTG",
+      "description": "Marketing"
+    },
+    {
+      "code": "MATH",
+      "description": "Mathematics"
+    },
+    {
+      "code": "MILS",
+      "description": "Military Science"
+    },
+    {
+      "code": "MUSC",
+      "description": "Music (MUSC)"
+    },
+    {
+      "code": "MUSA",
+      "description": "Music Applied"
+    },
+    {
+      "code": "MUED",
+      "description": "Music Education"
+    },
+    {
+      "code": "MUSE",
+      "description": "Music Ensemble"
+    },
+    {
+      "code": "MUSX",
+      "description": "Music Experience"
+    },
+    {
+      "code": "PHIL",
+      "description": "Philosophy"
+    },
+    {
+      "code": "PHYS",
+      "description": "Physics"
+    },
+    {
+      "code": "POLI",
+      "description": "Political Science"
+    },
+    {
+      "code": "PORT",
+      "description": "Portuguese Language"
+    },
+    {
+      "code": "PRHP",
+      "description": "Pre-Health"
+    },
+    {
+      "code": "PSYC",
+      "description": "Psychology"
+    },
+    {
+      "code": "PUBH",
+      "description": "Public Health"
+    },
+    {
+      "code": "RELS",
+      "description": "Religious Studies"
+    },
+    {
+      "code": "REES",
+      "description": "Russian, East European, and Eurasian Studies"
+    },
+    {
+      "code": "RUSS",
+      "description": "Russian Language"
+    },
+    {
+      "code": "SALS",
+      "description": "Sales"
+    },
+    {
+      "code": "SSCI",
+      "description": "Social Science - Interdisciplinary"
+    },
+    {
+      "code": "SOCI",
+      "description": "Sociology"
+    },
+    {
+      "code": "SPAN",
+      "description": "Spanish"
+    },
+    {
+      "code": "SPTB",
+      "description": "Sport Business"
+    },
+    {
+      "code": "STAT",
+      "description": "Statistics"
+    },
+    {
+      "code": "SA",
+      "description": "Study Abroad"
+    },
+    {
+      "code": "FOOD",
+      "description": "Sustainable Food Systems"
+    },
+    {
+      "code": "THEA",
+      "description": "Theatre Arts"
+    },
+    {
+      "code": "TRF",
+      "description": "Transfer-Law School"
+    },
+    {
+      "code": "WLGC",
+      "description": "World Languages and Cultures"
+    }
+  ]
