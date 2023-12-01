@@ -17,6 +17,7 @@ def readDatabase():
             # print(ourData)
             for x in range(len(ourData)):
                 app_data = {
+                    "entry": ourData[x]["entry"],
                     "id": ourData[x]["id"],
                     "termEffective": ourData[x]["termEffective"],
                     "courseNumber": ourData[x]["courseNumber"],

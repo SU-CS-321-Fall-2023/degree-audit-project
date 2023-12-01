@@ -107,6 +107,7 @@ try:
                     # print(ourData["data"][x]["subject"])
                     break
             app_data = {
+                "entry": x+1,
                 "id": myIDs[x],
                 "termEffective": ourData["data"][x]["termEffective"],
                 "courseNumber": ourData["data"][x]["courseNumber"],
