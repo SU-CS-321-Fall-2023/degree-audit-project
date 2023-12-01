@@ -4,6 +4,7 @@ from flask import render_template, send_from_directory
 from flask_cors import CORS
 import csv
 import os
+from src import create_app
 
 def ourPaths():
     """
@@ -27,14 +28,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-app = Flask(
-    __name__,
-    root_path=(rootPath),
-    # "D:/GitHub/Software Dev II/The-Auditors/degree-audit-project/front-end/src",
-    # template_folder= rootPath + "/frontend/src/templates",
-    # static_folder= rootPath + "/frontend/src")
-    template_folder= rootPath + "/front-end/src/templates",
-    static_folder= rootPath + "/front-end/src/static")
+app = create_app()
 # cors = CORS(app)
 # Configure the value of the "origins" key to be the actual URL of the React Frontend.
 # Make sure to NOT have a / at the end of the "origins" URL.
@@ -120,11 +114,10 @@ def index():
 
     # return render_template(webletIndex, data=data)
 
-
-
 if __name__ == '__main__':
     """
     Must be placed at the end of the file.
     """
     # app.run(host = '192.168.1.46', port = 3000, debug = True)
-    app.run(host = '127.0.0.1', port = 3000, debug = True)
+    #app.run(host = '127.0.0.1', port = 3000, debug = True)
+    app.run(debug=True)
