@@ -24,32 +24,48 @@
 */
 
 :root {
-    --background-color: #ffffff; /* Light mode background color */
-    --text-color: #000000;       /* Light mode text color */
-    --primary-color: #409639;    /* Primary green color in light mode */
-    --secondary-color: #85ab82;  /* Secondary green color in light mode */
-    /* Add other variables as needed */
+    /* Light mode variables */
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #409639;
+    --secondary-color: #85ab82;
+    --accent-color: #ff6929;
+    --border-color: #409639;; /* Example border color for light mode */
+    --hover-background-color: #e0e0e0; /* Light mode hover background */
+    --hover-text-color: #333333; /* Light mode hover text color */
+       --inner-form-bg: #ffffff;
 }
 
-.dark-mode {
-    --background-color: #000000; /* Dark mode background color */
-    --text-color: #ffffff;       /* Dark mode text color */
-    --primary-color: #175640;    /* Primary green color in dark mode */
-    --secondary-color: #409639;  /* Secondary green color in dark mode */
-    /* Adjust other variables for dark mode */
+body.dark-mode {
+    /* Dark mode variables */
+    --background-color: #000000;
+    --text-color: #ffffff; 
+    --primary-color: #175640;
+    --secondary-color: #409639;
+    --accent-color: #ff6d4d;
+    --border-color: #555555; /* Example border color for dark mode */
+    --hover-background-color: #333333; /* Dark mode hover background */
+    --hover-text-color: #ffffff; /* Dark mode hover text color */
+    --inner-form-bg: #333333;
 }
 
 
+p, div, h1, h3, .some-class {
+    color: var(--text-color); /* Using the CSS variable for text color */
+}
 
 * {
     box-sizing: border-box;
 }
 html {
-    background-color: #85ab82;
+    /*background-color: #85ab82;*/
+    background-color: var(--secondary-color);
 
     font-weight: normal;
 }
 body{
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0px;
 }
 main {
@@ -61,6 +77,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    height: 50vh;
 
     padding-top: 0px;
     padding-right: 0px;
@@ -129,6 +147,30 @@ p {
 /*
 *<---- Containers specific to about-us.html ---->
     */
+
+/* Styling for the form container */
+div.idForm {
+    color: var(--text-color); /* This will use the color defined in the :root or body.dark-mode */
+    /* ... other styles ... */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    flex-direction: column; /* Stacks children vertically */
+    /* Other styles... */
+    border: 2px solid #409639; /* Example green border */
+    padding: 20px; /* Adds some space inside the border */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+}
+
+/* Styling for inner elements of the form */
+div.idForm > * {
+    text-align: center;
+    width: 100%; /* Makes sure children take full width */
+    /* Other styles... */
+}
+
+
+
 div.about-us_title__container {
     width: 1000px;
     min-width: 370px;
@@ -262,7 +304,8 @@ div.About-Us article.bio p#About_Paragraph_3 {
 
 div.username#handler {
     /*background-color: #409639;*/
-    background-color: var(--primary-color); 
+    background-color: var(--background-color); /* Use variable for background */
+    color: var(--text-color);
     width: 250px;
     height: 50px;
     border-radius: 10px;
@@ -351,7 +394,8 @@ div.biography__container {
                 margin-left: 5px;
             }
     div.biography__container#specific_bio_001 {
-        background-color: #409639;
+        /*background-color: #409639;*/
+        background-color: var(--primary-color);
         width: fit-content;
         min-height: 350px;
         border-radius: 20px;
@@ -360,14 +404,16 @@ div.biography__container {
         margin-left: auto;
     }
         div.biography__container#specific_bio_001 article.bio-specifics {
-            background-color: #175640;
+            /*background-color: #175640;*/
+            background-color: var(--secondary-color); /* Updated to use variable */
             width: 350px;
             min-height: 300px;
             border-radius: 20px;
 
             float: right;
 
-            color: #ffffff;
+            /*color: #ffffff;*/
+            color: var(--text-color);
             font-size: 12pt;
             font-style: normal;
             font-weight: normal;
@@ -384,17 +430,20 @@ div.biography__container {
             margin-left: 5px;
         }
             div.biography__container#specific_bio_001 article.bio-specifics h3.bio-specifics-Header {
-                color: #ffffff;
+                /*color: #ffffff;*/
+                color: var(--text-color);
                 text-align: center;
             }
             div.biography__container#specific_bio_001 article.bio-specifics h3.bio-specifics-Header hr {
-                background-color: #ffffff;
+                /*background-color: #ffffff;*/
+                background-color: var(--text-color);
                 height: 1px;
 
                 border-width: 0px;
             }
             div.biography__container#specific_bio_001 article.bio-specifics ul {
-                background-color: #175640;
+                /*background-color: #175640;*/
+                background-color: var(--secondary-color);
                 
                 font-weight: lighter;
                 line-height: 150%;
@@ -477,7 +526,10 @@ div.inner_header {
 
     margin: 0 auto;
 }
-.nav-bar a:hover, 
+.nav-bar a:hover{
+    background-color: var(--hover-background-color); /* Use variable for hover background */
+    color: var(--hover-text-color); /* Use variable for hover text color */
+}
 .navigation#information-for__dropdown-title:hover ul.info-for__dropdown, 
 .navigation#remainder__nav-bar a:hover, 
 div.nav-bar-bottom__container ul.nav-bar-bottom__list a.nav-bar-bottom__list-link:hover,
@@ -558,7 +610,9 @@ nav.nav-bar {
             width: 150px;
             border-left-width: 2px;
             border-left-style: solid;
-            border-left-color: #ffffff;
+            /*border-left-color: #ffffff;*/
+            border-left-color: var(--border-color); /* Replaced hard-coded color with variable */
+
 
             float: right;
             overflow: hidden;
@@ -770,14 +824,16 @@ nav.nav-bar-bottom {
     */
 
 footer {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    background-color: var(--background-color);
     height: 100%;
 
     margin: 0px;
     /* margin-top: 2rem; */
 }
     div.footer__container {
-        background-color: #409639;
+        /*background-color: #409639;*/
+        background-color: var(--primary-color);
         min-width: 100%;
         min-height: 100%;
 
@@ -786,9 +842,7 @@ footer {
         padding: 0px;
         padding: 2rem 2rem;
 
-        margin: 0px;
-        margin-right: auto;
-        margin-left: auto;
+        margin: 0 auto;
     }
         div.footer__container div.footer__container__row {
             min-width: 200px;
@@ -1006,6 +1060,7 @@ footer {
 
 div.idForm {
     /* background-color: #85ab82; */
+    background-color: var(--background-color);
     width: 100%;
     max-width: 600px;
     /* min-height: 100%; */
@@ -1014,6 +1069,8 @@ div.idForm {
     display: flex;
 
     color: black;
+
+
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     padding: 0;
@@ -1024,7 +1081,8 @@ div.idForm {
     margin-left: 0;
 }
 div.inner_form {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    background-color: var(--inner-form-bg);
     width: 100%;
     height: 100%;
 
@@ -1250,6 +1308,12 @@ div.inner_form {
         max-width: 200px;
     }
 }
+@media (min-width: 600px) {
+    .some-responsive-element {
+        background-color: var(--background-color);
+        /* ... other responsive styles ... */
+    }
+}
 @media (min-width: 768px)
 {
     .courses-table-md, 
@@ -1378,7 +1442,9 @@ div.inner_form {
     .courses-table-xl, .courses-table-lg, 
     .courses-table-md, 
     .courses-table-sm, .courses-table-xs, .courses-table-xxs, 
-    .courses-table
+    .courses-table{
+        border-color: var(--border-color); /* Use variable for border color */
+    }
     {
         width: 100%;
         max-width: fit-content;
@@ -1506,14 +1572,16 @@ div.inner_form {
 
 .myWrapper#myWrapper
 {
-    background-color: #85ab82;
+    /*background-color: #409639;*/
+    background-color: var(--primary-color);
 
-    padding: 0 0px;
-    margin: 0 0;
+    padding: 0;
+    margin: 0;
 }
 .page-title
 {
-    color: black;
+    /*color: black;*/
+    color: var(--text-color);
     font-weight: bold;
 }
 p.sched-des#sched-des
@@ -1527,17 +1595,16 @@ p.sched-des#sched-des
 {
     text-align: center;
 }
-.student-heading-wrapper#student-heading-wrapper
-{
-    background-color: white;
+.student-heading-wrapper#student-heading-wrapper {
+    background-color: var(--heading-wrapper-bg); /* Use variable for background color */
     border-width: 3px;
     border-style: solid;
     border-top-width: 10px;
-    border-top-color: #409639;
+    border-top-color: var(--heading-wrapper-border-top); /* Use variable for border top color */
     
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.175);
-    padding: 0 0;
-    margin: 0 auto 0 auto;
+    box-shadow: 5px 5px 5px white;
+    padding: 0;
+    margin: 0 auto;
 }
 .student-heading#student-heading
 {
@@ -1617,7 +1684,7 @@ div.degree_heading#degree_heading
 
     display: block;
 
-    color: white;
+    color: black
 
     margin: 0 0 1rem;
 }
