@@ -4,6 +4,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField, SubmitField, RadioField
 from wtforms.validators import DataRequired, Length
 from datetime import datetime
+from flask import send_from_directory
+import os
 
 # import os
 # rootPath = os.path.abspath(os.getcwd())
@@ -106,6 +108,59 @@ def course_selection():
         selected_course = request.form['course_name']
         return render_template('reviews.html', course=selected_course)
     return render_template('course_selection.html')
+
+@app.route('/submit_review', methods=['POST'])
+def submit_review():
+    form = ReviewForm(request.form)
+    if form.validate_on_submit():
+        try:
+            # Assuming you have logic to get or handle the course_id appropriately
+            course_id = course_selection.html  # Replace with actual logic to handle course_id
+
+            new_review = Review(
+                course_id=course_id,
+                review_text=form.review_text.data,
+                # ... other fields ...
+            )
+            db.session.add(new_review)
+            db.session.commit()
+
+            # Save the review to a file
+            with open("reviews.txt", "a") as file:
+                file.write(f"Course ID: {new_review.course_id}\n")
+                file.write(f"Review Text: {new_review.review_text}\n")
+                file.write("------\n")
+
+            flash('Review submitted successfully!', 'success')
+        except Exception as e:
+            # If an error occurs, log it and flash a message
+            flash(f'An error occurred: {str(e)}', 'error')
+
+        return redirect(url_for('index'))
+
+    # If the form is not valid or it's a GET request, render the form again
+    return render_template('reviews.html', form=form)
+
+
+
+@app.route('/download_reviews')
+def download_reviews():
+    directory = os.path.dirname(os.path.abspath(__file__))
+    return send_from_directory(directory, "reviews.txt", as_attachment=True)
+
+
+
+@app.route('/reviews/<int:course_id>')
+def show_reviews(course_id):
+    course = Course.query.get(course_id)
+    if course is None:
+        flash('Course not found!', 'error')
+        return redirect(url_for('index'))
+    
+    reviews = Review.query.filter_by(course_id=course_id).all()
+    return render_template('course_reviews.html', course=course, reviews=reviews)
+
+
 
 if __name__ == '__main__':
     with app.app_context():
