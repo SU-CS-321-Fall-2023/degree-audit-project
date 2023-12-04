@@ -5,7 +5,8 @@ import mysql.connector
 import os
 rootPath = os.path.abspath(os.getcwd())
 
-pwFile = (rootPath + "\\ourPySQL.txt")
+# pwFile = (rootPath + "\\ourPySQL.txt")
+pwFile = (rootPath + "\\Misc_Folder\\SQL\\ourPySQL.txt")
 with open(pwFile, 'r') as passFile:
     password = passFile.readline()
     # Password for the databases gets read from a file, so
