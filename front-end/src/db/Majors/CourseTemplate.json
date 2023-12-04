@@ -2,6 +2,7 @@
     "data":
     [
         {
+          "entry": "Numerical value that is used to mark the course's position in the catalog database.",
           "id": "Numerical value assigned to course based on its 'subject' and its 'courseNumber'. It is the combination of the course's 'subject ID' and its 'courseNumber'.",
           "termEffective": "Current value of term according to the year and semester. Follows Stetson's original system.",
           "courseNumber": "Numerical value that corresponds to the course's number for registration. Ex.: 141 for CSCI141",
