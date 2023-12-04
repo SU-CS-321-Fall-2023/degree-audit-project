@@ -6,8 +6,8 @@ def create_app():
     app = Flask(
         __name__,
         root_path = rootPath,
-        template_folder= rootPath + "/front-end-unified/src/templates",
-        static_folder= rootPath + "/front-end-unified/src/static")
+        template_folder= rootPath + "/front-end/src/templates",
+        static_folder= rootPath + "/front-end/src/static")
     app.config['SECRET_KEY'] = 'hai'
 
     from .views import views
