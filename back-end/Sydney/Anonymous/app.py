@@ -1,7 +1,41 @@
 from flask import Flask, render_template, request, jsonify
 from flask import request 
 
-app = Flask(__name__)
+import mysql.connector
+import os
+rootPath = os.path.abspath(os.getcwd())
+
+# pwFile = (rootPath + "\\ourPySQL.txt")
+pwFile = (rootPath + "\\Misc_Folder\\SQL\\ourPySQL.txt")
+with open(pwFile, 'r') as passFile:
+    password = passFile.readline()
+    # Password for the databases gets read from a file, so
+    # that it is not explicitly stored here in the code.
+    # Also, the databases are currently located locally on 
+    # my machine (Alexander G.) and I do not feel inclined 
+    # to allowing the entire world have free root access to 
+    # my computer's databases. MySQL Injections are scary.
+
+catalog = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password=password,
+    database="catalog"
+)
+reviews = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password=password,
+    database="reviews"
+)
+myCatalog = catalog.cursor(prepared=True)
+myReviews = reviews.cursor(prepared=True)
+
+app = Flask(
+    __name__,
+    root_path=(rootPath),
+    template_folder= rootPath + "/back-end/Sydney/Anonymous/templates")
+    # static_folder= rootPath + "/back-end/Sydney/Anonymous/static")
 
 # This will act as a simple database in memory
 reviews = []
@@ -52,4 +86,4 @@ def view_reviews(course_code):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='127.0.0.1', port=5000, debug=True)

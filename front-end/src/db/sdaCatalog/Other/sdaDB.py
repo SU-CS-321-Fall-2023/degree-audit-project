@@ -1,4 +1,4 @@
-import json, os
+import json
 
 null = None
 def readDatabase():
@@ -10,13 +10,14 @@ def readDatabase():
     """
     newCatalog = list()
     try:
-        with open('front-end\\src\\db\\sdaCatalog\\sdaCatalog.json', 'r') as ourFile:
+        with open('front-end\\src\\db\\sdaCatalog\\Other\\sdaCatalog.json', 'r') as ourFile:
             # content = ourFile.read()
             # print(content)
             ourData = json.load(ourFile)
             # print(ourData)
             for x in range(len(ourData)):
                 app_data = {
+                    "entry": ourData[x]["entry"],
                     "id": ourData[x]["id"],
                     "termEffective": ourData[x]["termEffective"],
                     "courseNumber": ourData[x]["courseNumber"],
@@ -61,7 +62,7 @@ def readDatabase():
                 }
                 newCatalog.append(app_data)
             # # print("\n".join(map(str, newCatalog)))
-            # with open('front-end\\src\\db\\sdaCatalog\\test.json', 'w') as json_file:
+            # with open('front-end\\src\\db\\sdaCatalog\\Other\\test.json', 'w') as json_file:
             #     json.dump(newCatalog, json_file, indent=4)
             # print("test.json has been created.")
             # # print(myIDs)

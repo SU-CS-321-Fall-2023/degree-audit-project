@@ -59,30 +59,31 @@ ALLOWED_EXTENSIONS = {'csv'}
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    data = []  # A list to hold our CSV data
+    # data = []  # A list to hold our CSV data
 
-    # Use raw string notation for the path or double up the backslashes
-    userCSV_path = rootPath + '\\front-end\\src\\user.csv'
-    reqsCSV_path = rootPath + r'\\reqs.csv'
-    testCSV_path = rootPath + r'\\test.csv'
+    # # Use raw string notation for the path or double up the backslashes
+    # userCSV_path = rootPath + '\\front-end\\src\\user.csv'
+    # reqsCSV_path = rootPath + r'\\reqs.csv'
+    # testCSV_path = rootPath + r'\\test.csv'
 
     if request.method == 'POST':
         email = request.form.get('student_email', None)  # Fetch the major entered by the user
 
-        # Read the predefined CSV file and store the data
-        #with open(userCSV_path, 'r') as f:
-         #   reader = csv.reader(f)
-          #  data = [row for row in reader]
+    #     # Read the predefined CSV file and store the data
+    #     #with open(userCSV_path, 'r') as f:
+    #      #   reader = csv.reader(f)
+    #       #  data = [row for row in reader]
 
-        # Filter the data based on the major if one is entered
-        #if email:
-            # Assuming the major is in the 2nd column (index 1). Adjust the index if needed.
-         #   data = [data[0]] + [row for row in data[1:] if email.lower() in row[1].lower()]
+    #     # Filter the data based on the major if one is entered
+    #     #if email:
+    #         # Assuming the major is in the 2nd column (index 1). Adjust the index if needed.
+    #      #   data = [data[0]] + [row for row in data[1:] if email.lower() in row[1].lower()]
     else:
         print("else Statement has been reached for /api/index.")
-        # print("GET method has been used for /api/index .")
+    #     # print("GET method has been used for /api/index .")
 
-    return render_template("index.html", data=data)
+    return render_template("index.html")
+    # return render_template("index.html", data=data)
 
 # @app.route('/api/static/', methods=['GET', 'POST'])
 
@@ -120,4 +121,4 @@ if __name__ == '__main__':
     """
     # app.run(host = '192.168.1.46', port = 3000, debug = True)
     #app.run(host = '127.0.0.1', port = 3000, debug = True)
-    app.run(debug=True)
+    app.run(host = '127.0.0.1', port = 9000, debug=True)

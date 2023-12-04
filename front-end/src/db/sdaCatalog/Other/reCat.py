@@ -1,4 +1,16 @@
-import json, os
+import json
+
+"""
+    This Python file was created and used to reconstruct the 
+    Stetson course catalog to fit the needs of the newer 
+    Smart Degree Audit (SDA) Catalog.
+
+    newCatalog.json is just a copy of 2024SpringCatalog.json
+
+    sdaCatalog.json serves as our reconstructed course catalog. 
+    This was then imported into the MySQL Database to form the 
+    SDA Course Catalog database.
+    """
 
 null = None
 lineCount = 0
@@ -91,22 +103,16 @@ try:
     #     lineCount= sum(1 for _ in f)
     # print(f"Line Count: {lineCount}")
 
-    # with open('front-end\\src\\db\\Majors\\CS.json', 'r') as file002:
-    #     csData = json.load(file002)
-    with open('front-end\\src\\db\\sdaCatalog\\newCatalog.json', 'r') as ourFile:
-        # content = ourFile.read()
-        # print(content)
+    with open('front-end\\src\\db\\sdaCatalog\\Other\\newCatalog.json', 'r') as ourFile:
         ourData = json.load(ourFile)
-        # print(ourData)
         for x in range(len(ourData["data"])):
             for i in range(len(subjects)):
                 if (ourData["data"][x]["subject"] == subjects[i][0]):
                     newID = (subjects[i][1] + ourData["data"][x]["courseNumber"])
                     myIDs.append(newID)
-                    # print(newID)
-                    # print(ourData["data"][x]["subject"])
                     break
             app_data = {
+                "entry": x+1,
                 "id": myIDs[x],
                 "termEffective": ourData["data"][x]["termEffective"],
                 "courseNumber": ourData["data"][x]["courseNumber"],
@@ -150,11 +156,9 @@ try:
                 "prerequisites": null
             }
             newCatalog.append(app_data)
-        # print("\n".join(map(str, newCatalog)))
-        with open('front-end\\src\\db\\sdaCatalog\\sdaCatalog.json', 'w') as json_file:
+        with open('front-end\\src\\db\\sdaCatalog\\Other\\sdaCatalog.json', 'w') as json_file:
             json.dump(newCatalog, json_file, indent=4)
         print("sdaCatalog.json has been created.")
-        # print(myIDs)
 
 except json.JSONDecodeError as e:
     print(f"JSON decoding error: {e}")

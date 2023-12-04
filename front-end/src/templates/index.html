@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title>{% block title %}Smart Degree Audit{% endblock %}</title>
+        <title>SDA - Home</title>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE-edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#000000" />
         <meta name="description" content="This is the beginning of the Auditors' creation." />
         <meta name="author" content="The Auditors" />
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrapCyborg.css') }}" />
-        <script src="{{ url_for('static', filename='header.js') }}" type="text/javascript" defer></script>
-        <script src="{{ url_for('static', filename='footer.js') }}" type="text/javascript" defer></script>
-        <script src="{{ url_for('static', filename='idForm.js') }}" type="text/javascript" defer></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrapCyborg.css') }}" />
+        <script src="{{ url_for('static', filename='js/header.js') }}" type="text/javascript" defer></script>
+        <script src="{{ url_for('static', filename='js/footer.js') }}" type="text/javascript" defer></script>
+        <script src="{{ url_for('static', filename='js/idForm.js') }}" type="text/javascript" defer></script>
+        <style>
+            body {
+                background: white;
+            }
+            body.dark-mode {
+                background: black;
+            }
+        </style>
     </head>
     <body>
         <header-component></header-component>
         <main>
+            <!--
+            I found this in the style.css file, which was causing it throw errors.
+
+            const toggleButton = document.querySelector('#toggle-button');
+            const body = document.querySelector('body');
+            toggleButton.addEventListener('click', () => {
+              body.classList.toggle('dark-mode');
+            }); -->
             <div class="theme-toggle">
                 <input type="checkbox" id="darkModeToggle">
                 <label for="darkModeToggle">Dark Mode</label>
@@ -27,14 +43,6 @@
             </div>
         </main>
         <footer-component></footer-component>
-        <style>
-            body {
-                background: white;
-            }
-            body.dark-mode {
-                background: black;
-            }
-        </style>
         <script>
             const darkModeToggle = document.getElementById('darkModeToggle');
             darkModeToggle.addEventListener('change', function() {
@@ -44,6 +52,6 @@
                     document.body.classList.remove('dark-mode');
                 }
             });
-        </script>  
+        </script>
     </body>
 </html>

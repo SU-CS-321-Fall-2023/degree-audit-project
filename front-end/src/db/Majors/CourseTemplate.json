@@ -1,7 +1,8 @@
 {
-    "data":
+    "courseTemplate":
     [
         {
+          "entry": "Numerical value that is used to mark the course's position in the catalog database.",
           "id": "Numerical value assigned to course based on its 'subject' and its 'courseNumber'. It is the combination of the course's 'subject ID' and its 'courseNumber'.",
           "termEffective": "Current value of term according to the year and semester. Follows Stetson's original system.",
           "courseNumber": "Numerical value that corresponds to the course's number for registration. Ex.: 141 for CSCI141",
@@ -18,7 +19,7 @@
           "ceu": "Continuing Education Unit. Used in continuing education programs to assist professionals in maintaining their license in their profession.",
 
           "scheduleType": "A two-letter abbreviation of the value for the course's 'scheduleTypeDescription' key.",
-          "scheduleTypeDescription": "THe full definition of what the value of the 'scheduleType' key represents.",
+          "scheduleTypeDescription": "The full definition of what the value of the 'scheduleType' key represents.",
           "restrictions": "Specifies when this course is offered. Has acceptable values of: ['Fall Only', 'Spring Only', 'Fall and Spring']",
           "restrictionsPeriod": "Specifies how often this course is offered. Has acceptable values of ['Every semester', 'Annually', 'Every two years', 'Every three years', etc.]",
 
@@ -45,6 +46,102 @@
           "termEnd": "'999999', equivalent to the 'End of Time'",
           "preRequisiteCheckMethodCde": "B",
           "prerequisites": "A list of the prerequisites that are required for a student to register for this course."
+        }
+    ],
+    "progressTemplate": 
+    [
+        {
+          "id": "Numerical value assigned to course based on its 'subject' and its 'courseNumber'. It is the combination of the course's 'subject ID' and its 'courseNumber'.",
+          "courseNumber": "Numerical value that corresponds to the course's number for registration. Ex.: 141 for CSCI141",
+          "subject": "Alphanumeric abbreviation of the major or area that the course corresponds with. CSCI for Computer Science, etc.",
+          "courseReferenceNumber": "An unique numerical value that is assigned to the course as an identifier to differentiate it from other sections that might be offered.",
+          "section": "Alphanumeric value that identifies which instance of this course that the student completed.",
+          "courseTitle": "Name of the course.",
+
+          "levelCode": "Alphanumeric abbreviation of the value of the course's 'levelDescription' key. (UG for Undergraduate)",
+          "levelDescription": "The full definition of what the value for the 'levelCode' key represents.",
+          "campusCode": "Alphanumeric ID that is associated with where instruction for this course occurred. ('D' for DeLand Campus, 'OL' for Online, etc.)",
+          "termDescription": "Alphanumeric value of the semester that the student completed this course.",
+
+          "gpaHours": "A numerical value of the hours that get factored into calculating the student's GPA. If the course is a Pass/Fail, then the value for this key would be '0.000', even if the course was worth 1 unit, or 4 credits.",
+          "hoursAttempted": "A numerical value of how many credits the course is worth. It is the maximum credits that the student could possibly receive for completing the course.",
+          "hoursEarned": "A numerical value that will not exceed the value of the 'hoursAttempted' key. This is the number of credits that the student earned for completing the course.",
+          "midtermGrade": "Two possible values: [S or D]",
+          "finalGrade": "The final grade the student received for the course. On a letter scale of [A+, A, A-, B+, B, B-, C+, C, C-, D+, D, D-, F]. Additional values are [I, P, W, X, XF, NR]",
+          "calculatedFinalGrade": "Same as the 'finalGrade' key.",
+          "historyFinalGrade": "Same as the 'finalGrade' key.",
+          "qualityPoints": "A numerical valuation of what the student received as their 'finalGrade'."
+        }
+    ],
+    "progressTrimmedTemplate": 
+    [
+        {
+          "id": "Numerical value assigned to course based on its 'subject' and its 'courseNumber'. It is the combination of the course's 'subject ID' and its 'courseNumber'.",
+          "courseNumber": "Numerical value that corresponds to the course's number for registration. Ex.: 141 for CSCI141",
+          "subject": "Alphanumeric abbreviation of the major or area that the course corresponds with. CSCI for Computer Science, etc.",
+          "courseReferenceNumber": "An unique numerical value that is assigned to the course as an identifier to differentiate it from other sections that might be offered.",
+          "section": "Alphanumeric value that identifies which instance of this course that the student completed.",
+          "courseTitle": "Name of the course.",
+
+          "levelCode": "Alphanumeric abbreviation of the value of the course's 'levelDescription' key. (UG for Undergraduate)",
+          "levelDescription": "The full definition of what the value for the 'levelCode' key represents.",
+          "campusCode": "Alphanumeric ID that is associated with where instruction for this course occurred. ('D' for DeLand Campus, 'OL' for Online, etc.)",
+          "termDescription": "Alphanumeric value of the semester that the student completed this course.",
+
+          "gpaHours": "A numerical value of the hours that get factored into calculating the student's GPA. If the course is a Pass/Fail, then the value for this key would be '0.000', even if the course was worth 1 unit, or 4 credits.",
+          "hoursAttempted": "A numerical value of how many credits the course is worth. It is the maximum credits that the student could possibly receive for completing the course.",
+          "hoursEarned": "A numerical value that will not exceed the value of the 'hoursAttempted' key. This is the number of credits that the student earned for completing the course.",
+          "midtermGrade": "Two possible values: [S or D]",
+          "finalGrade": "The final grade the student received for the course. On a letter scale of [A+, A, A-, B+, B, B-, C+, C, C-, D+, D, D-, F]. Additional values are [I, P, W, X, XF, NR]",
+          "calculatedFinalGrade": "Same as the 'finalGrade' key.",
+          "historyFinalGrade": "Same as the 'finalGrade' key.",
+          "qualityPoints": "A numerical valuation of what the student received as their 'finalGrade'."
+        }
+    ],
+    "reviewTemplate":
+    [
+        {
+          "id": "Numerical value assigned to course based on its 'subject' and its 'courseNumber'. It is the combination of the course's 'subject ID' and its 'courseNumber'.",
+          "courseNumber": "Numerical value that corresponds to the course's number for registration. Ex.: 141 for CSCI141",
+          "courseTitle": "Name of the course.",
+          "subject": "Alphanumeric abbreviation of the major or area that the course corresponds with. CSCI for Computer Science, etc.",
+          "professor": "The name of the professor who provided instruction to the student who submitted this course review.",
+
+          "professorRating": "A rating, on a scale of 1 to 5 with 5 being the best, given by the student to the professor.",
+          "postNotes": "Does the instructor post the class notes online? Responses: [Yes, No, N/A]",
+          "extraCredit": "Does the instructor offer extra credit? Responses: [Yes, No]",
+          "flexibility": "The instructor is flexible when it comes to unforeseen circumstances. Responses: [Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree, N/A]",
+          "justBecause": "You would take a course just because this instructor was the one teaching it. Responses: [Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree, N/A]",
+          "questionReaction": "How does the instructor respond to questions? Response: Text box",
+          "professorDemeanor": "What was the professor's demeanor like? Response: Text box",
+          "professorFeedback": "What did you think of the Professor? Response: Text box",
+          "professorAddInfo": "Any additional information you would like to share regarding the professor? Response: Text box",
+
+          "quizFrequency": "How often were the quizzes? Responses: [Weekly, Biweekly, Monthly, N/A]",
+          "quizQuestionType": "What type of questions were on the quizzes? Responses (multi-select): [Multiple choice, Short response]",
+          "quizSetting": "Were the quizzes take-home or in-class? Responses (multi-select): [Take-home, In-class, Both]",
+          "quizToCourseSimilarity": "How similar were the quizzes to the content covered in class? Responses: [Same questions, Very similar, Slightly similar, No relation, N/A]",
+          "quizToAssignmentSimilarity": "How similar were the quizzes to the class assignments? Responses: [Same questions, Very similar, Slightly similar, No relation, N/A]",
+          "quizAddInfo": "Any additional information you would like to share regarding the quizzes? Response: Text box",
+
+          "midterm/final": "Was there a Mid-Term and/or Final Exam? Responses: [Mid-Term only, Final Exam only, Both, N/A]",
+          "cumulativeFinal": "Was the Final Exam cumulative? Responses: [Yes, No, N/A]",
+          "examQuestionType": "What type of questions were on the tests/exams? Responses (multi-select): [Multiple choice, Short response]",
+          "examSetting": "Were the tests/exams take-home or in-class? Responses (multi-select): [Take-home, In-class, Both]",
+          "examType": "What type of tests/exams were there? Responses (multi-select): [Normal (multiple choice, short response, etc.), Essay Tests]",
+          "examAddInfo": "Any additional information you would like to share regarding the tests/exams? Response: Text box",
+
+          "finalGrade": "What was your final grade for the course? Responses: [A, B, C, D, F]",
+
+          "wisdom": " What are some words of wisdom that you would give to a student looking to take this course? Response: Text box",
+          "newApproach": "If you were to retake this course, what would you have done differently? Response: Text box",
+
+          "textbookPurchase": "Did this course require you to purchase textbook(s)? Responses: [Yes, No]",
+          "textbookRecommendation": "Would you recommend purchasing the textbook(s)? Responses: [Yes, No]",
+          "textbookUse": "How much did the professor use the textbook(s)? Responses: ['The book and the professor were one entity.', Every week, Often, Not often, Never]",
+
+          "courseLoad": "Describe the course load. Response: Text box",
+          "overallReview": "How would you describe the course overall? Response: Text box"
         }
     ]
 }
