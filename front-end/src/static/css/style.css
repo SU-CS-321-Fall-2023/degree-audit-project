@@ -1653,6 +1653,7 @@ tr.degree-row#not-fulfilled td
     justify-content: center;
 }
 
+
 :root {
     --background-color-light: #f5f5f5;
     --text-color-light: #333;
@@ -1661,23 +1662,23 @@ tr.degree-row#not-fulfilled td
     /* Add more color variables as needed */
   }
 
+  
   body {
     background-color: var(--background-color-light);
     color: var(--text-color-light);
   }
-
   
+
   const toggleButton = document.querySelector('#toggle-button');
-const body = document.querySelector('body');
+  const body = document.querySelector('body');
+  
+  toggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+  });
+  
 
-toggleButton.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-});
-
-
-body.dark-mode {
+  body.dark-mode {
     --background-color: #111;
     --text-color: #fff;
   }
   
-
