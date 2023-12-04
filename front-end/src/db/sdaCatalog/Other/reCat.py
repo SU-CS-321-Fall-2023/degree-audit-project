@@ -1,4 +1,4 @@
-import json, os
+import json
 
 null = None
 lineCount = 0
@@ -93,7 +93,7 @@ try:
 
     # with open('front-end\\src\\db\\Majors\\CS.json', 'r') as file002:
     #     csData = json.load(file002)
-    with open('front-end\\src\\db\\sdaCatalog\\newCatalog.json', 'r') as ourFile:
+    with open('front-end\\src\\db\\sdaCatalog\\Other\\newCatalog.json', 'r') as ourFile:
         # content = ourFile.read()
         # print(content)
         ourData = json.load(ourFile)
@@ -152,7 +152,7 @@ try:
             }
             newCatalog.append(app_data)
         # print("\n".join(map(str, newCatalog)))
-        with open('front-end\\src\\db\\sdaCatalog\\sdaCatalog.json', 'w') as json_file:
+        with open('front-end\\src\\db\\sdaCatalog\\Other\\sdaCatalog.json', 'w') as json_file:
             json.dump(newCatalog, json_file, indent=4)
         print("sdaCatalog.json has been created.")
         # print(myIDs)
