@@ -33,25 +33,25 @@
     --border-color: #409639;; /* Example border color for light mode */
     --hover-background-color: #e0e0e0; /* Light mode hover background */
     --hover-text-color: #333333; /* Light mode hover text color */
-       --inner-form-bg: #ffffff;
+    --inner-form-bg: #ffffff;
 }
 
 body.dark-mode {
     /* Dark mode variables */
     --background-color: #000000;
+    --inner-form-bg: #000000;
     --text-color: #ffffff; 
     --primary-color: #175640;
     --secondary-color: #409639;
     --accent-color: #ff6d4d;
-    --border-color: #555555; /* Example border color for dark mode */
+    --border-color: #555555; 
     --hover-background-color: #333333; /* Dark mode hover background */
     --hover-text-color: #ffffff; /* Dark mode hover text color */
-    --inner-form-bg: #333333;
 }
 
 
 p, div, h1, h3, .some-class {
-    color: var(--text-color); /* Using the CSS variable for text color */
+    color: var(--text-color); 
 }
 
 * {
@@ -69,7 +69,6 @@ body{
     margin: 0px;
 }
 main {
-    /* background-color: lightyellow; */
     max-width: 1700px;
     width: auto;
     overflow-x: visible;
@@ -109,7 +108,6 @@ em {
     font-style: normal;
 }
 h1 {
-    /* background-color: orange; */
     padding: 0px;
     margin: 0px;
 }
