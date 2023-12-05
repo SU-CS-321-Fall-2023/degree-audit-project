@@ -150,17 +150,17 @@ p {
 
 /* Styling for the form container */
 div.idForm {
-    color: var(--text-color); /* This will use the color defined in the :root or body.dark-mode */
-    /* ... other styles ... */
+    color: var(--text-color);
     display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    flex-direction: column; /* Stacks children vertically */
-    /* Other styles... */
-    border: 2px solid #409639; /* Example green border */
-    padding: 20px; /* Adds some space inside the border */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #409639;
+    padding: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow size */
+    margin: 40px; /* Increased margin */
 }
+
 
 /* Styling for inner elements of the form */
 div.idForm > * {
