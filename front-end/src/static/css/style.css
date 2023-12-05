@@ -26,6 +26,7 @@
 :root {
     /* Light mode variables */
     --background-color: #ffffff;
+    --inner-form-bg: #ffffff;
     --text-color: #000000;
     --primary-color: #409639;
     --secondary-color: #61805f;
@@ -33,7 +34,6 @@
     --border-color: #409639;; /* Example border color for light mode */
     --hover-background-color: #e0e0e0; /* Light mode hover background */
     --hover-text-color: #333333; /* Light mode hover text color */
-    --inner-form-bg: #ffffff;
 }
 
 body.dark-mode {
