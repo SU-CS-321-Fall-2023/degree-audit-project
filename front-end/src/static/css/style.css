@@ -1604,7 +1604,14 @@ p.sched-des#sched-des
     padding: 0;
     margin: 0 auto;
     margin-bottom: 10px;
+
+    /* Centering content */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text for good measure */
 }
+
 .student-heading#student-heading
 {
     display: flex;
