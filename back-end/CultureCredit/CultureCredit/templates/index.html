@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cultural Credit Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <img class="logo" src="{{ url_for('static', filename='stetsonlogo.png') }}">
+    <div class="header">
+        <h1>Cultural Credit Tracker</h1>
+        <p>You have {{ credits }} cultural credits.</p>
+        <p>You need {{ remaining }} to graduate.</p>
+    </div>
+    <h2>Culture Credit Events</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in events %}
+            <tr>
+                <td>{{ event.name }}</td>
+                <td>{{ event.date }}</td>
+                <td>{{ event.location }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
