@@ -1,8 +1,8 @@
 from flask import Flask, render_template, redirect, url_for
-from flask_wtf import FlaskForm
-from wtforms import StringField, SelectField, SubmitField
-from wtforms.validators import DataRequired
-from wtforms import SubmitField 
+# from flask_wtf import FlaskForm
+# from wtforms import StringField, SelectField, SubmitField
+# from wtforms.validators import DataRequired
+# from wtforms import SubmitField 
 
 import mysql.connector
 import os
@@ -66,7 +66,7 @@ def index():
 
         for x in myResult:
             courses_data.append(x)
-        return render_template('index.html', courses=courses_data)
+        return render_template('progress_tracker.html', courses=courses_data)
 
     except mysql.connector.Error as error:
         print("query failed {}".format(error))
