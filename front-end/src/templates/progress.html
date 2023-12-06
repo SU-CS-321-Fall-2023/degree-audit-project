@@ -1,0 +1,81 @@
+{% extends "index.html" %} 
+{% block title %}Academic Progress Tracker{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Academic Progress Tracker</h1>
+        
+<label for="showTracker">
+    <input type="checkbox" id="showTracker" onclick="toggleTracker()">
+    Show Academic Progress Tracker
+</label>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- This div is the modal that will pop up -->
+<div class="modal" id="tracker">
+    <h2>Academic Progress Tracker</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Course Number</th>
+                <th>Subject</th>
+                <th>CRN</th>
+                <th>Course Title</th>
+                <th>Campus</th>
+                <th>Term Description</th>
+                <th>GPA Hours</th>
+                <th>Attempted Hours</th>
+                <th>Earned Hours</th>
+                <th>Midterm Grade</th>
+                <th>Final Grade</th>
+                <th>Quality Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courses %}
+            <tr>
+                <td>{{ course[0] }}</td>
+                <td>{{ course[1] }}</td>
+                <td>{{ course[2] }}</td>
+                <td>{{ course[3] }}</td>
+                <td>{{ course[4] }}</td>
+                <td>{{ course[5] }}</td>
+                <td>{{ course[6] }}</td>
+                <td>{{ course[7] }}</td>
+                <td>{{ course[8] }}</td>
+                <td>{{ course[9] }}</td>
+                <td>{{ course[10] }}</td>
+                <td>{{ course[11] }}</td>
+                <td>{{ course[12] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button onclick="closeModal()">Close</button>
+</div>
+
+<script>
+    function toggleTracker() {
+        var checkbox = document.getElementById('showTracker');
+        var tracker = document.getElementById('tracker');
+        var overlay = document.getElementById('overlay');
+        if (checkbox.checked) {
+            tracker.style.display = 'block';
+            overlay.style.display = 'block';
+        } else {
+            tracker.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    }
+
+    function closeModal() {
+        var checkbox = document.getElementById('showTracker');
+        var tracker = document.getElementById('tracker');
+        var overlay = document.getElementById('overlay');
+        checkbox.checked = false;
+        tracker.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+</script>
+{% endblock %}

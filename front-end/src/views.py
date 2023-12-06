@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, flash, redirect, url_for
+from flask_mail import Mail, Message
 #import course_data
 
 default_interests = ["Computer Science", "Psychology", "Biology", "Mathematics", "Chemistry", "Cybersecurity"]
@@ -6,6 +7,7 @@ selected_interests = []
 
 views = Blueprint('views', __name__)
 
+#ROUTING FUNCTIONS
 def generate_course_recommendations(interests):
     recommended_courses = []
     for interest in interests:
@@ -13,13 +15,55 @@ def generate_course_recommendations(interests):
             recommended_courses.extend(course_data[interest])
     return recommended_courses
 
+mail = Mail(views)
+def check_hold_status(student_email):
+    # Check if the student email exists in the fake database
+    student = students.get(student_email)
+
+    if student:
+        return student['has_hold']
+    else:
+        # If the student is not found in the fake database, consider them as having a hold for this example
+        app.logger.warning(f"Student with email {student_email} not found in the fake database.")
+        return True
+
+
+def send_email(to, subject, body):
+    msg = Message(subject, sender="pshelly@stetson.edu", recipients=[to], body=body)
+    mail.send(msg)
+
+
+#WEBPAGE ROUTING
 @views.route('/')
 def home():
     return render_template("home.html")
 
-@views.route('/review')
-def review():
-    return render_template("course_selection.html")
+#Email
+#@views.route('/email')
+#def home():
+#    return render_template("email.html")
+
+#@views.route('/send_alert', methods=['POST'])
+#def send_alert():
+#    student_email = request.form.get('email')  # Update 'email' to match the actual name attribute in your form
+#
+#    has_hold = check_hold_status(student_email)#
+#
+#    if has_hold:
+#        flash('You have a hold on your account. Please remove it to register for classes.', 'warning')#
+#
+#        send_email(student_email, 'Hold Alert',
+#                   'You have a hold on your account. Please remove it to register for classes.')#
+#
+#    else:
+#        flash('No holds on your account. You can proceed with class registration.', 'success')
+#
+#    return redirect(url_for('index'))
+
+#Academic Progress <- ALEX LOOK HERE
+@views.route('/progress')
+def progress():
+    return render_template("progress.html")
 
 #Interest Exploration
 @views.route('/interest')
@@ -65,6 +109,10 @@ def culture():
     return render_template('culture.html', credits=user_cultural_credits, remaining=credits_remaining, events=cultural_events)
 
 #COURSE REVIEWS
+@views.route('/review')
+def review():
+    return render_template("course_selection.html")
+
 @views.route('/courses')
 def courses():
     courses = Course.query.all()

@@ -29,6 +29,12 @@ def allowed_file(filename):
 
 
 app = create_app()
+#app.config['MAIL_SERVER'] = 'smtp.office365.com'
+#app.config['MAIL_PORT'] = 587
+#app.config['MAIL_USE_TLS'] = True
+#app.config['MAIL_USE_SSL'] = False
+#app.config['MAIL_USERNAME'] = "pshelly@stetson.edu"
+#app.config['MAIL_PASSWORD'] = "Hattercheer01$prs"
 # cors = CORS(app)
 # Configure the value of the "origins" key to be the actual URL of the React Frontend.
 # Make sure to NOT have a / at the end of the "origins" URL.

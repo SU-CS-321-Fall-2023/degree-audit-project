@@ -1,0 +1,12 @@
+{% extends "index.html" %} 
+{% block title %}Academic Progress Tracker{% endblock %}
+
+{% block content %}
+
+<h1>Email Alert Demo</h1>
+<form method="POST" action="/send_alert">
+ <label for="email">Email:</label>
+ <input type="text" name="email" id="email">
+ <input type="submit" value="Send Alert">
+</form>
+{% endblock %}
