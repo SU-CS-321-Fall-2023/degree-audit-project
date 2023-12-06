@@ -23,20 +23,52 @@
     #900028 ---- Fordham red
 */
 
+:root {
+    /* Light mode variables */
+    --background-color: #ffffff;
+    --inner-form-bg: #ffffff;
+    --text-color: #000000;
+    --primary-color: #409639;
+    --secondary-color: #61805f;
+    --accent-color: #ff6929;
+    --border-color: #409639;; /* Example border color for light mode */
+    --hover-background-color: #e0e0e0; /* Light mode hover background */
+    --hover-text-color: #333333; /* Light mode hover text color */
+}
+
+body.dark-mode {
+    /* Dark mode variables */
+    --background-color: #000000;
+    --inner-form-bg: #000000;
+    --text-color: #ffffff; 
+    --primary-color: #175640;
+    --secondary-color: #409639;
+    --accent-color: #ff6d4d;
+    --border-color: #555555; 
+    --hover-background-color: #333333; /* Dark mode hover background */
+    --hover-text-color: #ffffff; /* Dark mode hover text color */
+}
+
+
+p, div, h1, h3 {
+    color: var(--text-color); 
+}
 
 * {
     box-sizing: border-box;
 }
 html {
-    background-color: #85ab82;
+    /*background-color: #85ab82;*/
+    background-color: var(--secondary-color);
 
     font-weight: normal;
 }
 body{
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0px;
 }
 main {
-    /* background-color: lightyellow; */
     max-width: 1700px;
     width: auto;
     overflow-x: visible;
@@ -44,6 +76,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    height: 50vh;
 
     padding-top: 0px;
     padding-right: 0px;
@@ -72,11 +106,6 @@ em {
     color: red;
     font-size: 14pt;
     font-style: normal;
-}
-h1 {
-    /* background-color: orange; */
-    padding: 0px;
-    margin: 0px;
 }
 h3 {
     padding-top: 0px;
@@ -112,6 +141,7 @@ p {
 /*
 *<---- Containers specific to about-us.html ---->
     */
+
 div.about-us_title__container {
     width: 1000px;
     min-width: 370px;
@@ -124,7 +154,8 @@ div.about-us_title__container {
         margin-left: auto;
     }
 div.About-Us {
-    background-color: #409639;
+    /*background-color: #409639;*/
+    background-color: var(--primary-color);
     max-width: 1700px;
     max-height: 100%;
     border-radius: 0px;
@@ -137,7 +168,8 @@ div.About-Us {
     text-align: left;
 }
     div.About-Us img.About-Us_team-pic {
-        background-color: #175640; /* #095540 */
+        /*background-color: #175640; /* #095540 */
+        background-color: var(--secondary-color);
         min-width: 1000px;
         max-width: 100%;
         min-height: 300px;
@@ -168,7 +200,8 @@ div.About-Us {
         justify-content: space-evenly;
     }
         div.About-Us article.bio p {
-            background-color: #175640;
+            /*background-color: #175640;*/
+            background-color: var(--primary-color);
             min-width: 300px;
             border-radius: 20px;
 
@@ -233,8 +266,17 @@ main h1.profile-name {
     margin-bottom: 0px;
     margin-left: 25px;
 }
+
+div.About-Us article.bio p#About_Paragraph_1,
+div.About-Us article.bio p#About_Paragraph_2,
+div.About-Us article.bio p#About_Paragraph_3 {
+    background-color: var(--primary-color); /* Updated to use variable */
+}
+
 div.username#handler {
-    background-color: #409639;
+    /*background-color: #409639;*/
+    background-color: var(--background-color); /* Use variable for background */
+    color: var(--text-color);
     width: 250px;
     height: 50px;
     border-radius: 10px;
@@ -262,7 +304,8 @@ div.username#handler {
         margin: 0px;
     }
 div.biography__container {
-    background-color: #9bcd97;
+    /*background-color: #9bcd97; */
+    background-color: var(--secondary-color);
     width: 500px;
 
     float: right;
@@ -275,7 +318,8 @@ div.biography__container {
     margin: 0;
 }
     div.biography__container#personal_bio_001 {
-        background-color: #409639;
+        /*background-color: #409639;*/
+        background-color: var(--primary-color);
         width: fit-content;
         height: 400px;
         border-radius: 20px;
@@ -283,7 +327,8 @@ div.biography__container {
         margin-left: 0px;
     }
         div.biography__container#personal_bio_001 article.bio {
-            background-color: #900028;
+            /*background-color: #900028;*/
+            background-color: var(--secondary-color);
             border-radius: 20px;
 
             display: block;
@@ -293,7 +338,8 @@ div.biography__container {
             margin-bottom: auto;
         }
             div.biography__container#personal_bio_001 article.bio p {
-                background-color: #175640;
+                /*background-color: #175640;*/
+                background-color: var(--secondary-color); 
                 width: 400px;
                 border-radius: 20px;
 
@@ -319,7 +365,8 @@ div.biography__container {
                 margin-left: 5px;
             }
     div.biography__container#specific_bio_001 {
-        background-color: #409639;
+        /*background-color: #409639;*/
+        background-color: var(--primary-color);
         width: fit-content;
         min-height: 350px;
         border-radius: 20px;
@@ -328,14 +375,16 @@ div.biography__container {
         margin-left: auto;
     }
         div.biography__container#specific_bio_001 article.bio-specifics {
-            background-color: #175640;
+            /*background-color: #175640;*/
+            background-color: var(--secondary-color); /* Updated to use variable */
             width: 350px;
             min-height: 300px;
             border-radius: 20px;
 
             float: right;
 
-            color: #ffffff;
+            /*color: #ffffff;*/
+            color: var(--text-color);
             font-size: 12pt;
             font-style: normal;
             font-weight: normal;
@@ -352,23 +401,27 @@ div.biography__container {
             margin-left: 5px;
         }
             div.biography__container#specific_bio_001 article.bio-specifics h3.bio-specifics-Header {
-                color: #ffffff;
+                /*color: #ffffff;*/
+                color: var(--text-color);
                 text-align: center;
             }
             div.biography__container#specific_bio_001 article.bio-specifics h3.bio-specifics-Header hr {
-                background-color: #ffffff;
+                /*background-color: #ffffff;*/
+                background-color: var(--text-color);
                 height: 1px;
 
                 border-width: 0px;
             }
             div.biography__container#specific_bio_001 article.bio-specifics ul {
-                background-color: #175640;
+                /*background-color: #175640;*/
+                background-color: var(--secondary-color);
                 
                 font-weight: lighter;
                 line-height: 150%;
             }
 img.profile_pic {
-    background-color: #175640; /* #095540 */
+    /*background-color: #175640; /* #095540 */
+    background-color: var(--secondary-color);
     width: 300px;
     min-height: 400px;
     border-radius: 20px;
@@ -408,7 +461,8 @@ div.Profile-Pic_wedge {
     */
 
 header object {
-    background-color: palegreen;
+    /*background-color: palegreen;*/
+    background-color: var(--secondary-color);
     width: 1000px;
     height: 248px;
     border: 0px;
@@ -420,7 +474,8 @@ header object {
     margin: 0px;
 }
 header.header {
-    background-color: #85ab82;
+    /*background-color: #85ab82;*/
+    background-color: var(--secondary-color);
     width: 100%;
     min-height: 100px;
     position: relative;
@@ -433,7 +488,8 @@ header.header {
     margin: 0;
 }
 div.inner_header {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    background-color: var(--background-color);
     width: 100%;
     height: 100%;
 
@@ -441,16 +497,20 @@ div.inner_header {
 
     margin: 0 auto;
 }
-.nav-bar a:hover, 
+.nav-bar a:hover{
+    background-color: var(--hover-background-color); /* Use variable for hover background */
+    color: var(--hover-text-color); /* Use variable for hover text color */
+}
 .navigation#information-for__dropdown-title:hover ul.info-for__dropdown, 
 .navigation#remainder__nav-bar a:hover, 
 div.nav-bar-bottom__container ul.nav-bar-bottom__list a.nav-bar-bottom__list-link:hover,
 div.header-nav__log-in-out#log-in-out a:hover {
-    background-color: #ff6929;
-    color:#000000;
+    background-color: var(--hover-background-color);
+    color: var(--hover-text-color);
 }
 nav.nav-bar {
-    background-color: #409639;
+    /*background-color: #409639;*/
+    background-color: var(--primary-color);
     width: 100%;
     min-width: 320px;
     height: auto;
@@ -478,7 +538,8 @@ nav.nav-bar {
         margin: 0px;
     }
         div.header-nav__log-in-out#log-in-out {
-            background-color: #900028;
+            /*background-color: #900028;*/
+            background-color: var(--secondary-color);
             width: 180px;
             height: auto;
             border-left-width: 2px;
@@ -520,7 +581,9 @@ nav.nav-bar {
             width: 150px;
             border-left-width: 2px;
             border-left-style: solid;
-            border-left-color: #ffffff;
+            /*border-left-color: #ffffff;*/
+            border-left-color: var(--border-color); /* Replaced hard-coded color with variable */
+
 
             float: right;
             overflow: hidden;
@@ -558,7 +621,8 @@ nav.nav-bar {
                     padding-left: 15px;
                 }
                 div.information-for__dropdown__content {
-                    background-color: #ffffff;
+                    /*background-color: #ffffff;*/
+                    background-color: var(--background-color);
                     min-width: 200px;
                     position: absolute;
                     z-index: 1;
@@ -583,7 +647,7 @@ nav.nav-bar {
                         padding-left: 10px;
                     }
                     div.information-for__dropdown__content a:hover {
-                        background-color: #ddd;
+                        background-color: var(--hover-background-color);
                     }
                     .navigation#information-for__dropdown-title:hover .information-for__dropdown__content {
                         display: block;
@@ -630,7 +694,8 @@ nav.nav-bar {
                     margin-left: 1px;
                 }
 nav.nav-bar-bottom {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    background-color: var(--background-color);
     width: 100%;
     height: auto;
     border-bottom-width: 6px;
@@ -730,14 +795,16 @@ nav.nav-bar-bottom {
     */
 
 footer {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    background-color: var(--background-color);
     height: 100%;
 
     margin: 0px;
     /* margin-top: 2rem; */
 }
     div.footer__container {
-        background-color: #409639;
+        /*background-color: #409639;*/
+        background-color: var(--primary-color);
         min-width: 100%;
         min-height: 100%;
 
@@ -746,9 +813,7 @@ footer {
         padding: 0px;
         padding: 2rem 2rem;
 
-        margin: 0px;
-        margin-right: auto;
-        margin-left: auto;
+        margin: 0 auto;
     }
         div.footer__container div.footer__container__row {
             min-width: 200px;
@@ -966,27 +1031,36 @@ footer {
 
 div.idForm {
     /* background-color: #85ab82; */
+    background-color: var(--background-color);
+    border: 2px solid #409639;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow size */
     width: 100%;
     max-width: 600px;
     /* min-height: 100%; */
     position: relative;
 
-    display: flex;
+    /* display: block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
 
-    color: black;
+
+    color: var(--text-color);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-    padding: 0;
+    padding: 0px;
 
     margin-top: 1rem;
     margin-right: auto;
     margin-bottom: 1rem;
-    margin-left: 0;
+    margin-left: auto;
 }
 div.inner_form {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    background-color: var(--inner-form-bg);
     width: 100%;
     height: 100%;
+    color: var(--text-color);
 
     display: block;
 
@@ -994,6 +1068,15 @@ div.inner_form {
 
     margin: 0 auto;
 }
+
+/* Styling for inner elements of the form */
+div.idForm > * {
+    color: var(--text-color);
+    text-align: center;
+    width: 100%; /* Makes sure children take full width */
+    /* Other styles... */
+}
+
 /*
 !<---- END OF Styling for idForm.js ---->
     */
@@ -1210,6 +1293,12 @@ div.inner_form {
         max-width: 200px;
     }
 }
+@media (min-width: 600px) {
+    .some-responsive-element {
+        background-color: var(--background-color);
+        /* ... other responsive styles ... */
+    }
+}
 @media (min-width: 768px)
 {
     .courses-table-md, 
@@ -1338,14 +1427,14 @@ div.inner_form {
     .courses-table-xl, .courses-table-lg, 
     .courses-table-md, 
     .courses-table-sm, .courses-table-xs, .courses-table-xxs, 
-    .courses-table
-    {
+    .courses-table{
+        border-color: var(--border-color); /* Use variable for border color */
         width: 100%;
         max-width: fit-content;
         height: 600px;
         overflow-x: auto;
         border-spacing: 0;
-        border-color: black;
+        /* border-color: black; */
 
         display: block;
 
@@ -1466,14 +1555,16 @@ div.inner_form {
 
 .myWrapper#myWrapper
 {
-    background-color: #85ab82;
+    /*background-color: #409639;*/
+    background-color: var(--primary-color);
 
-    padding: 0 0px;
-    margin: 0 0;
+    padding: 0;
+    margin: 0;
 }
 .page-title
 {
-    color: black;
+    /*color: black;*/
+    color: var(--text-color);
     font-weight: bold;
 }
 p.sched-des#sched-des
@@ -1487,18 +1578,25 @@ p.sched-des#sched-des
 {
     text-align: center;
 }
-.student-heading-wrapper#student-heading-wrapper
-{
-    background-color: white;
+.student-heading-wrapper#student-heading-wrapper {
+    background-color: var(--heading-wrapper-bg); /* Use variable for background color */
     border-width: 3px;
     border-style: solid;
     border-top-width: 10px;
-    border-top-color: #409639;
+    border-top-color: var(--heading-wrapper-border-top); /* Use variable for border top color */
     
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.175);
-    padding: 0 0;
-    margin: 0 auto 0 auto;
+    box-shadow: 5px 5px 5px gray;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    /* Centering content */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text for good measure */
 }
+
 .student-heading#student-heading
 {
     display: flex;
@@ -1577,7 +1675,7 @@ div.degree_heading#degree_heading
 
     display: block;
 
-    color: white;
+    color: black;
 
     margin: 0 0 1rem;
 }
@@ -1654,21 +1752,4 @@ tr.degree-row#not-fulfilled td
 }
 
 
-:root {
-    --background-color-light: #f5f5f5;
-    --text-color-light: #333;
-    --background-color-dark: #333;
-    --text-color-dark: #fff;
-    /* Add more color variables as needed */
-  }
 
-
-body {
-    --background-color: var(--background-color-light);
-    --color: var(--text-color-light);
-}
-
-body.dark-mode {
-    --background-color: #111;
-    --text-color: #fff;
-}

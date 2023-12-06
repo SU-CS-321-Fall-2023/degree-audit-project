@@ -1,5 +1,3 @@
-// import DOMPurify from "dompurify";
-
 class Footer extends HTMLElement {
     constructor() {
         super();

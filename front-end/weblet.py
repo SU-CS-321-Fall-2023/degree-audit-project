@@ -22,7 +22,7 @@ def ourPaths():
     
     global webletIndex
     webletIndex =  "index.html"
-ourPaths() # Must be placed at beginning of file.
+ourPaths()# Must be placed at beginning of file.
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
