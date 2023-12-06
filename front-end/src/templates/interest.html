@@ -1,0 +1,35 @@
+{% extends "index.html" %} 
+{% block title %}Interests{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>myStetson</h1>
+</div>
+<table>
+    <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+    </tr>
+    <tr>
+        <td>800719386</td>
+        <td>Peyton Shelly</td>
+    </tr>
+</table>
+
+<h1>Select Your Interests</h1>
+<form method="POST" action="/submit">
+    <label for="interests">Choose your interests:</label><br>
+    {% for interest in default_interests %}
+        <label>
+            <input type="checkbox" name="interests" value="{{ interest }}">
+        </label> {{ interest }}<br>
+    {% endfor %}
+    <label>
+        <input type="checkbox" name="interests" value="OTHER">
+    </label> Other (please specify):<br>
+    <label>
+        <input type="text" name="custom_interest" placeholder="Specify your interest">
+    </label><br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

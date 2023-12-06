@@ -1,0 +1,34 @@
+{% extends "index.html" %} 
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+<div class="banner">
+    <table>
+        <tr>
+            <td>Student Name:</td>
+            <td>Peyton Shelly</td>
+        </tr>
+        <tr>
+            <td>Student ID:</td>
+            <td>800719386</td>
+        </tr>
+    </table>
+</div>
+
+<div class="recommended-courses">
+    <h1>Recommended Courses</h1>
+    <p>Your selected interests:</p>
+    <ul>
+        {% for interest in interests %}
+            <li>{{ interest }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>Here are some recommended courses:</p>
+    <ul>
+        {% for course in courses %}
+            <li>{{ course }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

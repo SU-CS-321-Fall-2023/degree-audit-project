@@ -32,7 +32,7 @@ app = create_app()
 # cors = CORS(app)
 # Configure the value of the "origins" key to be the actual URL of the React Frontend.
 # Make sure to NOT have a / at the end of the "origins" URL.
-cors = CORS(app, resources={r"/*": {"origins": "http://localhost:*"}})
+#cors = CORS(app, resources={r"/*": {"origins": "http://localhost:*"}})
 
 ALLOWED_EXTENSIONS = {'csv'}
 # class Index(Resource):
@@ -54,8 +54,6 @@ ALLOWED_EXTENSIONS = {'csv'}
 # @app.route('/data')
 # def database():
 #     return 'data'
-
-
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -119,6 +117,5 @@ if __name__ == '__main__':
     """
     Must be placed at the end of the file.
     """
-    # app.run(host = '192.168.1.46', port = 3000, debug = True)
-    #app.run(host = '127.0.0.1', port = 3000, debug = True)
+
     app.run(host = '127.0.0.1', port = 9000, debug=True)

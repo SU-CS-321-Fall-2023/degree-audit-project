@@ -1,0 +1,191 @@
+{% extends "index.html" %} 
+{% block title %}SDA - Course Reviews{% endblock %}
+
+{% block content %}
+<h1>Review for {{ course }}</h1>
+<h1>Welcome to Course Reviews</h1>
+<p>Please quantify your responses. Don't just say "it was good", "instructor can't teach", "the class was terrible", etc. Offer an explanation for why you feel the way you do so as to help others understand your perspective.</p>
+
+<label>
+    <input type="checkbox" id="showReview" onclick="toggleReview()"> Show Course Review Form
+</label>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="modal" id="reviewForm">
+    <h2>Course Review Form</h2>
+
+    <form>
+        <!-- Course Name dropdown field -->
+        <div class="form-field">
+            
+            <select name="course_name" required>
+                <option value="" disabled selected>Select your course to review</option>
+                <option value="Software Development II">CSCI 321</option>
+                <option value="Discrete Structures">CSCI 211</option>
+                <option value="Introduction to Computer Science">CSCI 141</option>
+                <option value="Introduction to Computing">CSCI 111</option>
+            </select>
+        </div> 
+
+        <!-- Additional new fields as per your requirement -->
+        <!-- Flask page -->
+
+        <!-- Star rating for professor -->
+        <!-- Flex container for rating and feedback -->
+        <div class="rating-feedback-container">
+            <!-- Star rating for professor -->
+            <div class="star-rating-container">
+                <!-- <label class="professor-rating-label">{{ form.professor_rate.label }}</label> -->
+                <div class="star-rating">
+                    {% for i in range(5, 0, -1) %}
+                        <input type="radio" id="rate{{ i }}" name="professor_rate" value="{{ i }}">
+                        <label for="rate{{ i }}">★</label>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Professor feedback -->
+            <div class="feedback-textarea-container">
+                <label for="professorFeedback">What did you think of the Professor:</label>
+                <textarea id="professorFeedback" class="char-count-textarea" name="professor_feedback" oninput="updateCharCount(this)"></textarea>
+                <p class="char-count-display">Characters: 0/250</p>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label for="courseLoad">Describe the course load:</label>
+            <textarea id="courseLoad" class="char-count-textarea" name="course_load" oninput="updateCharCount(this)"></textarea>
+            <p class="char-count-display">Characters: 0/250</p>
+        </div>
+
+        <div class="form-field">
+            <label for="quizzesTests">How were quizzes/tests (if any):</label>
+            <textarea id="quizzesTests" class="char-count-textarea" name="quizzes_tests" oninput="updateCharCount(this)"></textarea>
+            <p class="char-count-display">Characters: 0/250</p>
+        </div>
+
+        <div class="form-field">
+            <label for="reviewTextarea">Overall Course Review:</label>
+            <textarea id="reviewTextarea" class="char-count-textarea" name="review" oninput="updateCharCount(this)"></textarea>
+            <p class="char-count-display">Characters: 0/250</p>
+        </div>
+
+    <!-- Instructor Notes Online -->
+    <!-- Corrected class name for the form field -->
+        <div class="form-field">
+            <label class="question-label">Does the instructor post the class notes online?</label>
+            <div class="radio-group">
+                <input type="radio" id="notes_yes" name="notes_online" value="Yes">
+                <label for="notes_yes">Yes</label>
+                <input type="radio" id="notes_no" name="notes_online" value="No">
+                <label for="notes_no">No</label>
+                <input type="radio" id="notes_na" name="notes_online" value="N/A">
+                <label for="notes_na">N/A</label>
+            </div>
+        </div>
+
+        <!-- Does the instructor offer extra credit? -->
+        <div class="form-field">
+            <label class="question-label">Does the instructor offer extra credit?</label>
+            <div class="radio-group">
+                <input type="radio" id="extra_credit_yes" name="extra_credit" value="Yes">
+                <label for="extra_credit_yes">Yes</label>
+                <input type="radio" id="extra_credit_no" name="extra_credit" value="No">
+                <label for="extra_credit_no">No</label>
+                <input type="radio" id="extra_credit_na" name="extra_credit" value="N/A">
+                <label for="extra_credit_na">N/A</label>
+            </div>
+        </div>
+
+        <!-- The instructor is flexible when it comes to unforeseen circumstances -->
+        <div class="form-field">
+            <label class="question-label">The instructor is flexible when it comes to unforeseen circumstances</label>
+            <div class="radio-group">
+                <input type="radio" id="flexibility_strongly_agree" name="flexibility" value="Strongly Agree">
+                <label for="flexibility_strongly_agree">Strongly Agree</label>
+                <input type="radio" id="flexibility_agree" name="flexibility" value="Agree">
+                <label for="flexibility_agree">Agree</label>
+                <input type="radio" id="flexibility_neutral" name="flexibility" value="Neutral">
+                <label for="flexibility_neutral">Neutral</label>
+                <input type="radio" id="flexibility_disagree" name="flexibility" value="Disagree">
+                <label for="flexibility_Disagree">Disagree</label>
+                <input type="radio" id="flexibility_strongly_disagree" name="flexibility" value="Strongly Disagree">
+                <label for="flexibility_strongly_disagree">Strongly Disgree</label>
+                <!-- Repeat for Disagree, Neutral, Agree, Strongly Agree, N/A -->
+            </div>
+        </div>
+
+    <!-- Other form fields... -->
+
+
+    <!-- Other form fields... -->
+
+        <div class="form-field">
+            <label for="instructorDemeanor">What was the professor's demeanor like?:</label>
+            <textarea id="instructorDemeanor" name="instructor_demeanor" oninput="updateCharCount(this)"></textarea>
+            <p class="char-count-display">Characters: 0/250</p>
+        </div>
+
+        <!-- Rest of the new fields... -->
+
+        <div class="form-field">
+            <label>Overall Course Review:</label>
+            <textarea name="review" id="reviewTextarea" oninput="updateCharCount()"></textarea>
+            <p id="charCountDisplay">Characters: 0/250</p> <!-- Updated ID and text -->
+        </div>
+
+        <input type="submit" value="Save Review">
+    </form>
+
+    <button onclick="closeModal()">Close</button>
+</div>
+
+<script>
+    // Function to update character count for a specific textarea
+    function updateCharCount(textareaElement) {
+            var charCountDisplay = textareaElement.nextElementSibling; // Assuming the character count display <p> is right after the textarea
+            var charCount = textareaElement.value.length;
+            charCountDisplay.textContent = 'Characters: ' + charCount + '/250';
+
+            // Optional: Change color if the count exceeds 250 characters
+            if (charCount > 250) {
+                charCountDisplay.style.color = 'red';
+            } else {
+                charCountDisplay.style.color = 'black';
+            }
+        }
+
+
+    document.querySelector('form').addEventListener('submit', function(event) {
+        var words = document.getElementById('reviewTextarea').value.split(/\s+/).filter(Boolean).length;
+
+        if (words > 100) {
+            alert('Review exceeds the maximum word count of 100. Please reduce your review length.');
+            event.preventDefault();
+        }
+    });
+
+    function toggleReview() {
+        var checkbox = document.getElementById('showReview');
+        var reviewForm = document.getElementById('reviewForm');
+        var overlay = document.getElementById('overlay');
+        if (checkbox.checked) {
+            reviewForm.style.display = 'block';
+            overlay.style.display = 'block';
+        } else {
+            reviewForm.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    }
+
+    function closeModal() {
+        var checkbox = document.getElementById('showReview');
+        var reviewForm = document.getElementById('reviewForm');
+        var overlay = document.getElementById('overlay');
+        checkbox.checked = false;
+        reviewForm.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+</script>
+{% endblock %}

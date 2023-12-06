@@ -22,6 +22,7 @@ class Header extends HTMLElement {
                         <a class="nav-item nav-link" id="home" href="/">Home</a>
                         <a class="nav-item nav-link" id="review" href="/review">Course Review</a>
                         <a class="nav-item nav-link" id="culture" href="/culture">Cultural Credits</a>
+                        <a class="nav-item nav-link" id="interests" href="/interest">Interest Exploration</a>
                     </div>
                 </nav>
             </div>

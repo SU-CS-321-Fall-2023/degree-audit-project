@@ -1,0 +1,22 @@
+{% extends "index.html" %} 
+{% block title %}Course Reviews - Select Course{% endblock %}
+
+{% block content %}
+<form action="/review_form" method="post">
+    <h2>Select Your Course</h2>
+
+    <!-- Adding label for accessibility -->
+    <label for="courseSelect">Course:</label>
+    <select name="course_name" id="courseSelect" required>
+        <option value="" disabled selected>Select your course to review</option>
+        <option value="Software Development II">Software Development II</option>
+        <option value="Discrete Structures">Discrete Structures</option>
+        <option value="Introduction to Computer Science">Introduction to Computer Science</option>
+        <option value="Introduction to Computing">Introduction to Computing</option>
+        <!-- Add other courses as needed -->
+    </select>
+
+    <input type="submit" value="Next">
+</form>
+
+{% endblock %}
