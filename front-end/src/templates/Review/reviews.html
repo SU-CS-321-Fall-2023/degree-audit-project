@@ -1,17 +1,7 @@
 {% extends "index.html" %}
 {% block title %}SDA - Course Reviews{% endblock %}
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Course Reviews</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="static/review.css">
-        <!-- Moved <style> section to "Sydney/static/place.css" -->
-    </head>
-
-    <body>
+{% block content %}
         <h1>Review for {{ course }}</h1>
         <h1>Welcome to Course Reviews</h1>
         <p>Please quantify your responses. Don't just say "it was good", "instructor can't teach", "the class was terrible", etc. Offer an explanation for why you feel the way you do so as to help others understand your perspective.</p>
@@ -150,7 +140,9 @@
 
             <button onclick="closeModal()">Close</button>
         </div>
+{% endblock %}
 
+{% block script %}
         <script>
             // Function to update character count for a specific textarea
             function updateCharCount(textareaElement) {
@@ -198,5 +190,4 @@
                 overlay.style.display = 'none';
             }
         </script>
-    </body>
-</html>
+{% endblock %}
