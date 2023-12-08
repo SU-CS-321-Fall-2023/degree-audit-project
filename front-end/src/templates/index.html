@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title>SDA - Home</title>
+        <title>{% block title %}SDA - Home{% endblock %}</title>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE-edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,8 +10,7 @@
         <meta name="author" content="The Auditors" />
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrapCyborg.css') }}" />
-        <script src="{{ url_for('static', filename='js/header.js') }}" type="text/javascript" defer></script>
-        <script src="{{ url_for('static', filename='js/footer.js') }}" type="text/javascript" defer></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/review.css') }}" />
         <script src="{{ url_for('static', filename='js/idForm.js') }}" type="text/javascript" defer></script>
         <style>
             body {
@@ -20,10 +19,49 @@
             body.dark-mode {
                 background: black;
             }
+            {% block style %}
+            {% endblock %}
         </style>
     </head>
     <body>
-        <header-component></header-component>
+        <!--
+            <header-component></header-component>
+            {% block header %}{% endblock header %}
+        -->
+        <header class="header" aria-label="Site header">
+            <div class="inner_header">
+                <nav class="nav-bar-bottom">
+                    <div class="nav-bar-bottom__container">
+                        <a href="/">
+                            <img src="./static/images/EPIC-Danny-DeVito.jpg" alt="SDA Logo" id="nav-bar__logo">
+                        </a>
+                        <h1 class="nav-bar-bottom__logo">
+                            Smart <br> Degree <br> Audit
+                        </h1>
+                        <div>
+                            <div class="navigation" id="information-for__dropdown-title">
+                                <ul class="info-for__dropdown"><a href="#">Information For</a>
+                                    <div class="information-for__dropdown__content">
+                                        <a href="/" class="nav-item nav-link" id="home" aria-label="Link to the Smart Degree Audit Homepage">Home</a>
+                                        <a href="/course-registration" class="nav-item nav-link" id="course-registration" aria-label="Link for Course Registration">Registration</a>
+                                        <a href="/course-search" class="nav-item nav-link" id="course_search" aria-label="Link to the Course Search">Course Search</a>
+                                        <a href="/reviews" class="nav-item nav-link" id="review" aria-label="Link to view and submit Course Reviews">Course Review</a>
+                                        <a href="/culture" class="nav-item nav-link" id="culture" aria-label="Link to view your Cultural Credits">Cultural Credits</a>
+                                        <a href="/progress-tracker" class="nav-item nav-link" id="progress_tracker" aria-label="Link to view your progress to your Degree">Progress Tracker</a>
+                                    </div>
+                                </ul>
+                            </div>
+                            <div class="theme-toggle" id="theme-toggle_container">
+                                <div class="theme-toggle" id="theme-toggle">
+                                    <input type="checkbox" id="darkModeToggle">
+                                    <label for="darkModeToggle">Dark Mode</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
         <main class="dark-mode">
             <!--
             I found this in the style.css file, which was causing it throw errors.
@@ -34,18 +72,50 @@
               body.classList.toggle('dark-mode');
             }); 
         -->
-            <div class="theme-toggle">
-                <input type="checkbox" id="darkModeToggle">
-                <label for="darkModeToggle">Dark Mode</label>
-            </div> 
-            <div class="container">
+            <div class="content_container" id="main_block_container">
                 {% block content %}
                 {% endblock %}
             </div>
-            </div>
-            </div>
         </main>
-        <footer-component></footer-component>
+        <footer class="footer" aria-label="Site footer">
+            <div class="footer__container">
+                <div class="footer__container__row">
+                    <div class="footer__left_column">
+                        <div class="The_Auditors_Logo__container">
+                            <a href="/" class="footer__logo" id="footer__logo" aria-label="The Auditors' Logo">
+                                <h1 class="footer__logo"id="footer__logo-heading">
+                                    The Auditors
+                                </h1>
+                                <!--
+                                <img src="./static/images/EPIC-Danny-DeVito.jpg" alt="Stetson Smart Degree Audit" id="nav-bar__logo">
+                                -->
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__right_column">
+                        <div class="footer_links__widget__container">
+                            <ul class="widget_column" id="footer_links">
+                                <li class="widget_title" id="footer_links">
+                                    <span class="widget_title" id="footer_links">Helpful Links</span>
+                                </li>
+                                <ul class="widget_list" id="footer_links">
+                                    <li class="widget_item" id="footer_links">
+                                        <a href="/front-end/src/about-us.html" class="widget_link" id="about_us" target="blank">About Us</a>
+                                    </li>
+                                    <li class="widget_item" id="footer_links">
+                                        <a href="https://github.com/SU-CS-321-Fall-2023/degree-audit-project" class="widget_link" id="repo" target="blank">GitHub Repo</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--
+            <footer-component></footer-component>
+            {% block footer %}{% endblock footer %}
+        -->
         <!--<script>
             const darkModeToggle = document.getElementById('darkModeToggle');
             darkModeToggle.addEventListener('change', function() {
@@ -68,6 +138,6 @@
                 document.body.classList.toggle('dark-mode', this.checked);
             });
         </script>
-        
+        {% block script %}{% endblock script %}
     </body>
 </html>
