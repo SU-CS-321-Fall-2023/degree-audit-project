@@ -16,6 +16,7 @@ null = None
 lineCount = 0
 newCatalog = list()
 myIDs = list()
+subjectIDs = list()
 subjects = [
     ["ACCT", "01"],
     ["AERS", "02"],
@@ -109,6 +110,8 @@ try:
             for i in range(len(subjects)):
                 if (ourData["data"][x]["subject"] == subjects[i][0]):
                     newID = (subjects[i][1] + ourData["data"][x]["courseNumber"])
+                    newSubID = subjects[i][1]
+                    subjectIDs.append(newSubID)
                     myIDs.append(newID)
                     break
             app_data = {
@@ -116,19 +119,23 @@ try:
                 "id": myIDs[x],
                 "termEffective": ourData["data"][x]["termEffective"],
                 "courseNumber": ourData["data"][x]["courseNumber"],
+                "courseTitle": ourData["data"][x]["courseTitle"],
                 "subject": ourData["data"][x]["subject"],
                 "subjectCode": ourData["data"][x]["subjectCode"],
+                "subjectId": subjectIDs[x],
                 "college": ourData["data"][x]["college"],
                 "collegeCode": ourData["data"][x]["collegeCode"],
                 "department": ourData["data"][x]["department"],
                 "departmentCode": ourData["data"][x]["departmentCode"],
-                "courseTitle": ourData["data"][x]["courseTitle"],
                 # "durationUnit": ourData["data"][x]["durationUnit"],
                 # "numberOfUnits": ourData["data"][x]["numberOfUnits"],
                 "attributes": ourData["data"][x]["attributes"],
                 # "gradeModes": ourData["data"][x]["gradeModes"],
                 "ceu": ourData["data"][x]["ceu"],
-                "courseScheduleTypes": ourData["data"][x]["courseScheduleTypes"],
+                "scheduleType": ourData["data"][x]["courseScheduleTypes"],
+                "scheduleTypeDescription": null,
+                "restrictions": null,
+                "restrictionsPeriod": null,
                 # "courseLevels": ourData["data"][x]["courseLevels"],
                 "creditHourLow": ourData["data"][x]["creditHourLow"],
                 "creditHourHigh": ourData["data"][x]["creditHourHigh"],
