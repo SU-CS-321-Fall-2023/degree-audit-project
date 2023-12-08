@@ -1,84 +1,80 @@
-<!-- templates/index.html -->
+{% extends "index.html" %} 
+{% block title %}SDA - Academic Progress Tracker{% endblock %}
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Academic Progress Tracker</title>
-        <style>
-            /* Style for the background overlay when modal is shown */
-            .overlay {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-                z-index: 1;
-            }
+{% block style %}
+    <style>
+        /* Style for the background overlay when modal is shown */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
 
-            /* Styles for the modal */
-            .modal {
-                background-color: black;  /* Black background */
-                width: 100%;
-                max-width: 90%;
-                height: 80vh;
+        /* Styles for the modal */
+        .modal {
+            background-color: black;  /* Black background */
+            width: 100%;
+            max-width: 90%;
+            height: 80vh;
 
-                display: block;
+            display: block;
 
-                padding: 20px;
-                margin: 0 auto;
+            padding: 20px;
+            margin: 0 auto;
 
-                display: none;
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: white;             /* White text */
-                z-index: 2;
-                border-radius: 8px;      /* Rounded corners */
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                overflow: scroll;
-            }
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;             /* White text */
+            z-index: 2;
+            border-radius: 8px;      /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: scroll;
+        }
 
-            .modal h2 {
-                background-color: green; /* Green header */
-                padding: 10px;
-                margin-top: 0;
-                border-radius: 6px 6px 0 0; /* Rounded corners for the top of the modal */
-            }
+        .modal h2 {
+            background-color: green; /* Green header */
+            padding: 10px;
+            margin-top: 0;
+            border-radius: 6px 6px 0 0; /* Rounded corners for the top of the modal */
+        }
 
-            .modal button {
-                background-color: white;   /* White button */
-                color: black;              /* Black text on the button */
-                padding: 5px 10px;         /* Some padding for the button */
-                border: none;              /* No border */
-                border-radius: 4px;        /* Rounded corners for the button */
-                cursor: pointer;           /* Hand cursor on hover */
-            }
+        .modal button {
+            background-color: white;   /* White button */
+            color: black;              /* Black text on the button */
+            padding: 5px 10px;         /* Some padding for the button */
+            border: none;              /* No border */
+            border-radius: 4px;        /* Rounded corners for the button */
+            cursor: pointer;           /* Hand cursor on hover */
+        }
 
-            .modal button:hover {
-                background-color: green;  /* Green background on hover */
-                color: white;             /* White text on hover */
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Welcome to the Academic Progress Tracker</h1>
-        
+        .modal button:hover {
+            background-color: green;  /* Green background on hover */
+            color: white;             /* White text on hover */
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="progress_tracker" id="aptContainer">
+        <h1 class="progress_tracker" id="aptH1">Welcome to the Academic Progress Tracker</h1>
+
         <label for="showTracker">
             <input type="checkbox" id="showTracker" onclick="toggleTracker()">
             Show Academic Progress Tracker
         </label>
-
         <div class="overlay" id="overlay"></div>
-
-        <!-- This div is the modal that will pop up -->
         <div class="modal" id="tracker">
-            <h2>Academic Progress Tracker</h2>
-            <table border="1">
+            <h2 class="progress_tracker" id="aptH2">Academic Progress Tracker</h2>
+
+            <table class="progress_tracker" id="aptTable" border="1">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -118,29 +114,33 @@
             </table>
             <button onclick="closeModal()">Close</button>
         </div>
+    </div>
+{% endblock %}
 
-        <script>
-            function toggleTracker() {
-                var checkbox = document.getElementById('showTracker');
-                var tracker = document.getElementById('tracker');
-                var overlay = document.getElementById('overlay');
-                if (checkbox.checked) {
-                    tracker.style.display = 'block';
-                    overlay.style.display = 'block';
-                } else {
-                    tracker.style.display = 'none';
-                    overlay.style.display = 'none';
-                }
-            }
-
-            function closeModal() {
-                var checkbox = document.getElementById('showTracker');
-                var tracker = document.getElementById('tracker');
-                var overlay = document.getElementById('overlay');
-                checkbox.checked = false;
+    <!--
+    -->
+{% block script %}
+    <script>
+        function toggleTracker() {
+            var checkbox = document.getElementById('showTracker');
+            var tracker = document.getElementById('tracker');
+            var overlay = document.getElementById('overlay');
+            if (checkbox.checked) {
+                tracker.style.display = 'block';
+                overlay.style.display = 'block';
+            } else {
                 tracker.style.display = 'none';
                 overlay.style.display = 'none';
             }
-        </script>
-    </body>
-</html>
+        }
+
+        function closeModal() {
+            var checkbox = document.getElementById('showTracker');
+            var tracker = document.getElementById('tracker');
+            var overlay = document.getElementById('overlay');
+            checkbox.checked = false;
+            tracker.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    </script>
+{% endblock script %}
