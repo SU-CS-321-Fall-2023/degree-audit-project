@@ -1,8 +1,8 @@
 # from werkzeug.utils import secure_filename
 # from flask import Flask, jsonify, redirect, url_for, send_from_directory
 # import csv
-from flask import render_template, request, redirect, url_for, flash
-from flask import send_from_directory
+from flask import render_template, request, redirect, send_from_directory, url_for
+from flask import flash, request
 from flask_sqlalchemy import SQLAlchemy
 
 from flask_wtf import FlaskForm
@@ -28,37 +28,36 @@ def ourPaths():
     Purpose: Initializes necessary variable for web app.
     """
     global rootPath
-    # rootPath = os.path.abspath(os.getcwd()) + "\\front-end\\src"
     rootPath = os.path.abspath(os.getcwd())
     print(f"rootPath: {rootPath}")
     
     # global webletIndex
     # webletIndex =  "index.html"
     
-    global password
-    # pwFile = (rootPath + "\\ourPySQL.txt")
-    pwFile = (rootPath + "\\Misc_Folder\\SQL\\ourPySQL.txt")
+    global passwordTA
+    global passwordTC
+    pwFile = (rootPath + "\\Misc_Folder\\SQL\\TA_ourPySQL.txt")
     with open(pwFile, 'r') as passFile:
-        password = passFile.readline()
+        passwordTA = passFile.readline()
+    pwFile = (rootPath + "\\Misc_Folder\\SQL\\TC_ourPySQL.txt")
+    with open(pwFile, 'r') as passFile:
+        passwordTC = passFile.readline()
         # Password for the databases gets read from a file, so
         # that it is not explicitly stored here in the code.
-        # Also, the databases are currently located locally on 
-        # my machine (Alexander G.) and I do not feel inclined 
-        # to allowing the entire world have free root access to 
-        # my computer's databases. MySQL Injections are scary.
+        # MySQL Injections are scary.
 ourPaths()# Must be placed at beginning of file.
 
 # Connections to the MySQL Databases
 # catalog = mysql.connector.connect(
 #     host="174.138.53.254",
 #     user="TheAuditor",
-#     password=password,
+#     password=passwordTA,
 #     database="catalog"
 # )
 # reviews = mysql.connector.connect(
 #     host="174.138.53.254",
 #     user="TheAuditor",
-#     password=password,
+#     password=passwordTA,
 #     database="reviews"
 # )
 # myCatalog = catalog.cursor(prepared=True)
@@ -137,6 +136,25 @@ class ReviewForm(FlaskForm):
     # instructor_demeanor = TextAreaField('What was the professor\'s demeanor like?', validators=[Length(max=250)])
     # Add other new form fields as needed...
 
+@app.errorhandler(404)
+def page_not_found(e):
+    # if a page does not exist
+    if request.path.startswith('/'):
+        # we return a generic 404 page
+        return render_template("Errors/404.html"), 404
+    else:
+        # otherwise we return a generic 404 page
+        return render_template("Errors/404.html"), 404
+@app.errorhandler(405)
+def method_not_allowed(e):
+    # if a request has the wrong method to our API
+    if request.path.startswith('/'):
+        # we return a generic 405 page
+        return render_template("Errors/405.html"), 405
+    else:
+        # otherwise we return a generic 405 page
+        return render_template("Errors/405.html"), 405
+
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -146,6 +164,41 @@ def index():
     else:
         print("Request Method = GET")
     return render_template('index.html')
+
+@app.route('/idForm', methods=['POST'])
+def idForm():
+    try:
+        courses_data = list()
+
+        studentID    = request.form['student_id']
+        # studentEmail = request.form['student_email']
+        print(studentID)
+
+        students = mysql.connector.connect(
+            host="174.138.53.254",
+            user="TheAuditor",
+            password=passwordTA,
+            database="students"
+        )
+        myStudents = students.cursor(prepared=True)
+        myStudents.execute(f"CALL sys.table_exists('students', '{studentID}', @exists); SELECT @exists;")
+        # sql_query = """SELECT studentID FROM students.students WHERE studentID=%s ;"""
+        # myStudents.execute(sql_query,studentID)
+        myResult = myStudents.fetchall()
+
+        for x in myResult:
+            courses_data.append(x)
+        return render_template('APT/progress_tracker.html', courses=courses_data)
+
+    except mysql.connector.Error as error:
+        print("query failed {}".format(error))
+
+    finally:
+        if students.is_connected():
+            myStudents.close()
+            students.close()
+            print("MySQL connection is closed.")
+
 
 
 @app.route('/course-registration')
@@ -185,9 +238,40 @@ def review():
         return redirect(url_for('index'))
     return render_template('Review/reviews.html', form=form)
 
-@app.route('/select_course')
+@app.route('/select_course', methods=['GET', 'POST'])
 def select_course():
-    return render_template('Review/course_selection.html')
+    try:
+        courses = list()
+
+        progress = mysql.connector.connect(
+            host="174.138.53.254",
+            user="TheAuditor",
+            password=passwordTA,
+            database="progress"
+        )
+        myProgress = progress.cursor(prepared=True)
+        sql_query = """SELECT courseTitle FROM agarofalo WHERE qualityPoints IS NOT NULL;"""
+        myProgress.execute(sql_query)
+        myResult = myProgress.fetchall()
+
+        for x in myResult:
+            courses.append(x)
+            print(x)
+        if request.method == 'POST':
+            selected_course = request.form['course_name']
+            return render_template('Review/reviews.html', course=selected_course)
+        return render_template('Review/course_selection.html', courses=courses)
+
+
+    except mysql.connector.Error as error:
+        print("query failed {}".format(error))
+
+    finally:
+        if progress.is_connected():
+            myProgress.close()
+            progress.close()
+            print("MySQL connection is closed.")
+
 
 @app.route('/culture')
 def culture():
@@ -201,7 +285,7 @@ def progressTracker():
         progress = mysql.connector.connect(
             host="174.138.53.254",
             user="TheAuditor",
-            password=password,
+            password=passwordTA,
             database="progress"
         )
         myProgress = progress.cursor(prepared=True)
