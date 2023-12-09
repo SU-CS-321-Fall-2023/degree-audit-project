@@ -1,6 +1,8 @@
 {% extends "index.html" %} 
 {% block title %}SDA - Academic Progress Tracker{% endblock %}
 
+
+<!--
 {% block style %}
     <style>
         /* Style for the background overlay when modal is shown */
@@ -61,6 +63,8 @@
         }
     </style>
 {% endblock %}
+-->
+
 
 {% block content %}
     <div class="progress_tracker" id="aptContainer">
@@ -68,17 +72,21 @@
 
         <label for="showTracker">
             <input type="checkbox" id="showTracker" onclick="toggleTracker()">
-            Show Academic Progress Tracker
+                Show Academic Progress Tracker
+            </input>
         </label>
-        <div class="overlay" id="overlay"></div>
-        <div class="modal" id="tracker">
-            <h2 class="progress_tracker" id="aptH2">Academic Progress Tracker</h2>
+        <div class="progress_tracker" id="aptOverlay"></div>
+        <div class="progress_tracker" id="aptModal">
+            <button class="progress_tracker" id="aptClose" onclick="closeModal()">X</button>
+            <h2 class="progress_tracker" id="aptH2">
+                Academic Progress Tracker
+            </h2>
 
             <table class="progress_tracker" id="aptTable" border="1">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Course Number</th>
+                        <th>Course #</th>
                         <th>Subject</th>
                         <th>CRN</th>
                         <th>Course Title</th>
@@ -112,19 +120,16 @@
                     {% endfor %}
                 </tbody>
             </table>
-            <button onclick="closeModal()">Close</button>
         </div>
     </div>
 {% endblock %}
 
-    <!--
-    -->
 {% block script %}
     <script>
         function toggleTracker() {
             var checkbox = document.getElementById('showTracker');
-            var tracker = document.getElementById('tracker');
-            var overlay = document.getElementById('overlay');
+            var tracker = document.getElementById('aptModal');
+            var overlay = document.getElementById('aptOverlay');
             if (checkbox.checked) {
                 tracker.style.display = 'block';
                 overlay.style.display = 'block';
@@ -136,8 +141,8 @@
 
         function closeModal() {
             var checkbox = document.getElementById('showTracker');
-            var tracker = document.getElementById('tracker');
-            var overlay = document.getElementById('overlay');
+            var tracker = document.getElementById('aptModal');
+            var overlay = document.getElementById('aptOverlay');
             checkbox.checked = false;
             tracker.style.display = 'none';
             overlay.style.display = 'none';
