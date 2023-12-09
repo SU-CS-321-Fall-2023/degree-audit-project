@@ -81,10 +81,10 @@ main {
     width: auto;
     overflow-x: visible;
 
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content:left;
+    align-items: center; */
     /* height: 50vh; */
 
     padding-top: 0px;
@@ -752,6 +752,35 @@ footer {
 !<---- END OF Miscellaneous containers ---->
     */
 
+
+/*
+*<---- Styling for Error Pages ---->
+    */
+.error_page#error_page-Container
+{
+    background-color: var(--accent-color);
+    border-top-left-radius: 6rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 6rem;
+
+    padding-left: 2rem;
+    margin-right: 1rem;
+    margin-left: 5rem;
+}
+.error_page#error_page-Heading
+{
+    color: var(--text-color);
+    font-size: 48pt;
+}
+
+
+/*
+!<---- END OF Styling for Error Pages ---->
+    */
+
+
+
 *,
 *::before,
 *::after {
@@ -768,6 +797,8 @@ footer {
     */
 @media (min-width: 300px)
 {
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-xxs, .student-heading-wrapper#student-heading-wrapper,
     .student-heading-xxs, .student-heading#student-heading
     {
@@ -776,6 +807,8 @@ footer {
 }
 @media (min-width: 400px)
 {
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
     .student-heading-wrapper#student-heading-wrapper,
     .student-heading-xs, .student-heading-xxs, 
@@ -786,6 +819,8 @@ footer {
 }
 @media (min-width: 576px)
 {
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
     .student-heading-wrapper#student-heading-wrapper,
     .student-heading-sm, .student-heading-xs, .student-heading-xxs, 
@@ -796,6 +831,8 @@ footer {
 }
 @media (min-width: 768px)
 {
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-md, 
     .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
     .student-heading-wrapper#student-heading-wrapper,
@@ -808,6 +845,8 @@ footer {
 }
 @media (min-width: 992px)
 {
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-lg, 
     .student-heading-wrapper-md, 
     .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
@@ -822,6 +861,8 @@ footer {
 }
 @media (min-width: 1200px)
 {
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-xl, .student-heading-wrapper-lg, 
     .student-heading-wrapper-md, 
     .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
@@ -836,6 +877,8 @@ footer {
 }
 @media (min-width: 1400px)
 {
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-xxl, .student-heading-wrapper-xl, .student-heading-wrapper-lg, 
     .student-heading-wrapper-md, 
     .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
@@ -922,6 +965,16 @@ div.degree_heading#degree_heading
 /*
 *<---- Styling for idForm in index.html ---->
     */
+.home_Wrapper
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+
+    margin-right: auto;
+    margin-left: auto;
+}
 .myWrapper#myWrapper
 {
     /*background-color: #409639;*/
@@ -935,26 +988,23 @@ div.idForm {
     background-color: var(--background-color);
     border: 2px solid #409639;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow size */
-    width: 100%;
     max-width: 600px;
-    /* min-height: 100%; */
     position: relative;
 
-    /* display: block;
+    display: block;
     justify-content: center;
     align-items: center;
-    flex-direction: column; */
-
+    flex-direction: column;
 
     color: var(--text-color);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-    padding: 0px;
+    padding: 0;
 
     margin-top: 1rem;
-    margin-right: auto;
+    margin-right: 1rem;
     margin-bottom: 1rem;
-    margin-left: auto;
+    margin-left: 1rem;
 }
 div.inner_form {
     /*background-color: #ffffff;*/
@@ -968,6 +1018,74 @@ div.inner_form {
     padding: 10px;
 
     margin: 0 auto;
+}
+p.idForm#heading
+{
+    color: var(--text-color);
+    font-size: 20pt;
+    /* font-weight:900; */
+    /* text-wrap: nowrap; */
+}
+form.idForm#idForm
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:right;
+    /* align-items; */
+}
+div.idForm#student_id, 
+div.idForm#student_email,
+div.idForm#submit
+{
+    border-style: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    margin-left: auto;
+}
+@media (min-width: 200px)
+{
+    input#student_id, input#student_email
+    {
+        margin-left: 1rem;
+    }
+}
+@media (min-width: 400px)
+{
+    div#break
+    {
+        padding-left: 1rem;
+        margin-left: auto;
+    }
+    input#student_id, input#student_email
+    {
+        margin-left: 1rem;
+    }
+}
+@media (min-width: 600px)
+{
+    div#break
+    {
+        padding-left: 3rem;
+        margin-left: auto;
+    }
+    input#student_id, input#student_email
+    {
+        margin-left: 1rem;
+    }
+}
+@media (min-width: 700px)
+{
+    div#break
+    {
+        padding-left: 0;
+        margin-left: auto;
+    }
+    input#student_id, input#student_email
+    {
+        margin-left: 1rem;
+    }
 }
 
 /* Styling for inner elements of the form */
@@ -984,6 +1102,7 @@ div.idForm > * {
 /*
 *<---- Styling for Dark Mode Toggle ---->
     */
+
 .theme-toggle#theme-toggle_container
 {
     height: 3rem;
@@ -1034,6 +1153,7 @@ div.theme-toggle#theme-toggle label
     padding-right: 15px;
     padding-left: 15px;
 }
+
 /*
 !<---- END OF Styling for Dark Mode Toggle ---->
     */
@@ -1047,16 +1167,13 @@ div.theme-toggle#theme-toggle label
 
 .progress_tracker#aptContainer
 {
-    /* height: 20vh; */
-
+    width: 100%;
     background-color: var(--primary-color);
-    /* border-style: solid;
-    border-width: 2pt;
-    border-color: var(--accent-color); */
-
     overflow: auto;
+
+    padding: 1rem;
 }
-.progress_tracker#aptModal
+/* .progress_tracker#aptModal
 {
     background-color: var(--background-color);
     width: 100%;
@@ -1065,10 +1182,10 @@ div.theme-toggle#theme-toggle label
     border-style: solid;
     border-color: var(--accent-color);
     border-width: 3pt;
-    border-radius: 8px;      /* Rounded corners */
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-    display: none;
+    display: block;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1078,33 +1195,31 @@ div.theme-toggle#theme-toggle label
 
     padding: 20px;
     margin: 0 auto;
-}
+} */
 .progress_tracker#aptH1,
 .progress_tracker#aptH2
 {
-    background-color: var(--primary-color);
-
-    color: var(--text-color);
+    background-color: var(--secondary-color);
+    color: var(--rev-text-color);
 
     padding: 1rem;
-
     margin-top: 0px;
 }
 .progress_tracker#aptH2
 {
     width: 100%;
-    border-radius: 6px 6px 0 0; /* Rounded corners for the top of the modal */
+    border-radius: 6px 6px 0 0;
     overflow: visible;
 }
-.progress_tracker#aptClose
+/* .progress_tracker#aptClose
 {
     background-color: var(--close-button-color);
     border: none;
-    border-radius: 4px;        /* Rounded corners for the button */
+    border-radius: 4px;
 
     display: block;
     float: right;
-    cursor: pointer;           /* Hand cursor on hover */
+    cursor: pointer;
 
     color: white;
 
@@ -1114,7 +1229,7 @@ div.theme-toggle#theme-toggle label
 {
     background-color: var(--hover-background-color);
     color: var(--hover-text-color);
-}
+} */
 .progress_tracker#aptTable
 {
     background-color: var(--background-color);
@@ -1156,6 +1271,7 @@ table.progress_tracker#aptTable td
     background-color: rgba(247, 0, 0, 0.5);
     z-index: 1;
 } */
+
 /*
 !<---- END OF Styling for progress_tracker.html ---->
     */
@@ -1169,6 +1285,11 @@ table.progress_tracker#aptTable td
 *<---- Styling for culture.html ---->
     */
 
+.cultural_credit#ccContainer
+{
+    background-color: var(--background-color);
+}
+
 /*
 !<---- END OF Styling for culture.html ---->
     */
@@ -1176,17 +1297,268 @@ table.progress_tracker#aptTable td
 
 
 
-/*? Feature: Course Reviews */
 /*
 *<---- Styling for course_selection.html ---->
     */
 
+.course_selection#csContainer
+{
+    background-color: var(--background-color);
+}
+
 /*
 !<---- END OF Styling for course_selection.html ---->
     */
+
+
+/*? Feature: Course Reviews */
 /*
 *<---- Styling for reviews.html ---->
     */
+
+.course_review#reviewHeading,
+.course_review#reviewNotice
+{
+    color: var(--text-color);
+}
+.progress_tracker#aptH2
+{
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    overflow: visible;
+}
+.course_review#reviewForm
+{
+    width: 100%;
+    background-color: var(--primary-color);
+    overflow: auto;
+
+    padding: 1rem;
+}
+
+/* Responsive font sizes */
+body, input, select, textarea, button {
+    /* Responsive font size */
+    font-size: 0.8rem; 
+}
+
+.modal h2 {
+    background-color: #4CAF50;
+    padding: 10px;
+    margin-top: 0;
+    border-radius: 6px 6px 0 0;
+    color: white;
+}
+
+.modal button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #45a049;
+}
+
+.rating label
+{
+    font-size: 25px;
+    text-decoration: none;
+    color: #aaa;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+.rating > a:hover,
+.rating > a:hover ~ a,
+.rating > input:checked ~ label 
+{
+    color: gold;
+}
+.star-rating
+{
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order of the flex items */
+    justify-content: flex-end; /* Align items to the right */
+}
+.professor-rating-label
+{
+    font-size: 14px; /* Smaller font size for the label */
+    margin-left: 10px; /* Space between the label and the stars */
+}
+/* Hide the radio buttons */
+.star-rating input[type="radio"]
+{
+    display: none;
+}
+/* Style for the star labels */
+.star-rating label
+{
+    font-size: 25px;
+    color: black; /* Default color of stars */
+    cursor: pointer;
+}
+
+/* Change color of stars when radio button is checked */
+.star-rating input[type="radio"]:checked ~ label
+{
+    color: gold;
+}
+
+
+.rating input
+{
+    display: none;
+}
+
+.form-field {
+    margin-bottom: 10px;
+}
+
+/* Slider CSS */
+.slider-container
+{
+    display: flex;
+    align-items: center;
+}
+.slider-label
+{
+    margin-right: 10px;
+}
+.slider
+{
+    flex: 1;
+    margin-right: 10px;
+}
+.slider-value
+{
+    width: 30px;
+    text-align: center;
+}
+
+
+/* Style for each form-field group */
+.form-field {
+    margin-bottom: 10px; /* Adjust space between each form field */
+}
+
+/* Style for each question label */
+.question-label {
+    display: inline-block; /* Display the label inline with the radio buttons */
+    margin-right: 10px; /* Space between the label and the radio buttons */
+    vertical-align: top; /* Aligns the label with the top of the radio buttons */
+}
+
+/* Style for each radio button group */
+.radio-group {
+    display: block; /* Display the radio buttons inline with the label */
+}
+
+/* Style for each radio option */
+.radio-group label {
+    display: inline-block; 
+    margin-right: 10px; /* Space between each radio button */
+    white-space: nowrap; /* Prevents label text from wrapping */
+    margin-bottom: 0; /* Remove bottom margin if any */
+}
+
+/* Styling radio buttons and checkboxes for better interaction */
+.radio-group label, .checkbox-group label {
+    padding: 5px; /* Easier to click */
+    cursor: pointer;
+}
+
+/* Organizing form sections */
+.form-section {
+    margin-bottom: 30px; /* Space out sections */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .modal {
+        padding: 10px; /* Smaller padding on smaller screens */
+        width: 95%; /* Use more width on smaller screens */
+    }
+
+    .form-field, .question-label, .radio-group {
+    /* Adjust layout for smaller screens */
+    }
+
+    .radio-group label {
+        /* Adjustments for smaller screens */
+        display: inline-block; /* Aligns labels horizontally */
+        margin-right: 10px; /* Space between each label */
+        margin-bottom: 0; /* Remove bottom margin if any */
+    }
+}
+
+/* Styles for tabs or accordion (if implemented) */
+.tab-container, .accordion-container {
+/* Styles for tab or accordion layout */
+}
+
+input[type="text"], select, textarea {
+    font-size: 0.9rem; /* Reduce font size in form elements */
+}
+
+button {
+    padding: 5px 10px; /* Adjust button padding */
+}
+
+/* Adjusting the base font size */
+body {
+    font-size: 0.8rem; /* Decrease the base font size */
+}
+
+/* Adjusting headings */
+h1 {
+    font-size: 1.0 rem; /* Adjust the size as needed */
+}
+
+h2 {
+    font-size: 1.0 rem; /* Adjust the size as needed */
+}
+
+/* Adjusting labels and buttons */
+label, button {
+    font-size: 0.8rem; /* Adjust the size as needed */
+}
+
+/* Adjusting form inputs */
+input[type="text"], select, textarea {
+    font-size: 0.8rem; /* Adjust the size as needed */
+}
+
+/* Other specific adjustments as needed */
+/* ... */
+
+
+/* Flex container for rating and feedback */
+.rating-feedback-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between elements */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between items */
+}
+
+.star-rating-container, .feedback-textarea-container {
+    flex: 1; /* Take up equal space */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+  }
+/* *Everything below this comment is dedicated to responsive styling. */
+
+@media (max-width: 768px) {
+    .rating-feedback-container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+}
 
 /*
 !<---- END OF Styling for reviews.html ---->
@@ -1200,6 +1572,11 @@ table.progress_tracker#aptTable td
 *<---- Styling for course_search.html ---->
     */
 
+.course_search#course_searchContainer
+{
+    background-color: var(--background-color);
+}
+
 /*
 !<---- END OF Styling for course_search.html ---->
     */
@@ -1211,6 +1588,11 @@ table.progress_tracker#aptTable td
 /*
 *<---- Styling for course_registration.html ---->
     */
+
+.course_registration#regContainer
+{
+    background-color: var(--background-color);
+}
 
 /*
 !<---- END OF Styling for course_registration.html ---->
