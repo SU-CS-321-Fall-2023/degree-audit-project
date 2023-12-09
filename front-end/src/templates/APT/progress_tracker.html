@@ -1,73 +1,9 @@
-{% extends "index.html" %} 
+{% extends "index.html" %}
 {% block title %}SDA - Academic Progress Tracker{% endblock %}
-
-
-<!--
-{% block style %}
-    <style>
-        /* Style for the background overlay when modal is shown */
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-
-        /* Styles for the modal */
-        .modal {
-            background-color: black;  /* Black background */
-            width: 100%;
-            max-width: 90%;
-            height: 80vh;
-
-            display: block;
-
-            padding: 20px;
-            margin: 0 auto;
-
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;             /* White text */
-            z-index: 2;
-            border-radius: 8px;      /* Rounded corners */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            overflow: scroll;
-        }
-
-        .modal h2 {
-            background-color: green; /* Green header */
-            padding: 10px;
-            margin-top: 0;
-            border-radius: 6px 6px 0 0; /* Rounded corners for the top of the modal */
-        }
-
-        .modal button {
-            background-color: white;   /* White button */
-            color: black;              /* Black text on the button */
-            padding: 5px 10px;         /* Some padding for the button */
-            border: none;              /* No border */
-            border-radius: 4px;        /* Rounded corners for the button */
-            cursor: pointer;           /* Hand cursor on hover */
-        }
-
-        .modal button:hover {
-            background-color: green;  /* Green background on hover */
-            color: white;             /* White text on hover */
-        }
-    </style>
-{% endblock %}
--->
-
 
 {% block content %}
     <div class="progress_tracker" id="aptContainer">
+        <!--
         <h1 class="progress_tracker" id="aptH1">Welcome to the Academic Progress Tracker</h1>
 
         <label for="showTracker">
@@ -78,6 +14,7 @@
         <div class="progress_tracker" id="aptOverlay"></div>
         <div class="progress_tracker" id="aptModal">
             <button class="progress_tracker" id="aptClose" onclick="closeModal()">X</button>
+        -->
             <h2 class="progress_tracker" id="aptH2">
                 Academic Progress Tracker
             </h2>
@@ -120,7 +57,9 @@
                     {% endfor %}
                 </tbody>
             </table>
+        <!--
         </div>
+        -->
     </div>
 {% endblock %}
 
