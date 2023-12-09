@@ -24,10 +24,6 @@
         </style>
     </head>
     <body>
-        <!--
-            <header-component></header-component>
-            {% block header %}{% endblock header %}
-        -->
         <header class="header" aria-label="Site header">
             <div class="inner_header">
                 <nav class="nav-bar-bottom">
@@ -82,14 +78,14 @@
                 <div class="footer__container__row">
                     <div class="footer__left_column">
                         <div class="The_Auditors_Logo__container">
-                            <a href="/" class="footer__logo" id="footer__logo" aria-label="The Auditors' Logo">
-                                <h1 class="footer__logo"id="footer__logo-heading">
+                            <h1 class="footer__logo"id="footer__logo-heading">
+                                <a href="/" class="footer__logo" id="footer__logo" aria-label="The Auditors' Logo">
                                     The Auditors
-                                </h1>
-                                <!--
-                                <img src="./static/images/EPIC-Danny-DeVito.jpg" alt="Stetson Smart Degree Audit" id="nav-bar__logo">
-                                -->
-                            </a>
+                                    <!--
+                                        <img src="./static/images/EPIC-Danny-DeVito.jpg" alt="Stetson Smart Degree Audit" id="nav-bar__logo">
+                                    -->
+                                </a>
+                            </h1>
                         </div>
                     </div>
                     <div class="footer__right_column">
@@ -99,11 +95,13 @@
                                     <span class="widget_title" id="footer_links">Helpful Links</span>
                                 </li>
                                 <ul class="widget_list" id="footer_links">
+                                    <!--
                                     <li class="widget_item" id="footer_links">
                                         <a href="/front-end/src/about-us.html" class="widget_link" id="about_us" target="blank">About Us</a>
                                     </li>
+                                    -->
                                     <li class="widget_item" id="footer_links">
-                                        <a href="https://github.com/SU-CS-321-Fall-2023/degree-audit-project" class="widget_link" id="repo" target="blank">GitHub Repo</a>
+                                        <a href="https://github.com/SU-CS-321-Fall-2023/degree-audit-project" class="widget_link" id="repo" rel="noopener">GitHub Repo</a>
                                     </li>
                                 </ul>
                             </ul>
@@ -112,10 +110,6 @@
                 </div>
             </div>
         </footer>
-        <!--
-            <footer-component></footer-component>
-            {% block footer %}{% endblock footer %}
-        -->
         <!--<script>
             const darkModeToggle = document.getElementById('darkModeToggle');
             darkModeToggle.addEventListener('change', function() {
