@@ -2,24 +2,24 @@
 {% block title %}SDA - Course Reviews{% endblock %}
 
 {% block content %}
-        <h1>Review for {{ course }}</h1>
-        <h1>Welcome to Course Reviews</h1>
-        <p>Please quantify your responses. Don't just say "it was good", "instructor can't teach", "the class was terrible", etc. Offer an explanation for why you feel the way you do so as to help others understand your perspective.</p>
-
-        <label>
-            <input type="checkbox" id="showReview" onclick="toggleReview()"> Show Course Review Form
-        </label>
-
-        <div class="overlay" id="overlay"></div>
-
-        <div class="modal" id="reviewForm">
-            <h2>Course Review Form</h2>
+    <div class="course_review" id="reviewContainer">
+        <h1 class="course_review" id="reviewHeading">Welcome to Course Reviews</h2>
+        <p class="course_review" id="reviewNotice">
+            <i>Please quantify your responses.Don't just say "it was good", "instructor can't teach", "the class was terrible", etc.
+                Offer an explanation for why you feel the way you do so as to help others understand your perspective.</i>
+        </p>
+        <div class="course_review" id="reviewForm">
+            <h2 class="course_review" id="reviewHeading">Course Review Form</h2>
 
             <form>
                 <!-- Course Name dropdown field -->
                 <div class="form-field">
                     
                     <select name="course_name" required>
+                        <!--
+                            Create a list from a MySQL query.
+                            SELECT * FROM 'progress'.'agarofalo' WHERE qualityPoints IS NOT NULL;
+                        -->
                         <option value="" disabled selected>Select your course to review</option>
                         <option value="Software Development II">CSCI 321</option>
                         <option value="Discrete Structures">CSCI 211</option>
@@ -137,9 +137,8 @@
 
                 <input type="submit" value="Save Review">
             </form>
-
-            <button onclick="closeModal()">Close</button>
         </div>
+    </div>
 {% endblock %}
 
 {% block script %}
