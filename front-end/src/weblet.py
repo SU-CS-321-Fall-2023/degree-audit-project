@@ -81,9 +81,9 @@ def create_weblet():
     @weblet.errorhandler(405)
     def method_not_allowed(e):
         # if a request has the wrong method to our API
-        if request.path.startswith('/'):
-            # we return a generic 405 page
-            return render_template("errors/405.html"), 405
+        if request.path == "/APT/progress-tracker":
+            # we return a special 405 page
+            return render_template("errors/405_APT.html"), 405
         else:
             # otherwise we return a generic 405 page
             return render_template("errors/405.html"), 405

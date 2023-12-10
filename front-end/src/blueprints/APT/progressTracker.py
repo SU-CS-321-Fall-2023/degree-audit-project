@@ -43,7 +43,7 @@ progressTracker_bp = Blueprint(
 )
 
 
-@progressTracker_bp.route('/progress-tracker', methods=['GET','POST'])
+@progressTracker_bp.route('/progress-tracker', methods=['POST'])
 def progress_tracker():
     try:
         courses_data = list()

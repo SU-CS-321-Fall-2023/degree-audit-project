@@ -37,6 +37,7 @@
 
     --rev-text-color: #ffffff; /* For when you want light text in Light Mode. */
     --close-button-color: #c00;
+    --font-weight-boldToNormal: bold;
 
 
     /* font-size: 10pt; */
@@ -55,6 +56,8 @@ body.dark-mode {
     --hover-text-color: #ffffff; /* Dark mode hover text color */
 
     --rev-text-color: #000000; /* For when you want dark text in Dark Mode. */
+    --close-button-color: #c00;
+    --font-weight-boldToNormal: normal;
 }
 
 
@@ -151,7 +154,6 @@ p {
     */
 
 header object {
-    /*background-color: palegreen;*/
     background-color: var(--secondary-color);
     width: 1000px;
     height: 248px;
@@ -164,7 +166,6 @@ header object {
     margin: 0px;
 }
 header.header {
-    /*background-color: #85ab82;*/
     background-color: var(--secondary-color);
     width: 100%;
     min-height: 100px;
@@ -178,7 +179,6 @@ header.header {
     margin: 0;
 }
 div.inner_header {
-    /*background-color: #ffffff;*/
     background-color: var(--background-color);
     width: 100%;
     height: 100%;
@@ -499,7 +499,6 @@ nav.nav-bar-bottom {
     */
 
 footer {
-    /*background-color: #ffffff;*/
     background-color: var(--background-color);
     height: 100%;
 
@@ -507,7 +506,6 @@ footer {
     /* margin-top: 2rem; */
 }
     div.footer__container {
-        /*background-color: #409639;*/
         background-color: var(--primary-color);
         min-width: 100%;
         min-height: 100%;
@@ -758,23 +756,44 @@ footer {
     */
 .error_page#error_page-Container
 {
+    min-width: min-content;
     background-color: var(--accent-color);
     border-top-left-radius: 6rem;
-    border-bottom-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 6rem;
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 6rem;
+    border-bottom-right-radius: 0rem;
 
-    padding-left: 2rem;
+    padding-right:3rem;
+    padding-left: 3rem;
     margin-right: 1rem;
+    margin-bottom: 0px;
     margin-left: 5rem;
 }
 .error_page#error_page-Heading
 {
     color: var(--text-color);
     font-size: 48pt;
+    margin-bottom: 0px;
 }
+.error_page#error_page-Notice_Container
+{
+    background-color: var(--accent-color);
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 6rem;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 6rem;
 
-
+    padding-right:3rem;
+    padding-left: 3rem;
+    margin-right: 1rem;
+    margin-bottom: 0px;
+    margin-left: 5rem;
+}
+.APT-error_page#APT-error_page-Notice
+{
+    font-size: 16pt;
+    font-style: italic;
+}
 /*
 !<---- END OF Styling for Error Pages ---->
     */
@@ -977,14 +996,13 @@ div.degree_heading#degree_heading
 }
 .myWrapper#myWrapper
 {
-    /*background-color: #409639;*/
     background-color: var(--primary-color);
 
     padding: 0;
     margin: 0;
 }
-div.idForm {
-    /* background-color: #85ab82; */
+div.idForm
+{
     background-color: var(--background-color);
     border: 2px solid #409639;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow size */
@@ -1006,8 +1024,8 @@ div.idForm {
     margin-bottom: 1rem;
     margin-left: 1rem;
 }
-div.inner_form {
-    /*background-color: #ffffff;*/
+div.inner_form
+{
     background-color: var(--inner-form-bg);
     width: 100%;
     height: 100%;
@@ -1016,15 +1034,17 @@ div.inner_form {
     display: block;
 
     padding: 10px;
-
     margin: 0 auto;
 }
 p.idForm#heading
 {
     color: var(--text-color);
     font-size: 20pt;
-    /* font-weight:900; */
+    font-weight: var(--font-weight-boldToNormal);
     /* text-wrap: nowrap; */
+
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 form.idForm#idForm
 {
@@ -1043,6 +1063,10 @@ div.idForm#submit
     margin-top: 0.5rem;
     margin-right: 1rem;
     margin-left: auto;
+}
+input.idForm#submit
+{
+    color: #000000;
 }
 @media (min-width: 200px)
 {
@@ -1221,7 +1245,7 @@ div.theme-toggle#theme-toggle label
     float: right;
     cursor: pointer;
 
-    color: white;
+    color: #ffffff;
 
     padding: 5px 10px;
 }
@@ -1347,12 +1371,12 @@ body, input, select, textarea, button {
     padding: 10px;
     margin-top: 0;
     border-radius: 6px 6px 0 0;
-    color: white;
+    color: #ffffff;
 }
 
 .modal button {
     background-color: #4CAF50;
-    color: white;
+    color: #ffffff;
     padding: 5px 10px;
     border: none;
     border-radius: 4px;
@@ -1397,7 +1421,7 @@ body, input, select, textarea, button {
 .star-rating label
 {
     font-size: 25px;
-    color: black; /* Default color of stars */
+    color: #000000; /* Default color of stars */
     cursor: pointer;
 }
 
