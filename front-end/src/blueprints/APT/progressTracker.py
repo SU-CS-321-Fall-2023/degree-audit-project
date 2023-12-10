@@ -43,10 +43,14 @@ progressTracker_bp = Blueprint(
 )
 
 
-@progressTracker_bp.route('/progress-tracker')
-def progressTracker():
+@progressTracker_bp.route('/progress-tracker', methods=['GET','POST'])
+def progress_tracker():
     try:
         courses_data = list()
+
+        # studentID    = request.form['student_id']
+        # studentEmail = request.form['student_email']
+        # student_ID = studentID
 
         progress = mysql.connector.connect(
             host="174.138.53.254",
@@ -70,4 +74,4 @@ def progressTracker():
         if progress.is_connected():
             myProgress.close()
             progress.close()
-            print("MySQL connection is closed.")
+            print("MySQL connection (TA) is closed.")

@@ -3,6 +3,8 @@ from flask import flash, request
 
 from flask_mail import Mail, Message
 
+# import mysql.connector
+
 # from weblet import rootPath, passwordTA, passwordTC, weblet
 def ourPaths():
     """
@@ -18,17 +20,17 @@ def ourPaths():
     global rootPath
     rootPath = os.path.abspath(os.getcwd())
 
-    global passwordTA
-    global passwordTC
-    pwFile = (rootPath + "\\Misc_Folder\\SQL\\TA_ourPySQL.txt")
-    with open(pwFile, 'r') as passFile:
-        passwordTA = passFile.readline()
-    pwFile = (rootPath + "\\Misc_Folder\\SQL\\TC_ourPySQL.txt")
-    with open(pwFile, 'r') as passFile:
-        passwordTC = passFile.readline()
-        # Password for the databases gets read from a file, so
-        # that it is not explicitly stored here in the code.
-        # MySQL Injections are scary.
+    # global passwordTA
+    # global passwordTC
+    # pwFile = (rootPath + "\\Misc_Folder\\SQL\\TA_ourPySQL.txt")
+    # with open(pwFile, 'r') as passFile:
+    #     passwordTA = passFile.readline()
+    # pwFile = (rootPath + "\\Misc_Folder\\SQL\\TC_ourPySQL.txt")
+    # with open(pwFile, 'r') as passFile:
+    #     passwordTC = passFile.readline()
+    #     # Password for the databases gets read from a file, so
+    #     # that it is not explicitly stored here in the code.
+    #     # MySQL Injections are scary.
 
     print("Loading '/Email'...")
 ourPaths() # Must be placed at beginning of file.

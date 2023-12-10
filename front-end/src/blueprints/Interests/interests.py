@@ -1,6 +1,8 @@
 from flask import Blueprint, render_template
 from flask import request
 
+import mysql.connector
+
 # from weblet import rootPath, passwordTA, passwordTC, weblet
 def ourPaths():
     """
