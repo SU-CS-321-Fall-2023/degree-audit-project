@@ -345,3 +345,9 @@ ip.md
 /Misc_Folder
 grades.json
 gradesTrimmed.json
+
+
+#! Temporary exclusions
+/Database
+/front-end/src/db/
+/front-end/src/jsonCreate.py
