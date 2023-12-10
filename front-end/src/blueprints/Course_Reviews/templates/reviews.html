@@ -1,5 +1,6 @@
 {% extends "index.html" %}
-{% block title %}SDA - Course Reviews{% endblock %}
+{% block title %}SDA - Course Reviews{% endblock title %}
+
 
 {% block content %}
     <div class="course_review" id="reviewContainer">
@@ -139,54 +140,55 @@
             </form>
         </div>
     </div>
-{% endblock %}
+{% endblock content %}
+
 
 {% block script %}
-        <script>
-            // Function to update character count for a specific textarea
-            function updateCharCount(textareaElement) {
-                    var charCountDisplay = textareaElement.nextElementSibling; // Assuming the character count display <p> is right after the textarea
-                    var charCount = textareaElement.value.length;
-                    charCountDisplay.textContent = 'Characters: ' + charCount + '/250';
+    <script>
+        // Function to update character count for a specific textarea
+        function updateCharCount(textareaElement) {
+                var charCountDisplay = textareaElement.nextElementSibling; // Assuming the character count display <p> is right after the textarea
+                var charCount = textareaElement.value.length;
+                charCountDisplay.textContent = 'Characters: ' + charCount + '/250';
 
-                    // Optional: Change color if the count exceeds 250 characters
-                    if (charCount > 250) {
-                        charCountDisplay.style.color = 'red';
-                    } else {
-                        charCountDisplay.style.color = 'black';
-                    }
-                }
-
-
-            document.querySelector('form').addEventListener('submit', function(event) {
-                var words = document.getElementById('reviewTextarea').value.split(/\s+/).filter(Boolean).length;
-
-                if (words > 100) {
-                    alert('Review exceeds the maximum word count of 100. Please reduce your review length.');
-                    event.preventDefault();
-                }
-            });
-
-            function toggleReview() {
-                var checkbox = document.getElementById('showReview');
-                var reviewForm = document.getElementById('reviewForm');
-                var overlay = document.getElementById('overlay');
-                if (checkbox.checked) {
-                    reviewForm.style.display = 'block';
-                    overlay.style.display = 'block';
+                // Optional: Change color if the count exceeds 250 characters
+                if (charCount > 250) {
+                    charCountDisplay.style.color = 'red';
                 } else {
-                    reviewForm.style.display = 'none';
-                    overlay.style.display = 'none';
+                    charCountDisplay.style.color = 'black';
                 }
             }
 
-            function closeModal() {
-                var checkbox = document.getElementById('showReview');
-                var reviewForm = document.getElementById('reviewForm');
-                var overlay = document.getElementById('overlay');
-                checkbox.checked = false;
+
+        document.querySelector('form').addEventListener('submit', function(event) {
+            var words = document.getElementById('reviewTextarea').value.split(/\s+/).filter(Boolean).length;
+
+            if (words > 100) {
+                alert('Review exceeds the maximum word count of 100. Please reduce your review length.');
+                event.preventDefault();
+            }
+        });
+
+        function toggleReview() {
+            var checkbox = document.getElementById('showReview');
+            var reviewForm = document.getElementById('reviewForm');
+            var overlay = document.getElementById('overlay');
+            if (checkbox.checked) {
+                reviewForm.style.display = 'block';
+                overlay.style.display = 'block';
+            } else {
                 reviewForm.style.display = 'none';
                 overlay.style.display = 'none';
             }
-        </script>
-{% endblock %}
+        }
+
+        function closeModal() {
+            var checkbox = document.getElementById('showReview');
+            var reviewForm = document.getElementById('reviewForm');
+            var overlay = document.getElementById('overlay');
+            checkbox.checked = false;
+            reviewForm.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    </script>
+{% endblock script %}

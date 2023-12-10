@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="">
-<head>
-    <title>Recommended Courses</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
+{% extends "index.html" %}
+{% block title %}SDA - Recommended Courses{% endblock title %}
+
+
+{% block content %}
     <div class="header">
         <h1>myStetson</h1>
     </div>
@@ -38,5 +36,4 @@
             {% endfor %}
         </ul>
     </div>
-</body>
-</html>
+{% endblock content %}

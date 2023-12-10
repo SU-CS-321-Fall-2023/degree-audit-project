@@ -1,5 +1,6 @@
 {% extends "index.html" %}
-{% block title %}SDA - Course Reviews{% endblock %}
+{% block title %}SDA - Course Reviews{% endblock title %}
+
 
 {% block style %}
         form {
@@ -15,12 +16,12 @@
             border-radius: 5px;
             border: 1px solid #ccc;
         }
-{% endblock %}
+{% endblock style %}
 
 
 {% block content %}
     <div class="course_selection" id="csContainer">
-        <form action="{{ url_for('courseReview') }}" method="post">
+        <form action="{{ url_for('courseReviews') }}" method="post">
             <h2>Select Your Course</h2>
 
             <!-- Adding label for accessibility -->
@@ -35,4 +36,4 @@
             <input type="submit" value="Next">
         </form>
     </div>
-{% endblock %}
+{% endblock content %}

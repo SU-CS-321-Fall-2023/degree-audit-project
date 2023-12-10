@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="">
-<head>
-    <title>Your Schedule</title>
-    <style>
-        body {
-            background-color: white;
-            color: green;
-        }
+{% extends "index.html" %}
+{% block title %}SDA - Your Schedule{% endblock title %}
+
+
+{% block style %}
         table {
             border-collapse: collapse;
             width: 50%;
@@ -18,9 +14,10 @@
         th, td {
             padding: 10px;
         }
-    </style>
-</head>
-<body>
+{% endblock style %}
+
+
+{% block content %}
     <h1>Your Schedule</h1>
     <p>Your selected interests:</p>
     <ul>
@@ -39,6 +36,4 @@
             <td>John Doe</td>
         </tr>
     </table>
-</body>
-</html>
-
+{% endblock content %}

@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Alert Demo</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" id="default-theme">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style-light.css') }}" id="light-theme" disabled>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style-dark.css') }}" id="dark-theme" disabled>
-</head>
-<body>
+{% extends "index.html" %}
+{% block title %}SDA - Email Alerts{% endblock title %}
+
+
+{% block content %}
     <h1>Email Alert Demo</h1>
-   <form method="POST" action="/send_alert">
-    <label for="email">Email:</label>
-    <input type="text" name="email" id="email">
-    <input type="submit" value="Send Alert">
-</form>
+    <form method="POST" action="/send_alert">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
+        <input type="submit" value="Send Alert">
+    </form>
 
     <button id="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
     {% with messages = get_flashed_messages() %}
@@ -26,6 +20,10 @@
             </ul>
         {% endif %}
     {% endwith %}
+{% endblock content %}
+
+
+{% block script %}
     <script>
         function toggleTheme() {
             const defaultTheme = document.getElementById('default-theme');
@@ -37,5 +35,4 @@
             darkTheme.disabled = !darkTheme.disabled;
         }
     </script>
-</body>
-</html>
+{% endblock script %}

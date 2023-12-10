@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title>{% block title %}SDA - Home{% endblock %}</title>
+        <title>{% block title %}SDA - Home{% endblock title %}</title>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE-edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,7 +19,7 @@
                 background: black;
             }
             {% block style %}
-            {% endblock %}
+            {% endblock style %}
         </style>
     </head>
     <body>
@@ -40,7 +40,7 @@
                                         <a href="/" class="nav-item nav-link" id="home" aria-label="Link to the Smart Degree Audit Homepage">Home</a>
                                         <a href="/course-registration" class="nav-item nav-link" id="course-registration" aria-label="Link for Course Registration">Registration</a>
                                         <a href="/course-search" class="nav-item nav-link" id="course_search" aria-label="Link to the Course Search">Course Search</a>
-                                        <a href="/Review/course-selection" class="nav-item nav-link" id="review" aria-label="Link to view and submit Course Reviews">Course Review</a>
+                                        <a href="/course-reviews/course-selection" class="nav-item nav-link" id="review" aria-label="Link to view and submit Course Reviews">Course Review</a>
                                         <a href="/culture" class="nav-item nav-link" id="culture" aria-label="Link to view your Cultural Credits">Cultural Credits</a>
                                         <a href="/progress-tracker" class="nav-item nav-link" id="progress_tracker" aria-label="Link to view your progress to your Degree">Progress Tracker</a>
                                     </div>
@@ -69,7 +69,7 @@
         -->
             <div class="content_container" id="main_block_container">
                 {% block content %}
-                {% endblock %}
+                {% endblock content %}
             </div>
         </main>
         <footer class="footer" aria-label="Site footer">
@@ -131,6 +131,7 @@
                 document.body.classList.toggle('dark-mode', this.checked);
             });
         </script>
-        {% block script %}{% endblock script %}
+        {% block script %}
+        {% endblock script %}
     </body>
 </html>
