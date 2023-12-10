@@ -15,10 +15,7 @@ def ourPaths():
     global rootPath
     rootPath = os.path.abspath(os.getcwd())
     print(f"rootPath: {rootPath}")
-    
-    # global webletIndex
-    # webletIndex =  "index.html"
-    
+
     global passwordTA
     global passwordTC
     pwFile = (rootPath + "\\Misc_Folder\\SQL\\TA_ourPySQL.txt")

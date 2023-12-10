@@ -45,7 +45,7 @@ ourPaths() # Must be placed at beginning of file.
 # app.register_blueprint(courseReviews_bp, url_prefix='/course-reviews')
 courseReviews_bp = Blueprint('courseReviews', __name__,
                   root_path = rootPath,
-                  template_folder= rootPath + "/front-end/src/Course_Reviews/templates",
+                  template_folder= rootPath + "/front-end/src/blueprints/Course_Reviews/templates",
                   static_folder= rootPath + "/front-end/src/static")
 
 courseReviews_Flask = Flask('courseReviews')

@@ -23,7 +23,7 @@ ourPaths() # Must be placed at beginning of file.
 # app.register_blueprint(errors_bp, url_prefix='/error')
 errors_bp = Blueprint('errors', __name__,
                       root_path = rootPath,
-                      template_folder= rootPath + "/front-end/src/Errors/templates",
+                      template_folder= rootPath + "/front-end/src/blueprints/Errors/templates",
                       static_folder= rootPath + "/front-end/src/static")
 
 

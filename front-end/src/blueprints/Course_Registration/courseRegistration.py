@@ -34,7 +34,7 @@ ourPaths() # Must be placed at beginning of file.
 # app.register_blueprint(courseRegistration_bp, url_prefix='/course-registration')
 courseRegistration_bp = Blueprint('courseRegistration', __name__,
                                   root_path = rootPath,
-                                  template_folder= rootPath + "/front-end/src/Course_Registration/templates",
+                                  template_folder= rootPath + "/front-end/src/blueprints/Course_Registration/templates",
                                   static_folder= rootPath + "/front-end/src/static")
 
 

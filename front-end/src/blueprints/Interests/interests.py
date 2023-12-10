@@ -35,7 +35,7 @@ ourPaths() # Must be placed at beginning of file.
 # app.register_blueprint(interests_bp, url_prefix='/interests')
 interests_bp = Blueprint('interests', __name__,
                          root_path = rootPath,
-                         template_folder= rootPath + "/front-end/src/Interests/templates",
+                         template_folder= rootPath + "/front-end/src/blueprints/Interests/templates",
                          static_folder= rootPath + "/front-end/src/static")
 
 

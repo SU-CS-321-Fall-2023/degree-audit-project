@@ -37,7 +37,7 @@ ourPaths() # Must be placed at beginning of file.
 # app.register_blueprint(email_bp, url_prefix='/email')
 email_bp = Blueprint('email', __name__,
                   root_path = rootPath,
-                  template_folder= rootPath + "/front-end/src/Email/templates",
+                  template_folder= rootPath + "/front-end/src/blueprints/Email/templates",
                   static_folder= rootPath + "/front-end/src/static")
 
 email_Flask = Flask('email')

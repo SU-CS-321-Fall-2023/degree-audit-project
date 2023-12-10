@@ -36,7 +36,7 @@ ourPaths() # Must be placed at beginning of file.
 # app.register_blueprint(progressTracker_bp, url_prefix='/APT')
 progressTracker_bp = Blueprint('progressTracker', __name__,
                                root_path = rootPath,
-                               template_folder= rootPath + "/front-end/src/APT/templates",
+                               template_folder= rootPath + "/front-end/src/blueprints/APT/templates",
                                static_folder= rootPath + "/front-end/src/static")
 
 

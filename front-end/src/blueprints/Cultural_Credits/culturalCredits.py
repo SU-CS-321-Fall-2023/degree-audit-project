@@ -34,7 +34,7 @@ ourPaths() # Must be placed at beginning of file.
 # app.register_blueprint(culturalCredits_bp, url_prefix='/cultural-credits')
 culturalCredits_bp = Blueprint('culturalCredits', __name__,
                                root_path = rootPath,
-                               template_folder= rootPath + "/front-end/src/Cultural_Credits/templates",
+                               template_folder= rootPath + "/front-end/src/blueprints/Cultural_Credits/templates",
                                static_folder= rootPath + "/front-end/src/static")
 
 
