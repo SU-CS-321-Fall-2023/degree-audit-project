@@ -3,7 +3,7 @@ from flask import flash, request
 
 from flask_mail import Mail, Message
 
-# from weblet import rootPath, passwordTA, passwordTC, app
+# from weblet import rootPath, passwordTA, passwordTC, weblet
 def ourPaths():
     """
     ourPaths() must be placed at the beginning of the file 
@@ -34,11 +34,14 @@ def ourPaths():
 ourPaths() # Must be placed at beginning of file.
 
 
-# app.register_blueprint(email_bp, url_prefix='/email')
-email_bp = Blueprint('email', __name__,
-                  root_path = rootPath,
-                  template_folder= rootPath + "/front-end/src/blueprints/Email/templates",
-                  static_folder= rootPath + "/front-end/src/static")
+# weblet.register_blueprint(email_bp, url_prefix='/email')
+email_bp = Blueprint(
+    name='email',
+    import_name=__name__,
+    root_path=rootPath,
+    template_folder=rootPath + "/front-end/src/blueprints/Email/templates",
+    static_folder=rootPath + "/front-end/src/static"
+)
 
 email_Flask = Flask('email')
 
@@ -63,7 +66,7 @@ def index():
     return render_template('email.html')
 
 
-@email_bp.route('/send_alert', methods=['POST'])
+@email_bp.route('/send-alert', methods=['POST'])
 def send_alert():
     student_email = request.form.get('email')  # Update 'email' to match the actual name attribute in your form
     has_hold = check_hold_status(student_email)
@@ -77,7 +80,7 @@ def send_alert():
     else:
         flash('No holds on your account. You can proceed with class registration.', 'success')
 
-    return redirect(url_for('index'))
+    return redirect(url_for('home'))
 
 
 

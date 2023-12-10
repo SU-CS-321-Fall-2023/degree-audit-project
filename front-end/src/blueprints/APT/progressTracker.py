@@ -2,7 +2,7 @@ from flask import Blueprint, render_template
 
 import mysql.connector
 
-# from weblet import rootPath, passwordTA, passwordTC, app
+# from weblet import rootPath, passwordTA, passwordTC, weblet
 def ourPaths():
     """
     ourPaths() must be placed at the beginning of the file 
@@ -33,11 +33,14 @@ def ourPaths():
 ourPaths() # Must be placed at beginning of file.
 
 
-# app.register_blueprint(progressTracker_bp, url_prefix='/APT')
-progressTracker_bp = Blueprint('progressTracker', __name__,
-                               root_path = rootPath,
-                               template_folder= rootPath + "/front-end/src/blueprints/APT/templates",
-                               static_folder= rootPath + "/front-end/src/static")
+# weblet.register_blueprint(progressTracker_bp, url_prefix='/APT')
+progressTracker_bp = Blueprint(
+    name='progressTracker',
+    import_name=__name__,
+    root_path=rootPath,
+    template_folder=rootPath + "/front-end/src/blueprints/APT/templates",
+    static_folder=rootPath + "/front-end/src/static"
+)
 
 
 @progressTracker_bp.route('/progress-tracker')

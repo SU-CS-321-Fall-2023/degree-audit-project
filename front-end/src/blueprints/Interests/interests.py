@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 from flask import request
 
-# from weblet import rootPath, passwordTA, passwordTC, app
+# from weblet import rootPath, passwordTA, passwordTC, weblet
 def ourPaths():
     """
     ourPaths() must be placed at the beginning of the file 
@@ -32,11 +32,14 @@ def ourPaths():
 ourPaths() # Must be placed at beginning of file.
 
 
-# app.register_blueprint(interests_bp, url_prefix='/interests')
-interests_bp = Blueprint('interests', __name__,
-                         root_path = rootPath,
-                         template_folder= rootPath + "/front-end/src/blueprints/Interests/templates",
-                         static_folder= rootPath + "/front-end/src/static")
+# weblet.register_blueprint(interests_bp, url_prefix='/interests')
+interests_bp = Blueprint(
+    name='interests',
+    import_name=__name__,
+    root_path=rootPath,
+    template_folder=rootPath + "/front-end/src/blueprints/Interests/templates",
+    static_folder=rootPath + "/front-end/src/static"
+)
 
 
 default_interests = ["Computer Science", "Psychology", "Biology", "Mathematics", "Chemistry", "Cybersecurity"]
@@ -52,7 +55,7 @@ def generate_course_recommendations(interests):
     return recommended_courses
 
 #Interest Exploration
-@interests_bp.route('/interest')
+@interests_bp.route('/')
 def interest():
     return render_template("interests.html")
     

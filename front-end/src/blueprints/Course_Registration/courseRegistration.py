@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 
-# from weblet import rootPath, passwordTA, passwordTC, app
+# from weblet import rootPath, passwordTA, passwordTC, weblet
 def ourPaths():
     """
     ourPaths() must be placed at the beginning of the file 
@@ -31,13 +31,16 @@ def ourPaths():
 ourPaths() # Must be placed at beginning of file.
 
 
-# app.register_blueprint(courseRegistration_bp, url_prefix='/course-registration')
-courseRegistration_bp = Blueprint('courseRegistration', __name__,
-                                  root_path = rootPath,
-                                  template_folder= rootPath + "/front-end/src/blueprints/Course_Registration/templates",
-                                  static_folder= rootPath + "/front-end/src/static")
+# weblet.register_blueprint(courseRegistration_bp, url_prefix='/course-registration')
+courseRegistration_bp = Blueprint(
+    name='courseRegistration',
+    import_name=__name__,
+    root_path=rootPath,
+    template_folder=rootPath + "/front-end/src/blueprints/Course_Registration/templates",
+    static_folder=rootPath + "/front-end/src/static"
+)
 
 
-@courseRegistration_bp.route('/course-registration')
+@courseRegistration_bp.route('/')
 def courseRegistration():
     return render_template('course_registration.html')

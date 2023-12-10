@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 
-# from weblet import rootPath, passwordTA, passwordTC, app
+# from weblet import rootPath, passwordTA, passwordTC, weblet
 def ourPaths():
     """
     ourPaths() must be placed at the beginning of the file 
@@ -31,14 +31,17 @@ def ourPaths():
 ourPaths() # Must be placed at beginning of file.
 
 
-# app.register_blueprint(culturalCredits_bp, url_prefix='/cultural-credits')
-culturalCredits_bp = Blueprint('culturalCredits', __name__,
-                               root_path = rootPath,
-                               template_folder= rootPath + "/front-end/src/blueprints/Cultural_Credits/templates",
-                               static_folder= rootPath + "/front-end/src/static")
+# weblet.register_blueprint(culturalCredits_bp, url_prefix='/cultural-credits')
+culturalCredits_bp = Blueprint(
+    name='culturalCredits',
+    import_name=__name__,
+    root_path=rootPath,
+    template_folder=rootPath + "/front-end/src/blueprints/Cultural_Credits/templates",
+    static_folder=rootPath + "/front-end/src/static"
+)
 
 
-@culturalCredits_bp.route('/culture')
+@culturalCredits_bp.route('/')
 def culture():
     # Here, you would fetch data from Stetson's Engage platform and process it to show the user's cultural credits.
     user_cultural_credits = 24

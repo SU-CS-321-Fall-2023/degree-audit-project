@@ -1,4 +1,5 @@
-from flask import Flask
+from flask import Flask, render_template
+from flask import request
 
 
 def ourPaths():
@@ -29,12 +30,26 @@ def ourPaths():
         # MySQL Injections are scary.
 ourPaths()# Must be placed at beginning of file.
 
-def create_app():
-    app = Flask(__name__,
-                root_path = rootPath,
-                template_folder= rootPath + "/front-end/src/templates",
-                static_folder= rootPath + "/front-end/src/static")
-    app.config['SECRET_KEY'] = 'hai'
+def create_weblet():
+    """_summary_
+    "View Imports" block should be placed before the 
+    "Page Registry" block.
+
+    "Page Registry" block is to be placed at the end of 
+    create_weblet(). If it is not placed at the end, and a 
+    "@blueprint.route()" is called on an existing blueprint, 
+    then an "AssertionError" will be triggered.
+
+    Returns:
+        _type_: _description_
+    """
+    weblet = Flask(
+        import_name=__name__,
+        root_path=rootPath,
+        template_folder=rootPath + "/front-end/src/templates",
+        static_folder=rootPath + "/front-end/src/static"
+    )
+    weblet.config['SECRET_KEY'] = 'hai'
 
     # View Imports
     from blueprints.APT.progressTracker import progressTracker_bp
@@ -45,43 +60,68 @@ def create_app():
 
     from blueprints.Cultural_Credits.culturalCredits import culturalCredits_bp
     from blueprints.Email.email import email_bp
-    from blueprints.Errors.errors import errors_bp
+    # from blueprints.Errors.errors import errors_bp
     from blueprints.Home.home import home_bp
     from blueprints.Interests.interests import interests_bp
 
     from views import views
     # END OF View Imports
 
+
+    # Global Error Handlers
+    @weblet.errorhandler(404)
+    def page_not_found(e):
+        # if a page does not exist
+        if request.path.startswith('/'):
+            # we return a generic 404 page
+            return render_template("errors/404.html"), 404
+        else:
+            # otherwise we return a generic 404 page
+            return render_template("errors/404.html"), 404
+    @weblet.errorhandler(405)
+    def method_not_allowed(e):
+        # if a request has the wrong method to our API
+        if request.path.startswith('/'):
+            # we return a generic 405 page
+            return render_template("errors/405.html"), 405
+        else:
+            # otherwise we return a generic 405 page
+            return render_template("errors/405.html"), 405
+
+
     # Page Registry
-    app.register_blueprint(progressTracker_bp, url_prefix='/APT')
+    # To be placed at the end of the create_app()
+    weblet.register_blueprint(progressTracker_bp, url_prefix='/APT')
 
-    app.register_blueprint(courseRegistration_bp, url_prefix='/course-registration')
-    app.register_blueprint(courseReviews_bp, url_prefix='/course-reviews')
-    app.register_blueprint(courseSearch_bp, url_prefix='/course-search')
+    weblet.register_blueprint(courseRegistration_bp, url_prefix='/course-registration')
+    weblet.register_blueprint(courseReviews_bp, url_prefix='/course-reviews')
+    weblet.register_blueprint(courseSearch_bp, url_prefix='/course-search')
 
-    app.register_blueprint(culturalCredits_bp, url_prefix='/cultural-credits')
-    app.register_blueprint(email_bp, url_prefix='/email')
-    app.register_blueprint(errors_bp, url_prefix='/error')
-    app.register_blueprint(home_bp, url_prefix='/home')
-    app.register_blueprint(interests_bp, url_prefix='/interests')
+    weblet.register_blueprint(culturalCredits_bp, url_prefix='/cultural-credits')
+    weblet.register_blueprint(email_bp, url_prefix='/email')
+    # weblet.register_blueprint(errors_bp, url_prefix='/error')
+    weblet.register_blueprint(home_bp, url_prefix='/home')
+    weblet.register_blueprint(interests_bp, url_prefix='/interests')
 
-    app.register_blueprint(views, url_prefix='/')
+    weblet.register_blueprint(views, url_prefix='/')
     # END OF Page Registry
 
 
-    return app
+    return weblet
 
-app = create_app()
+weblet = create_weblet()
 
-# app = Flask(__name__,
-#             root_path = rootPath,
-#             template_folder= rootPath + "/front-end/src/templates",
-#             static_folder= rootPath + "/front-end/src/static")
-# app.config['SECRET_KEY'] = 'hai'
+if __name__ == "__main__":
+    """
+    Must be placed at the end of the file.
+    """
+    weblet.run(host = '127.0.0.1', port = 9000, debug=True)
+    # app.run(host= "174.138.53.254" , port = 9000, debug = True)
+
+
 
 # import mysql.connector
-
-# Connections to the MySQL Databases
+# # Connections to the MySQL Databases
 # catalog = mysql.connector.connect(
 #     host="174.138.53.254",
 #     user="TheAuditor",
@@ -100,20 +140,9 @@ app = create_app()
 #     password=passwordTA,
 #     database="progress"
 # )
-
 # myCatalog = catalog.cursor(prepared=True)
 # myReviews = reviews.cursor(prepared=True)
 # myProgress = progress.cursor(prepared=True)
-
-
-if __name__ == "__main__":
-    """
-    Must be placed at the end of the file.
-    """
-    app.run(host = '127.0.0.1', port = 9000, debug=True)
-    # app.run(host= "174.138.53.254" , port = 9000, debug = True)
-
-
 
 
 

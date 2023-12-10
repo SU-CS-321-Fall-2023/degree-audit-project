@@ -39,7 +39,7 @@
     </table>
 
     <h1>Select Your Interests</h1>
-    <form method="POST" action="/submit">
+    <form action="{{ url_for('interests.submit') }}" method="POST">
         <label for="interests">Choose your interests:</label><br>
         {% for interest in default_interests %}
             <label>

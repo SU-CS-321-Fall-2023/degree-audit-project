@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, redirect, url_for
 from flask import request
 
 import mysql.connector
@@ -35,20 +35,22 @@ ourPaths() # Must be placed at beginning of file.
 
 
 # app.register_blueprint(views, url_prefix='/')
+views = Blueprint(
+    name='views',
+    import_name=__name__,
+    root_path=rootPath,
+    template_folder=rootPath + "/front-end/src/templates",
+    static_folder=rootPath + "/front-end/src/static"
+    )
 
-
-views = Blueprint('views', __name__,
-                  root_path = rootPath,
-                  template_folder= rootPath + "/front-end/src/templates",
-                  static_folder= rootPath + "/front-end/src/static")
-
-@views.route('/', methods=['GET', 'POST'])
-def index():
-    if request.method == 'POST':
-        print("Request Method = POST")
-    else:
-        print("Request Method = GET")
-    return render_template('index.html')
+# @views.route('/', methods=['GET', 'POST'])
+# def index():
+#     if request.method == 'POST':
+#         print("Request Method = POST")
+#     else:
+#         print("Request Method = GET")
+#     # return redirect(url_for('views.index'))
+#     return render_template('index.html')
 
 
 

@@ -11,7 +11,7 @@ from datetime import datetime
 
 import mysql.connector
 
-# from weblet import rootPath, passwordTA, passwordTC, app
+# from weblet import rootPath, passwordTA, passwordTC, weblet
 def ourPaths():
     """
     ourPaths() must be placed at the beginning of the file 
@@ -42,11 +42,14 @@ def ourPaths():
 ourPaths() # Must be placed at beginning of file.
 
 
-# app.register_blueprint(courseReviews_bp, url_prefix='/course-reviews')
-courseReviews_bp = Blueprint('courseReviews', __name__,
-                  root_path = rootPath,
-                  template_folder= rootPath + "/front-end/src/blueprints/Course_Reviews/templates",
-                  static_folder= rootPath + "/front-end/src/static")
+# weblet.register_blueprint(courseReviews_bp, url_prefix='/course-reviews')
+courseReviews_bp = Blueprint(
+    name='courseReviews',
+    import_name=__name__,
+    root_path=rootPath,
+    template_folder=rootPath + "/front-end/src/blueprints/Course_Reviews/templates",
+    static_folder=rootPath + "/front-end/src/static"
+)
 
 courseReviews_Flask = Flask('courseReviews')
 
@@ -127,7 +130,7 @@ def courseReview():
         if not course:
             flash('Course not found! Please add the course before submitting a review.', 'error')
             return redirect(url_for('index'))
-        
+
         new_review = Review(
             course_id=course.id,
             review_text=form.review_text.data,
@@ -146,6 +149,7 @@ def courseReview():
         flash('Review added successfully!', 'success')
         return redirect(url_for('index'))
     return render_template('reviews.html', form=form)
+
 
 @courseReviews_bp.route('/course-selection', methods=['GET', 'POST'])
 def courseSelection():

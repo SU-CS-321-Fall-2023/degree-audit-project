@@ -4,13 +4,12 @@
 
 {% block content %}
     <h1>Email Alert Demo</h1>
-    <form method="POST" action="/send_alert">
+    <form action="{{ url_for('email.send_alert') }}" method="POST">
         <label for="email">Email:</label>
         <input type="text" name="email" id="email">
         <input type="submit" value="Send Alert">
     </form>
 
-    <button id="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             <ul>
@@ -21,18 +20,3 @@
         {% endif %}
     {% endwith %}
 {% endblock content %}
-
-
-{% block script %}
-    <script>
-        function toggleTheme() {
-            const defaultTheme = document.getElementById('default-theme');
-            const lightTheme = document.getElementById('light-theme');
-            const darkTheme = document.getElementById('dark-theme');
-
-            defaultTheme.disabled = !defaultTheme.disabled;
-            lightTheme.disabled = !lightTheme.disabled;
-            darkTheme.disabled = !darkTheme.disabled;
-        }
-    </script>
-{% endblock script %}

@@ -3,7 +3,7 @@ from flask import request
 
 import mysql.connector
 
-# from weblet import rootPath, passwordTA, passwordTC, app
+# from weblet import rootPath, passwordTA, passwordTC, weblet
 def ourPaths():
     """
     ourPaths() must be placed at the beginning of the file 
@@ -34,11 +34,18 @@ def ourPaths():
 ourPaths() # Must be placed at beginning of file.
 
 
-# app.register_blueprint(home_bp, url_prefix='/home')
-home_bp = Blueprint('home', __name__,
-                    root_path = rootPath,
-                    template_folder= rootPath + "/front-end/src/blueprints/Home/templates",
-                    static_folder= rootPath + "/front-end/src/static")
+# weblet.register_blueprint(home_bp, url_prefix='/home')
+home_bp = Blueprint(
+    name='home',
+    import_name=__name__,
+    root_path=rootPath,
+    template_folder=rootPath + "/front-end/src/blueprints/Home/templates",
+    static_folder=rootPath + "/front-end/src/static"
+)
+
+@home_bp.route('/')
+def index():
+    return render_template('home.html')
 
 
 @home_bp.route('/idForm', methods=['POST'])
