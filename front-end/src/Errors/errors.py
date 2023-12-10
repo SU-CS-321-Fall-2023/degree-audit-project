@@ -1,9 +1,26 @@
 from flask import Blueprint, render_template
 from flask import request
 
-from weblet import rootPath
+# from weblet import rootPath
+def ourPaths():
+    """
+    ourPaths() must be placed at the beginning of the file 
+    in order for the site to build and run.
+    
+    ourPaths() must be called immediately after it ends.
+    
+    Purpose: Initializes necessary variable for web app.
+    """
+    import os
+
+    global rootPath
+    rootPath = os.path.abspath(os.getcwd())
+
+    print("Loading '/Errors'...")
+ourPaths() # Must be placed at beginning of file.
 
 
+# app.register_blueprint(errors_bp, url_prefix='/error')
 errors_bp = Blueprint('errors', __name__,
                       root_path = rootPath,
                       template_folder= rootPath + "/front-end/src/Errors/templates",

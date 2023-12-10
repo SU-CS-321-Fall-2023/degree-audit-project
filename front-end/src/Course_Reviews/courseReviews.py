@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, url_for
+from flask import Flask, Blueprint, render_template, redirect, url_for
 from flask import flash, request
 
 from flask_sqlalchemy import SQLAlchemy
@@ -9,22 +9,51 @@ from wtforms.validators import DataRequired, Length
 
 from datetime import datetime
 
-from weblet import rootPath, passwordTA, passwordTC, app
 import mysql.connector
 
+# from weblet import rootPath, passwordTA, passwordTC, app
+def ourPaths():
+    """
+    ourPaths() must be placed at the beginning of the file 
+    in order for the site to build and run.
+    
+    ourPaths() must be called immediately after it ends.
+    
+    Purpose: Initializes necessary variable for web app.
+    """
+    import os
+
+    global rootPath
+    rootPath = os.path.abspath(os.getcwd())
+
+    global passwordTA
+    global passwordTC
+    pwFile = (rootPath + "\\Misc_Folder\\SQL\\TA_ourPySQL.txt")
+    with open(pwFile, 'r') as passFile:
+        passwordTA = passFile.readline()
+    pwFile = (rootPath + "\\Misc_Folder\\SQL\\TC_ourPySQL.txt")
+    with open(pwFile, 'r') as passFile:
+        passwordTC = passFile.readline()
+        # Password for the databases gets read from a file, so
+        # that it is not explicitly stored here in the code.
+        # MySQL Injections are scary.
+
+    print("Loading '/Course-Reviews'...")
+ourPaths() # Must be placed at beginning of file.
+
+
 # app.register_blueprint(courseReviews_bp, url_prefix='/course-reviews')
-
-
 courseReviews_bp = Blueprint('courseReviews', __name__,
                   root_path = rootPath,
-                  template_folder= rootPath + "/front-end/src/Course-Reviews/templates",
+                  template_folder= rootPath + "/front-end/src/Course_Reviews/templates",
                   static_folder= rootPath + "/front-end/src/static")
 
+courseReviews_Flask = Flask('courseReviews')
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///reviews.db'
-app.config['SECRET_KEY'] = 'your_secret_key'
+courseReviews_Flask.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///reviews.db'
+courseReviews_Flask.config['SECRET_KEY'] = 'your_secret_key'
 
-db = SQLAlchemy(app)
+db = SQLAlchemy(courseReviews_Flask)
 
 class Course(db.Model):
     id          = db.Column(db.Integer, primary_key=True)
