@@ -6,11 +6,12 @@ def create_app():
     app = Flask(
         __name__,
         root_path = rootPath,
-        template_folder= rootPath + "/front-end/src/templates",
+        # template_folder= rootPath + "/front-end/src/templates",
         static_folder= rootPath + "/front-end/src/static")
     app.config['SECRET_KEY'] = 'hai'
 
-    from .views import views
     app.register_blueprint(views, url_prefix='/')
+    app.register_blueprint(courseReviews, url_prefix='/Review')
+    app.register_blueprint(progressTracker, url_prefix='/APT')
 
     return app

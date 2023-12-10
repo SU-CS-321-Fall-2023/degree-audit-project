@@ -1,3 +1,33 @@
+from flask import Flask
+
+from src.APT.progressTracker import progressTracker_bp
+from src.Course_Registration.courseRegistration import courseRegistration_bp
+from src.Course_Reviews.courseReviews import courseReviews_bp
+from src.Course_Search.courseSearch import courseSearch_bp
+from src.Cultural_Credits.culturalCredits import culturalCredits_bp
+from src.Errors.errors import errors_bp
+from src.Home.home import home_bp
+
+app = Flask(__name__,
+            root_path = rootPath,
+            # template_folder= rootPath + "/front-end/src/templates",
+            static_folder= rootPath + "/front-end/src/static")
+app.config['SECRET_KEY'] = 'hai'
+
+
+app.register_blueprint(progressTracker_bp, url_prefix='/APT')
+app.register_blueprint(courseRegistration_bp, url_prefix='/course-registration')
+app.register_blueprint(courseReviews_bp, url_prefix='/course-reviews')
+app.register_blueprint(courseSearch_bp, url_prefix='/course-search')
+app.register_blueprint(culturalCredits_bp, url_prefix='/cultural-credits')
+
+app.register_blueprint(errors_bp, url_prefix='/error')
+app.register_blueprint(home_bp, url_prefix='/')
+
+
+
+
+
 # from werkzeug.utils import secure_filename
 # from flask import Flask, jsonify, redirect, url_for, send_from_directory
 # import csv
@@ -164,40 +194,47 @@ def index():
     else:
         print("Request Method = GET")
     return render_template('index.html')
+# @app.route('/Review', methods=['GET', 'POST'])
+# def reviewal():
+#     if request.method == 'POST':
+#         print("Request Method = POST")
+#     else:
+#         print("Request Method = GET")
+#     return render_template('index.html')
 
-@app.route('/idForm', methods=['POST'])
-def idForm():
-    try:
-        courses_data = list()
+# @app.route('/idForm', methods=['POST'])
+# def idForm():
+#     try:
+#         courses_data = list()
 
-        studentID    = request.form['student_id']
-        # studentEmail = request.form['student_email']
-        print(studentID)
+#         studentID    = request.form['student_id']
+#         # studentEmail = request.form['student_email']
+#         print(studentID)
 
-        students = mysql.connector.connect(
-            host="174.138.53.254",
-            user="TheAuditor",
-            password=passwordTA,
-            database="students"
-        )
-        myStudents = students.cursor(prepared=True)
-        myStudents.execute(f"CALL sys.table_exists('students', '{studentID}', @exists); SELECT @exists;")
-        # sql_query = """SELECT studentID FROM students.students WHERE studentID=%s ;"""
-        # myStudents.execute(sql_query,studentID)
-        myResult = myStudents.fetchall()
+#         students = mysql.connector.connect(
+#             host="174.138.53.254",
+#             user="TheAuditor",
+#             password=passwordTA,
+#             database="students"
+#         )
+#         myStudents = students.cursor(prepared=True)
+#         myStudents.execute(f"CALL sys.table_exists('students', '{studentID}', @exists); SELECT @exists;")
+#         # sql_query = """SELECT studentID FROM students.students WHERE studentID=%s ;"""
+#         # myStudents.execute(sql_query,studentID)
+#         myResult = myStudents.fetchall()
 
-        for x in myResult:
-            courses_data.append(x)
-        return render_template('APT/progress_tracker.html', courses=courses_data)
+#         for x in myResult:
+#             courses_data.append(x)
+#         return render_template('APT/progress_tracker.html', courses=courses_data)
 
-    except mysql.connector.Error as error:
-        print("query failed {}".format(error))
+#     except mysql.connector.Error as error:
+#         print("query failed {}".format(error))
 
-    finally:
-        if students.is_connected():
-            myStudents.close()
-            students.close()
-            print("MySQL connection is closed.")
+#     finally:
+#         if students.is_connected():
+#             myStudents.close()
+#             students.close()
+#             print("MySQL connection is closed.")
 
 
 
@@ -209,8 +246,8 @@ def courseRegistration():
 def courseSearch():
     return render_template('Course-Search/course_search.html')
 
-@app.route('/reviews', methods=['GET', 'POST'])
-def review():
+@app.route('/course-review', methods=['GET', 'POST'])
+def courseReview():
     form = ReviewForm()
     if form.validate_on_submit():
         rating = form.professor_rate.data
@@ -238,8 +275,8 @@ def review():
         return redirect(url_for('index'))
     return render_template('Review/reviews.html', form=form)
 
-@app.route('/select_course', methods=['GET', 'POST'])
-def select_course():
+@app.route('/Review/course-selection', methods=['GET', 'POST'])
+def courseSelection():
     try:
         courses = list()
 
@@ -250,7 +287,8 @@ def select_course():
             database="progress"
         )
         myProgress = progress.cursor(prepared=True)
-        sql_query = """SELECT courseTitle FROM agarofalo WHERE qualityPoints IS NOT NULL;"""
+        data = "qualityPoints"
+        sql_query = """SELECT courseTitle FROM `800737736` WHERE qualityPoints IS NOT NULL;"""
         myProgress.execute(sql_query)
         myResult = myProgress.fetchall()
 
@@ -260,8 +298,8 @@ def select_course():
         if request.method == 'POST':
             selected_course = request.form['course_name']
             return render_template('Review/reviews.html', course=selected_course)
-        return render_template('Review/course_selection.html', courses=courses)
-
+        else:
+            return render_template('Review/course_selection.html', courses=courses)
 
     except mysql.connector.Error as error:
         print("query failed {}".format(error))
@@ -271,13 +309,14 @@ def select_course():
             myProgress.close()
             progress.close()
             print("MySQL connection is closed.")
+    return render_template('Review/course_selection.html', courses=courses)
 
 
 @app.route('/culture')
 def culture():
     return render_template('Cultural-Credits/culture.html')
 
-@app.route('/progress-tracker')
+@app.route('/APT/progress-tracker')
 def progressTracker():
     try:
         courses_data = list()
@@ -289,13 +328,13 @@ def progressTracker():
             database="progress"
         )
         myProgress = progress.cursor(prepared=True)
-        sql_query = """SELECT `id`, `courseNumber`, `subject`, `courseReferenceNumber`, `courseTitle`, `campusCode`, `termDescription`, `gpaHours`, `hoursAttempted`, `hoursEarned`, `midtermGrade`, `finalGrade`, `qualityPoints` FROM agarofalo;"""
+        sql_query = """SELECT `id`, `courseNumber`, `subject`, `courseReferenceNumber`, `courseTitle`, `campusCode`, `termDescription`, `gpaHours`, `hoursAttempted`, `hoursEarned`, `midtermGrade`, `finalGrade`, `qualityPoints` FROM `800737736` ; """
         myProgress.execute(sql_query)
         myResult = myProgress.fetchall()
 
         for x in myResult:
             courses_data.append(x)
-        return render_template('APT/progress_tracker.html', courses=courses_data)
+        return render_template('progress_tracker.html', courses=courses_data)
 
     except mysql.connector.Error as error:
         print("query failed {}".format(error))

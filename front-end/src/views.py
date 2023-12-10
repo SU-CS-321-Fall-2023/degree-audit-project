@@ -48,6 +48,8 @@ views = Blueprint('views', __name__,
                   static_folder= rootPath + "/front-end/src/static")
 
 
+
+
 # Connections to the MySQL Databases
 # catalog = mysql.connector.connect(
 #     host="174.138.53.254",
@@ -206,7 +208,7 @@ def idForm():
         #     database="students"
         # )
         myStudentsTA = studentsTA.cursor(prepared=True)
-        sql_query = f"SELECT `id`, `courseNumber`, `subject`, `courseReferenceNumber`, `courseTitle`, `campusCode`, `termDescription`, `gpaHours`, `hoursAttempted`, `hoursEarned`, `midtermGrade`, `finalGrade`, `qualityPoints` FROM `800737736` ; "
+        sql_query = """SELECT `id`, `courseNumber`, `subject`, `courseReferenceNumber`, `courseTitle`, `campusCode`, `termDescription`, `gpaHours`, `hoursAttempted`, `hoursEarned`, `midtermGrade`, `finalGrade`, `qualityPoints` FROM `800737736` ; """
         myStudentsTA.execute(sql_query)
         myResult = myStudentsTA.fetchall()
         # print(f"myResult: {myResult}")
@@ -253,34 +255,34 @@ def idForm():
 # #    return redirect(url_for('index'))
 
 # #Academic Progress <- ALEX LOOK HERE
-@views.route('/progress-tracker')
-def progressTracker():
-    try:
-        courses_data = list()
+# @views.route('/progress-tracker')
+# def progressTracker():
+#     try:
+#         courses_data = list()
 
-        progress = mysql.connector.connect(
-            host="174.138.53.254",
-            user="TheAuditor",
-            password=passwordTA,
-            database="progress"
-        )
-        myProgress = progress.cursor(prepared=True)
-        sql_query = """SELECT `id`, `courseNumber`, `subject`, `courseReferenceNumber`, `courseTitle`, `campusCode`, `termDescription`, `gpaHours`, `hoursAttempted`, `hoursEarned`, `midtermGrade`, `finalGrade`, `qualityPoints` FROM `800737736` ; """
-        myProgress.execute(sql_query)
-        myResult = myProgress.fetchall()
+#         progress = mysql.connector.connect(
+#             host="174.138.53.254",
+#             user="TheAuditor",
+#             password=passwordTA,
+#             database="progress"
+#         )
+#         myProgress = progress.cursor(prepared=True)
+#         sql_query = """SELECT `id`, `courseNumber`, `subject`, `courseReferenceNumber`, `courseTitle`, `campusCode`, `termDescription`, `gpaHours`, `hoursAttempted`, `hoursEarned`, `midtermGrade`, `finalGrade`, `qualityPoints` FROM `800737736` ; """
+#         myProgress.execute(sql_query)
+#         myResult = myProgress.fetchall()
 
-        for x in myResult:
-            courses_data.append(x)
-        return render_template('APT/progress_tracker.html', courses=courses_data)
+#         for x in myResult:
+#             courses_data.append(x)
+#         return render_template('APT/progress_tracker.html', courses=courses_data)
 
-    except mysql.connector.Error as error:
-        print("query failed {}".format(error))
+#     except mysql.connector.Error as error:
+#         print("query failed {}".format(error))
 
-    finally:
-        if progress.is_connected():
-            myProgress.close()
-            progress.close()
-            print("MySQL connection is closed.")
+#     finally:
+#         if progress.is_connected():
+#             myProgress.close()
+#             progress.close()
+#             print("MySQL connection is closed.")
 
 # #Interest Exploration
 # @views.route('/interest')
@@ -328,34 +330,93 @@ def progressTracker():
 # # #COURSE REVIEWS
 # # @views.route('/review')
 # # def review():
-# #     return render_template("course_selection.html")
+# #     return render_template("Review/course_selection.html")
 
 # # @views.route('/courses')
 # # def courses():
 # #     courses = Course.query.all()
-# #     return render_template('reviews.html', courses=courses)
+# #     return render_template('Review/reviews.html', courses=courses)
 
 # # @views.route('/all_reviews')
 # # def all_reviews():
 # #     reviews = Review.query.all()
-# #     return render_template('all_reviews.html', reviews=reviews)
+# #     return render_template('Review/all_reviews.html', reviews=reviews)
 
 # # @views.route('/select_course')
 # # def select_course():
-# #     return render_template('course_selection.html')
+# #     return render_template('Review/course_selection.html')
 
 # # @views.route('/review_form', methods=['POST'])
 # # def review_form():
 # #     selected_course = request.form['course_name']
 # #     # Do something with the selected course, like render a new template
-# #     return render_template('review_form.html', course=selected_course)
+# #     return render_template('Review/review_form.html', course=selected_course)
 
-# # @views.route('/course_selection', methods=['GET', 'POST'])
-# # def course_selection():
-# #     if request.method == 'POST':
-# #         selected_course = request.form['course_name']
-# #         return render_template('reviews.html', course=selected_course)
-# #     return render_template('course_selection.html')
+# @views.route('/course-selection', methods=['GET', 'POST'])
+# def course_selection():
+#     try:
+#         courses = list()
+
+#         progress = mysql.connector.connect(
+#             host="174.138.53.254",
+#             user="TheAuditor",
+#             password=passwordTA,
+#             database="progress"
+#         )
+#         myProgress = progress.cursor(prepared=True)
+#         data = "qualityPoints"
+#         sql_query = """SELECT courseTitle FROM `800737736` WHERE qualityPoints IS NOT NULL;"""
+#         myProgress.execute(sql_query)
+#         myResult = myProgress.fetchall()
+
+#         for x in myResult:
+#             courses.append(x)
+#             print(x)
+#         if request.method == 'POST':
+#             selected_course = request.form['course_name']
+#             return render_template('Review/reviewal.html', course=selected_course)
+#         else:
+#             return render_template('Review/course_selection.html', courses=courses)
+
+#     except mysql.connector.Error as error:
+#         print("query failed {}".format(error))
+
+#     finally:
+#         if progress.is_connected():
+#             myProgress.close()
+#             progress.close()
+#             print("MySQL connection is closed.")
+#     return render_template('Review/course_selection.html', courses=courses)
+
+
+# @views.route('/reviews', methods=['GET', 'POST'])
+# def review():
+#     form = ReviewForm()
+#     if form.validate_on_submit():
+#         rating = form.professor_rate.data
+#         course = Course.query.filter_by(course_name=form.course_name.data).first()
+#         if not course:
+#             flash('Course not found! Please add the course before submitting a review.', 'error')
+#             return redirect(url_for('index'))
+        
+#         new_review = Review(
+#             course_id=course.id,
+#             review_text=form.review_text.data,
+#             professor_feedback=form.professor_feedback.data,
+#             course_load=form.course_load.data,
+#             quizzes_tests=form.quizzes_tests.data,
+#             instructor_notes_online=form.instructor_notes_online.data,
+#             instructor_offer_extra_credit=form.instructor_offer_extra_credit.data,
+#             instructor_flexibility=form.instructor_flexibility.data,
+#             instructor_demeanor=form.instructor_demeanor.data
+#             # Assign other new fields here...
+#         )
+
+#         db.session.add(new_review)
+#         db.session.commit()
+#         flash('Review added successfully!', 'success')
+#         return redirect(url_for('index'))
+#     return render_template('Review/reviews.html', form=form)
 
 # @views.route('/submit_review', methods=['POST'])
 # def submit_review():
