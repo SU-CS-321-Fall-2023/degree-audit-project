@@ -89,7 +89,7 @@ def index():
             # Assuming the major is in the 2nd column (index 1). Adjust the index if needed.
             data = [data[0]] + [row for row in data[1:] if major.lower() in row[1].lower()]
 
-    return render_template('index.html', data=data)
+    return render_template('OLD-index.html', data=data)
 
 
 ##@app.route('/', methods=['GET', 'POST'])

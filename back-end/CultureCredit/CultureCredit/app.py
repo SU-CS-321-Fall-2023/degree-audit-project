@@ -21,7 +21,7 @@ def index():
         {"name": "BSA Ball:70's Boogies Night","date": "02-25-2022", "units": "1"}
     ]
 
-    return render_template('index.html', credits=user_cultural_credits, remaining=credits_remaining,
+    return render_template('culture-index.html', credits=user_cultural_credits, remaining=credits_remaining,
                            events=cultural_events)
 
 

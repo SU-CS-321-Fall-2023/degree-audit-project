@@ -120,7 +120,7 @@ def index():
         course = Course.query.filter_by(course_name=form.course_name.data).first()
         if not course:
             flash('Course not found! Please add the course before submitting a review.', 'error')
-            return redirect(url_for('index'))
+            return redirect(url_for('OLD-index'))
         
         new_review = Review(
             course_id=course.id,
@@ -138,35 +138,35 @@ def index():
         db.session.add(new_review)
         db.session.commit()
         flash('Review added successfully!', 'success')
-        return redirect(url_for('index'))
-    return render_template('reviews.html', form=form)
+        return redirect(url_for('OLD-index'))
+    return render_template('OLD-reviews.html', form=form)
 
 @app.route('/courses')
 def courses():
     courses = Course.query.all()
-    return render_template('reviews.html', courses=courses)
+    return render_template('OLD-reviews.html', courses=courses)
 
 @app.route('/all_reviews')
 def all_reviews():
     reviews = Review.query.all()
-    return render_template('all_reviews.html', reviews=reviews)
+    return render_template('OLD-all_reviews.html', reviews=reviews)
 
 @app.route('/select_course')
 def select_course():
-    return render_template('course_selection.html')
+    return render_template('OLD-course_selection.html')
 
 @app.route('/review_form', methods=['POST'])
 def review_form():
     selected_course = request.form['course_name']
     # Do something with the selected course, like render a new template
-    return render_template('review_form.html', course=selected_course)
+    return render_template('OLD-review_form.html', course=selected_course)
 
 @app.route('/course_selection', methods=['GET', 'POST'])
 def course_selection():
     if request.method == 'POST':
         selected_course = request.form['course_name']
-        return render_template('reviews.html', course=selected_course)
-    return render_template('course_selection.html')
+        return render_template('OLD-reviews.html', course=selected_course)
+    return render_template('OLD-course_selection.html')
 
 @app.route('/submit_review', methods=['POST'])
 def submit_review():
@@ -195,10 +195,10 @@ def submit_review():
             # If an error occurs, log it and flash a message
             flash(f'An error occurred: {str(e)}', 'error')
 
-        return redirect(url_for('index'))
+        return redirect(url_for('OLD-index'))
 
     # If the form is not valid or it's a GET request, render the form again
-    return render_template('reviews.html', form=form)
+    return render_template('OLD-reviews.html', form=form)
 
 
 
@@ -214,10 +214,10 @@ def show_reviews(course_id):
     course = Course.query.get(course_id)
     if course is None:
         flash('Course not found!', 'error')
-        return redirect(url_for('index'))
+        return redirect(url_for('OLD-index'))
     
     reviews = Review.query.filter_by(course_id=course_id).all()
-    return render_template('course_reviews.html', course=course, reviews=reviews)
+    return render_template('OLD-course_reviews.html', course=course, reviews=reviews)
 
 
 

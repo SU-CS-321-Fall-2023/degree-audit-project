@@ -112,7 +112,7 @@ course_data = {
 
 @app.route('/')
 def index():
-    return render_template('index.html', default_interests=default_interests)
+    return render_template('interestsU-index.html', default_interests=default_interests)
 
 
 def generate_course_recommendations(interests):
@@ -143,7 +143,7 @@ def submit():
         else:
             recommended_courses.append(f"{custom_interest} - Introductory Course in {custom_interest}")
 
-    return render_template('courses.html', interests=selected_interests, courses=recommended_courses)
+    return render_template('interestsU-courses.html', interests=selected_interests, courses=recommended_courses)
 
 
 if __name__ == '__main__':
