@@ -1,2 +1,20 @@
 {% extends "index.html" %}
 {% block title %}SDA - Cultural Credits{% endblock %}
+
+{% block content %}
+    <div class="cultural_credit" id="ccContainer">
+        <h1 class="cultural_credit" id="ccH1">Cultural Credit Tracker</h1>
+        <p class="cultural_credit" id="ccNotice">
+            You have {{ credits }} cultural credits.
+        </p>
+        <p class="cultural_credit" id="ccNotice">
+            You need {{ remaining }} more to graduate.
+        </p>
+        <h2 class="cultural_credit" id="ccH2">Upcoming Events</h2>
+        <ul>
+            {% for event in events %}
+            <li>{{ event.name }} - {{ event.date }} - {{ event.unit }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
