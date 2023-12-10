@@ -40,33 +40,20 @@ def create_app():
     app.config['SECRET_KEY'] = 'hai'
 
     # View Imports
-    import APT.progressTracker
-    import Course_Registration.courseRegistration
-    import Course_Reviews.courseReviews
-    import Course_Search.courseSearch
+    from blueprints.APT.progressTracker import progressTracker_bp
 
-    import Cultural_Credits.culturalCredits
-    import Email.email
-    import Errors.errors
-    import Home.home
-    import Interests.interests
+    from blueprints.Course_Registration.courseRegistration import courseRegistration_bp
+    from blueprints.Course_Reviews.courseReviews import courseReviews_bp
+    from blueprints.Course_Search.courseSearch import courseSearch_bp
 
-    import views
+    from blueprints.Cultural_Credits.culturalCredits import culturalCredits_bp
+    from blueprints.Email.email import email_bp
+    from blueprints.Errors.errors import errors_bp
+    from blueprints.Home.home import home_bp
+    from blueprints.Interests.interests import interests_bp
 
-    # from .APT.progressTracker import progressTracker_bp
-    # from .Course_Registration.courseRegistration import courseRegistration_bp
-    # from .Course_Reviews.courseReviews import courseReviews_bp
-    # from .Course_Search.courseSearch import courseSearch_bp
-
-    # from .Cultural_Credits.culturalCredits import culturalCredits_bp
-    # from .Email.email import email_bp
-    # from .Errors.errors import errors_bp
-    # from .Home.home import home_bp
-    # from .Interests.interests import interests_bp
-
-    # from .views import views
-
-
+    from views import views
+    # END OF View Imports
 
     # Page Registry
     app.register_blueprint(progressTracker_bp, url_prefix='/APT')
@@ -82,6 +69,7 @@ def create_app():
     app.register_blueprint(interests_bp, url_prefix='/interests')
 
     app.register_blueprint(views, url_prefix='/')
+    # END OF Page Registry
 
 
     return app
