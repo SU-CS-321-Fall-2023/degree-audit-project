@@ -2,6 +2,20 @@
 
 
 {% block content %}
+    {% with messages = get_flashed_messages()%}
+        {% if messages %}
+        <div class="get_flashed_messages" id="flash-Overlay"></div>
+        <div class="get_flashed_messages" id="flash-Modal">
+            <button class="get_flashed_messages" id="flashClose" onclick="closeModal()">X</button>
+
+            {% for message in messages %}
+                <p class="get_flashed_messages" id="message">
+                    {{message}}
+                </p>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
     <div class="home_Wrapper">
         <div class="myWrapper" id="myWrapper">
                 <div class="idForm" aria-label="Student ID Form">
@@ -11,14 +25,14 @@
                             <div class="idForm" id="student_id">
                                 <label for="student_id">
                                     Student ID:
-                                    <input type="text" id="student_id" name="student_id" required>
+                                    <input type="number" min="800000000" max="800999999" step="1" id="student_id" name="student_id" required>
                                 </label>
                             </div>
                             <!-- Input for Student Email -->
                             <div class="idForm" id="student_email">
                                 <label for="student_email">
                                     Student Email:
-                                    <input type="text" id="student_email" name="student_email" required>
+                                    <input type="email" maxlength="40" id="student_email" name="student_email" required>
                                 </label>
                             </div>
                             <div id="break">
@@ -32,3 +46,15 @@
         </div>
     </div>
 {% endblock content %}
+
+{% block script %}
+    <script>
+        function closeModal() {
+            var flashModal = document.getElementById('flash-Modal');
+            var flashOverlay = document.getElementById('flash-Overlay');
+            flashModal.style.display = 'none';
+            flashOverlay.style.display = 'none';
+            tracker
+        }
+    </script>
+{% endblock script %}

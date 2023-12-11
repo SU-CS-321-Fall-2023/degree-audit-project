@@ -3,33 +3,52 @@
 
 
 {% block content %}
-    <div class="row" id="student-heading-wrapper">
+    <div id="student-heading-wrapper">
         <div class="student-heading-wrapper" id="student-heading-wrapper">
             <div class="student-heading" id="student-heading">
                 <div id="grad-level">
                     <span><b>Level</b></span>
-                    <span>Undergraduate</span>
+                    <span>{{ student[0][0] }}</span>
                 </div>
                 <div id="class-level">
                     <span><b>Class</b></span>
-                    <span>Senior</span>
+                    <span>{{ student[0][1] }}</span>
                 </div>
-                <div id="major">
+                <div id="gpa">
+                    <span><b>GPA</b></span>
+                    <span>{{ student[0][2] }}</span>
+                </div>
+                <div id="majorOne">
                     <span><b>Major</b></span>
-                    <span>American Studies</span>
+                    <span>{{ student[0][3] }}</span>
                 </div>
-                <div id="program">
+                <div id="programOne">
                     <span><b>Program</b></span>
-                    <span>BA-AMST</span>
+                    <span>{{ student[0][4] }}</span>
                 </div>
-                <div id="advisor-name">
-                    <span><b>Advisor</b></span>
-                    <span>Last, First</span>
+                <div id="collegeOne">
+                    <span><b>College</b></span>
+                    <span>{{ student[0][5] }}</span>
                 </div>
-                <div id="academic-status">
-                    <span><b>Academic Status</b></span>
-                    <span>Good Standing</span>
+            {% if student[0][6] != None %}
+                <div id="majorTwo">
+                    <span><b>Major</b></span>
+                    <span>{{ student[0][6] }}</span>
                 </div>
+            {% endif %}
+            {% if student[0][7] != None %}
+                <div id="programTwo">
+                    <span><b>Program</b></span>
+                    <span>{{ student[0][7] }}</span>
+                </div>
+            {% endif %}
+            {% if student[0][8] != None %}
+                <div id="collegeTwo">
+                    <span><b>College</b></span>
+                    <span>{{ student[0][8] }}</span>
+                </div>
+            {% endif %}
+                <!--
                 <div id="student-type">
                     <span><b>Student Type</b></span>
                     <span>(C) Continuing Student</span>
@@ -38,9 +57,10 @@
                     <span><b>Student Status</b></span>
                     <span>Active</span>
                 </div>
+                -->
                 <div id="ant-grad-date">
                     <span><b>Anticipated Grad Date</b></span>
-                    <span>DD-MMM-YY</span>
+                    <span>{{ student[0][9] }}</span>
                 </div>
             </div>
         </div>

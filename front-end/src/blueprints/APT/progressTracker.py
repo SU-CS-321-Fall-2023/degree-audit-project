@@ -1,4 +1,6 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, redirect, url_for
+from flask import flash, request
+import time
 
 import mysql.connector
 
@@ -43,14 +45,41 @@ progressTracker_bp = Blueprint(
 )
 
 
+# @progressTracker_bp.route('/progress-tracker', methods=['POST'])
 @progressTracker_bp.route('/progress-tracker', methods=['POST'])
 def progress_tracker():
     try:
-        courses_data = list()
+        # Progress Tracker: Student Heading
+        student_data = list()
 
-        # studentID    = request.form['student_id']
-        # studentEmail = request.form['student_email']
-        # student_ID = studentID
+        studentID    = request.form.get('student_id')
+        studentEmail = request.form.get('student_email')
+
+        students = mysql.connector.connect(
+            host="174.138.53.254",
+            user="TheAuditor",
+            password=passwordTA,
+            database="students"
+        )
+        myStudents = students.cursor(prepared=True)
+        query_studentHeading = (
+            """SELECT 
+            `studentLevel`, `studentClass`, `studentGPA`, `majorOne`, `programOne`, `collegeOne`, 
+            CASE WHEN `majorTwo` IS NOT NULL THEN `majorTwo`ELSE NULL END AS `majorTwo`,
+            CASE WHEN `programTwo` IS NOT NULL THEN `programTwo`ELSE NULL END AS `programTwo`,
+            CASE WHEN `collegeTwo` IS NOT NULL THEN `collegeTwo`ELSE NULL END AS `collegeTwo`,
+            `anticipatedGradDate`
+            FROM students WHERE studentID=%s ;""" 
+            % (studentID))
+        myStudents.execute(query_studentHeading)
+        myResult1 = myStudents.fetchall()
+
+        for x in myResult1:
+            student_data.append(x)
+        print(student_data)
+
+        # Progress Tracker: Course History
+        courses_data = list()
 
         progress = mysql.connector.connect(
             host="174.138.53.254",
@@ -59,19 +88,57 @@ def progress_tracker():
             database="progress"
         )
         myProgress = progress.cursor(prepared=True)
-        sql_query = """SELECT `id`, `courseNumber`, `subject`, `courseReferenceNumber`, `courseTitle`, `campusCode`, `termDescription`, `gpaHours`, `hoursAttempted`, `hoursEarned`, `midtermGrade`, `finalGrade`, `qualityPoints` FROM `800737736` ; """
-        myProgress.execute(sql_query)
-        myResult = myProgress.fetchall()
 
-        for x in myResult:
-            courses_data.append(x)
-        return render_template('progress_tracker.html', courses=courses_data)
+        # query to create table in MySQL for new student
+        query_createTable = ("""CREATE TABLE IF NOT EXISTS `%s` LIKE defaultStudent ;""" % studentID)
+        myProgress.execute(query_createTable)
+        progress.commit()
+
+        # query to fill Progress Tracker with data from MySQL table
+        query_APT = (
+            """SELECT 
+            `id`, `courseNumber`, `subject`, `courseReferenceNumber`, `courseTitle`, 
+            `campusCode`, `termDescription`, `gpaHours`, 
+            `hoursAttempted`, `hoursEarned`, 
+            `midtermGrade`, `finalGrade`, `qualityPoints` 
+            FROM `%s` ;""" 
+            % studentID
+        )
+        myProgress.execute(query_APT)
+        myResult2 = myProgress.fetchall()
+        for y in myResult2:
+            courses_data.append(y)
+
+        return render_template('progress_tracker.html', courses=courses_data, student=student_data)
 
     except mysql.connector.Error as error:
-        print("query failed {}".format(error))
-
+        if TypeError:
+            flash(
+                message="Invalid Student ID or Email.",
+                category='error'
+            )
+            print("query failed {}".format(error))
+            return redirect(url_for('home.index'))
+        elif UnboundLocalError:
+            flash(
+                message="Invalid Student ID or Email.",
+                category='error'
+            )
+            print("query failed {}".format(error))
+            return redirect(url_for('home.index'))
+        else:
+            flash(
+                message="Invalid Student ID or Email.",
+                category='error'
+            )
+            print("query failed {}".format(error))
+            return redirect(url_for('home.index'))
     finally:
         if progress.is_connected():
             myProgress.close()
             progress.close()
-            print("MySQL connection (TA) is closed.")
+            print("MySQL connection (progress) is closed.")
+        if students.is_connected():
+            myStudents.close()
+            students.close()
+            print("MySQL connection (students) is closed.")
