@@ -122,27 +122,38 @@ if __name__ == "__main__":
 
 # import mysql.connector
 # # Connections to the MySQL Databases
+# # Database: "catalog"
 # catalog = mysql.connector.connect(
 #     host="174.138.53.254",
 #     user="TheAuditor",
 #     password=passwordTA,
 #     database="catalog"
 # )
-# reviews = mysql.connector.connect(
-#     host="174.138.53.254",
-#     user="TheAuditor",
-#     password=passwordTA,
-#     database="reviews"
-# )
+# myCatalog = catalog.cursor(prepared=True)
+# # Database: "progress"
 # progress = mysql.connector.connect(
 #     host="174.138.53.254",
 #     user="TheAuditor",
 #     password=passwordTA,
 #     database="progress"
 # )
-# myCatalog = catalog.cursor(prepared=True)
-# myReviews = reviews.cursor(prepared=True)
 # myProgress = progress.cursor(prepared=True)
+# # Database: "reviews"
+# reviews = mysql.connector.connect(
+#     host="174.138.53.254",
+#     user="TheAuditor",
+#     password=passwordTA,
+#     database="reviews"
+# )
+# myReviews = reviews.cursor(prepared=True)
+# # Database: "students"
+# students = mysql.connector.connect(
+#     host="174.138.53.254",
+#     user="TheAuditor",
+#     password=passwordTA,
+#     database="students"
+# )
+# myStudents = students.cursor(prepared=True)
 
 
 
