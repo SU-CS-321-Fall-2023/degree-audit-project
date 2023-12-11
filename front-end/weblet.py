@@ -17,7 +17,7 @@ import os
 import mysql.connector
 
 from src import create_app
-
+#Sydney
 def ourPaths():
     """
     ourPaths() must be placed at the beginning of the file 
