@@ -1,0 +1,57 @@
+{% extends "index.html" %}
+{% block title %}SDA - Interest Exploration{% endblock title %}
+
+
+{% block style %}
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 0 auto;
+        }
+        table, th, td {
+            border: 1px antiquewhite;
+        }
+        th, td {
+            padding: 1px;
+        }
+        .header {
+            background-color: forestgreen;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+{% endblock style %}
+
+
+{% block content %}
+    <div class="header">
+        <h1>myStetson</h1>
+    </div>
+    <table>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>800719386</td>
+            <td>Peyton Shelly</td>
+        </tr>
+    </table>
+
+    <h1>Select Your Interests</h1>
+    <form action="{{ url_for('interests.submit') }}" method="POST">
+        <label for="interests">Choose your interests:</label><br>
+        {% for interest in default_interests %}
+            <label>
+                <input type="checkbox" name="interests" value="{{ interest }}">
+            </label> {{ interest }}<br>
+        {% endfor %}
+        <label>
+            <input type="checkbox" name="interests" value="OTHER">
+        </label> Other (please specify):<br>
+        <label>
+            <input type="text" name="custom_interest" placeholder="Specify your interest">
+        </label><br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock content %}

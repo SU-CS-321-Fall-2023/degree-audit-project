@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% block title %}SDA - Your Schedule{% endblock title %}
+
+
+{% block style %}
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 0 auto;
+        }
+        table, th, td {
+            border: 1px solid green;
+        }
+        th, td {
+            padding: 10px;
+        }
+{% endblock style %}
+
+
+{% block content %}
+    <h1>Your Schedule</h1>
+    <p>Your selected interests:</p>
+    <ul>
+        {% for interest in interests %}
+            <li>{{ interest }}</li>
+        {% endfor %}
+    </ul>
+
+    <table>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>80012345</td>
+            <td>John Doe</td>
+        </tr>
+    </table>
+{% endblock content %}

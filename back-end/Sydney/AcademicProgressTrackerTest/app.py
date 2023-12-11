@@ -66,7 +66,7 @@ def index():
 
         for x in myResult:
             courses_data.append(x)
-        return render_template('progress_tracker.html', courses=courses_data)
+        return render_template('OLD-progress_tracker.html', courses=courses_data)
 
     except mysql.connector.Error as error:
         print("query failed {}".format(error))

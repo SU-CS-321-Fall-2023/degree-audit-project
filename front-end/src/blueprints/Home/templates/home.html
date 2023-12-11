@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+
+
+{% block content %}
+    <div class="home_Wrapper">
+        <div class="myWrapper" id="myWrapper">
+                <div class="idForm" aria-label="Student ID Form">
+                    <div class="inner_form">
+                        <p class="idForm" id="heading">Enter Your Student ID and Student Email</p>
+                        <form class="idForm" id="idForm" action="{{ url_for('progressTracker.progress_tracker') }}" method="POST">
+                            <div class="idForm" id="student_id">
+                                <label for="student_id">
+                                    Student ID:
+                                    <input type="text" id="student_id" name="student_id" required>
+                                </label>
+                            </div>
+                            <!-- Input for Student Email -->
+                            <div class="idForm" id="student_email">
+                                <label for="student_email">
+                                    Student Email:
+                                    <input type="text" id="student_email" name="student_email" required>
+                                </label>
+                            </div>
+                            <div id="break">
+                                <div class="idForm" id="submit">
+                                    <input class="idForm" id="submit" type="submit" value="Submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+{% endblock content %}

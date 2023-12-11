@@ -1,0 +1,136 @@
+{% extends "index.html" %}
+{% block title %}SDA - Academic Progress Tracker{% endblock title %}
+
+
+{% block content %}
+    <div class="row" id="student-heading-wrapper">
+        <div class="student-heading-wrapper" id="student-heading-wrapper">
+            <div class="student-heading" id="student-heading">
+                <div id="grad-level">
+                    <span><b>Level</b></span>
+                    <span>Undergraduate</span>
+                </div>
+                <div id="class-level">
+                    <span><b>Class</b></span>
+                    <span>Senior</span>
+                </div>
+                <div id="major">
+                    <span><b>Major</b></span>
+                    <span>American Studies</span>
+                </div>
+                <div id="program">
+                    <span><b>Program</b></span>
+                    <span>BA-AMST</span>
+                </div>
+                <div id="advisor-name">
+                    <span><b>Advisor</b></span>
+                    <span>Last, First</span>
+                </div>
+                <div id="academic-status">
+                    <span><b>Academic Status</b></span>
+                    <span>Good Standing</span>
+                </div>
+                <div id="student-type">
+                    <span><b>Student Type</b></span>
+                    <span>(C) Continuing Student</span>
+                </div>
+                <div id="student-status">
+                    <span><b>Student Status</b></span>
+                    <span>Active</span>
+                </div>
+                <div id="ant-grad-date">
+                    <span><b>Anticipated Grad Date</b></span>
+                    <span>DD-MMM-YY</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress_tracker" id="aptContainer">
+        
+        <!--
+        <h1 class="progress_tracker" id="aptH1">Welcome to the Academic Progress Tracker</h1>
+
+        <label for="showTracker">
+            <input type="checkbox" id="showTracker" onclick="toggleTracker()">
+                Show Academic Progress Tracker
+            </input>
+        </label>
+        <div class="progress_tracker" id="aptOverlay"></div>
+        <div class="progress_tracker" id="aptModal">
+            <button class="progress_tracker" id="aptClose" onclick="closeModal()">X</button>
+        -->
+            <h2 class="progress_tracker" id="aptH2">
+                Academic Progress Tracker
+            </h2>
+
+            <table class="progress_tracker" id="aptTable" border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Course #</th>
+                        <th>Subject</th>
+                        <th>CRN</th>
+                        <th>Course Title</th>
+                        <th>Campus</th>
+                        <th>Term Description</th>
+                        <th>GPA Hours</th>
+                        <th>Attempted Hours</th>
+                        <th>Earned Hours</th>
+                        <th>Midterm Grade</th>
+                        <th>Final Grade</th>
+                        <th>Quality Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in courses %}
+                    <tr>
+                        <td>{{ course[0] }}</td>
+                        <td>{{ course[1] }}</td>
+                        <td>{{ course[2] }}</td>
+                        <td>{{ course[3] }}</td>
+                        <td>{{ course[4] }}</td>
+                        <td>{{ course[5] }}</td>
+                        <td>{{ course[6] }}</td>
+                        <td>{{ course[7] }}</td>
+                        <td>{{ course[8] }}</td>
+                        <td>{{ course[9] }}</td>
+                        <td>{{ course[10] }}</td>
+                        <td>{{ course[11] }}</td>
+                        <td>{{ course[12] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        <!--
+        </div>
+        -->
+    </div>
+{% endblock content %}
+
+
+{% block script %}
+    <script>
+        function toggleTracker() {
+            var checkbox = document.getElementById('showTracker');
+            var tracker = document.getElementById('aptModal');
+            var overlay = document.getElementById('aptOverlay');
+            if (checkbox.checked) {
+                tracker.style.display = 'block';
+                overlay.style.display = 'block';
+            } else {
+                tracker.style.display = 'none';
+                overlay.style.display = 'none';
+            }
+        }
+
+        function closeModal() {
+            var checkbox = document.getElementById('showTracker');
+            var tracker = document.getElementById('aptModal');
+            var overlay = document.getElementById('aptOverlay');
+            checkbox.checked = false;
+            tracker.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    </script>
+{% endblock script %}

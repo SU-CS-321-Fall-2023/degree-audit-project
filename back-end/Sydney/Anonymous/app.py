@@ -44,7 +44,7 @@ last_review_id = 1000
 @app.route('/')
 def index():
     # Display the home page and form to submit reviews
-    return render_template('index.html')
+    return render_template('OLD-index.html')
 
 @app.route('/submit_review', methods=['POST'])
 def submit_review():
@@ -82,7 +82,7 @@ def view_reviews(course_code):
     course_reviews = [review for review in reviews if review['course_code'].lower() == course_code.lower()]
     
     # Display the reviews for the specific course
-    return render_template('reviews.html', course_code=course_code.upper(), reviews=course_reviews)
+    return render_template('OLD-reviews.html', course_code=course_code.upper(), reviews=course_reviews)
 
 
 if __name__ == '__main__':

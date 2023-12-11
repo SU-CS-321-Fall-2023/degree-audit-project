@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% block title %}SDA - Recommended Courses{% endblock title %}
+
+
+{% block content %}
+    <div class="header">
+        <h1>myStetson</h1>
+    </div>
+
+    <div class="banner">
+        <table>
+            <tr>
+                <td>Student Name:</td>
+                <td>Peyton Shelly</td>
+            </tr>
+            <tr>
+                <td>Student ID:</td>
+                <td>800719386</td>
+            </tr>
+        </table>
+    </div>
+
+    <h1>Recommended Courses</h1>
+    <p>Your selected interests:</p>
+    <ul>
+        {% for interest in interests %}
+            <li>{{ interest }}</li>
+        {% endfor %}
+    </ul>
+
+    <div class="recommended-courses">
+        <p>Here are some recommended courses:</p>
+        <ul>
+            {% for course in courses %}
+                <li>{{ course }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}

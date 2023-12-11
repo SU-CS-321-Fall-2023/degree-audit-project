@@ -34,7 +34,7 @@ mail = Mail(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('email-index.html')
 
 
 @app.route('/send_alert', methods=['POST'])
@@ -52,7 +52,7 @@ def send_alert():
     else:
         flash('No holds on your account. You can proceed with class registration.', 'success')
 
-    return redirect(url_for('index'))
+    return redirect(url_for('email-index'))
 
 
 

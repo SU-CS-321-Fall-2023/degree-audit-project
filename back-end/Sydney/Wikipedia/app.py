@@ -9,14 +9,14 @@ app = Flask(__name__)
 @app.route("/", methods=["POST", "GET"]) 
 def home(): 
     if request.method == "GET": 
-        return render_template("index.html") 
+        return render_template("OLD-index.html") 
     else: 
         search = request.form["search"] 
   
         # Fetch data from wikipedia 
         result = wikipedia.summary(search, sentences=2) 
         title = search
-        return render_template("results.html", title=title, summary=result)
+        return render_template("OLD-results.html", title=title, summary=result)
         #return f"<h1>{result}</h1>"
   
 if __name__ == '__main__': 

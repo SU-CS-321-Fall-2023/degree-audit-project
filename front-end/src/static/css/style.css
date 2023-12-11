@@ -35,6 +35,11 @@
     --hover-background-color: #e0e0e0; /* Light mode hover background */
     --hover-text-color: #333333; /* Light mode hover text color */
 
+    --rev-text-color: #ffffff; /* For when you want light text in Light Mode. */
+    --close-button-color: #c00;
+    --font-weight-boldToNormal: bold;
+
+
     /* font-size: 10pt; */
 }
 
@@ -49,6 +54,10 @@ body.dark-mode {
     --border-color: #555555; 
     --hover-background-color: #333333; /* Dark mode hover background */
     --hover-text-color: #ffffff; /* Dark mode hover text color */
+
+    --rev-text-color: #000000; /* For when you want dark text in Dark Mode. */
+    --close-button-color: #c00;
+    --font-weight-boldToNormal: normal;
 }
 
 
@@ -75,11 +84,11 @@ main {
     width: auto;
     overflow-x: visible;
 
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
+    justify-content:left;
+    align-items: center; */
+    /* height: 50vh; */
 
     padding-top: 0px;
     padding-right: 0px;
@@ -141,329 +150,10 @@ p {
     */
 
 /*
-*<---- Containers specific to about-us.html ---->
-    */
-
-div.about-us_title__container {
-    width: 1000px;
-    min-width: 370px;
-}
-    h1.about-us_title {
-        width: fit-content;
-        padding: 10px;
-        margin: 10px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-div.About-Us {
-    /*background-color: #409639;*/
-    background-color: var(--primary-color);
-    max-width: 1700px;
-    max-height: 100%;
-    border-radius: 0px;
-
-    overflow: auto;
-
-    font-family:'Times New Roman', Times, serif;
-    font-size: 16pt;
-    font-style: normal;
-    text-align: left;
-}
-    div.About-Us img.About-Us_team-pic {
-        /*background-color: #175640; /* #095540 */
-        background-color: var(--secondary-color);
-        min-width: 1000px;
-        max-width: 100%;
-        min-height: 300px;
-        border-radius: 0px;
-
-        float: none;
-        box-sizing: content-box;
-        display: flex;
-        justify-content: center;
-
-        padding-top: 10px;
-        padding-right: 10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-
-        margin-top: auto;
-        margin-right: auto;
-        margin-bottom: 25px;
-        margin-left: auto;
-    }
-    div.About-Us article.bio {
-        max-width: 100%;
-        min-height: 200px;
-
-        float: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-        div.About-Us article.bio p {
-            /*background-color: #175640;*/
-            background-color: var(--primary-color);
-            min-width: 300px;
-            border-radius: 20px;
-
-            float: left;
-
-            color: #ffffff;
-            font-size: 12pt;
-            font-style: normal;
-            font-weight: lighter;
-            line-height: 115%;
-            text-align: left;
-            text-indent: 0.15in;
-
-            padding-top: 10px;
-            padding-right: 15px;
-            padding-bottom: 10px;
-            padding-left: 15px;
-
-            margin-top: 10px;
-            margin-right: auto;
-            margin-bottom: 10px;
-            margin-left: auto;
-        }
-            div.About-Us article.bio p#About_Paragraph_1 {
-                background-color: #175640;
-            }
-            div.About-Us article.bio p#About_Paragraph_2 {
-                background-color: #175640;
-            }
-            div.About-Us article.bio p#About_Paragraph_3 {
-                background-color: #175640;
-            }
-    /* div.About-Us div.About-Us-wedge#About-Us_wedge {
-        background-color: blue;
-        width: 100%;
-        height: 5px;
-
-        float: none;
-
-        margin-top: 0px;
-    } */
-/*
-!<----END OF Containers specific to about-us.html ---->
-    */
-
-/*
-*<---- Containers specific to the various profile .html ---->
-    */
-main h1.profile-name {
-    min-width: 300px;
-    display: inline-flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-
-    padding-top: 10px;
-    padding-right: 5px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-
-    margin-top: 0px;
-    margin-right: 25px;
-    margin-bottom: 0px;
-    margin-left: 25px;
-}
-
-div.About-Us article.bio p#About_Paragraph_1,
-div.About-Us article.bio p#About_Paragraph_2,
-div.About-Us article.bio p#About_Paragraph_3 {
-    background-color: var(--primary-color); /* Updated to use variable */
-}
-
-div.username#handler {
-    /*background-color: #409639;*/
-    background-color: var(--background-color); /* Use variable for background */
-    color: var(--text-color);
-    width: 250px;
-    height: 50px;
-    border-radius: 10px;
-
-    overflow: visible;
-    box-sizing: content-box;
-
-    font-family:'Times New Roman', Times, serif;
-    font-size: 24pt;
-    font-style: normal;
-    font-weight: bold;
-    text-align: center;
-    
-    padding: 10px;
-    margin: 0;
-    margin-bottom: 0px;
-}
-    div.username#handler p {
-        width: 250px;
-
-        line-height: 50px;
-        text-align: center;
-
-        padding: 0px;
-        margin: 0px;
-    }
-div.biography__container {
-    /*background-color: #9bcd97; */
-    background-color: var(--secondary-color);
-    width: 500px;
-
-    float: right;
-    overflow: visible;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-
-    padding: 25px;
-    margin: 0;
-}
-    div.biography__container#personal_bio_001 {
-        /*background-color: #409639;*/
-        background-color: var(--primary-color);
-        width: fit-content;
-        height: 400px;
-        border-radius: 20px;
-
-        margin-left: 0px;
-    }
-        div.biography__container#personal_bio_001 article.bio {
-            /*background-color: #900028;*/
-            background-color: var(--secondary-color);
-            border-radius: 20px;
-
-            display: block;
-            
-            padding: 0;
-            margin: 0;
-            margin-bottom: auto;
-        }
-            div.biography__container#personal_bio_001 article.bio p {
-                /*background-color: #175640;*/
-                background-color: var(--secondary-color); 
-                width: 400px;
-                border-radius: 20px;
-
-                float: left;
-                display: block;
-                overflow: auto;
-
-                color: #ffffff;
-                font-size: 14pt;
-                font-style: normal;
-                font-weight: lighter;
-                text-align: left;
-                text-indent: 0.25in;
-
-                padding-top: 5px;
-                padding-right: 15px;
-                padding-bottom: 5px;
-                padding-left: 15px;
-
-                margin-top: 0px;
-                margin-right: 5px;
-                margin-bottom: 0px;
-                margin-left: 5px;
-            }
-    div.biography__container#specific_bio_001 {
-        /*background-color: #409639;*/
-        background-color: var(--primary-color);
-        width: fit-content;
-        min-height: 350px;
-        border-radius: 20px;
-
-        margin-right: 25px;
-        margin-left: auto;
-    }
-        div.biography__container#specific_bio_001 article.bio-specifics {
-            /*background-color: #175640;*/
-            background-color: var(--secondary-color); /* Updated to use variable */
-            width: 350px;
-            min-height: 300px;
-            border-radius: 20px;
-
-            float: right;
-
-            /*color: #ffffff;*/
-            color: var(--text-color);
-            font-size: 12pt;
-            font-style: normal;
-            font-weight: normal;
-            text-align: left;
-
-            padding-top: 5px;
-            padding-right: 5px;
-            padding-bottom: 5px;
-            padding-left: 5px;
-
-            margin-top: 0px;
-            margin-right: 5px;
-            margin-bottom: 0px;
-            margin-left: 5px;
-        }
-            div.biography__container#specific_bio_001 article.bio-specifics h3.bio-specifics-Header {
-                /*color: #ffffff;*/
-                color: var(--text-color);
-                text-align: center;
-            }
-            div.biography__container#specific_bio_001 article.bio-specifics h3.bio-specifics-Header hr {
-                /*background-color: #ffffff;*/
-                background-color: var(--text-color);
-                height: 1px;
-
-                border-width: 0px;
-            }
-            div.biography__container#specific_bio_001 article.bio-specifics ul {
-                /*background-color: #175640;*/
-                background-color: var(--secondary-color);
-                
-                font-weight: lighter;
-                line-height: 150%;
-            }
-img.profile_pic {
-    /*background-color: #175640; /* #095540 */
-    background-color: var(--secondary-color);
-    width: 300px;
-    min-height: 400px;
-    border-radius: 20px;
-    
-    float: left;
-
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-
-    margin-top: 0px;
-    margin-right: 5px;
-    margin-bottom: 0px;
-    margin-left: 25px;
-}
-/*
-!<---- END OF Containers specific to the various profile .html (Ex.: Alex_G.html) ---->
-    */
-
-/*
-*<---- Containers specific to specific profiles ---->
-    */
-/*
-    The blue background-color for the Profile-Pic_wedge is NOT FINAL. Refer to the top of this file for explanation.
-    */
-div.Profile-Pic_wedge {
-    width: 10000px;
-    height: 5px;
-}
-/*
-!<---- END OF Containers specific to specific profiles ---->
-    */
-
-/*
 *<---- Styling for header.html ---->
     */
 
 header object {
-    /*background-color: palegreen;*/
     background-color: var(--secondary-color);
     width: 1000px;
     height: 248px;
@@ -476,7 +166,6 @@ header object {
     margin: 0px;
 }
 header.header {
-    /*background-color: #85ab82;*/
     background-color: var(--secondary-color);
     width: 100%;
     min-height: 100px;
@@ -490,7 +179,6 @@ header.header {
     margin: 0;
 }
 div.inner_header {
-    /*background-color: #ffffff;*/
     background-color: var(--background-color);
     width: 100%;
     height: 100%;
@@ -811,7 +499,6 @@ nav.nav-bar-bottom {
     */
 
 footer {
-    /*background-color: #ffffff;*/
     background-color: var(--background-color);
     height: 100%;
 
@@ -819,7 +506,6 @@ footer {
     /* margin-top: 2rem; */
 }
     div.footer__container {
-        /*background-color: #409639;*/
         background-color: var(--primary-color);
         min-width: 100%;
         min-height: 100%;
@@ -827,7 +513,7 @@ footer {
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
         padding: 0px;
-        padding: 2rem 2rem;
+        padding: 1rem 1rem;
 
         margin: 0 auto;
     }
@@ -868,19 +554,20 @@ footer {
                     padding: 0px;
                     margin: 0px;
                 }
-                    div.The_Auditors_Logo__container a.footer__logo#footer__logo {
-                        background-color: transparent;
-                        max-width: 300px;
-                        height: auto;
-
-                        text-decoration: none;
-
-                        margin-top: 0.5rem;
-                        margin-bottom: 1rem;
+                    h1.footer__logo#footer__logo-heading {
+                        width: 100%;
                     }
-                        h1.footer__logo#footer__logo-heading {
-                            width: 100%;
+                        a.footer__logo#footer__logo {
+                            background-color: transparent;
+                            max-width: 300px;
+                            height: auto;
+
                             color: var(--text-color);
+                            font-size: 36pt;
+                            text-decoration: none;
+
+                            margin-top: 0.5rem;
+                            margin-bottom: 1rem;
                         }
                         /* a.footer__logo#footer__logo img {
                             width: 100%;
@@ -946,6 +633,7 @@ footer {
                             li.widget_title#footer_links span.widget_title#footer_links {
                                 display: block;
 
+                                font-size: 16pt;
                                 font-weight: 700;
                                 letter-spacing: -0.025rem;
 
@@ -972,10 +660,12 @@ footer {
                                     margin: 0px;
                                 }
                                 li.widget_item#footer_links a.widget_link#repo {
-                                    color: #000000;
+                                    color: var(--text-color);
+                                    font-size: 14pt;
                                     text-decoration: none;
                                     padding: 0px;
                                     margin: 0px;
+                                    margin-left: 0.5rem;
                                 }
 
 
@@ -1046,70 +736,69 @@ footer {
     */
 
 /*
-*<---- Styling for idForm.js ---->
-    */
-
-div.idForm {
-    /* background-color: #85ab82; */
-    background-color: var(--background-color);
-    border: 2px solid #409639;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow size */
-    width: 100%;
-    max-width: 600px;
-    /* min-height: 100%; */
-    position: relative;
-
-    /* display: block;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
-
-
-    color: var(--text-color);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-    padding: 0px;
-
-    margin-top: 1rem;
-    margin-right: auto;
-    margin-bottom: 1rem;
-    margin-left: auto;
-}
-div.inner_form {
-    /*background-color: #ffffff;*/
-    background-color: var(--inner-form-bg);
-    width: 100%;
-    height: 100%;
-    color: var(--text-color);
-
-    display: block;
-
-    padding: 10px;
-
-    margin: 0 auto;
-}
-
-/* Styling for inner elements of the form */
-div.idForm > * {
-    color: var(--text-color);
-    text-align: center;
-    width: 100%; /* Makes sure children take full width */
-    /* Other styles... */
-}
-
-/*
-!<---- END OF Styling for idForm.js ---->
-    */
-
-
-/*
 *<---- Miscellaneous containers ---->
     */
+.content_container#main_block_container
+{
+    display: block;
+
+    margin-bottom: 2rem;
+}
 
 
 /*
 !<---- END OF Miscellaneous containers ---->
     */
+
+
+/*
+*<---- Styling for Error Pages ---->
+    */
+.error_page#error_page-Container
+{
+    min-width: min-content;
+    background-color: var(--accent-color);
+    border-top-left-radius: 6rem;
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 6rem;
+    border-bottom-right-radius: 0rem;
+
+    padding-right:3rem;
+    padding-left: 3rem;
+    margin-right: 1rem;
+    margin-bottom: 0px;
+    margin-left: 5rem;
+}
+.error_page#error_page-Heading
+{
+    color: var(--text-color);
+    font-size: 48pt;
+    margin-bottom: 0px;
+}
+.error_page#error_page-Notice_Container
+{
+    background-color: var(--accent-color);
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 6rem;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 6rem;
+
+    padding-right:3rem;
+    padding-left: 3rem;
+    margin-right: 1rem;
+    margin-bottom: 0px;
+    margin-left: 5rem;
+}
+.APT-error_page#APT-error_page-Notice
+{
+    font-size: 16pt;
+    font-style: italic;
+}
+/*
+!<---- END OF Styling for Error Pages ---->
+    */
+
+
 
 *,
 *::before,
@@ -1122,120 +811,23 @@ div.idForm > * {
     scroll-behavior: smooth;
   }
 }
-/* *Everything below this comment is dedicated to responsive styling. */
-
+/*
+*<---- Responsive Styling ---->
+    */
 @media (min-width: 300px)
 {
-    .courses-table-xxs, .courses-table
-    {
-        min-width: 280px;
-        width: 100%;
-        max-width: 280px;
-        min-height: 300px;
-        max-height: 400px;
-        overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .degree-table-xxs, .degree-table
-    {
-        min-width: 280px;
-        width: 100%;
-        max-width: 280px;
-        min-height: 300px;
-        max-height: 400px;
-        overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .table-new-xxs, .table-new
-    {
-        width: 100%;
-        max-height: 400px;
-        overflow-x: auto;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .table-key-xxs, .table-key#table-key
-    {
-        min-width: fit-content;
-        height: fit-content;
-        overflow-x: auto;
-
-        display: block;
-
-        color: black;
-
-        margin: 0 0 1rem;
-    }
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-xxs, .student-heading-wrapper#student-heading-wrapper,
     .student-heading-xxs, .student-heading#student-heading
     {
         max-width: 300px;
     }
-    .nav-tabs-content-xxs, .nav-tabs-content
-    {
-        max-width: 300px;
-    }
-    .new-container-xxs, .new-container
-    {
-        max-width: 200px;
-    }
 }
 @media (min-width: 400px)
 {
-    .courses-table-xs, .courses-table-xxs, 
-    .courses-table
-    {
-        width: 100%;
-        max-width: 380px;
-        height: 600px;
-        max-height: 900px;
-        overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .degree-table-xs, .degree-table-xxs, 
-    .degree-table
-    {
-        width: 100%;
-        max-width: 380px;
-        height: 600px;
-        max-height: 900px;
-        overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .table-new-xs, .table-new-xxs, 
-    .table-new
-    {
-        width: 100%;
-        height: 600px;
-        max-height: 900px;
-        overflow-x: auto;
-
-        display: block;
-
-        margin: 0 0;
-    }
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
     .student-heading-wrapper#student-heading-wrapper,
     .student-heading-xs, .student-heading-xxs, 
@@ -1243,57 +835,11 @@ div.idForm > * {
     {
         max-width: 380px;
     }
-    .nav-tabs-content-xs, .nav-tabs-content-xxs, 
-    .nav-tabs-content
-    {
-        max-width: 380px;
-    }
-    .new-container-xs, .new-container-xxs, .new-container
-    {
-        max-width: 200px;
-    }
 }
 @media (min-width: 576px)
 {
-    .courses-table-sm, .courses-table-xs, .courses-table-xxs, 
-    .courses-table
-    {
-        width: 100%;
-        max-width: 540px;
-        height: 600px;
-        overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .degree-table-sm, .degree-table-xs, .degree-table-xxs, 
-    .degree-table
-    {
-        width: 100%;
-        max-width: 540px;
-        height: 600px;
-        overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .table-new-sm, .table-new-xs, .table-new-xxs, 
-    .table-new
-    {
-        width: 100%;
-        height: 600px;
-        overflow-x: auto;
-
-        display: block;
-
-        margin: 0 0;
-    }
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
     .student-heading-wrapper#student-heading-wrapper,
     .student-heading-sm, .student-heading-xs, .student-heading-xxs, 
@@ -1301,68 +847,11 @@ div.idForm > * {
     {
         max-width: 400px;
     }
-    .nav-tabs-content-sm, .nav-tabs-content-xs, .nav-tabs-content-xxs, 
-    .nav-tabs-content
-    {
-        max-width: 400px;
-        height: 40px;
-        max-height: 40px;
-    }
-    .new-container-sm, .new-container-xs, .new-container-xxs, .new-container
-    {
-        max-width: 200px;
-    }
-}
-@media (min-width: 600px) {
-    .some-responsive-element {
-        background-color: var(--background-color);
-        /* ... other responsive styles ... */
-    }
 }
 @media (min-width: 768px)
 {
-    .courses-table-md, 
-    .courses-table-sm, .courses-table-xs, .courses-table-xxs, 
-    .courses-table
-    {
-        width: 100%;
-        max-width: fit-content;
-        height: 600px;
-        overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .degree-table-md, 
-    .degree-table-sm, .degree-table-xs, .degree-table-xxs, 
-    .degree-table
-    {
-        width: 100%;
-        max-width: fit-content;
-        height: 600px;
-        overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .table-new-md, 
-    .table-new-sm, .table-new-xs, .table-new-xxs, 
-    .table-new
-    {
-        width: 100%;
-        height: 600px;
-        overflow-x: auto;
-
-        display: block;
-
-        margin: 0 0;
-    }
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-md, 
     .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
     .student-heading-wrapper#student-heading-wrapper,
@@ -1372,59 +861,11 @@ div.idForm > * {
     {
         max-width: 600px;
     }
-    .new-container-md, 
-    .new-container-sm, .new-container-xs, .new-container-xxs, .new-container
-    {
-        max-width: 200px;
-    }
 }
 @media (min-width: 992px)
 {
-    .courses-table-lg, 
-    .courses-table-md, 
-    .courses-table-sm, .courses-table-xs, .courses-table-xxs, 
-    .courses-table
-    {
-        width: 100%;
-        max-width: fit-content;
-        height: 600px;
-        overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .degree-table-lg, 
-    .degree-table-md, 
-    .degree-table-sm, .degree-table-xs, .degree-table-xxs, 
-    .degree-table
-    {
-        width: 100%;
-        max-width: fit-content;
-        height: 600px;
-        overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .table-new-lg, 
-    .table-new-md, 
-    .table-new-sm, .table-new-xs, .table-new-xxs, 
-    .table-new
-    {
-        width: 100%;
-        height: 600px;
-        overflow-x: auto;
-
-        display: block;
-
-        margin: 0 0;
-    }
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-lg, 
     .student-heading-wrapper-md, 
     .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
@@ -1436,59 +877,11 @@ div.idForm > * {
     {
         max-width: 800px;
     }
-    .new-container-lg, .new-container-md, 
-    .new-container-sm, .new-container-xs, .new-container-xxs, .new-container
-    {
-        max-width: 800px;
-    }
 }
 @media (min-width: 1200px)
 {
-    .courses-table-xl, .courses-table-lg, 
-    .courses-table-md, 
-    .courses-table-sm, .courses-table-xs, .courses-table-xxs, 
-    .courses-table{
-        border-color: var(--border-color); /* Use variable for border color */
-        width: 100%;
-        max-width: fit-content;
-        height: 600px;
-        overflow-x: auto;
-        border-spacing: 0;
-        /* border-color: black; */
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .degree-table-xl, .degree-table-lg, 
-    .degree-table-md, 
-    .degree-table-sm, .degree-table-xs, .degree-table-xxs, 
-    .degree-table
-    {
-        width: 100%;
-        max-width: fit-content;
-        height: 600px;
-        overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .table-new-xl, .table-new-lg, 
-    .table-new-md, 
-    .table-new-sm, .table-new-xs, .table-new-xxs, 
-    .table-new
-    {
-        width: 100%;
-        height: 600px;
-        overflow-x: auto;
-
-        display: block;
-
-        margin: 0 0;
-    }
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-xl, .student-heading-wrapper-lg, 
     .student-heading-wrapper-md, 
     .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
@@ -1500,61 +893,11 @@ div.idForm > * {
     {
         max-width: 800px;
     }
-    .new-container-xl, .new-container-lg, .new-container-md, 
-    .new-container-sm, .new-container-xs, .new-container-xxs, .new-container
-    {
-        max-width: 800px;
-    }
 }
 @media (min-width: 1400px)
 {
-    .courses-table-xxl, .courses-table-xl, .courses-table-lg, 
-    .courses-table-md, 
-    .courses-table-sm, .courses-table-xs, .courses-table-xxs, 
-    .courses-table
-    {
-        width: 100%;
-        max-width: fit-content;
-        height: 600px;
-        max-height: max-content;
-        overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .degree-table-xxl, .degree-table-xl, .degree-table-lg, 
-    .degree-table-md, 
-    .degree-table-sm, .degree-table-xs, .degree-table-xxs, 
-    .degree-table
-    {
-        width: 100%;
-        max-width: fit-content;
-        height: 600px;
-        max-height: max-content;
-        overflow-x: auto;
-        border-spacing: 0;
-        border-color: black;
-
-        display: block;
-
-        margin: 0 0;
-    }
-    .table-new-xxl, .table-new-xl, .table-new-lg, 
-    .table-new-md, 
-    .table-new-sm, .table-new-xs, .table-new-xxs, 
-    .table-new
-    {
-        width: 100%;
-        height: 600px;
-        overflow-x: auto;
-
-        display: block;
-
-        margin: 0 0;
-    }
+    .home_Wrapper,
+    .myWrapper#myWrapper,
     .student-heading-wrapper-xxl, .student-heading-wrapper-xl, .student-heading-wrapper-lg, 
     .student-heading-wrapper-md, 
     .student-heading-wrapper-sm, .student-heading-wrapper-xs, .student-heading-wrapper-xxs, 
@@ -1566,38 +909,14 @@ div.idForm > * {
     {
         max-width: 1200px;
     }
-    .new-container-xxl, .new-container-xl, .new-container-lg, .new-container-md, 
-    .new-container-sm, .new-container-xs, .new-container-xxs, .new-container
-    {
-        max-width: 1200px;
-    }
 }
+/*
+!<---- END OF Responsive Styling ---->
+    */
 
-.myWrapper#myWrapper
-{
-    /*background-color: #409639;*/
-    background-color: var(--primary-color);
-
-    padding: 0;
-    margin: 0;
-}
-.page-title
-{
-    /*color: black;*/
-    color: var(--text-color);
-    font-weight: bold;
-}
-p.sched-des#sched-des
-{
-    width: fit-content;
-    max-width: 500px;
-    text-wrap: wrap;
-    margin: 0 0 1rem 0;
-}
-#course-semester
-{
-    text-align: center;
-}
+/*
+*<---- Styling for Student Heading in index.html ---->
+    */
 .student-heading-wrapper#student-heading-wrapper
 {
     background-color: var(--heading-wrapper-bg); /* Use variable for background color */
@@ -1617,7 +936,6 @@ p.sched-des#sched-des
     align-items: center; /* Center vertically */
     text-align: center; /* Center text for good measure */
 }
-
 .student-heading#student-heading
 {
     display: flex;
@@ -1659,193 +977,648 @@ div.degree_heading#degree_heading
     flex-wrap: wrap;
     align-content: flex-start;
 }
+/*
+!<---- END OF Styling for Student Heading in index.html ---->
+    */
 
-.table-main_container#table-main
+/*
+*<---- Styling for idForm in index.html ---->
+    */
+.home_Wrapper
 {
-    margin-top: 0.5rem;
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-    margin-left: 0;
-}
-.table-new#table-main
-{
-    width: 100%;
-    height: 100%;
-    border-color: black;
-    border-style: solid;
-    border-width: 3px;
-    resize: both;
-}
-.table-key#table-key
-{
-    min-width: fit-content;
-    height: fit-content;
-    overflow-x: auto;
-
-    display: block;
-
-    color: white;
-
-    margin: 0 0 1rem;
-}
-.table-expand#table-expand
-{
-    min-width: fit-content;
-    height: fit-content;
-    overflow-x: auto;
-
-    display: block;
-
-    color: black;
-
-    margin: 0 0 1rem;
-}
-.table-new#expanded-table#table-main
-{
-    width: 100%;
-    height: 100%;
-    border-color: black;
-    border-style: solid;
-    border-width: 3px;
-    resize: both;
-}
-
-.tab-content-text
-{
-    /* width: auto; */
-    max-width: 200px;
-
     display: flex;
     flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+.myWrapper#myWrapper
+{
+    background-color: var(--primary-color);
+
+    padding: 0;
+    margin: 0;
+}
+div.idForm
+{
+    background-color: var(--background-color);
+    border: 2px solid #409639;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow size */
+    max-width: 600px;
+    position: relative;
+
+    display: block;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    justify-content: flex-start;
+
+    color: var(--text-color);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    padding: 0;
+
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
 }
-tr.odd-row th, tr.odd-row td
+div.inner_form
 {
-    background-color: lightslategray;
-    color: black;
+    background-color: var(--inner-form-bg);
+    width: 100%;
+    height: 100%;
+    color: var(--text-color);
+
+    display: block;
+
+    padding: 10px;
+    margin: 0 auto;
 }
-tr.even-row th, tr.even-row td
+p.idForm#heading
 {
-    background-color: lightcoral;
+    color: var(--text-color);
+    font-size: 20pt;
+    font-weight: var(--font-weight-boldToNormal);
+    /* text-wrap: nowrap; */
+
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
-tr.degree-row th, tr.degree-row td
-{
-    background-color: snow;
-    color: black;
-}
-tr.degree-row#not-fulfilled th, 
-tr.degree-row#not-fulfilled td
-{
-    background-color: rgb(255, 152, 152);
-}
-.table-text
-{
-    justify-content: left;
-}
-.table-head
-{
-    position: sticky;
-    top: 0;
-    vertical-align: bottom;
-}
-.table-body
-{
-    white-space: nowrap;
-}
-.courses-table-head
-{
-    text-align: left;
-}
-.skill-table-text-left
-{
-    text-align: left;
-}
-.skill-table-text-right
-{
-    text-align: right;
-}
-.new-iframe
+form.idForm#idForm
 {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content:right;
+    /* align-items; */
 }
+div.idForm#student_id, 
+div.idForm#student_email,
+div.idForm#submit
+{
+    border-style: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    margin-left: auto;
+}
+input.idForm#submit
+{
+    color: #000000;
+}
+@media (min-width: 200px)
+{
+    input#student_id, input#student_email
+    {
+        margin-left: 1rem;
+    }
+}
+@media (min-width: 400px)
+{
+    div#break
+    {
+        padding-left: 1rem;
+        margin-left: auto;
+    }
+    input#student_id, input#student_email
+    {
+        margin-left: 1rem;
+    }
+}
+@media (min-width: 600px)
+{
+    div#break
+    {
+        padding-left: 3rem;
+        margin-left: auto;
+    }
+    input#student_id, input#student_email
+    {
+        margin-left: 1rem;
+    }
+}
+@media (min-width: 700px)
+{
+    div#break
+    {
+        padding-left: 0;
+        margin-left: auto;
+    }
+    input#student_id, input#student_email
+    {
+        margin-left: 1rem;
+    }
+}
+
+/* Styling for inner elements of the form */
+div.idForm > * {
+    color: var(--text-color);
+    text-align: center;
+    width: 100%; /* Makes sure children take full width */
+    /* Other styles... */
+}
+/*
+!<---- END OF Styling for idForm in index.html ---->
+    */
+
+/*
+*<---- Styling for Dark Mode Toggle ---->
+    */
 
 .theme-toggle#theme-toggle_container
 {
-    display: block;
+    height: 3rem;
+    width: auto;
+    border-right-style: solid;
+    border-right-width: 2pt;
+    border-color: var(--accent-color);
+
     float: right;
+    overflow: hidden;
+    box-sizing: border-box;
 
-    margin-top: auto;
-    margin-right: 0px;
-    margin-bottom: 0px;
+    padding: 0px;
+    margin: 0px;
     margin-left: auto;
-
 }
 .theme-toggle#theme-toggle
 {
-    display: block;
-    /* float: right; */
+    background-color: var(--primary-color);
+    width: auto;
+    height: auto;
+    border: none;
+    outline: none;
 
-    margin-top: auto;
-    margin-right: 1rem;
-    margin-bottom: 0px;
-    margin-left: auto;
+    display: inline-block;
+    align-items: center;
+
+    padding: 0px;
+    margin: 0px;
 }
-.content_container#main_block_container
+input#darkModeToggle
 {
-    /* height: 1000px; */
-    max-height: 1000px;
+    background-color: var(--primary-color);
+    margin-left: 0.5rem;
+}
+div.theme-toggle#theme-toggle label
+{
+    width: auto;
+    height: max-content;
 
-    /* display: flex; */
-    /* flex-direction: row; */
+    display: inline-block;
+    align-items: center;
 
-    /* display: block; */
+    font-size: 14pt;
+    text-decoration: none;
 
-    /* overflow-y: scroll; */
-
-    /* padding: 100px; */
-    margin-bottom: auto;
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
+/*
+!<---- END OF Styling for Dark Mode Toggle ---->
+    */
+
+
+
+/*? Feature: Academic Progress Tracker */
 /*
 *<---- Styling for progress_tracker.html ---->
     */
 
+.progress_tracker#aptContainer
+{
+    width: 100%;
+    background-color: var(--primary-color);
+    overflow: auto;
+
+    padding: 1rem;
+}
+/* .progress_tracker#aptModal
+{
+    background-color: var(--background-color);
+    width: 100%;
+    max-width: 90%;
+    height: 80vh;
+    border-style: solid;
+    border-color: var(--accent-color);
+    border-width: 3pt;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    z-index: 2;
+    overflow: auto;
+
+    padding: 20px;
+    margin: 0 auto;
+} */
 .progress_tracker#aptH1,
 .progress_tracker#aptH2
 {
-    color: var(--text-color);
-}
+    background-color: var(--secondary-color);
+    color: var(--rev-text-color);
 
-.progress_tracker#aptContainer
+    padding: 1rem;
+    margin-top: 0px;
+}
+.progress_tracker#aptH2
 {
-    /* height: 20vh; */
-
-    background-color: var(--primary-color);
-    /* border-style: solid;
-    border-width: 2pt;
-    border-color: var(--accent-color); */
-
-    overflow: auto;
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    overflow: visible;
 }
+/* .progress_tracker#aptClose
+{
+    background-color: var(--close-button-color);
+    border: none;
+    border-radius: 4px;
 
+    display: block;
+    float: right;
+    cursor: pointer;
+
+    color: #ffffff;
+
+    padding: 5px 10px;
+}
+.progress_tracker#aptClose:hover
+{
+    background-color: var(--hover-background-color);
+    color: var(--hover-text-color);
+} */
 .progress_tracker#aptTable
 {
-    background-color: var(--secondary-color);
-    overflow-y: scroll;
+    background-color: var(--background-color);
+    width: 100%;
     border-style: solid;
-    border-width: 2pt;
-    border-color: var(--border-color);
+    border-width: 1.5pt;
+    border-color: var(--accent-color);
+
+    color: var(--text-color);
+    text-wrap: nowrap;
 }
 table.progress_tracker#aptTable th, 
-table.progress_tracker#aptTable td {
+table.progress_tracker#aptTable td
+{
     border-style: solid;
-    border-width: 5pt;
-}
+    border-width: 1.5pt;
 
-    /*
+    text-align: center;
+
+    padding: 0.2rem;
+}
+table.progress_tracker#aptTable th
+{
+    font-weight: 800;
+}
+table.progress_tracker#aptTable td
+{
+    font-weight: 200;
+}
+/* Style for the background overlay when modal is shown */
+/* .progress_tracker#aptOverlay
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 0, 0, 0.5);
+    z-index: 1;
+} */
+
+/*
 !<---- END OF Styling for progress_tracker.html ---->
     */
+/*? END OF Academic Progress Tracker */
 
+
+
+
+/*? Feature: Cultural Credits */
+/*
+*<---- Styling for culture.html ---->
+    */
+
+.cultural_credit#ccContainer
+{
+    background-color: var(--background-color);
+}
+
+/*
+!<---- END OF Styling for culture.html ---->
+    */
+/*? END OF Cultural Credits */
+
+
+
+/*
+*<---- Styling for course_selection.html ---->
+    */
+
+.course_selection#csContainer
+{
+    background-color: var(--background-color);
+}
+
+/*
+!<---- END OF Styling for course_selection.html ---->
+    */
+
+
+/*? Feature: Course Reviews */
+/*
+*<---- Styling for reviews.html ---->
+    */
+
+.course_review#reviewHeading,
+.course_review#reviewNotice
+{
+    color: var(--text-color);
+}
+.progress_tracker#aptH2
+{
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    overflow: visible;
+}
+.course_review#reviewForm
+{
+    width: 100%;
+    background-color: var(--primary-color);
+    overflow: auto;
+
+    padding: 1rem;
+}
+
+/* Responsive font sizes */
+body, input, select, textarea, button {
+    /* Responsive font size */
+    font-size: 0.8rem; 
+}
+
+.modal h2 {
+    background-color: #4CAF50;
+    padding: 10px;
+    margin-top: 0;
+    border-radius: 6px 6px 0 0;
+    color: #ffffff;
+}
+
+.modal button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #45a049;
+}
+
+.rating label
+{
+    font-size: 25px;
+    text-decoration: none;
+    color: #aaa;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+.rating > a:hover,
+.rating > a:hover ~ a,
+.rating > input:checked ~ label 
+{
+    color: gold;
+}
+.star-rating
+{
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order of the flex items */
+    justify-content: flex-end; /* Align items to the right */
+}
+.professor-rating-label
+{
+    font-size: 14px; /* Smaller font size for the label */
+    margin-left: 10px; /* Space between the label and the stars */
+}
+/* Hide the radio buttons */
+.star-rating input[type="radio"]
+{
+    display: none;
+}
+/* Style for the star labels */
+.star-rating label
+{
+    font-size: 25px;
+    color: #000000; /* Default color of stars */
+    cursor: pointer;
+}
+
+/* Change color of stars when radio button is checked */
+.star-rating input[type="radio"]:checked ~ label
+{
+    color: gold;
+}
+
+
+.rating input
+{
+    display: none;
+}
+
+.form-field {
+    margin-bottom: 10px;
+}
+
+/* Slider CSS */
+.slider-container
+{
+    display: flex;
+    align-items: center;
+}
+.slider-label
+{
+    margin-right: 10px;
+}
+.slider
+{
+    flex: 1;
+    margin-right: 10px;
+}
+.slider-value
+{
+    width: 30px;
+    text-align: center;
+}
+
+
+/* Style for each form-field group */
+.form-field {
+    margin-bottom: 10px; /* Adjust space between each form field */
+}
+
+/* Style for each question label */
+.question-label {
+    display: inline-block; /* Display the label inline with the radio buttons */
+    margin-right: 10px; /* Space between the label and the radio buttons */
+    vertical-align: top; /* Aligns the label with the top of the radio buttons */
+}
+
+/* Style for each radio button group */
+.radio-group {
+    display: block; /* Display the radio buttons inline with the label */
+}
+
+/* Style for each radio option */
+.radio-group label {
+    display: inline-block; 
+    margin-right: 10px; /* Space between each radio button */
+    white-space: nowrap; /* Prevents label text from wrapping */
+    margin-bottom: 0; /* Remove bottom margin if any */
+}
+
+/* Styling radio buttons and checkboxes for better interaction */
+.radio-group label, .checkbox-group label {
+    padding: 5px; /* Easier to click */
+    cursor: pointer;
+}
+
+/* Organizing form sections */
+.form-section {
+    margin-bottom: 30px; /* Space out sections */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .modal {
+        padding: 10px; /* Smaller padding on smaller screens */
+        width: 95%; /* Use more width on smaller screens */
+    }
+
+    .form-field, .question-label, .radio-group {
+    /* Adjust layout for smaller screens */
+    }
+
+    .radio-group label {
+        /* Adjustments for smaller screens */
+        display: inline-block; /* Aligns labels horizontally */
+        margin-right: 10px; /* Space between each label */
+        margin-bottom: 0; /* Remove bottom margin if any */
+    }
+}
+
+/* Styles for tabs or accordion (if implemented) */
+.tab-container, .accordion-container {
+/* Styles for tab or accordion layout */
+}
+
+input[type="text"], select, textarea {
+    font-size: 0.9rem; /* Reduce font size in form elements */
+}
+
+button {
+    padding: 5px 10px; /* Adjust button padding */
+}
+
+/* Adjusting the base font size */
+body {
+    font-size: 0.8rem; /* Decrease the base font size */
+}
+
+/* Adjusting headings */
+h1 {
+    font-size: 1.0 rem; /* Adjust the size as needed */
+}
+
+h2 {
+    font-size: 1.0 rem; /* Adjust the size as needed */
+}
+
+/* Adjusting labels and buttons */
+label, button {
+    font-size: 0.8rem; /* Adjust the size as needed */
+}
+
+/* Adjusting form inputs */
+input[type="text"], select, textarea {
+    font-size: 0.8rem; /* Adjust the size as needed */
+}
+
+/* Other specific adjustments as needed */
+/* ... */
+
+
+/* Flex container for rating and feedback */
+.rating-feedback-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between elements */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between items */
+}
+
+.star-rating-container, .feedback-textarea-container {
+    flex: 1; /* Take up equal space */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+  }
+/* *Everything below this comment is dedicated to responsive styling. */
+
+@media (max-width: 768px) {
+    .rating-feedback-container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+}
+
+/*
+!<---- END OF Styling for reviews.html ---->
+    */
+/*? END OF Course Reviews */
+
+
+
+/*? Feature: Course Search */
+/*
+*<---- Styling for course_search.html ---->
+    */
+
+.course_search#course_searchContainer
+{
+    background-color: var(--background-color);
+}
+
+/*
+!<---- END OF Styling for course_search.html ---->
+    */
+/*? END OF Course Search */
+
+
+
+/*? Feature: Course Registration */
+/*
+*<---- Styling for course_registration.html ---->
+    */
+
+.course_registration#regContainer
+{
+    background-color: var(--background-color);
+}
+
+/*
+!<---- END OF Styling for course_registration.html ---->
+    */
+/*? END OF Course Registration */

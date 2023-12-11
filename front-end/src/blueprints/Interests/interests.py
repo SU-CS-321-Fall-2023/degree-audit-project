@@ -1,9 +1,92 @@
-from flask import Flask, render_template, request
+from flask import Blueprint, render_template
+from flask import request
 
-app = Flask(__name__)
+import mysql.connector
+
+# from weblet import rootPath, passwordTA, passwordTC, weblet
+def ourPaths():
+    """
+    ourPaths() must be placed at the beginning of the file 
+    in order for the site to build and run.
+    
+    ourPaths() must be called immediately after it ends.
+    
+    Purpose: Initializes necessary variable for web app.
+    """
+    import os
+
+    global rootPath
+    rootPath = os.path.abspath(os.getcwd())
+
+    global passwordTA
+    global passwordTC
+    pwFile = (rootPath + "\\Misc_Folder\\SQL\\TA_ourPySQL.txt")
+    with open(pwFile, 'r') as passFile:
+        passwordTA = passFile.readline()
+    pwFile = (rootPath + "\\Misc_Folder\\SQL\\TC_ourPySQL.txt")
+    with open(pwFile, 'r') as passFile:
+        passwordTC = passFile.readline()
+        # Password for the databases gets read from a file, so
+        # that it is not explicitly stored here in the code.
+        # MySQL Injections are scary.
+
+    print("Loading '/Interests'...")
+ourPaths() # Must be placed at beginning of file.
+
+
+# weblet.register_blueprint(interests_bp, url_prefix='/interests')
+interests_bp = Blueprint(
+    name='interests',
+    import_name=__name__,
+    root_path=rootPath,
+    template_folder=rootPath + "/front-end/src/blueprints/Interests/templates",
+    static_folder=rootPath + "/front-end/src/static"
+)
+
 
 default_interests = ["Computer Science", "Psychology", "Biology", "Mathematics", "Chemistry", "Cybersecurity"]
 selected_interests = []
+
+
+#ROUTING FUNCTIONS
+def generate_course_recommendations(interests):
+    recommended_courses = []
+    for interest in interests:
+        if interest in course_data:
+            recommended_courses.extend(course_data[interest])
+    return recommended_courses
+
+#Interest Exploration
+@interests_bp.route('/')
+def interest():
+    return render_template("interests.html")
+    
+@interests_bp.route('/submit', methods=['POST'])
+def submit():
+    selected_interests.clear()
+    interests_from_form = request.form.getlist('interests') or []
+    print("Interests from form:", interests_from_form)
+
+    selected_interests.extend(interests_from_form)
+
+    recommended_courses = generate_course_recommendations(selected_interests)
+
+    # Check if 'OTHER' is selected and handle it separately
+    if 'OTHER' in selected_interests and len(interests_from_form) > 1:
+        custom_interest = interests_from_form[interests_from_form.index('OTHER') + 1]
+        if custom_interest.lower() == 'music':
+            recommended_courses.extend(course_data['Music'])
+        elif custom_interest.lower() == 'digital arts':
+            recommended_courses.extend(course_data['Digital Arts'])
+        else:
+            recommended_courses.append(f"{custom_interest} - Introductory Course in {custom_interest}")
+
+    return render_template('courses.html', interests=selected_interests, courses=recommended_courses)
+
+
+
+
+
 
 course_data = {
     "Computer Science": ["CSCI141 - Introduction to Computer Science I ",
@@ -108,43 +191,3 @@ course_data = {
                      "DIGA 398 - Advanced Digital Arts Studio",
                      "Three units total from any of the following prefixes: ARTS, ARTH, CREA, MUSC, PHYS, ENCW or THEA"]
 }
-
-
-@app.route('/')
-def index():
-    return render_template('interestsU-index.html', default_interests=default_interests)
-
-
-def generate_course_recommendations(interests):
-    recommended_courses = []
-    for interest in interests:
-        if interest in course_data:
-            recommended_courses.extend(course_data[interest])
-    return recommended_courses
-
-
-@app.route('/submit', methods=['POST'])
-def submit():
-    selected_interests.clear()
-    interests_from_form = request.form.getlist('interests') or []
-    print("Interests from form:", interests_from_form)
-
-    selected_interests.extend(interests_from_form)
-
-    recommended_courses = generate_course_recommendations(selected_interests)
-
-    # Check if 'OTHER' is selected and handle it separately
-    if 'OTHER' in selected_interests and len(interests_from_form) > 1:
-        custom_interest = interests_from_form[interests_from_form.index('OTHER') + 1]
-        if custom_interest.lower() == 'music':
-            recommended_courses.extend(course_data['Music'])
-        elif custom_interest.lower() == 'digital arts':
-            recommended_courses.extend(course_data['Digital Arts'])
-        else:
-            recommended_courses.append(f"{custom_interest} - Introductory Course in {custom_interest}")
-
-    return render_template('interestsU-courses.html', interests=selected_interests, courses=recommended_courses)
-
-
-if __name__ == '__main__':
-    app.run(debug=True)

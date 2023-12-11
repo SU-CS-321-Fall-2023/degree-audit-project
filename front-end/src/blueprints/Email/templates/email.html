@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block title %}SDA - Email Alerts{% endblock title %}
+
+
+{% block content %}
+    <h1>Email Alert Demo</h1>
+    <form action="{{ url_for('email.send_alert') }}" method="POST">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
+        <input type="submit" value="Send Alert">
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+{% endblock content %}

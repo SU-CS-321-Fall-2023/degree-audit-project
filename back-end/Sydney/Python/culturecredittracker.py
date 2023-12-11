@@ -15,7 +15,7 @@ def index():
         # Add more events here.
     ]
 
-    return render_template('index.html', credits=user_cultural_credits, remaining=credits_remaining, events=cultural_events)
+    return render_template('OLD-index.html', credits=user_cultural_credits, remaining=credits_remaining, events=cultural_events)
 
 if __name__ == '__main__':
     app.run(debug=True)
