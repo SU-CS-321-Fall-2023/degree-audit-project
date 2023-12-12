@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template, redirect, url_for
 from flask import flash, request
-import time
 
 import mysql.connector
 
@@ -72,9 +71,9 @@ def progress_tracker():
             FROM students WHERE studentID=%s ;""" 
             % (studentID))
         myStudents.execute(query_studentHeading)
-        myResult1 = myStudents.fetchall()
+        resultStudents = myStudents.fetchall()
 
-        for x in myResult1:
+        for x in resultStudents:
             student_data.append(x)
         print(student_data)
 
@@ -105,8 +104,8 @@ def progress_tracker():
             % studentID
         )
         myProgress.execute(query_APT)
-        myResult2 = myProgress.fetchall()
-        for y in myResult2:
+        resultProgress = myProgress.fetchall()
+        for y in resultProgress:
             courses_data.append(y)
 
         return render_template('progress_tracker.html', courses=courses_data, student=student_data)

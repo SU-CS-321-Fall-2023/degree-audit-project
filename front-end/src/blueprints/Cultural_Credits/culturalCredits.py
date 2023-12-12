@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, redirect, url_for
+
 
 import mysql.connector
 
@@ -45,15 +46,96 @@ culturalCredits_bp = Blueprint(
 
 @culturalCredits_bp.route('/')
 def culture():
-    # Here, you would fetch data from Stetson's Engage platform and process it to show the user's cultural credits.
-    user_cultural_credits = 24
-    credits_remaining = 10  # Change this to the remaining credits.
+    try:
+        # student_data = list()
+        studentID = 800737736
+        
+        cultural_events = [
+            {"name": "Pollination:The Art of Citizen Science", "date": "2023-24-08", "units": "1"},
+            {"name": "The Bone Wars: Museums, Fossils and National Identity ", "date": "2023-24-08", "units": "1"},
+            # Add more events here.
+        ]
 
-    # Dummy data for cultural credit events.
-    cultural_events = [
-        {"name": "Pollination:The Art of Citizen Science", "date": "2023-24-08", "units": "1"},
-        {"name": "The Bone Wars: Museums, Fossils and National Identity ", "date": "2023-24-08", "units": "1"},
-        # Add more events here.
-    ]
+        students = mysql.connector.connect(
+            host="174.138.53.254",
+            user="TheAuditor",
+            password=passwordTA,
+            database="students"
+        )
+        myStudents = students.cursor(prepared=True)
+        query_current = (
+            """SELECT 
+            `currentCulturalCredits`
+            FROM students WHERE studentID=%s ;""" 
+            % (studentID))
+        myStudents.execute(query_current)
+        resultCurrent = myStudents.fetchone()
+        query_required = (
+            """SELECT 
+            `requiredCulturalCredits`
+            FROM students WHERE studentID=%s ;""" 
+            % (studentID))
+        myStudents.execute(query_required)
+        resultRequired = myStudents.fetchone()
 
-    return render_template('culture.html', credits=user_cultural_credits, remaining=credits_remaining, events=cultural_events)
+        currentCredits  = int(resultCurrent[0])
+        requiredCredits = int(resultRequired[0])
+
+        remainingCredits = (requiredCredits - currentCredits)
+        if (remainingCredits < 0):
+            remainingCredits = 0
+
+        return render_template(
+            'culture.html', 
+            currentCredits=currentCredits,
+            requiredCredits=requiredCredits,
+            remainingCredits=remainingCredits,
+            events=cultural_events
+        )
+
+    except mysql.connector.Error as error:
+        print("query failed {}".format(error))
+        return redirect(url_for('home.index'))
+
+
+        # if TypeError:
+        #     flash(
+        #         message="Invalid Student ID or Email.",
+        #         category='error'
+        #     )
+        #     print("query failed {}".format(error))
+        #     return redirect(url_for('home.index'))
+        # elif UnboundLocalError:
+        #     flash(
+        #         message="Invalid Student ID or Email.",
+        #         category='error'
+        #     )
+        #     print("query failed {}".format(error))
+        #     return redirect(url_for('home.index'))
+        # else:
+        #     flash(
+        #         message="Invalid Student ID or Email.",
+        #         category='error'
+        #     )
+        #     print("query failed {}".format(error))
+        #     return redirect(url_for('home.index'))
+    finally:
+        if students.is_connected():
+            myStudents.close()
+            students.close()
+            print("MySQL connection (students) is closed.")
+
+
+
+    # # Here, you would fetch data from Stetson's Engage platform and process it to show the user's cultural credits.
+    # user_cultural_credits = 24
+    # credits_remaining = 10  # Change this to the remaining credits.
+
+    # # Dummy data for cultural credit events.
+    # cultural_events = [
+    #     {"name": "Pollination:The Art of Citizen Science", "date": "2023-24-08", "units": "1"},
+    #     {"name": "The Bone Wars: Museums, Fossils and National Identity ", "date": "2023-24-08", "units": "1"},
+    #     # Add more events here.
+    # ]
+
+    # return render_template('culture.html', credits=user_cultural_credits, remaining=credits_remaining, events=cultural_events)

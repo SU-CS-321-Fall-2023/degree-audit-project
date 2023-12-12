@@ -121,7 +121,7 @@ class ReviewForm(FlaskForm):
     # Add other new form fields as needed...
 
 
-@courseReviews_bp.route('/course-review', methods=['GET', 'POST'])
+@courseReviews_bp.route('/course-review', methods=['POST'])
 def courseReview():
     form = ReviewForm()
     if form.validate_on_submit():
@@ -163,14 +163,14 @@ def courseSelection():
             database="progress"
         )
         myProgress = progress.cursor(prepared=True)
-        data = "qualityPoints"
+        # data = "qualityPoints"
         sql_query = """SELECT courseTitle FROM `800737736` WHERE qualityPoints IS NOT NULL;"""
         myProgress.execute(sql_query)
         myResult = myProgress.fetchall()
 
         for x in myResult:
-            courses.append(x)
-            print(x)
+            courses.append(x[0])
+            # print(x[0])
         if request.method == 'POST':
             selected_course = request.form['course_name']
             return render_template('reviews.html', course=selected_course)
@@ -184,7 +184,7 @@ def courseSelection():
         if progress.is_connected():
             myProgress.close()
             progress.close()
-            print("MySQL connection is closed.")
+            print("MySQL connection (progress) is closed.")
     return render_template('course_selection.html', courses=courses)
 
 

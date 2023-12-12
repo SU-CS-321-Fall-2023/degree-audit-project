@@ -2,38 +2,57 @@
 {% block title %}SDA - Course Reviews{% endblock title %}
 
 
-{% block style %}
-        form {
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        select, input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-{% endblock style %}
-
-
 {% block content %}
-    <div class="course_selection" id="csContainer">
-        <form action="{{ url_for('courseReviews.courseReview') }}" method="POST">
-            <h2>Select Your Course</h2>
-
-            <!-- Adding label for accessibility -->
-            <label for="courseSelect">Course:</label>
-            <select name="course_name" id="courseSelect" required>
-                <option value="" disabled selected>Select your course to review</option>
-                {% for course in courses %}
-                <option value="{{course}}">{{ course }}</option>
-                {% endfor %}
-            </select>
-
-            <input type="submit" value="Next">
-        </form>
+    <div class="course_selection" id="csContainer_wrapper">
+        <div class="course_selection" id="csContainer">
+            <h1 class="course_selection" id="csH1">Course Reviews</h1>
+            <div class="course_selection" id="cs_subContainer">
+                <div class="course_selection" id="completedCourses_container">
+                    <h2 class="course_selection" id="csH2">Review completed courses</h2>
+                    <div class="course_selection" id="csForm_outerContainer">
+                        <p class="course_selection" id="csNotice">
+                            <b>Please note:</b> This form only allows you to review courses for which a Final Grade has been submitted.
+                        </p>
+                        <form class="course_selection" id="csForm" action="{{ url_for('courseReviews.courseReview') }}" method="POST">
+                            <!-- 
+                                Adding label for accessibility 
+                                <label for="courseSelect">Course:</label>
+                            -->
+                            <select class="course_selection" id="course_select" name="course_name" required>
+                                <option value="" disabled selected>Select a course to review</option>
+                                {% for course in courses %}
+                                <option value="{{course}}">{{ course }}</option>
+                                {% endfor %}
+                            </select>
+                            <input class="course_selection" id="course_submit" type="submit" value="Select course">
+                        </form>
+                    </div>
+                </div>
+                <div class="course_selection" id="incompleteCourses_container">
+                    <h2 class="course_selection" id="csH2">Review courses in-progress</h2>
+                    <p class="course_selection" id="csNotice">
+                        <b>Please note:</b> This form only allows you to review courses for which you have received a Midterm grade.
+                    </p>
+                    <div class="course_selection" id="csForm_outerContainer">
+                        <p class="course_selection" id="csNotice_disclaimer">
+                            **Some courses might not be availabe if the instructor did not submit a Midterm grade.
+                        </p>
+                        <form class="course_selection" id="csForm" action="{{ url_for('courseReviews.courseReview') }}" method="POST">
+                            <!-- 
+                                Adding label for accessibility 
+                                <label for="courseSelect">Course:</label>
+                            -->
+                            <select class="course_selection" id="course_select" name="course_name" required>
+                                <option value="" disabled selected>Select a course to review</option>
+                                {% for course in courses %}
+                                <option value="{{course}}">{{ course }}</option>
+                                {% endfor %}
+                            </select>
+                            <input class="course_selection" id="course_submit" type="submit" value="Select course">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock content %}

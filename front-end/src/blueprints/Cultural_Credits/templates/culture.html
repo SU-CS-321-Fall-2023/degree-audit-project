@@ -6,11 +6,21 @@
     <div class="cultural_credit" id="ccContainer">
         <h1 class="cultural_credit" id="ccH1">Cultural Credit Tracker</h1>
         <p class="cultural_credit" id="ccNotice">
-            You have {{ credits }} cultural credits.
+            You need at least {{ requiredCredits }} Cultural Credits to graduate.
         </p>
-        <p class="cultural_credit" id="ccNotice">
-            You need {{ remaining }} more to graduate.
+        <p class="cultural_credit" id="ccNotice_current">
+            You currently have {{ currentCredits }} Cultural Credits.
         </p>
+        {% if remainingCredits == 0 %}
+        <p class="cultural_credit" id="ccNotice_fulfilled">
+            You have fulfilled your Cultural Credits requirement!
+        </p>
+        {% endif %}
+        {% if remainingCredits > 0 %}
+        <p class="cultural_credit" id="ccNotice_unfulfilled">
+            You need {{ remainingCredits }} more Cultural Credits to graduate.
+        </p>
+        {% endif %}
         <h2 class="cultural_credit" id="ccH2">Upcoming Events</h2>
         <ul>
             {% for event in events %}
